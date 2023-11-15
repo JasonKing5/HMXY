@@ -1,0 +1,5 @@
+<div class="container" @click="back">
+    <text class="title" >
+        庄生
+    </text>
+</div>
