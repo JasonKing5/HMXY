@@ -13,3 +13,11 @@ https://mayw-teaching.feishu.cn/drive/folder/Qm0LfbzjIlBwE8duFZ1cKEKinUd?from=fr
 ---
 
 ### 所有内容动态更新，敬请期待。
+
+
+
+---
+
+<img src="assets/image-20231116111627263.png" alt="image-20231116111627263" style="zoom:33%;" />
+
+### 该仓库第一个点赞的是微信ID为齐朋的同学。特此记录。
