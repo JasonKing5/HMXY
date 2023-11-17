@@ -1,5 +1,3 @@
-
-
 // 声明变量并赋值   ：初始化
 let pome: string= '劝君莫惜金缕衣 劝君惜取少年时'
 
@@ -17,7 +15,6 @@ let me
 @Component
 struct Index {
   @State message: string = 'Hello World'
-
   build() {
     Row() {
       Column() {
