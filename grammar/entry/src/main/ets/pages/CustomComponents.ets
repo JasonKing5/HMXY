@@ -4,6 +4,7 @@
  * todo: 自定义组件创建何使用
  * todo: Mr. Chen 陈(背景图)
  * */
+
 /*
  * 1: 组件必须使用@Component装饰
  * 2:@Entry 装饰哪个组件，哪个就呈现在页面上，。
@@ -41,6 +42,8 @@ struct itemComponent {
   content: string = '青山隐隐水迢迢，秋尽江南草未凋。'
   // 哪种情况可以驱动UI更新。@state
   @State isDone: boolean = false
+
+
 
   build() {
     //   必须有一个根组件。

@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/dataType",
     "pages/DeclarativeUI",
-    "pages/CustomComponents"
+    "pages/CustomComponents",
+    "pages/BuilderUI"
   ]
 }
