@@ -2,6 +2,7 @@
   "src": [
     "pages/Index",
     "pages/dataType",
-    "pages/DeclarativeUI"
+    "pages/DeclarativeUI",
+    "pages/CustomComponents"
   ]
 }
