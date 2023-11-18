@@ -21,6 +21,7 @@ struct BuilderUI {
     .height('100%')
   }
 }
+
 // 写在外面的自定义组件构建函数  方便多组件共同调用
 @Builder  function  item(content:string){
   Row() {

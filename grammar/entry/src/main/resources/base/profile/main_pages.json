@@ -8,6 +8,7 @@
     "pages/StylesFun",
     "pages/ExtendFun",
     "pages/StateStylesFun",
-    "pages/StateManagement"
+    "pages/StateManagement",
+    "pages/ProvideConsume"
   ]
 }
