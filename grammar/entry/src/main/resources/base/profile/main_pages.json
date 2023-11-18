@@ -4,6 +4,12 @@
     "pages/dataType",
     "pages/DeclarativeUI",
     "pages/CustomComponents",
-    "pages/BuilderUI"
+    "pages/BuilderUI",
+    "pages/StylesFun",
+    "pages/ExtendFun",
+    "pages/StateStylesFun",
+    "pages/StateDecorator",
+    "pages/PropDecorator",
+    "pages/LinkDecorator"
   ]
 }
