@@ -12,16 +12,8 @@ https://mayw-teaching.feishu.cn/drive/folder/Qm0LfbzjIlBwE8duFZ1cKEKinUd?from=fr
 
 ---
 
-### 所有内容动态更新，敬请期待。
+### 所有内容动态更新，敬请追更。
 
-![image-20231116111854787](assets/image-20231116111854787.png)
-
-
+### 为爱发电，录课不易。请您不吝三连，多多推广。
 
 
-
----
-
-<img src="assets/image-20231116111627263.png" alt="image-20231116111627263" style="zoom:33%;" />
-
-##### 该页面右上角仓库Star第一个点赞的是微信ID为齐朋的同学。特此记录。
