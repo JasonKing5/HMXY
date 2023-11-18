@@ -8,8 +8,6 @@
     "pages/StylesFun",
     "pages/ExtendFun",
     "pages/StateStylesFun",
-    "pages/StateDecorator",
-    "pages/PropDecorator",
-    "pages/LinkDecorator"
+    "pages/StateManagement"
   ]
 }
