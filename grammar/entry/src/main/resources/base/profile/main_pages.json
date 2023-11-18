@@ -10,6 +10,8 @@
     "pages/ExtendFun",
     "pages/StateStylesFun",
     "pages/ProvideConsume",
-    "pages/WatchDct"
+    "pages/WatchDct",
+    "pages/Branch",
+    "pages/Loop"
   ]
 }
