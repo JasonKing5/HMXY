@@ -1,14 +1,15 @@
 {
   "src": [
-    "pages/Index",
     "pages/dataType",
+    "pages/StateManagement",
+    "pages/Index",
     "pages/DeclarativeUI",
     "pages/CustomComponents",
     "pages/BuilderUI",
     "pages/StylesFun",
     "pages/ExtendFun",
     "pages/StateStylesFun",
-    "pages/StateManagement",
-    "pages/ProvideConsume"
+    "pages/ProvideConsume",
+    "pages/WatchDct"
   ]
 }
