@@ -8,10 +8,13 @@
     "pages/BuilderUI",
     "pages/StylesFun",
     "pages/ExtendFun",
+    "pages/LifeCycle1",
     "pages/StateStylesFun",
     "pages/ProvideConsume",
     "pages/WatchDct",
     "pages/Branch",
-    "pages/Loop"
+    "pages/Loop",
+    "pages/LifeCycle2"
+
   ]
 }

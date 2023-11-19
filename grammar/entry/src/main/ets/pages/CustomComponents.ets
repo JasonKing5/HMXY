@@ -35,15 +35,12 @@ struct CustomComponents {
   }
 }
 
-
 @Component
 struct itemComponent {
   // 自定义组件可以使用变量(都是私有化的) 传递参数
   content: string = '青山隐隐水迢迢，秋尽江南草未凋。'
   // 哪种情况可以驱动UI更新。@state
   @State isDone: boolean = false
-
-
 
   build() {
     //   必须有一个根组件。

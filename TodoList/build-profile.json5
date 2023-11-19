@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "C:\\Users\\73602\\.ohos\\config\\auto_debug_grammar_com.example.grammar_2850086000522892254.cer",
-          "storePassword": "0000001ABECA4E8D564DECE3E4E13B404F239ABC7E78FE0764690E980961F30613F563FEA2C43D374605",
+          "certpath": "C:\\Users\\73602\\.ohos\\config\\auto_debug_TodoList_com.example.todolist_2850086000522892254.cer",
+          "storePassword": "0000001B10F97F5598D7ACFD10E6506FBB948F7746EBAE4C7C268F7A8C3F4602639A19152D144655116720",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001A13F4913A51D17502FF241859D3D8F0F0A62DE65A51860033DA74C9A1FA36498F13EA5A3D6E6F",
-          "profile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_grammar_com.example.grammar_2850086000522892254.p7b",
+          "keyPassword": "0000001BF464CE59B8A1EC4F1DBB5E450E481B2DD63216323084D7411F339D62DAE6D3F68D1A3977788D9F",
+          "profile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_TodoList_com.example.todolist_2850086000522892254.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_grammar_com.example.grammar_2850086000522892254.p12"
+          "storeFile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_TodoList_com.example.todolist_2850086000522892254.p12"
         }
       }
     ],
