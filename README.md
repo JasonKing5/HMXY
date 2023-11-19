@@ -16,4 +16,6 @@ https://mayw-teaching.feishu.cn/drive/folder/Qm0LfbzjIlBwE8duFZ1cKEKinUd?from=fr
 
 ### 为爱发电，录课不易。请您不吝三连，多多推广。
 
+感谢帝心小助手的帮忙，微信人数超过200就不能通过扫码进群了。小助手哥们愿意拿出自己的微信让大家加好友，然后拉进群。自然会投入时间精力。无比感谢。
 
+![img](assets/-17003549659581.jpeg)
