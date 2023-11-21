@@ -1,0 +1,8 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/AnimateTo1",
+    "pages/AnimateTo2",
+    "pages/AnimateTo3"
+  ]
+}
