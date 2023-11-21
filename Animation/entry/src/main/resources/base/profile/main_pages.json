@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/AnimateTo1",
     "pages/AnimateTo2",
-    "pages/AnimateTo3"
+    "pages/AnimateTo3",
+    "pages/AttrAnimation"
   ]
 }
