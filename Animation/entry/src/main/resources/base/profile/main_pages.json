@@ -4,6 +4,8 @@
     "pages/AnimateTo1",
     "pages/AnimateTo2",
     "pages/AnimateTo3",
-    "pages/AttrAnimation"
+    "pages/AttrAnimation",
+    "pages/IfElseTransition",
+    "pages/ForEachTransition"
   ]
 }
