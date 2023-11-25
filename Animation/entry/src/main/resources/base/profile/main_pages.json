@@ -6,6 +6,8 @@
     "pages/AnimateTo3",
     "pages/AttrAnimation",
     "pages/IfElseTransition",
-    "pages/ForEachTransition"
+    "pages/ForEachTransition",
+    "pages/SharedTransitionSrc",
+    "pages/SharedTransitionDest"
   ]
 }

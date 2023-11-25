@@ -1,0 +1,41 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\Althen\\.ohos\\config\\auto_debug_biandan_Stage_cn.biandangroup.biandan_350086000111093226.cer",
+          "storePassword": "0000001B14ED1F2E4D2B5E383687A728AAF136277F250466F57AACB7A10F5988FCCE3D436CF560EEE314C3",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B7A48FA252E83841923CA65725F1296F683848A930E46876E3D30030FF57BAE2C24C51681849D1B",
+          "profile": "C:\\Users\\Althen\\.ohos\\config\\auto_debug_biandan_Stage_cn.biandangroup.biandan_350086000111093226.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\Althen\\.ohos\\config\\auto_debug_biandan_Stage_cn.biandangroup.biandan_350086000111093226.p12"
+        }
+      }
+    ],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

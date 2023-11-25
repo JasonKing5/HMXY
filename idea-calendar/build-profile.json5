@@ -1,0 +1,41 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\73602\\.ohos\\config\\auto_debug_idea-calendar_cn.biandangroup.idea_calendar_2850086000522892254.cer",
+          "storePassword": "0000001B02749FBE2E66A601208A846871F7677F50F21AB0B3216FA70DF1681AE140F2AFBEBE145B732E69",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B5AFAA5F467AD4A728B1D6BA320BD1AFB87D8911A8A9C2ACD5B545FFE5C0FDD043EBAEA04C6A48A",
+          "profile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_idea-calendar_cn.biandangroup.idea_calendar_2850086000522892254.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_idea-calendar_cn.biandangroup.idea_calendar_2850086000522892254.p12"
+        }
+      }
+    ],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
