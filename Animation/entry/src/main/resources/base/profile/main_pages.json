@@ -8,6 +8,8 @@
     "pages/IfElseTransition",
     "pages/ForEachTransition",
     "pages/SharedTransitionSrc",
-    "pages/SharedTransitionDest"
+    "pages/SharedTransitionDest",
+    "pages/PageTransitionSrc",
+    "pages/PageTransitionDest"
   ]
 }
