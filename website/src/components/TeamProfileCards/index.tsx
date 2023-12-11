@@ -24,16 +24,20 @@ type ProfileProps = {
   className?: string;
   name: string;
   children: ReactNode;
-  githubUrl: string;
-  twitterUrl?: string;
+  bilibiliUrl: string;
+  giteeUrl?: string;
+  avatarUrl?: string;
+  wechatUrl?: string;
 };
 
 function TeamProfileCard({
   className,
   name,
   children,
-  githubUrl,
-  twitterUrl,
+  bilibiliUrl,
+  giteeUrl,
+  avatarUrl,
+  wechatUrl,
 }: ProfileProps) {
   return (
     <div className={className}>
@@ -42,7 +46,7 @@ function TeamProfileCard({
           <div className="avatar avatar--vertical">
             <img
               className="avatar__photo avatar__photo--xl"
-              src={`${githubUrl}.png`}
+              src={`${avatarUrl}`}
               alt={`${name}'s avatar`}
             />
             <div className="avatar__intro">
@@ -55,14 +59,19 @@ function TeamProfileCard({
         <div className="card__body">{children}</div>
         <div className="card__footer">
           <div className="button-group button-group--block">
-            {githubUrl && (
-              <Link className="button button--secondary" href={githubUrl}>
-                GitHub
+            {bilibiliUrl && (
+              <Link className="button button--secondary" href={bilibiliUrl}>
+                Bilibili
               </Link>
             )}
-            {twitterUrl && (
-              <Link className="button button--secondary" href={twitterUrl}>
-                Twitter
+            {giteeUrl && (
+              <Link className="button button--secondary" href={giteeUrl}>
+                Gitee
+              </Link>
+            )}
+            {wechatUrl && (
+              <Link className="button button--secondary" href={wechatUrl}>
+                公众号
               </Link>
             )}
           </div>
@@ -82,55 +91,23 @@ export function ActiveTeamRow(): JSX.Element {
   return (
     <div className="row">
       <TeamProfileCardCol
-        name="Alexey Pyltsyn"
-        githubUrl="https://github.com/lex111">
-        <Translate id="team.profile.Alexey Pyltsyn.body">
-          Obsessed open-source enthusiast 👋 Eternal amateur at everything 🤷‍♂️
-          Maintainer of Russian docs on PHP, React, Kubernetes and much more 🧐
-        </Translate>
+        name="帝心"
+        giteeUrl="https://gitee.com/mayuanwei"
+        avatarUrl='https://foruda.gitee.com/avatar/1680571445959229147/9556293_mayuanwei_1680571445.png!avatar200'
+        wechatUrl="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzI0NDQ4MjE4MQ==&scene=1&album_id=3212803851943116806"
+        bilibiliUrl="https://space.bilibili.com/110937561">
+        <div>
+          喜欢吟诗，擅写故事，公众号里写尽人生百态。 略懂技术，偶写代码，IT教育中坚持开源精神。 庄生的大舅哥。
+        </div>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Joel Marcey"
-        githubUrl="https://github.com/JoelMarcey"
-        twitterUrl="https://twitter.com/joelmarcey">
-        <Translate id="team.profile.Joel Marcey.body">
-          Docusaurus founder and now ever grateful Docusaurus cheerleader to
-          those who actually write code for it.
-        </Translate>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
-        name="Sébastien Lorber"
-        githubUrl="https://github.com/slorber"
-        twitterUrl="https://twitter.com/sebastienlorber">
-        <Translate
-          id="team.profile.Sebastien Lorber.body"
-          values={{
-            website: <WebsiteLink to="https://sebastienlorber.com/" />,
-            devto: <Link to="https://dev.to/sebastienlorber">Dev.to</Link>,
-          }}>
-          {
-            'React lover since 2014. Freelance, helping Facebook ship Docusaurus v2. He writes regularly, on his {website} and {devto}.'
-          }
-        </Translate>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
-        name="Sida Chen"
-        githubUrl="https://github.com/Josh-Cena"
-        twitterUrl="https://twitter.com/SidaChen63">
-        <Translate id="team.profile.Sida Chen.body">
-          Student from Shanghai, China. Enthusiastic open-source project
-          creator, but never actually works hard on those projects he created.
-        </Translate>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
-        name="Yangshun Tay"
-        githubUrl="https://github.com/yangshun"
-        twitterUrl="https://twitter.com/yangshunz">
-        <Translate id="team.profile.Yangshun Tay.body">
-          Full Front End Stack developer who likes working on the Jamstack.
-          Working on Docusaurus made him Facebook&apos;s unofficial part-time
-          Open Source webmaster, which is an awesome role to be in.
-        </Translate>
+        name="庄生"
+        bilibiliUrl="https://space.bilibili.com/286327785"
+        avatarUrl="https://foruda.gitee.com/avatar/1676974431817687676/1529009_josoncoder_1578953753.png!avatar200"
+        giteeUrl="https://gitee.com/josonking">
+        <div>
+          Web全栈开发工程师 🧐 钟爱 React 技术栈，对底层技术和浏览器原理略有研究 👋 喜欢钻研新技术 🔥 
+        </div>
       </TeamProfileCardCol>
     </div>
   );
@@ -140,21 +117,20 @@ export function HonoraryAlumniTeamRow(): JSX.Element {
   return (
     <div className="row">
       <TeamProfileCardCol
-        name="Endilie Yacop Sucipto"
-        githubUrl="https://github.com/endiliey"
-        twitterUrl="https://twitter.com/endiliey">
-        <Translate id="team.profile.Endilie Yacop Sucipto.body">
-          Maintainer @docusaurus · 🔥🔥🔥
-        </Translate>
+        name="张三"
+        bilibiliUrl=""
+        giteeUrl="">
+        <div>
+          hello 张三
+        </div>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Wei Gao"
-        githubUrl="https://github.com/wgao19"
-        twitterUrl="https://twitter.com/wgao19">
-        <Translate id="team.profile.Wei Gao.body">
-          🏻‍🌾 Work in progress React developer, maintains Docusaurus, writes
-          docs and spams this world with many websites.
-        </Translate>
+        name="李四"
+        bilibiliUrl=""
+        giteeUrl="">
+        <div>
+          hello 李四
+        </div>
       </TeamProfileCardCol>
     </div>
   );
@@ -165,8 +141,8 @@ export function StudentFellowsTeamRow(): JSX.Element {
     <div className="row">
       <TeamProfileCardCol
         name="Anshul Goyal"
-        githubUrl="https://github.com/anshulrgoyal"
-        twitterUrl="https://twitter.com/ar_goyal">
+        bilibiliUrl="https://github.com/anshulrgoyal"
+        giteeUrl="https://twitter.com/ar_goyal">
         <Translate
           id="team.profile.Anshul Goyal.body"
           values={{
@@ -185,7 +161,7 @@ export function StudentFellowsTeamRow(): JSX.Element {
       </TeamProfileCardCol>
       <TeamProfileCardCol
         name="Drew Alexander"
-        githubUrl="https://github.com/drewbi">
+        bilibiliUrl="https://github.com/drewbi">
         <Translate id="team.profile.Drew Alexander.body">
           Developer and Creative, trying to gain the skills to build whatever he
           can think of.
@@ -193,8 +169,8 @@ export function StudentFellowsTeamRow(): JSX.Element {
       </TeamProfileCardCol>
       <TeamProfileCardCol
         name="Fanny Vieira"
-        githubUrl="https://github.com/fanny"
-        twitterUrl="https://twitter.com/fannyvieiira">
+        bilibiliUrl="https://github.com/fanny"
+        giteeUrl="https://twitter.com/fannyvieiira">
         <Translate
           id="team.profile.Fanny Vieira.body"
           values={{
@@ -220,8 +196,8 @@ export function StudentFellowsTeamRow(): JSX.Element {
       </TeamProfileCardCol>
       <TeamProfileCardCol
         name="Sam Zhou"
-        githubUrl="https://github.com/SamChou19815"
-        twitterUrl="https://twitter.com/SamChou19815">
+        bilibiliUrl="https://github.com/SamChou19815"
+        giteeUrl="https://twitter.com/SamChou19815">
         <Translate
           id="team.profile.Sam Zhou.body"
           values={{
@@ -254,8 +230,8 @@ export function StudentFellowsTeamRow(): JSX.Element {
       </TeamProfileCardCol>
       <TeamProfileCardCol
         name="Tan Teik Jun"
-        githubUrl="https://github.com/teikjun"
-        twitterUrl="https://twitter.com/teik_jun">
+        bilibiliUrl="https://github.com/teikjun"
+        giteeUrl="https://twitter.com/teik_jun">
         <Translate id="team.profile.Tan Teik Jun.body">
           Open-source enthusiast who aims to become as awesome as the other
           humans on this page. Working on Docusaurus brought him closer to his
@@ -264,8 +240,8 @@ export function StudentFellowsTeamRow(): JSX.Element {
       </TeamProfileCardCol>
       <TeamProfileCardCol
         name="Nisarag Bhatt"
-        githubUrl="https://github.com/FocalChord"
-        twitterUrl="https://twitter.com/focalchord_">
+        bilibiliUrl="https://github.com/FocalChord"
+        giteeUrl="https://twitter.com/focalchord_">
         <Translate id="team.profile.Nisarag Bhatt.body">
           Fullstack web developer who loves learning new technologies and
           applying them! Loves contributing to open source as well as writing
