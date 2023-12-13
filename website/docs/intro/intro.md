@@ -19,7 +19,7 @@ sidebar_position: 1
 
 课程特色
 
-- 全网最新 HarmonyOS4.0 教程
+- 新版本 HarmonyOS4.0 教程
 - 零基础保姆级教程
 - 全部资源直接共享
 - 华为 HarmonyOS 应用开发认证+开发

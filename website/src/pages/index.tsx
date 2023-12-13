@@ -23,7 +23,7 @@ function HomepageHeader() {
             width="200"
             height="200"
           />
-          <span className={styles.heroTitleTextHtml} >全网最新最细鸿蒙 HarmonyOS4.0 教程</span>
+          <span className={styles.heroTitleTextHtml} >新版本鸿蒙 HarmonyOS4.0 教程</span>
           <br />
         </Heading>
         {/* <p className="hero__subtitle">帝心 & 庄生</p> */}

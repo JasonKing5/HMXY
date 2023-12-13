@@ -11,11 +11,11 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: '全网最新',
+    title: '新版本',
     img: '/img/index_intro_1.png',
     description: (
       <>
-        全网最新 HarmonyOS4.0 教程。
+        新版本 HarmonyOS4.0 教程。
       </>
     ),
   },
