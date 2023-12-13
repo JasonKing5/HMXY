@@ -10,9 +10,19 @@
   overflow: hidden;
 }
 
+.videoIframe {
+  width: 580px;
+  height: 326px;
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+  }
+
+  .videoIframe {
+    width: 580px;
+    height: 326px;
   }
 }
 
@@ -87,6 +97,32 @@
 @media only screen and (max-width: 768px) {
   .topBannerTitle {
     font-size: 40px;
+  }
+
+  .videoIframe {
+    width: 526px;
+    height: 296px;
+  }
+}
+
+@media only screen and (max-width: 566px) {
+  .videoIframe {
+    width: 100%;
+    height: 255px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .videoIframe {
+    width: 399px;
+    height: 225px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .videoIframe {
+    width: 359px;
+    height: 203px;
   }
 }
 
@@ -298,4 +334,7 @@ html[data-theme="dark"] .topBannerTitleText {
   font-size: 16px;
   background-color: #2c78e5;
   color: white;
+}
+
+.team-container {
 }

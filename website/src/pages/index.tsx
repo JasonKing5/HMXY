@@ -152,7 +152,7 @@ function VideoContainer() {
                 marginTop: '55px',
                 marginBottom: '20px',
           }}>
-            <iframe src="//player.bilibili.com/player.html?aid=620886009&bvid=BV1pb4y1g75m&cid=1332523295&p=1" scrolling="no" style={{width: '580px', height: '326px'}}> </iframe>
+            <iframe src="//player.bilibili.com/player.html?aid=620886009&bvid=BV1pb4y1g75m&cid=1332523295&p=1" scrolling="no" className={styles.videoIframe}> </iframe>
           </div>
         </div>
         <div className="col">

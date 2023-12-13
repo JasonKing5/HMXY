@@ -12,7 +12,7 @@ import {
   StudentFellowsTeamRow,
 } from '@site/src/components/TeamProfileCards';
 
-import styles from './index.module.css';
+import styles from './team.module.css';
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
@@ -21,7 +21,7 @@ export default function Home(): JSX.Element {
       title={'团队'}
       description="课程团队介绍">
       <main>
-        <div className='container' style={{padding: '0 120px', marginTop: '40px'}}>
+        <div className={styles.teamContainer}>
           <h1>核心成员</h1>
           <p>核心成员致力于系列教程的设计、备课、录制视频等核心任务。</p>
           <p>现有核心成员按字母顺序列出如下。</p>
@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
           <h1>合作者</h1>
           <HonoraryAlumniTeamRow />
         </div> */}
-        <div className='container' style={{padding: '0 120px', marginTop: '40px'}}>
+        <div className={styles.teamContainer}>
           <h1>特别鸣谢</h1>
           <p>本鸿蒙 HarmonyOS4.0 教程最初由 帝心&庄生 打造。 时至今日，已经有数十位贡献者自愿主动参与。 我们希望对过去向本鸿蒙教程各个环节做出贡献的众人表示感谢：</p>
           <ul>
@@ -39,7 +39,7 @@ export default function Home(): JSX.Element {
             <li><Link to={""}></Link></li>
           </ul>
         </div>
-        <div className='container' style={{padding: '0 120px', marginTop: '40px'}}>
+        <div className={styles.teamContainer}>
           <h1>感谢支持</h1>
           <h3>为众人抱薪者不可使其冻毙于风雪</h3>
           <h4>课程全部免费，大家也完全可以拿去传播。但如果能因此获利，我将备受鼓舞。</h4>
@@ -47,14 +47,14 @@ export default function Home(): JSX.Element {
           <div style={{display: 'flex', justifyContent: 'space-evenly', marginBottom: '20px'}}>
             <img
               alt={'Docusaurus with Keytar'}
-              className={styles.heroLogo}
+              className={styles.heroLog}
               src={useBaseUrl('/img/team_money_wechat.jpg')}
               width="200"
               height="200"
             />
             <img
               alt={'Docusaurus with Keytar'}
-              className={styles.heroLogo}
+              className={styles.heroLog}
               src={useBaseUrl('/img/team_money_alipay.jpg')}
               width="200"
               height="200"
