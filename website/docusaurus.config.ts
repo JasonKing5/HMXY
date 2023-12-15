@@ -71,6 +71,7 @@ const config: Config = {
           label: '课程',
         },
         {to: '/blog', label: '博客', position: 'left'},
+        // {to: '/showcase', label: '案例', position: 'left'},
         {to: '/team', label: '团队', position: 'left'},
         {
           href: 'https://gitee.com/mayuanwei/harmonyOS_bilibili',
@@ -122,7 +123,7 @@ const config: Config = {
       //     ],
       //   },
       // ],
-      copyright: `Copyright © ${new Date().getFullYear()} 帝心 & 庄生`,
+      copyright: `ICP备案<a href=" https://beian.miit.gov.cn/" target="_blank" style="margin-left: 5px; margin-right: 20px; color: #b5b5b5">豫ICP备2022004823号-1</a> Copyright © ${new Date().getFullYear()} 帝心 & 庄生`,
     },
     prism: {
       theme: prismThemes.github,
