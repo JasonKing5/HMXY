@@ -83,6 +83,7 @@ function ShowcaseTagSelect(
         }}
         onChange={toggleTag}
         checked={selected}
+        style={{display: 'none'}}
         {...rest}
       />
       <label ref={ref} htmlFor={id} className={styles.checkboxLabel}>

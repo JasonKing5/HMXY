@@ -5,12 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import {useState, useMemo, useEffect} from 'react';
+import {useState, useMemo, useEffect, useCallback} from 'react';
 import clsx from 'clsx';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import Translate, {translate} from '@docusaurus/Translate';
 import {useHistory, useLocation} from '@docusaurus/router';
-import {usePluralForm} from '@docusaurus/theme-common';
+// import {usePluralForm} from '@docusaurus/theme-common';
+import { debounce } from 'lodash';
 
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
@@ -133,26 +134,26 @@ function ShowcaseHeader() {
   );
 }
 
-function useSiteCountPlural() {
-  const {selectMessage} = usePluralForm();
-  return (sitesCount: number) =>
-    selectMessage(
-      sitesCount,
-      translate(
-        {
-          id: 'showcase.filters.resultCount',
-          description:
-            'Pluralized label for the number of sites found on the showcase. Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
-          message: '共 1 个案例|共 {sitesCount} 个案例',
-        },
-        {sitesCount},
-      ),
-    );
-}
+// function useSiteCountPlural() {
+//   // const {selectMessage} = usePluralForm();
+//   return (sitesCount: number) =>
+//     selectMessage(
+//       sitesCount,
+//       translate(
+//         {
+//           id: 'showcase.filters.resultCount',
+//           description:
+//             'Pluralized label for the number of sites found on the showcase. Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',
+//           message: '共 1 个案例|共 {sitesCount} 个案例',
+//         },
+//         {sitesCount},
+//       ),
+//     );
+// }
 
 function ShowcaseFilters() {
   const filteredUsers = useFilteredUsers();
-  const siteCountPlural = useSiteCountPlural();
+  // const siteCountPlural = useSiteCountPlural();
   return (
     <section className="container margin-top--l margin-bottom--lg">
       <div className={clsx('margin-bottom--sm', styles.filterCheckbox)}>
@@ -160,7 +161,7 @@ function ShowcaseFilters() {
           <Heading as="h2">
             <Translate id="showcase.filters.title">标签</Translate>
           </Heading>
-          <span>{siteCountPlural(filteredUsers.length)}</span>
+          <span>{`共 ${filteredUsers.length} 个案例`}</span>
         </div>
         <ShowcaseFilterToggle />
       </div>
@@ -211,6 +212,40 @@ const otherUsers = sortedUsers.filter(
   (user) => !user.tags.includes('官方'),
 );
 
+// function SearchBar() {
+//   const history = useHistory();
+//   const location = useLocation();
+//   const [value, setValue] = useState<string | null>(null);
+//   useEffect(() => {
+//     setValue(readSearchName(location.search));
+//   }, [location]);
+//   return (
+//     <div className={styles.searchContainer}>
+//       <input
+//         id="searchbar"
+//         placeholder={'根据案例名称搜索...'}
+//         value={value ?? undefined}
+//         onInput={(e) => {
+//           setValue(e.currentTarget.value);
+//           const newSearch = new URLSearchParams(location.search);
+//           newSearch.delete(SearchNameQueryKey);
+//           if (e.currentTarget.value) {
+//             newSearch.set(SearchNameQueryKey, e.currentTarget.value);
+//           }
+//           history.push({
+//             ...location,
+//             search: newSearch.toString(),
+//             state: prepareUserState(),
+//           });
+//           setTimeout(() => {
+//             document.getElementById('searchbar')?.focus();
+//           }, 0);
+//         }}
+//       />
+//     </div>
+//   );
+// }
+
 function SearchBar() {
   const history = useHistory();
   const location = useLocation();
@@ -218,31 +253,56 @@ function SearchBar() {
   useEffect(() => {
     setValue(readSearchName(location.search));
   }, [location]);
+
+  useEffect(() => {
+    const searchbar = document.getElementById('searchbar');
+    if (searchbar) {
+      searchbar.focus();
+    }
+  }, [value]);
+
+  const updateSearch = useCallback(
+    debounce((searchValue: string) => {
+      const newSearch = new URLSearchParams(location.search);
+      newSearch.delete(SearchNameQueryKey);
+      if (searchValue) {
+        newSearch.set(SearchNameQueryKey, searchValue);
+      }
+      history.push({
+        ...location,
+        search: newSearch.toString(),
+        state: prepareUserState(),
+      });
+    }, 800), //搜索延时
+    [location, history]
+  );
+
+  const handleInput = (e: React.FormEvent<HTMLInputElement>) => {
+    if (window.innerWidth >= 768) { // PC 端
+      setValue(e.currentTarget.value);
+      updateSearch(e.currentTarget.value);
+    } else { // 移动端
+      setValue(e.currentTarget.value);
+      const newSearch = new URLSearchParams(location.search);
+      newSearch.delete(SearchNameQueryKey);
+      if (e.currentTarget.value) {
+        newSearch.set(SearchNameQueryKey, e.currentTarget.value);
+      }
+      history.push({
+        ...location,
+        search: newSearch.toString(),
+        state: prepareUserState(),
+      });
+    }
+  };
+
   return (
     <div className={styles.searchContainer}>
       <input
         id="searchbar"
-        placeholder={translate({
-          message: '根据案例名称搜索...',
-          id: 'showcase.searchBar.placeholder',
-        })}
+        placeholder="根据案例名称搜索..."
         value={value ?? undefined}
-        onInput={(e) => {
-          setValue(e.currentTarget.value);
-          const newSearch = new URLSearchParams(location.search);
-          newSearch.delete(SearchNameQueryKey);
-          if (e.currentTarget.value) {
-            newSearch.set(SearchNameQueryKey, e.currentTarget.value);
-          }
-          history.push({
-            ...location,
-            search: newSearch.toString(),
-            state: prepareUserState(),
-          });
-          setTimeout(() => {
-            document.getElementById('searchbar')?.focus();
-          }, 0);
-        }}
+        onInput={handleInput}
       />
     </div>
   );
@@ -256,7 +316,7 @@ function ShowcaseCards() {
       <section className="margin-top--lg margin-bottom--xl">
         <div className="container padding-vert--md text--center">
           <Heading as="h2">
-            <Translate id="showcase.usersList.noResult">无结果</Translate>
+            <Translate id="showcase.usersList.noResult">😒 找不到结果，请缩短搜索词</Translate>
           </Heading>
         </div>
       </section>

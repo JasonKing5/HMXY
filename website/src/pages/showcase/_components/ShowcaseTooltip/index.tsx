@@ -7,7 +7,7 @@
 
 import React, {useEffect, useState, useRef} from 'react';
 import ReactDOM from 'react-dom';
-// import {usePopper} from 'react-popper';
+import {usePopper} from 'react-popper';
 import styles from './styles.module.css';
 
 interface Props {
@@ -30,26 +30,26 @@ export default function Tooltip({
   const [popperElement, setPopperElement] = useState<HTMLElement | null>(null);
   const [arrowElement, setArrowElement] = useState<HTMLElement | null>(null);
   const [container, setContainer] = useState<Element | null>(null);
-  // const {styles: popperStyles, attributes} = usePopper(
-  //   referenceElement,
-  //   popperElement,
-  //   {
-  //     modifiers: [
-  //       {
-  //         name: 'arrow',
-  //         options: {
-  //           element: arrowElement,
-  //         },
-  //       },
-  //       {
-  //         name: 'offset',
-  //         options: {
-  //           offset: [0, 8],
-  //         },
-  //       },
-  //     ],
-  //   },
-  // );
+  const {styles: popperStyles, attributes} = usePopper(
+    referenceElement,
+    popperElement,
+    {
+      modifiers: [
+        {
+          name: 'arrow',
+          options: {
+            element: arrowElement,
+          },
+        },
+        {
+          name: 'offset',
+          options: {
+            offset: [0, 8],
+          },
+        },
+      ],
+    },
+  );
 
   const timeout = useRef<number | null>(null);
   const tooltipId = `${id}_tooltip`;
@@ -127,14 +127,14 @@ export default function Tooltip({
                 role="tooltip"
                 ref={setPopperElement}
                 className={styles.tooltip}
-                // style={popperStyles.popper}
-                // {...attributes.popper}
+                style={popperStyles.popper}
+                {...attributes.popper}
                 >
                 {text}
                 <span
                   ref={setArrowElement}
                   className={styles.tooltipArrow}
-                  // style={popperStyles.arrow}
+                  style={popperStyles.arrow}
                 />
               </div>
             ),

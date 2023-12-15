@@ -66,6 +66,7 @@ export default function ShowcaseFilterToggle(): JSX.Element {
           }
         }}
         checked={operator}
+        style={{display: 'none'}}
       />
       {/* <label htmlFor={id} className={clsx(styles.checkboxLabel, 'shadow--md')}>
         <span className={styles.checkboxLabelOr}>OR</span>

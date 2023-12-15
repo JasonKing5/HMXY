@@ -59,10 +59,10 @@ const config: Config = {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'HarmonyOS 4.0',
-      logo: {
-        alt: 'HarmonyOS 4.0 Logo',
-        src: 'img/logo.png',
-      },
+      // logo: {
+      //   alt: 'HarmonyOS 4.0 Logo',
+      //   src: 'img/logo.png',
+      // },
       items: [
         {
           type: 'docSidebar',

@@ -26,7 +26,7 @@ function HomepageHeader() {
           <span className={styles.heroTitleTextHtml} >新版本鸿蒙 HarmonyOS4.0 教程</span>
           <br />
         </Heading>
-        {/* <p className="hero__subtitle">帝心 & 庄生</p> */}
+        <p className="hero__subtitle">视频教程配套学习交流网站</p>
         {/* <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -80,7 +80,7 @@ function Resources() {
     border: "1px solid #e5e5e5",
     borderRadius: "4px",
     fontSize: "16px",
-    backgroundColor: "#dfdfdf",
+    backgroundColor: "rgb(152 173 205)",
     cursor: 'pointer',
   }
   const buttonSelectedStyle = {
@@ -95,7 +95,7 @@ function Resources() {
     }
   }
   const labelStyle = {
-    backgroundColor: '#94e3ff',
+    backgroundColor: 'rgb(37 194 160)',
     padding: '0 5px',
     display: 'inline-block',
   }
@@ -124,14 +124,14 @@ function Resources() {
         <div className='qq-chat-tabs'>
           <div className="tab-header">
             <span style={labelStyle}>QQ群</span>
-            <button style={buttonStl('qq', 0)} onClick={() => changeQQTab(0)}>1 群</button>
-            <button style={buttonStl('qq', 1)} onClick={() => changeQQTab(1)}>2 群</button>
             <button style={buttonStl('qq', 2)} onClick={() => changeQQTab(2)}>3 群</button>
+            <button style={buttonStl('qq', 1)} onClick={() => changeQQTab(1)}>2 群</button>
+            <button style={buttonStl('qq', 0)} onClick={() => changeQQTab(0)}>1 群</button>
           </div>
           <div className="tab-content">
-            {activeQQTab === 0 && <div>{imageContent({src: '/img/index_qq_1.jpg', })}</div>}
-            {activeQQTab === 1 && <div>{imageContent({src: '/img/index_qq_2.jpg', })}</div>}
             {activeQQTab === 2 && <div>{imageContent({src: '/img/index_qq_3.jpg', })}</div>}
+            {activeQQTab === 1 && <div>{imageContent({src: '/img/index_qq_2.jpg', })}</div>}
+            {activeQQTab === 0 && <div>{imageContent({src: '/img/index_qq_1.jpg', })}</div>}
           </div>
         </div>
       </div>
