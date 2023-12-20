@@ -15,7 +15,7 @@ const FeatureList: FeatureItem[] = [
     img: '/img/index_intro_1.png',
     description: (
       <>
-        新版本 HarmonyOS4.0 教程。
+        新版本 HarmonyOS4.0 教程
       </>
     ),
   },
@@ -24,7 +24,7 @@ const FeatureList: FeatureItem[] = [
     img: '/img/index_intro_2.png',
     description: (
       <>
-        零基础保姆级教程，新手轻松上手。
+        零基础保姆级教程，新手轻松上手
       </>
     ),
   },
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
     img: '/img/index_intro_3.png',
     description: (
       <>
-        华为 HarmonyOS 从基础入门到实战开发。
+        华为 HarmonyOS 从基础入门到实战开发
       </>
     ),
   },

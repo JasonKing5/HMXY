@@ -50,7 +50,7 @@ const Users: User[] = [
   {
     title: '按钮组件',
     description: '基础组件之按钮组件',
-    preview: '/img/showcase/1.png',
+    preview: '/img/showcase/button.png',
     website: '#',
     source: 'https://gitee.com/mayuanwei/harmonyOS_bilibili/blob/master/Components/entry/src/main/ets/pages/basic/Button.ets',
     tags: ['官方', '开源'],
@@ -59,7 +59,7 @@ const Users: User[] = [
   {
     title: '复选框组件',
     description: '基础组件之复选框组件',
-    preview: '/img/showcase/2.png',
+    preview: '/img/showcase/checkbox.png',
     website: '#',
     source: 'https://gitee.com/mayuanwei/harmonyOS_bilibili/blob/master/Components/entry/src/main/ets/pages/basic/Checkbox.ets',
     tags: ['官方', '开源'],

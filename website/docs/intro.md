@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # 课程由来
 
-帝心老师+庄生老师
+## 帝心老师+庄生老师
 
 ![微信公众号](./img/docs_intro_wegzh.png)
 ![2.0 课程](./img/2.png)
@@ -15,9 +15,7 @@ sidebar_position: 1
 
 ![](./img/5.png)
 
----
-
-课程特色
+## 课程特色
 
 - 新版本 HarmonyOS4.0 教程
 - 零基础保姆级教程
@@ -26,9 +24,7 @@ sidebar_position: 1
 - HarmonyOS 布道师
 - ...
 
----
-
-课程大纲
+## 课程大纲
 
 1. 入门
 2. 开发

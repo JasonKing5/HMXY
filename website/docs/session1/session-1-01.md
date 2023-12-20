@@ -4,7 +4,7 @@ sidebar_position: 101
 
 # 01：HarmonyOS4.0 应用开发教程
 
-课程特色
+## 课程特色
 
 - 全网最新 HarmonyOS4.0 教程
 - 零基础保姆级教程
@@ -15,7 +15,7 @@ sidebar_position: 101
 
 ---
 
-课程大纲
+## 课程大纲
 
 1. 入门
 2. 开发

@@ -11,8 +11,19 @@
 }
 
 .videoIframe {
-  width: 580px;
-  height: 326px;
+  width: 1194px;
+  height: 672px;
+}
+
+@media screen and (max-width: 1466px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+
+  .videoIframe {
+    width: 878px;
+    height: 494px;
+  }
 }
 
 @media screen and (max-width: 996px) {
@@ -337,4 +348,30 @@ html[data-theme="dark"] .topBannerTitleText {
 }
 
 .team-container {
+}
+
+.resources {
+  /* max-width: var(--ifm-container-width-xl); */
+  padding: 0 14%;
+
+  .desc {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .resourceContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .resources {
+    /* max-width: var(--ifm-container-width-xl); */
+  }
+}
+
+.weChatTabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }

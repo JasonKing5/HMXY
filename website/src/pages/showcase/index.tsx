@@ -36,11 +36,11 @@ import ShowcaseTooltip from './_components/ShowcaseTooltip';
 
 import styles from './styles.module.css';
 
-const TITLE = '鸿蒙 HarmonyOS 4.0 开发案例';
+const TITLE = '鸿蒙 HarmonyOS 4.0 开发案例 (待开发，欢迎一起参与，有意者群里联系）';
 const DESCRIPTION = translate({
   message: '使用鸿蒙 HarmonyOS 4.0 开发的案例列表',
 });
-const SUBMIT_URL = 'https://github.com/facebook/docusaurus/discussions/7826';
+const SUBMIT_URL = 'https://hm.codefe.cn/showcase';
 
 type UserState = {
   scrollTopPosition: number;
@@ -126,9 +126,7 @@ function ShowcaseHeader() {
       <Heading as="h1">{TITLE}</Heading>
       <p>{DESCRIPTION}</p>
       <Link className="button button--primary" to={SUBMIT_URL}>
-        <Translate id="showcase.header.button">
-          🙏 请添加你的案例
-        </Translate>
+        🙏 请添加你的案例
       </Link>
     </section>
   );

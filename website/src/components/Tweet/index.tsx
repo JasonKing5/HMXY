@@ -17,6 +17,7 @@ export interface Props {
   name: string;
   content: string;
   date: string;
+  url: string;
 }
 
 export default function Tweet({
@@ -24,6 +25,7 @@ export default function Tweet({
   name,
   content,
   date,
+  url,
 }: Props): JSX.Element {
   return (
     <div className={clsx('card', styles.tweet)}>
@@ -39,7 +41,7 @@ export default function Tweet({
             loading="lazy"
           />
           <div className={clsx('avatar__intro', styles.tweetMeta)}>
-            <strong className="avatar__name">{name}</strong>
+            <a className="avatar__name" href={url} target='_blank'>{name}</a>
           </div>
         </div>
       </div>

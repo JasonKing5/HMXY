@@ -71,8 +71,14 @@ const config: Config = {
           label: '课程',
         },
         {to: '/blog', label: '博客', position: 'left'},
-        // {to: '/showcase', label: '案例', position: 'left'},
-        {to: '/team', label: '团队', position: 'left'},
+        {to: '/showcase', label: '案例', position: 'left'},
+        {
+          type: 'docSidebar',
+          position: 'left',
+          sidebarId: 'community',
+          label: '社区',
+        },
+        // {to: '/team', label: '团队', position: 'left'},
         {
           href: 'https://gitee.com/mayuanwei/harmonyOS_bilibili',
           label: 'Gitee',
