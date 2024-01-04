@@ -8,9 +8,10 @@
 .history
 
 node_modules
-server/node_modules
 .yarn
 package-lock.json
+
+src/config/agconnect-services.js
 
 .eslintcache
 

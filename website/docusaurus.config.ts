@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'HarmonyOS 4.0',
-  tagline: 'HarmonyOS 4.0',
+  title: '鸿蒙学苑',
+  tagline: '鸿蒙学苑',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -28,6 +28,13 @@ const config: Config = {
     defaultLocale: 'zh',
     locales: ['zh'],
   },
+
+  // scripts: [
+  //   {
+  //     src: './src/pages/hw_agc.js',
+  //     async: true,
+  //   },
+  // ],
 
   presets: [
     [
@@ -58,9 +65,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'HarmonyOS 4.0',
+      title: '鸿蒙学苑',
       // logo: {
-      //   alt: 'HarmonyOS 4.0 Logo',
+      //   alt: '鸿蒙学苑 Logo',
       //   src: 'img/logo.png',
       // },
       items: [
@@ -84,6 +91,12 @@ const config: Config = {
           label: 'Gitee',
           position: 'right',
         },
+        // {
+        //   href: '/login',
+        //   // label: '登录',
+        //   html: '<div id="logInOut">登录<script>const hasToken = localStorage.getItem("hmosxy_token"); const logInOutDom = document.getElementById("logInOut"); logInOutDom.innerHTML = "退出" logInOutDom.addEventListener("click", function() { logOut() console.log("hello"); alert("hello") })</script></div>',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {

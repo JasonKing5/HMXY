@@ -7,6 +7,20 @@ slug: /community/dev
 
 # 网站规划
 
+## 技术栈
+
+### 前端
+
+- React.js 前端开发框架
+- MarkDown 静态文档页面编写
+
+### 后端
+
+- Node.js 后端开发语言
+- Nest.js 后端 HTTP 服务框架
+- MongoDB 数据库
+- TypeORM 连接数据库的三方库
+
 ## 已有功能
 
 - ✅ [网站首页](https://hm.codefe.cn/)

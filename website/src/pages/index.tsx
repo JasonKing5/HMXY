@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import useBaseUrl, {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
@@ -9,6 +10,8 @@ import Tweet from '@site/src/components/Tweet';
 import React, { useState } from 'react'
 
 import styles from './index.module.css';
+import AGCServer from '../server'
+import { hasToken } from '../server/auth';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -23,7 +26,7 @@ function HomepageHeader() {
             width="200"
             height="200"
           />
-          <span className={styles.heroTitleTextHtml} >新版本鸿蒙 HarmonyOS4.0 教程</span>
+          <span className={styles.heroTitleTextHtml} >鸿蒙学苑</span>
           <br />
         </Heading>
         <p className="hero__subtitle">视频教程配套学习交流网站</p>
@@ -48,6 +51,7 @@ function imageContent({src, alt = '', width = '200', height = '200'}) {
       // }}
       className={imageActive ? 'image-content-active' : 'image-content'}
       style={{position: 'relative'}}
+      key={src}
     >
       <img
         alt={alt}
@@ -61,8 +65,16 @@ function imageContent({src, alt = '', width = '200', height = '200'}) {
   )
 }
 
-function VideoContainer() {
+const VideoContainer = () => {
   const [qqIndex, setQQIndex] = React.useState(0)
+  
+  
+  AGCServer.Auth.getCurrentUser((code ,res) => {
+    console.log('getCurrentUser():', code, res)
+  })
+  
+  // const code = await AGCServer.Auth.isLogin()
+  // console.log('isLogin():', code)
   return (
     <div className="container text--center margin-top--xl">
       <div className="row">
@@ -216,7 +228,7 @@ function Resources() {
               <div className="tab-header">
                 <strong style={{marginRight: '5px', fontSize: '1.2rem'}}>微信群助手</strong>
                 {wechats.map(wechat => (
-                  <button style={buttonStl('wechat', wechat.id)} onClick={() => changeWechatTab(wechat.id)}>{wechat.name}</button>
+                  <button key={wechat.id} style={buttonStl('wechat', wechat.id)} onClick={() => changeWechatTab(wechat.id)}>{wechat.name}</button>
                 ))}
               </div>
               <div className="tab-content">
@@ -231,7 +243,7 @@ function Resources() {
               <div className="tab-header">
                 <strong style={{marginRight: '5px', fontSize: '1.2rem'}}>QQ群</strong>
                 {qqs.map(qq => (
-                  <button style={buttonStl('qq', qq.id)} onClick={() => changeQQTab(qq.id)}>{qq.name}</button>
+                  <button key={qq.id} style={buttonStl('qq', qq.id)} onClick={() => changeQQTab(qq.id)}>{qq.name}</button>
                 ))}
               </div>
               <div className="tab-content">
@@ -257,12 +269,26 @@ function Resources() {
 }
 
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const {siteConfig} = useDocusaurusContext();
+
+  // React.useEffect(() => {
+  //   const logInOutDom = document.getElementById('logInOut');
+  //   if (hasToken()) {
+  //     logInOutDom.innerHTML = '退出'
+  //     logInOutDom.addEventListener('click', function() {
+  //       logOut()
+  //       console.log('hello')
+  //     })
+  //     // logInOutDom.parentElement.attributes['href'] = '/login'
+  //   } else {
+  //     logInOutDom.innerHTML = '登录'
+  //   }
+  // })
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} 首页`}
+      description="鸿蒙学苑">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

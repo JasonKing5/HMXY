@@ -6,12 +6,32 @@
  */
 
 import {useState, useMemo, useEffect, useCallback} from 'react';
+import type { NotificationPlacement } from 'antd/es/notification/interface';
 import clsx from 'clsx';
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import Translate, {translate} from '@docusaurus/Translate';
 import {useHistory, useLocation} from '@docusaurus/router';
 // import {usePluralForm} from '@docusaurus/theme-common';
 import { debounce } from 'lodash';
+import { 
+  Button, 
+  Modal, 
+  notification, 
+  Cascader,
+  Checkbox,
+  ColorPicker,
+  DatePicker,
+  Form,
+  Input,
+  InputNumber,
+  Radio,
+  Select,
+  Slider,
+  Switch,
+  TreeSelect,
+  Upload, 
+} from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
 
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
@@ -35,6 +55,17 @@ import ShowcaseCard from './_components/ShowcaseCard';
 import ShowcaseTooltip from './_components/ShowcaseTooltip';
 
 import styles from './styles.module.css';
+import { hasToken } from '@site/src/server/auth';
+import AGCServer from '../../server'
+
+const { TextArea } = Input;
+
+const normFile = (e: any) => {
+  if (Array.isArray(e)) {
+    return e;
+  }
+  return e?.fileList;
+};
 
 const TITLE = '鸿蒙 HarmonyOS 4.0 开发案例 (待开发，欢迎一起参与，有意者群里联系）';
 const DESCRIPTION = translate({
@@ -100,7 +131,7 @@ function filterUsers(
 }
 
 function useFilteredUsers() {
-  const location = useLocation<UserState>();
+  const location = useLocation();
   const [operator, setOperator] = useState<Operator>('OR');
   // On SSR / first mount (hydration) no tag is selected
   const [selectedTags, setSelectedTags] = useState<TagType[]>([]);
@@ -120,14 +151,17 @@ function useFilteredUsers() {
   );
 }
 
-function ShowcaseHeader() {
+function ShowcaseHeader({showModal}) {
   return (
     <section className="margin-top--lg margin-bottom--lg text--center">
       <Heading as="h1">{TITLE}</Heading>
       <p>{DESCRIPTION}</p>
-      <Link className="button button--primary" to={SUBMIT_URL}>
-        🙏 请添加你的案例
-      </Link>
+      {/* <Link className="button button--primary" to={hasToken() ? SUBMIT_URL : '/login'}>
+        🙏 请添加您的案例
+      </Link> */}
+      <Button type="primary" onClick={showModal}>
+      🙏 请添加您的案例
+      </Button>
     </section>
   );
 }
@@ -379,10 +413,83 @@ function ShowcaseCards() {
 }
 
 export default function Showcase(): JSX.Element {
+  const [open, setOpen] = useState(false);
+  const [confirmLoading, setConfirmLoading] = useState(false);
+  const [allValues, setAllValues] = useState({})
+  
+  const [api, contextHolder] = notification.useNotification();
+
+  const showModal = () => {
+    if (!hasToken()) {
+
+      const openNotification = (placement: NotificationPlacement) => {
+          api.info({
+            message: `未登录`,
+            description:
+              '当前尚未登陆，请先登陆系统',
+            placement,
+          });
+        };
+        openNotification('top');
+        setTimeout(() => {
+          window.location.href = '/login'
+        }, 500);
+      return;
+    }
+    setOpen(true);
+  };
+
+  const handleOk = () => {
+    setConfirmLoading(true);
+    // onFinish(allValues)
+    console.log('handleOk() allvalues:', allValues)
+    setTimeout(() => {
+      setOpen(false);
+      setConfirmLoading(false);
+    }, 2000);
+  };
+
+  const handleCancel = () => {
+    console.log('Clicked cancel button');
+    setOpen(false);
+  };
+
+  const onFinish = (values: any) => {
+    console.log('onFinish() values: ', values);
+    setConfirmLoading(true);
+    AGCServer.ShowCase.createShowCase( (code, res) => {
+      console.log("pages/login.tsx => createCase() code:", code, 'res:', res);
+      setOpen(false);
+      setConfirmLoading(false);
+      if (code === 0) {
+        const openNotification = (placement: NotificationPlacement) => {
+          api.success({
+            message: `添加成功`,
+            description:
+              '恭喜您，添加案例成功',
+            placement,
+          });
+        };
+        openNotification('top');
+      } else {
+        const openNotification = (placement: NotificationPlacement) => {
+          api.error({
+            message: `添加失败`,
+            description:
+              `很抱歉，添加案例失败，${res}！`,
+            placement,
+          });
+        };
+        openNotification('top')
+      }
+    })
+  };
+
   return (
     <Layout title={TITLE} description={DESCRIPTION}>
       <main className="margin-vert--lg">
-        <ShowcaseHeader />
+        {contextHolder}
+        <ShowcaseHeader showModal={showModal}/>
         <ShowcaseFilters />
         <div
           style={{display: 'flex', marginLeft: 'auto'}}
@@ -391,6 +498,63 @@ export default function Showcase(): JSX.Element {
         </div>
         <ShowcaseCards />
       </main>
+      {/* <Button type="primary" onClick={showModal}>
+        Open Modal with async logic
+      </Button> */}
+      <Modal
+        title="添加案例"
+        open={open}
+        // onOk={handleOk}
+        confirmLoading={confirmLoading}
+        onCancel={handleCancel}
+        okText={'提交'}
+        cancelText={'取消'}
+        destroyOnClose
+        okButtonProps={{
+          htmlType: 'submit',
+          form: 'form',
+        }}
+      >
+        <Form
+          labelCol={{ span: 4 }}
+          wrapperCol={{ span: 19 }}
+          onFinish={onFinish}
+          name='form'
+          layout="horizontal"
+          style={{ maxWidth: 600, marginTop: '2rem' }}
+          onValuesChange={(changedValues, allValues) => {
+            console.log("allValues:", allValues)
+            setAllValues(allValues)
+          }}
+        >
+          <Form.Item label="案例名称" name='name' rules={[{ required: true, message: '请填写案例名称！' }, { type: 'string', min: 2, message: '案例名称不能少于2个字符！' }]}>
+            <Input placeholder='案例名称'/>
+          </Form.Item>
+          <Form.Item label="案例源码" name='source' rules={[
+            // { required: true, message: '请填写案例源码地址！' }, 
+            { type: 'url', message: '案例源码格式不正确！' }
+            ]}>
+            <Input placeholder='案例源码地址'/>
+          </Form.Item>
+          <Form.Item label="案例标签" name="tags">
+            <Select defaultActiveFirstOption defaultValue={'demo'}>
+              <Select.Option value="demo">Demo</Select.Option>
+              <Select.Option value="demo1">Demo1</Select.Option>
+            </Select>
+          </Form.Item>
+          <Form.Item label="案例描述" name='description' >
+            <TextArea rows={4} placeholder='案例描述信息'/>
+          </Form.Item>
+          <Form.Item label="案例效果" valuePropName="fileList" getValueFromEvent={normFile} name="snapshot">
+            <Upload action="/upload.do" listType="picture-card">
+              <div>
+                <PlusOutlined />
+                <div style={{ marginTop: 8 }}>案例截图</div>
+              </div>
+            </Upload>
+          </Form.Item>
+        </Form>
+      </Modal>
     </Layout>
   );
 }
