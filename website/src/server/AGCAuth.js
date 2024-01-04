@@ -25,12 +25,12 @@ export const createPhoneVerifyCode = (props, callback) => {
   // })
   //   .then((ret) => {
   //     //验证码申请成功
-  //     console.log("utils/AGCAuth.js => createPhoneVerifyCode() success:", ret);
+  //     console.log("server/AGCAuth.js => createPhoneVerifyCode() success:", ret);
   //     callback(AUTH_CODE.Successed, ret);
   //   })
   //   .catch((error) => {
   //     //验证码申请失败
-  //     console.log("utils/AGCAuth.js => createPhoneVerifyCode() error:", error);
+  //     console.log("server/AGCAuth.js => createPhoneVerifyCode() error:", error);
   //     callback(AUTH_CODE.Error, error);
   //   });
 
@@ -45,12 +45,12 @@ export const createPhoneVerifyCode = (props, callback) => {
     )
     .then((ret) => {
       //验证码申请成功
-      console.log("utils/AGCAuth.js => createPhoneVerifyCode() success:", ret);
+      console.log("server/AGCAuth.js => createPhoneVerifyCode() success:", ret);
       callback(AUTH_CODE.Successed, ret);
     })
     .catch((error) => {
       //验证码申请失败
-      console.log("utils/AGCAuth.js => createPhoneVerifyCode() error:", error);
+      console.log("server/AGCAuth.js => createPhoneVerifyCode() error:", error);
       callback(AUTH_CODE.Error, error);
     });
 };
@@ -68,12 +68,12 @@ export const createEmailVerifyCode = (props, callback) => {
     ) //发送间隔时间
     .then((ret) => {
       //验证码申请成功
-      console.log("utils/AGCAuth.js => createEmailVerifyCode() success:", ret);
+      console.log("server/AGCAuth.js => createEmailVerifyCode() success:", ret);
       callback(AUTH_CODE.Successed, ret);
     })
     .catch((error) => {
       //验证码申请失败
-      console.log("utils/AGCAuth.js => createEmailVerifyCode() error:", error);
+      console.log("server/AGCAuth.js => createEmailVerifyCode() error:", error);
       callback(AUTH_CODE.Error, error);
     });
 };
@@ -92,7 +92,7 @@ export const createPhoneUser = (props, callback) => {
     verifyCode
   );
   console.log(
-    "utils/AGCAuth.js => createPhoneUser() props:",
+    "server/AGCAuth.js => createPhoneUser() props:",
     countryCode,
     phoneNumber,
     password,
@@ -103,13 +103,13 @@ export const createPhoneUser = (props, callback) => {
     .createPhoneUser(phoneUser)
     .then((user) => {
       //创建用户成功
-      console.log("utils/AGCAuth.js => createPhoneUser() success:", user);
+      console.log("server/AGCAuth.js => createPhoneUser() success:", user);
       callback(AUTH_CODE.Successed, user);
     })
     .catch((error) => {
       //创建用户失败
-      // utils/AGCAuth.js => createPhoneUser() error: Error: Password strength is too low, please re-enter
-      console.log("utils/AGCAuth.js => createPhoneUser() error:", error);
+      // server/AGCAuth.js => createPhoneUser() error: Error: Password strength is too low, please re-enter
+      console.log("server/AGCAuth.js => createPhoneUser() error:", error);
       callback(AUTH_CODE.Error, error);
     });
 };
@@ -120,7 +120,7 @@ export const createEmailUser = (props, callback) => {
   let emailUser = new agconnect.auth.EmailUser(emailStr, password, verifyCode);
 
   console.log(
-    "utils/AGCAuth.js => createEmailUser() props:",
+    "server/AGCAuth.js => createEmailUser() props:",
     emailStr,
     password,
     verifyCode
@@ -131,12 +131,12 @@ export const createEmailUser = (props, callback) => {
     .createEmailUser(emailUser)
     .then((user) => {
       //创建帐号成功后，默认已登录
-      console.log("utils/AGCAuth.js => createEmailUser() success:", user);
+      console.log("server/AGCAuth.js => createEmailUser() success:", user);
       callback(AUTH_CODE.Successed, user);
     })
     .catch((error) => {
       //创建用户失败
-      console.log("utils/AGCAuth.js => createEmailUser() error:", error);
+      console.log("server/AGCAuth.js => createEmailUser() error:", error);
       callback(AUTH_CODE.Error, error);
     });
 };
@@ -147,7 +147,7 @@ export const getCurrentUser = (callback) => {
     .getCurrentUser()
     .then((user) => {
       //获取用户成功
-      console.log("utils/AGCAuth.js => getCurrentUser() success:", user);
+      console.log("server/AGCAuth.js => getCurrentUser() success:", user);
       if (!!user) {
         callback(AUTH_CODE.Successed, user);
       } else {
@@ -156,7 +156,7 @@ export const getCurrentUser = (callback) => {
     })
     .catch((error) => {
       //获取用户失败
-      console.log("utils/AGCAuth.js => getCurrentUser() error:", error);
+      console.log("server/AGCAuth.js => getCurrentUser() error:", error);
       callback(AUTH_CODE.Error, error);
     });
 };
@@ -165,7 +165,7 @@ export const isLogin = async () => {
   try {
     const user = await agconnect.auth().getCurrentUser();
     //获取用户成功
-    console.log("utils/AGCAuth.js => getCurrentUser() success:", user);
+    console.log("server/AGCAuth.js => getCurrentUser() success:", user);
     if (!!user) {
       return { code: AUTH_CODE.Successed, user };
     } else {
@@ -173,7 +173,7 @@ export const isLogin = async () => {
     }
   } catch (error) {
     //获取用户失败
-    console.log("utils/AGCAuth.js => getCurrentUser() error:", error);
+    console.log("server/AGCAuth.js => getCurrentUser() error:", error);
     return { code: AUTH_CODE.Error, user };
   }
 };
@@ -190,12 +190,12 @@ export const phoneNumberLogin = (props, callback) => {
     .signIn(credential)
     .then((user) => {
       //登录成功
-      console.log("utils/AGCAuth.js => phoneNumberLogin() success:", user);
+      console.log("server/AGCAuth.js => phoneNumberLogin() success:", user);
       callback(AUTH_CODE.Successed, user);
     })
     .catch((error) => {
       //登录失败
-      console.log("utils/AGCAuth.js => phoneNumberLogin() error:", error);
+      console.log("server/AGCAuth.js => phoneNumberLogin() error:", error);
       callback(AUTH_CODE.Error, error);
     });
 };
@@ -211,12 +211,12 @@ export const emailLogin = (props, callback) => {
     .signIn(credential)
     .then((user) => {
       //登录成功
-      console.log("utils/AGCAuth.js => emailLogin() success:", user);
+      console.log("server/AGCAuth.js => emailLogin() success:", user);
       callback(AUTH_CODE.Successed, user);
     })
     .catch((error) => {
       //登录失败
-      console.log("utils/AGCAuth.js => emailLogin() error:", error);
+      console.log("server/AGCAuth.js => emailLogin() error:", error);
       callback(AUTH_CODE.Error, error);
     });
 };
@@ -235,7 +235,7 @@ export const phoneNumberWithVerifyCodeLogin = (props, callback) => {
     .then((user) => {
       //登录成功
       console.log(
-        "utils/AGCAuth.js => phoneNumberWithVerifyCodeLogin() success:",
+        "server/AGCAuth.js => phoneNumberWithVerifyCodeLogin() success:",
         user
       );
       callback(AUTH_CODE.Successed, user);
@@ -243,7 +243,7 @@ export const phoneNumberWithVerifyCodeLogin = (props, callback) => {
     .catch((error) => {
       //登录失败
       console.log(
-        "utils/AGCAuth.js => phoneNumberWithVerifyCodeLogin() error:",
+        "server/AGCAuth.js => phoneNumberWithVerifyCodeLogin() error:",
         error
       );
       callback(AUTH_CODE.Error, error);
@@ -263,7 +263,7 @@ export const emailWithVerifyCodeLogin = (props, callback) => {
     .then((user) => {
       //登录成功
       console.log(
-        "utils/AGCAuth.js => emailWithVerifyCodeLogin() success:",
+        "server/AGCAuth.js => emailWithVerifyCodeLogin() success:",
         user
       );
       callback(AUTH_CODE.Successed, user);
@@ -271,7 +271,7 @@ export const emailWithVerifyCodeLogin = (props, callback) => {
     .catch((error) => {
       //登录失败
       console.log(
-        "utils/AGCAuth.js => emailWithVerifyCodeLogin() error:",
+        "server/AGCAuth.js => emailWithVerifyCodeLogin() error:",
         error
       );
       callback(AUTH_CODE.Error, error);
@@ -284,13 +284,13 @@ export const logOut = () => {
     .signOut()
     .then(() => {
       //登出成功
-      console.log("utils/AGCAuth.js => logOut() success:");
+      console.log("server/AGCAuth.js => logOut() success:");
       removeToken();
       removeUser();
     })
     .catch((error) => {
       //登出失败
-      console.log("utils/AGCAuth.js => logOut() error:", error);
+      console.log("server/AGCAuth.js => logOut() error:", error);
     });
 };
 
