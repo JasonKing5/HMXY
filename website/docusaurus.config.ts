@@ -65,10 +65,15 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: '鸿蒙学苑',
+      // title: '鸿蒙学苑',
+      logo: {
+        alt: '鸿蒙学苑 Logo',
+        src: 'img/logotext2.png',
+      },
+      // title: '鸿蒙学苑',
       // logo: {
       //   alt: '鸿蒙学苑 Logo',
-      //   src: 'img/logo.png',
+      //   src: 'img/logo.svg',
       // },
       items: [
         {
@@ -78,7 +83,7 @@ const config: Config = {
           label: '课程',
         },
         {to: '/blog', label: '博客', position: 'left'},
-        {to: '/showcase', label: '案例', position: 'left'},
+        // {to: '/showcase', label: '案例', position: 'left'},
         {
           type: 'docSidebar',
           position: 'left',
@@ -142,7 +147,7 @@ const config: Config = {
       //     ],
       //   },
       // ],
-      copyright: `ICP备案<a href=" https://beian.miit.gov.cn/" target="_blank" style="margin-left: 5px; margin-right: 20px; color: #b5b5b5">豫ICP备2022004823号-1</a> Copyright © ${new Date().getFullYear()} 帝心 & 庄生`,
+      copyright: `ICP备案<a href=" https://beian.miit.gov.cn/" target="_blank" style="margin-left: 5px; margin-right: 20px; color: #b5b5b5">豫ICP备2022004823号-1</a> Copyright © ${new Date().getFullYear()} 鸿蒙学苑`,
     },
     prism: {
       theme: prismThemes.github,

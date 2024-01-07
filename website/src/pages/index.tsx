@@ -19,13 +19,13 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          <img
+          {/* <img
             alt={'Docusaurus with Keytar'}
             className={styles.heroLogo}
             src={useBaseUrl('/img/index_title.png')}
             width="200"
             height="200"
-          />
+          /> */}
           <span className={styles.heroTitleTextHtml} >鸿蒙学苑</span>
           <br />
         </Heading>
