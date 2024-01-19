@@ -432,7 +432,8 @@ export default function Showcase(): JSX.Element {
         };
         openNotification('top');
         setTimeout(() => {
-          window.location.href = '/login'
+          // todo
+          // window.location.href = '/login'
         }, 500);
       return;
     }

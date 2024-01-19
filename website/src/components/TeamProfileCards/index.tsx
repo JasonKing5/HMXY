@@ -102,21 +102,21 @@ export function ActiveTeamRow(): JSX.Element {
         </div>
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="庄生"
-        bilibiliUrl="https://space.bilibili.com/286327785"
-        avatarUrl="https://foruda.gitee.com/avatar/1676974431817687676/1529009_josoncoder_1578953753.png!avatar200"
-        giteeUrl="https://gitee.com/josonking">
-        <div>
-          Web全栈开发工程师 🧐 钟爱 React 技术栈，对底层技术和浏览器原理略有研究 👋 喜欢钻研新技术 🔥 
-        </div>
-      </TeamProfileCardCol>
-      <TeamProfileCardCol
         name="漆海标"
         bilibiliUrl="https://space.bilibili.com/349810785"
         avatarUrl="https://ai1123.com/wp-content/uploads/2024/01/%E6%B5%B7%E5%AD%90%E8%87%AA%E6%8B%9F%E5%A4%B4%E5%83%8F2.jpg"
       >
         <div>
           喜欢哲学，前瞻未来。对自组织有所研究，与共开放社区发起人。在B站学鸿蒙课，结识为爱发电的帝心老师。与各位一起打造易交易平台。为数字时代探索经济模型而奋斗。
+        </div>
+      </TeamProfileCardCol>
+      <TeamProfileCardCol
+        name="庄生"
+        bilibiliUrl="https://space.bilibili.com/286327785"
+        avatarUrl="https://foruda.gitee.com/avatar/1676974431817687676/1529009_josoncoder_1578953753.png!avatar200"
+        giteeUrl="https://gitee.com/josonking">
+        <div>
+          Web全栈开发工程师 🧐 钟爱 React 技术栈，对底层技术和浏览器原理略有研究 👋 喜欢钻研新技术 🔥 
         </div>
       </TeamProfileCardCol>
     </div>

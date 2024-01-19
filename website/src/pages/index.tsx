@@ -66,12 +66,12 @@ function imageContent({src, alt = '', width = '200', height = '200'}) {
 }
 
 const VideoContainer = () => {
-  const [qqIndex, setQQIndex] = React.useState(0)
-  
-  
-  AGCServer.Auth.getCurrentUser((code ,res) => {
-    console.log('getCurrentUser():', code, res)
-  })
+  // const [qqIndex, setQQIndex] = React.useState(0)
+
+
+  // AGCServer.Auth.getCurrentUser((code ,res) => {
+  //   console.log('getCurrentUser():', code, res)
+  // })
   
   // const code = await AGCServer.Auth.isLogin()
   // console.log('isLogin():', code)

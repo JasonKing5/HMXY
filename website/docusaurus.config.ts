@@ -26,7 +26,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh',
-    locales: ['zh'],
+    locales: ['zh', 'en'],
   },
 
   // scripts: [
@@ -87,10 +87,14 @@ const config: Config = {
         {
           type: 'docSidebar',
           position: 'left',
-          sidebarId: 'community',
+          sidebarId: 'communitySidebar',
           label: '社区',
         },
         // {to: '/team', label: '团队', position: 'left'},
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
         {
           href: 'https://gitee.com/mayuanwei/harmonyOS_bilibili',
           label: 'Gitee',
