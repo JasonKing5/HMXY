@@ -26,5 +26,13 @@
   "sidebar.tutorialSidebar.category.第三季：HarmonyOS Next.link.generated-index.description": {
     "message": "HarmonyOS-Next开发系列教程。有想法请评论区留言告诉我，敬请期待。",
     "description": "The generated-index page description for category 第三季：HarmonyOS Next in sidebar tutorialSidebar"
+  },
+  "sidebar.communitySidebar.category.基础教程": {
+    "message": "pages - basic",
+    "description": "The label for category pages - basic in sidebar communitySidebar"
+  },
+  "sidebar.communitySidebar.category.基础教程.link.generated-index.description": {
+    "message": "5 minutes to learn the most important pages basic concepts.",
+    "description": "The generated-index page description for category pages - basic in sidebar communitySidebar"
   }
 }
