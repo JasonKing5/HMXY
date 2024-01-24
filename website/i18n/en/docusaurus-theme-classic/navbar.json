@@ -1,0 +1,22 @@
+{
+  "logo.alt": {
+    "message": "hmosxy Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.课程": {
+    "message": "tutorial",
+    "description": "Navbar item with label tutorial"
+  },
+  "item.label.博客": {
+    "message": "blog",
+    "description": "Navbar item with label blog"
+  },
+  "item.label.社区": {
+    "message": "community",
+    "description": "Navbar item with label community"
+  },
+  "item.label.Gitee": {
+    "message": "Gitee",
+    "description": "Navbar item with label Gitee"
+  }
+}
