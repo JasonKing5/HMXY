@@ -6,18 +6,16 @@
 
 ---
 
-### 配套笔记
+### 配套内容
 
-https://mayw-teaching.feishu.cn/drive/folder/Qm0LfbzjIlBwE8duFZ1cKEKinUd?from=from_copylink
+https://hm.codefe.cn/
+
+
 
 ---
 
-### 所有内容动态更新，敬请追更。
+所有内容动态更新，敬请追更。
 
-### 为爱发电，录课不易。请您不吝三连，多多推广。
+为爱发电，录课不易。请您不吝三连，多多推广。
 
-感谢帝心小助手的帮忙，微信人数超过200就不能通过扫码进群了。小助手哥们愿意拿出自己的微信让大家加好友，然后拉进群。自然会投入时间精力。无比感谢。
 
-![image-20231119085100869](assets/image-20231119085100869.png)
-
-![img](assets/-17013095832551.jpeg)
