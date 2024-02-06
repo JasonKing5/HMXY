@@ -1,91 +1,89 @@
 ---
-sidebar_position: 101
+sidebar_position: 102
 ---
 
-# 02：HarmonyOS 理论介绍
+# 02：环境搭建
 
-随着诸多设备搭载 HarmonyOS 系统以来，HarmonyOS 开发技术也逐渐成熟与推广开来，诸多对 HarmonyOS 技术感兴趣的开发者或亟待考取鸿蒙开发者认证人员，急需一套浅显易懂且循序渐进的系统性教程进行学习，这套理论与实践相辅相成的 HarmonyOS 教程将会助力您高效掌握 HarmonyOS 应用开发。
-时间线
+# DevEco Studio3.1版本（23年11-21编写教程时最新版）
 
-- 2019 年 8 月 9 日：HarmonyOS 1.0
-- 2020 年 9 月 10 日：HarmonyOS 2.0
-- 2022 年 11 月 04 日：HarmonyOS 3.1 Developer Preview
-- 2023 年 8 月 4 日，HarmonyOS 4.0 操作系统正式发布。
-- 2024 年：预计推出 HarmonyOS Next
+> 此文档为安装DevEco Studio过程演示。
+>
+> 也可参考官方网站指导教程：链接如下。
+>
+> 
+>
+> https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/deveco_overview-0000001053582387-V3?catalogVersion=V3
 
----
+# 开发工具下载安装
 
-背景分析
-新场景
-[Image]
-新挑战
-不同设备类型意味着不同的传感器能力、硬件能力、屏幕尺寸、操作系统和开发语言，还意味着差异化的交互方式。同时跨设备协作也让开发者面临分布式开发带来的各种复杂性，适配和管理工作量将非常巨大。当前移动应用开发中遇到的主要挑战包括：
+> 要求电脑内存8G以上，建议16+。如需视频指导安装过程，可点击下方超链接。
+>
+> **[环境搭建_指导视频](https://www.bilibili.com/video/BV1pb4y1g75m?p=3)**
 
-- 针对不同设备上的不同操作系统，重复开发，维护多套版本。
-- 多种开发框架，不同的编程范式。
-- 多种语言栈，对人员技能要求高。
-- 命令式编程，需关注细节，变更频繁，维护成本高。
-  移动终端应用生态面临变革， 轻量化程序实体正成为新的趋势
-  [Image]
-  鸿蒙生态迎接挑战
-- 单一设备延伸到多设备
-- 厚重应用模式到轻量化服务模式
-- 集中化分发到 AI 加持下的智慧分发
-- 纯软件到软硬芯协同的 AI 能力
-  HarmonyOS 简介
-- HarmonyOS 是一款面向万物互联时代的、全新的分布式操作系统。有三大系统特性，分别是：硬件互助，资源共享；一次开发，多端部署；统一 OS，弹性部署。
-- HarmonyOS 通过硬件互助，资源共享的能力，将多个形态不一的设备进行组网，共同构成一个超级终端，可在超级终端中实现任务分发与数据共享。
-- 硬件互助依赖 HarmonyOS 的分布式软总线，在此基础上，HarmonyOS 还具备了分布式硬件虚拟化、分布式数据管理、分布式任务调度等分布式特性。
-  [Image]
-- 在传统的单设备系统能力基础上，HarmonyOS 提出了基于同一套系统能力、适配多种终端形态的分布式理念，能够支持手机、平板、智能穿戴、智慧屏、车机等多种终端设备，提供全场景（移动办公、运动健康、社交通信、媒体娱乐等）业务能力。
-  [Image]
-  OpenHarmony
-- HarmonyOS 是华为通过 OpenHarmony 项目，结合商业发行版增加能力，构建华为自研产品的完整解决方案。
-- OpenHarmony 是由开放原子开源基金会（OpenAtom Foundation）孵化及运营的开源项目，目标是面向全场景、全连接、全智能时代，基于开源的方式，搭建一个智能终端设备操作系统的框架和平台，促进万物互联产业的繁荣发展。
-  [Image]
-  [Image]
+1. ## 下载安装包
 
-HarmonyOS Connect
+1. 进入官网点击下载
 
-- HarmonyOS Connect（中文“鸿蒙智联”）是华为统一的智能硬件生态品牌。
-- HarmonyOS Connect 生态伙伴可以基于华为提供的芯片设计、操作系统、连接、云、AI 和用户体验设计能力，为消费者提供高品质的智能硬件生态设备，使该设备能够与华为 HarmonyOS 设备（包括手机、全屋主机、智能座舱、智慧屏、手表等终端）以及其他的 HarmonyOS Connect 生态设备进行联接和协同，共同打造互联互通的 HarmonyOS Connect 生态。
-  [Image]
+> https://developer.harmonyos.com/cn/develop/deveco-studio/
 
----
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=N2M2YzQ4OWFhZmRiNjFiMTU0OTZkMDIwNzE4MjM0YmVfZDl3bU5MVW5UVThZUFpXeTFFT0lDbGJweWlTeVRaYk9fVG9rZW46TUw5cWJXSnFRb2pDcmh4N2ZGWmNib3RCbjBuXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
 
-HarmonyOS Next
-AOSP + HMS + OpenHarmony = HarmonyOS 4.0
-HMS + OpenHarmony = HarmonyOS Next
+1. 解压并安装
 
----
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDZlZWM2OGE0MjEzZjkzNDE1YmRlNWVjZjFiM2JkZTZfb3dPTUY5RHhwQlRGM2N2a3pEZ3U1ZXNPUkg2bFFRUzhfVG9rZW46SU1kZmI2dnJ4b3kwZ1N4RnZyOGMwTURYbkNkXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
 
-ArkTS
-ArkTS 是华为自研的开发语言。它在 TypeScript（简称 TS）的基础上，匹配 ArkUI 框架，扩展了声明式 UI、状态管理等相应的能力，让开发者以更简洁、更自然的方式开发跨端应用。
-[Image]
-[Image]
-ArkUI
-ArkUI 是一套构建分布式应用界面的声明式 UI 开发框架。它使用极简的 UI 信息语法、丰富的 UI 组件、以及实时界面预览工具，提升开发效率。使用一套 ArkTS API，就能在多个 HarmonyOS 设备上提供生动而流畅的用户界面体验。
-[Image]
-鸿蒙生态应用核心技术理念
-在万物智联时代重要机遇期，鸿蒙系统结合移动生态发展的趋势，提出了三大技术理念。
+1. 一路next进行安装
 
-- 一次开发 多端部署
-- 可分可合 自由流转
-- 统一生态 原生智能
-  [Image]
-  原子化服务定义
-- 原子化服务是 HarmonyOS 提供的一种全新的应用形态，具有独立入口，用户可通过点击、碰一碰、扫一扫等方式直接触发，无需显式安装，由程序框架后台静默安装后即可使用，可为用户提供便捷服务。
-  [Image]
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTUxY2IwNjMxNzk2ZWUxNWVmNDFkOThkZjE5ZjNmZjNfRllkYjdmTmlZbHk5Z2dTblk3TzFJZ2JCQldzNWJnb25fVG9rZW46RDVURmJ0ZnJBb3VIRVp4SmdEOGNjNEJVbnllXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
 
-免安装的 HAP 包不能超过 10MB，保持免安装属性，HAP 包必须包含 FA
-流转
-[Image]
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDY0ODIzNzZkNjU2M2Q4NjI2NDEwNmE3NjkxODJiMTVfQ2VZSk1paDNjOVZuOUhpd2JqR1VuWmkzdk8ydWk5NEZfVG9rZW46SWZTeGJROUxDb014eGl4S3Z3T2NTNDNTbmFlXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
 
-- 多个设备通过分布式操作系统能够相互感知，进而整合成一个超级终端，使设备间取长补短、相互帮助，为使用者提供自然流畅的分布式体验。
-- 流转在 HarmonyOS 中泛指多设备分布式操作，按照体验可分为跨端迁移和多端协同。
-  系统推荐流转
-- 系统感知周边有可用设备后，主动为用户提供可选择流转的设备信息，并在用户完成设备选择后回调通知应用开始流转，将用户选择的另一个设备的设备信息提供给应用。
-  [Image]
-  用户手动流转
-- 用户手动流转：系统在用户手动点击流转图标后，被动为用户提供可选择交互的设备信息，并在用户完成设备选择后回调通知应用开始流转，将用户所选另一个设备的设备信息提供给应用。
-  [Image]
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=M2ZhNDU4YTRiMjUwZGViMTQzNzYwZmNhMTAzOTRkOTBfd1ZqeE1YTnBYRk0zRGxwTkJIZ0F5RHRVRk5DdlB0S01fVG9rZW46VG5oSWJiMGxMbzdhOEd4d0R6Q2NYWG1ZbnFkXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=N2RhZDgxOTYxNmY1NzQ2ZmZhNmE4Nzc0OTYxOTE1MjlfQnZ0akpuVnJhM2I3QkJGWUZDUkswRTdmcDJuVmxTMFdfVG9rZW46SzJVeWJmQ29Cb3lSTE54YWtGamNzWmw5bkZlXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NGEwN2JmY2RjODJmMzQzZDZiMzIwZTE4YWE4MjgyZGZfMVJrcjZqOXpTWTlXWDVEdGVVQndGUTNBVGkzUUs5MHhfVG9rZW46SzNRYWJua0ZYb3YwVnh4N3hSSGNBem1ybm1mXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MmNkMjBmMTQzMjIyMmNjZGNlYmUxYmVjNDg1NTI4NThfc1NlWVNEZnUwTFpNRUdHYU4xVEtKMGRLamtIemkzZTZfVG9rZW46WHNuUWJFYmo5bzlTR1h4azVpT2NEeDk4bmxjXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NmNmNzM1ZDE4YzNhMGNmZjNmZDZmNmRhMzM4YTVjOTJfemRzRkU3M2VxWXhzdmF4d1VWUTdHOG9oRHFoeTBabVZfVG9rZW46U1p0dmIwMG0wb0hWQjB4cFc1Q2M4dUdnbkNCXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+1. ## 下载相关依赖：此后过程请不要使用校园网，需要确保网络稳定。很重要。
+
+> 如果C盘空间足够。建议都默认。如果置顶路径。务必注意不要出现中文、特殊字符、花里胡哨东西
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YWZlMjMxYmM5N2YwMjM4NjMzMDBlZGY0ZTcyNjBjNzZfdkFHdGdiT2FyTk9GM1NjOE1oNHRHZE1ZMG96YlpQQndfVG9rZW46UnFka2I2d01ob1FZcWZ4RkFUYmMwZUFMbmdiXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NDIzOTAyYzRiYmE0YzQwMWVmNzIwZDJiZDQxODliYjhfSEEwcVBpcnlESURjcjc2b2pEc0VjQlVxMUdiRWtnMFZfVG9rZW46S2EyYWJFUnNYbzdXOVl4WHF2b2NxUXFpbmtnXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YjcwYjk1NWE0MDA5ZDdlODU0ODg5N2RmN2VlOTY0YzlfQVBiN2FFSHc1ZzgxYk5aMHhuZDhMS3ROT0RlM09yZEJfVG9rZW46QUtPNGJKNHV5b2VKV0J4eFBsMGMxOFlZblRnXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MDA0OGJmZjNjNmE5ZTU5ZjM0MjZiOTAwODhmNmVhYTdfd08wZ05uUVdEOTR2Q0UzTk5WQmtsd21JOEpkNHdlb3hfVG9rZW46TnVic2JZWDFUb1psM3R4bFhVNGNabzhYbjRmXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MjNlZGNkM2I1MDM1OWRiYjYwMTA5MTkyYjEyM2NjYjlfT1RkWkRSYnA0OTJ1cVBuOENFTFVJWXBOV0hrcHJOQ0pfVG9rZW46T2l1TmJQU0psb0lNMVZ4eUxkSGNwZE9vbmdkXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+> 如下截图出现了警告信息，根据提示信息点击Finish按钮。
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NjIzODVlOTYzMjE3ZWVhODFlODE0OTYzNjBjOTBmMmFfeGpQcnNocEl5VXBOTUhLMWxSY2RoTW1vUXRnQ2I1VXNfVG9rZW46U0F4UmJzWFNyb3ZtQjZ4eERsYWNHREo4bnhiXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+- 双击桌面图标启动软件，校验环境
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NzYxNTZhNDIyZDQ2NTdiMGE3ZTFjMDg0MjVhMjFlNzZfRDFrT3JWSlJGa1hVMDFCd0tVclp1VzNBYW5BOTZQMEJfVG9rZW46T0k2Z2I4SFVFb2pHblp4eUc2Q2M3UlhGbjg5XzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzg5ZmRhMzlmOWVjNmIxYjE3Y2NjZDE1NDY0ZDk3MDNfc0FMOVZ4WWJkTTFqM0RUZFpIbk9lUDFaYlFSQVdSTlNfVG9rZW46TDc0RGJWRXBQbzRFOFp4cGJERGNWS3dEbk9nXzE3MDcyMzY0MjU6MTcwNzI0MDAyNV9WNA)
+
+> 到此位置，安装完成，叉掉当前检测界面即可使用该编辑器。使用教程见课堂内容（**[环境搭建_指导视频](https://www.bilibili.com/video/BV1pb4y1g75m?p=3)**）。
+
+# 卸载软件
+
+> 安装失败原因很多人是因为网络不稳定。不要使用校园网（不稳定）或者内网（需要代理）。
+
+如果安装失败，可以卸载重装。推荐好用的卸载软件：[geek-最好用的卸载工具.exe](https://mayw-teaching.feishu.cn/file/PzOSbHyZOoObtmxEAeKcxgZ3nhg?from=from_copylink) （6.3M）
+
+# 开发者注册与个人实名认证
+
+点击如下链接，参考文档指导，完成开发者注册与**个人**实名认证。（多种认证方式，任选其一。好像是银行卡认证效率最高，建议选择）
+
+https://developer.huawei.com/consumer/cn/doc/start/registration-and-verification-0000001053628148?ha_linker=eyJ0cyI6MTY5NjkyMDE3ODQ3MiwiaWQiOiIwYjdmODYzNjY3OGE5ZWY2MWE4MjRlYjk2ZjMxNTg5YSJ9
+
+# 
