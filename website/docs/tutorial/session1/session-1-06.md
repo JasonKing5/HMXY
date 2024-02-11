@@ -28,7 +28,7 @@ ArkUI中，产生动画的方式是改变属性值且指定动画参数。动画
 
 按照页面分类的动画
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MjcyMDE0OTc4NjE4YmY3N2Q4Yzg3ZGYyODNlNjQ4MDhfd3I4NXk4bVlLRnRqY1dmdzU5dzIwNnBYR3RxUGJaWkFfVG9rZW46TG1SMmJiZUxybzN2alB4T1AzN2NQVGZibmVoXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MzkyMzMwNjBjZjUyNWUxYTcxYTM0ZjA3MzY0ZTMwZjdfczB1RHJyYmgxMUo1SkFCOFhXclZwbzdJQnB5QmNpS3lfVG9rZW46SE1FS2JKSkUyb3NTUmZ4QmNtSWNFNklCbmJmXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![image-20240211105135884](img/image-20240211105135884.png)
 
 按照基础能力分类的动画
 
@@ -58,7 +58,7 @@ animateTo(value: AnimateParam, event: () => void): void
 
 ##### 案例：位置变化
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NWMzYTk2YTRiMDhkZmU4NzIwODkzNGFlNDU4NmFjNTZfZHlMTnR6TE91RHFnaEhFekVaSWVHTld6NGhIeXIwclhfVG9rZW46SVh5RGJhOWRIb3k2UUF4dndON2NoQXQ1bmNnXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![显示动画-位置变化](img/显示动画-位置变化.gif)
 
 ```JavaScript
 // 显示动画 ： 位置变化
@@ -104,7 +104,7 @@ struct LayoutChange {
 
 ##### 案例：尺寸变化
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTYwYWU5N2Y0ODMzYjk1YzNlZjNhODVmZWRkMGM5ZmRfaWhRRVhCYXg5aFYzZnVHR1BiZkljTmFScXgwS1RmeVFfVG9rZW46Vm94TmJ2eEg4bzVTc214aUw4aWNCS1pBbjFlXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![显示动画-尺寸变化](img/显示动画-尺寸变化.gif)
 
 ```JavaScript
 // 显示动画：尺寸变化
@@ -149,7 +149,7 @@ struct LayoutChange2 {
 
 ##### 案例：角度变化
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NDVjMDdlMmI2OTJkZDQyNzVkZmVlMmFmNWRlNDU1YmNfV2NGMDVjYTNSNkZiT0cwU3NPU0VuQnJnRHBJYVJtSU9fVG9rZW46SmxZa2JDOGJPb3piVmV4NTF0TGN5Mm95bldkXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmM2OGJjNmYyZTZkYTc5NTgxNWQ4NzVhMjk4YTRjM2VfWUJyMlFQWDVJSFVjMllMRzlaeFdtMUpjWGhuQjV3ODJfVG9rZW46Vm9Ed2JYTUZXb0xlWXN4UE5jUWN3UzJtbmpjXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YTQ5NzY5MTljZDQzMjY3Y2VjYmVkZDU4N2RhNDVmYTlfTW14b3hmQjhQeGVQcUw4eVVZWEN1Vm1CMENmTFpidFhfVG9rZW46U2tlWGJ2cmlvb2ZxQUh4MkF5Q2NVbUV6bnpmXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![显示动画-角度变化](img/显示动画-角度变化.gif)
 
 ```JavaScript
 // 显示动画-角度改变
@@ -223,7 +223,7 @@ animation(value: AnimateParam)
 > 2. 显式动画会对动画闭包前后造成的所有界面差异执行动画，且使用同一动画参数，适用于统一执行的场景。此外，显式动画也可以用于一些非属性变量造成的动画，如if/else的条件，ForEach使用的数组元素的删减。
 > 3. 如果一个属性配置了属性动画，且在显式动画闭包中改变该属性值，属性动画优先生效，会使用属性动画的动画参数。
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmQ1OGY4ZmQyN2UyYmQxM2ZkNjNmYmUxMmIyODg3NTdfOU9tckFzS1gwOUh3aFVXNXM1bU4wclh4STIyb2tXUmxfVG9rZW46WGEycmJJeW91b0Z6M0x4WTlpamN6TUlTblZjXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![属性动画](img/属性动画.gif)
 
 ```JavaScript
 // 属性动画
@@ -338,7 +338,7 @@ Button()
 
 #### **if/else产生组件内转场动画**
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MGE4MmZmMDQ0ZDY4MGU3YWNlMjQ3NzBmNGEwZmIxY2FfVTZMNHRLRHFrd0RDelAwZVM1akxJWkdCazNpODFUQ2VfVG9rZW46S0JmTWIxTTBzb3lLS0R4MXdsQWNWTExGbjRiXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MTFhOWE5ODBmNzAxZmQyZjczOGEzMTc2MDRkNmI4MjRfY0I3ODc4bDRJOFM5cDF6d1RkZ3lVY3lvZjJtdEFocnVfVG9rZW46TjA1UWJJQkxRb2xQZmx4TUtDZmN6MjIxbk1oXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![26016703-31b0-4a0a-af50-80e2f87db81f](img/26016703-31b0-4a0a-af50-80e2f87db81f.gif)
 
 `if/else`语句可以控制组件的插入和删除。如下代码即可通过`Button`的点击事件，控制if的条件是否满足，来控制`if`下的`Image`组件是否显示。
 
@@ -416,7 +416,7 @@ struct IfElseTransition {
 
 #### **ForEach****产生组件内转场动画**
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YjhlZGIwYjc4Yzg5YjQwNzJmN2NiYjIwMDc2NDFkMjlfTTFHVFFkT0h1THVId1lrQWRaQTN4U0pobFZ3SE1DZnNfVG9rZW46RmNTOGJrV3Vjb005azF4aWhBRWNocU4ybmxnXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![组件内转场动画-forEach](img/组件内转场动画-forEach.gif)
 
 和`if`/`else`类似，`ForEach`可以通过控制数组中的元素个数，来控制组件的插入和删除。通过`ForEach`来产生组件内转场动画，仍然需要两个条件：
 
@@ -541,9 +541,7 @@ sharedTransition(id: string, options?: sharedTransitionOptions)
 
 下面介绍使用共享元素转场进行放大缩小图片的示例。
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YTg4M2Q1NmJlZWU4YzU3M2UzNzVmNDVhMTAxMzU3MzZfMkhQS3I5ZWZ6eW5hdGhkTVZnQUM2N1lVb215MnhHVWNfVG9rZW46RUN2Y2Jjd1Y5b0JaWml4aTdCR2N3bTJCbkFiXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=OGNjMzU0ODgxZGNhZmVhZTNmMGFlYjA3ODk5NDQ4ZDBfRjVhbHRQdWVHaVRlVjR6bFJCQlpLQVk3SFhsN1B3QzdfVG9rZW46WFR3WmJlWElyb1FhWnN4OVRxOWMxUk0yblJiXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
-
-素材图片
+![页面间共享元素转场](img/页面间共享元素转场.gif)
 
 案例效果
 
@@ -610,7 +608,7 @@ struct SharedTransitionDest {
 
 ### 页面转场动画
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmQ2Zjk0OTQzZjEyNGNiM2MwMjQ1ZGJiZjIyNTQyZjJfRE96SnpueVkxdFRsWG9UZnkwMWZueUF4V0FMMmFzeTVfVG9rZW46VzVza2J4QUV4b3hxdjV4R0F2YmNnakw3bmJjXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![页面间转场动画](img/页面间转场动画.gif)
 
 两个页面间发生跳转，一个页面消失，另一个页面出现，这时可以配置各自页面的页面转场参数实现自定义的页面转场效果。[页面转场](https://developer.harmonyos.com/cn/docs/documentation/doc-references-V3/ts-page-transition-animation-0000001477981233-V3)效果写在pageTransition函数中，通过PageTransitionEnter和PageTransitionExit指定页面进入和退出的动画效果。
 
@@ -668,7 +666,7 @@ pageTransition() {
 
 #### 案例： 界面进场退场效果
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YzcwNGZjZGRjZmIyOWEyM2JjYjYwMTViYWU1MWViZWRfSzNmYWJrU2JIV0ROU05oeGFrcXVvQWI1OUVVVG5LOW9fVG9rZW46QVJ0amJpb2RYb2VvcFF4TFcwM2NIeXVnbmdjXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![页面间转场动画](img/页面间转场动画-17076203173681.gif)
 
 ```JavaScript
 import router from '@ohos.router'
@@ -872,7 +870,7 @@ httpRequest.request('接口地址',{
 
 ### 案例：诗词学习
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ODExYTZlNDczYTExMzhjODBlYTBhZmRkMGQ5ZjU0ZjhfTlc0ZkxyZ1RhT1FvQVhVcmF3UkJzc2lDdnp0OEo4TjdfVG9rZW46SzVEeGJyM1ptb2dkV0R4dlRYUWNabUtybnRiXzE3MDcyMzc3MDM6MTcwNzI0MTMwM19WNA)
+![网络请求获取诗词](img/网络请求获取诗词.gif)
 
 获取诗词接公开API接口
 
