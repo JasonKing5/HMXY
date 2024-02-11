@@ -12,6 +12,9 @@ sudo git pull
 # 进入网站代码根目录
 sudo cd ./website
 
+# 设置Node版本为18+
+sudo nvm use 18
+
 # 执行 npm install 并等待完成，然后执行 npm run build
 sudo npm install && npm run build
 
