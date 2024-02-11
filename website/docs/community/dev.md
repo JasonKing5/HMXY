@@ -22,6 +22,8 @@ slug: /community/dev
 
 ## 本地运行
 
+Node.JS 18+
+
 ### Installation
 
 ```bash
