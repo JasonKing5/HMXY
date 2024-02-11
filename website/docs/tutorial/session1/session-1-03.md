@@ -37,7 +37,7 @@ ArkTS是HarmonyOS优选的主力应用开发语言。ArkTS围绕应用开发在[
 
 # ArkTS的基本组成
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ODZiNTI2ODc2NzBlNmQ3ZTgyN2E3YWNkMWMxZmEyYmFfc2FKYWF5cUM1RlJuYWdCc2RjUVJldXBTSDQyc3QxNVVfVG9rZW46UHBsVGJQdUFUb1pqTTN4WGw0U2NzVTFZbmxiXzE3MDcyMzY1OTg6MTcwNzI0MDE5OF9WNA)
+![arkts组成](img/arkts组成.PNG)
 
 - 装饰器： 用于装饰类、结构、方法以及变量，并赋予其特殊的含义。如上述示例中@Entry、@Component和@State都是装饰器，[@Component](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-create-custom-components-0000001473537046-V3#section1430055924816)表示自定义组件，[@Entry](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-create-custom-components-0000001473537046-V3#section1430055924816)表示该自定义组件为入口组件，[@State](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-state-0000001474017162-V3)表示组件中的状态变量，状态变量变化会触发UI刷新。
 - [UI描述](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-declarative-ui-description-0000001524416537-V3)：以声明式的方式来描述UI的结构，例如build()方法中的代码块。
@@ -55,9 +55,9 @@ ArkTS是HarmonyOS优选的主力应用开发语言。ArkTS围绕应用开发在[
 
 # 页面跳转案例-ArkTS（声明式开发范式）
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NjI0MzVjOTk5MGIwMTRlMzI1MzViNmNiOTE1MGI4NWFfaVBhU0hXVWl3MGxGMEZ2bEhMZE9kTFlqdUthQTNiNTlfVG9rZW46WENvaGJBRHBGb1RFdjZ4NHkzYWNxZlppbktlXzE3MDcyMzY1OTg6MTcwNzI0MDE5OF9WNA)
+![页面跳转](img/页面跳转.gif)
 
-src/main/ets/pages/First.ets
+`src/main/ets/pages/First.ets`
 
 ```JavaScript
 import router from '@ohos.router'
@@ -85,7 +85,7 @@ struct First {
 }
 ```
 
-src/main/ets/pages/Second.ets
+`src/main/ets/pages/Second.ets`
 
 ```JavaScript
 import router from '@ohos.router'
@@ -108,11 +108,11 @@ struct Second {
 
 # 页面跳转案例-JavaScript（类Web开发范式）
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTA4YjI1ZGZjNzkwMjMwYjNmMTliNTg2MGVjNzU0OThfZDhnT0NVblNiRlV0aUJ3UFFFV2JXZmJhTTBoSVU0MXhfVG9rZW46R1RNQWJkN055b2p0UzB4a2VncGNnY3BRbmZlXzE3MDcyMzY1OTg6MTcwNzI0MDE5OF9WNA)
+![页面跳转2](img/页面跳转2.gif)
 
 ## 页面1
 
-src/main/js/MainAbility/pages/index/index.hml
+`src/main/js/MainAbility/pages/index/index.hml`
 
 ```JavaScript
 <div class="container">
@@ -123,7 +123,7 @@ src/main/js/MainAbility/pages/index/index.hml
 </div>
 ```
 
-src/main/js/MainAbility/pages/index/index.js
+`src/main/js/MainAbility/pages/index/index.js`
 
 ```JavaScript
 import router from '@ohos.router'
@@ -148,7 +148,7 @@ export default {
 
 ## 页面2
 
-src/main/js/MainAbility/pages/two/two.hml
+`src/main/js/MainAbility/pages/two/two.hml`
 
 ```JavaScript
 <div class="container" @click="back">
@@ -158,7 +158,7 @@ src/main/js/MainAbility/pages/two/two.hml
 </div>
 ```
 
-src/main/js/MainAbility/pages/two/two.js
+`src/main/js/MainAbility/pages/two/two.js`
 
 ```JavaScript
 import router from '@ohos.router'

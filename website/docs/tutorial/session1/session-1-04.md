@@ -10,7 +10,7 @@ sidebar_position: 104
 - ts：TypeScript
 - ets: extend TypeScript
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MzYyZWE0NDgzZTE1ZTZhOTk2ZGE3OWZiY2JjNTFhNzBfcWREZGJpZW1vWHlaTHlORFU1dGZ1RTE0Rk9nSzAxZDFfVG9rZW46S05DbmJmQzBKb1o1ZU14MlRnZmN6eDRybnZoXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![变量](img/变量.PNG)
 
 ## 变量名要求：
 
@@ -379,11 +379,9 @@ Column() {
 
 在ArkUI中，UI显示的内容均为组件，由框架直接提供的称为系统组件，由开发者定义的称为自定义组件。在进行 UI 界面开发时，通常不是简单的将系统组件进行组合使用，而是需要考虑代码可复用性、业务逻辑与UI分离，后续版本演进等因素。因此，将UI和部分业务逻辑封装成自定义组件是不可或缺的能力。
 
-# 诗文学习案例效果图（总是很多人找不到，所以标题设为一级）
+# 诗文学习案例效果图
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MGNkMjEwYmI4NWQxYTZlMDY2MDI5OGM4MTA5MDBmNmNfaTFQR0tSM3lqVmFEcWNrSk15V25LbWZKN01RQkZPV1hfVG9rZW46RUJ0bmJQUzZrb2VUbmJ4aHJkb2NVNzRFbjhnXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
-
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=M2RlMGFjMjcwOTc2NTA5M2U5YzlmMTliZGY2NjUwMWVfRTZWclAxVDVMZWlUMHo5dFdkTGxrZXhUbmFWTzlIM3dfVG9rZW46WHZqQWJ3Qnl2b0dZV3l4dlJFRWMzUlp2bjZnXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YTI4MDViNmZiZTAzNDM5MjAyMWI5ZTFjZTFlZmIxNGNfUnllOEVNZEN1dEpqQldYVVRLN3kxaU5ESHF5b0M1dktfVG9rZW46WHNiYmIxcXNzb1BEVEN4bVdPTGNuRGx1bm9mXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![诗文学习](img/诗文学习.gif)
 
 自定义组件具有以下特点：
 
@@ -695,7 +693,7 @@ struct MyComponent {
 
 ## 案例
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=N2IzMTEzNzYxNGUxYjMxMDZhY2MxM2RjYTE4ZDAwNTlfdmpYUEVncHBpR0dSVjB0M2xTYkQ4YUxOVkdRMk8zTEdfVG9rZW46RllLT2JFVnlEb09CWkN4WTVBdGNLdzd1bk9oXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![@Builder](img/@Builder.gif)
 
 ### 组件内自定义构建函数
 
@@ -847,7 +845,7 @@ MyGlobalBuilderFunction()
 
 # @Styles装饰器：定义组件重用样式
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTliOTRhM2VhYjljNDkwMzUzMzE2YWI2NTZjYWRjODRfY1JjNVRqSjJzRmN5Um9WOWcyZlY0TzZYVHpSYVhFSmpfVG9rZW46RE5DRGJRM3k1b3ZlTjF4NnVmdmNkS01yblBjXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![通用样式函数](img/通用样式函数.png)
 
 ```JavaScript
 /*
@@ -1212,7 +1210,7 @@ stateStyles是属性方法，可以根据UI内部状态来设置样式，类似�
 
 ## **使用场景**
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YjM0ZTI1MjIxZTc1NGRlZjIzMDUxMjRlYTllODY3OTFfMnp3dlRwWVIwRWFjWVBiNEt0TUFkamg0T0tsWE9YYVdfVG9rZW46T1BXbGJRcER5b2dCT1B4V0lHWGM0Y3JobmdoXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![状态样式](img/状态样式.gif)
 
 下面的示例展示了stateStyles最基本的使用场景。Button处于第一个组件，默认获焦，生效focused指定的红色样式。按压时显示为pressed态指定的蓝色。如果在Button前再放一个组件，使其不处于获焦态，就会生效normal态的绿色。
 
@@ -1264,7 +1262,7 @@ struct StateStylesFun {
 
 # 状态管理
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NmUzZGViMjA3ODc2NDgzZmYwNTEwYThhMTA4NDhiM2NfOXlxa3cxSjczYzRMTUFPdWlnTHB5MGpSME1DTmpONk1fVG9rZW46VllTZGJabTVSb0FpMjd4Z2I1TWNFNFZCblljXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![状态管理](img/状态管理.png)
 
 - @State：@State装饰的变量拥有其所属组件的状态，可以作为其子组件单向和双向同步的数据源。当其数值改变时，会引起相关组件的渲染刷新。
 - @Prop：@Prop装饰的变量可以和父组件建立单向同步关系，@Prop装饰的变量是可变的，但修改不会同步回父组件。
@@ -1279,7 +1277,7 @@ struct StateStylesFun {
 - @State   @Prop (`this.`进行传参)
 - @State   @Link(传参使用$)
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MjE1YjQ3YTMwYzM4NGFhNjBhOWEzNGI5ZTNiODY4YzhfN2N2dkhUblpoeHhVbVExTWxWOTZKMGtqUTZzcjFkY05fVG9rZW46SXlXN2J4cDVhb0JQWVd4ZWtLM2Mwc1Jubm9lXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![state和prop和link](img/state和prop和link.gif)
 
 ```JavaScript
 @Entry
@@ -1369,7 +1367,7 @@ struct StateManagement_link {
 
 @Provide和@Consume通过相同的变量名或者相同的变量别名绑定时，@Provide修饰的变量和@Consume修饰的变量是一对多的关系。不允许在同一个自定义组件内，包括其子组件中声明**多个同名或者同别名的**@Provide装饰的变量。
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NzY3MGUwZWYwZGE1YTFjNTJmMzdiYjllMTc0NzExMzBfVW1XUEJPS3k5eHdZbG1sZk9NdkhONFF0eWE5RlE2WU5fVG9rZW46TFc2Q2J1MmxWbzVFUEV4N0phT2NrNDFzbjdiXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![Provide-Consume](img/Provide-Consume.gif)
 
 ```JavaScript
 @Entry
@@ -1426,7 +1424,7 @@ struct ProvideConsume_sun {
 
 ## @Watch装饰器：状态变量更改通知
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGNlNGZmODdiYTU4NzFjZWRiYjVlMzIxZTBjYzJjNGFfWXlzYnpaS0JhUTNIVldoc01vbWl4dkYwczlnb0ZqM1dfVG9rZW46UGltOWJMSzY1bzRhb014Vnp5ZGNVV0JHbmdoXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![Watch](img/Watch.gif)
 
 @Watch应用于对状态变量的监听。如果开发者需要关注某个状态变量的值是否改变，可以使用@Watch为状态变量设置回调函数。
 
@@ -1525,15 +1523,7 @@ if(条件表达式){
 
 ### 案例：学习鸿蒙前后对比
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NDYyMWM0NGU3OTRhM2EyNjJmZGY3YWE5ZTQ1MGVkOTJfeE41MmFWMGpwc201djBvM0gzRzBCaVRlTnh5dDdxY0tfVG9rZW46QXhwY2I1eEY2bzRjSUR4WTlhSGNGaVJMbnNlXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
-
-素材
-
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ODZiNDU1YWZmYzM4NjdlYTc4MjQxMzIzMDU5ZDI5MjhfWVpseWI4NHN2UG5iRVVFRGJ4ZkJJbnRnQUVwZGJRczVfVG9rZW46Tmg2UGJSMENBb0p3WEh4aDBFTmNUbmxqbnZjXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ODUzZmY5NmEzNzkxYTQ4MDI2NDJlMDRhYTRlODVhNTVfcndtMVZZbGZ1VndkZ0RSN2JZTmxxdW50blVSTDJlRVRfVG9rZW46VWxFaWJ0UXZkb0VuS3V4UTR1cmNoZWJRblJoXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
-
-学习鸿蒙之前
-
-学习鸿蒙之后
+![学习鸿蒙前后](img/学习鸿蒙前后.gif)
 
 ```JavaScript
 /*
@@ -1582,7 +1572,7 @@ struct Branch_Comp {
 
 ### 作业：逢七过小游戏
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWQ1Y2QwM2ZkNzc5MmRmMjE3MGJiOGM3NDBiNDdlZjZfWUFvUGxNbktrNkY2WE9HTnY4djlFd09lQUpGZXBkZjNfVG9rZW46UmQ4M2I1YlZVbzd3Q1R4ZnF4YmNSM2pSblpjXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![逢七过](img/逢七过.gif)
 
 ## ForEach：循环渲染
 
@@ -1613,7 +1603,7 @@ ForEach(
  @State product: string[] = ['PC', '问界汽车', "平板", `手环`]
 ```
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGJjMWFhNWNmN2E5Mzk0NGY4MTU0NDk5MTcyMjFlYzRfcDJ0MVRoZ2JDWjhYeFdjTU1xU0RwNjFlaGdjdlJiQ1VfVG9rZW46R1FXZGJPekk3b0xYYmd4U1pvZGN5UkJKbmlmXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![循环](img/循环-17076212386262.png)
 
 ```JavaScript
 /*
@@ -1672,7 +1662,7 @@ struct Loop {
 
 ### 作业：使用渲染控制完成前文案例
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NzlmYjkxMjZmMDU1NGNkMzBiNmJlMDgzZTllMGE3MDFfY01xbGhNMWFwS2lRdXUwOVlKc1F0blYzY0hOYm4yZUpfVG9rZW46T0dIT2JMS2ZMb3dHMDF4SExPWmNoTDhibnViXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![诗文学习](img/诗文学习-17076212588153.gif)
 
 ## LazyForEach：数据懒加载(用法同上，自行学习)
 
@@ -1761,7 +1751,7 @@ let appName =  AppStorage.Get('appName') as string
 '等观众催更'
 ```
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTNhMWVkYzk3NDU1ZDU1NTM2YjU4N2Q5OWE1NWYzOGZfemJ6WW4xaU5YaXlUUFhBaVVFVXI0ZU5BZ1ZrZURlNnFfVG9rZW46UHZQR2J1amhvb0I2Q2x4R29hSWNVRmcxbjhkXzE3MDcyMzY4MzQ6MTcwNzI0MDQzNF9WNA)
+![综合案例待办事项](img/综合案例待办事项.gif)
 
 - 创建页面，提供（空）数组容器。
 - 页面加载前装载数组（组件生命周期）

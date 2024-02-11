@@ -30,7 +30,7 @@ sidebar_position: 107
 
 注：量力而行！！！心意即可！！！
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ODdhMjU0MmI1NTJlZTc0NWRhNWEwNTdmMDY0MzYwOTFfVDFFZXdPVzlRcU1ZRlZVekVGRWVOR2VvUWNwOTl0OHZfVG9rZW46VW5ESGI1UXR0b1dodkh4Z3puWWNSRUZYbkhoXzE3MDcyMzc4MTI6MTcwNzI0MTQxMl9WNA)![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=OWFiNGJlZmI3N2MxYTU0ZTc3M2ZjZWM5NjI1YTI5MjhfUG5pbFlteWZXTW1CNzVVYkhTb2FkWU5qRjd4Q1A0T3RfVG9rZW46SkVyN2JrVWhJb0VudjZ4dEt5WGMwVEV6bmp0XzE3MDcyMzc4MTI6MTcwNzI0MTQxMl9WNA)
+![image-20240211104953419](img/image-20240211104953419.png)
 
 我其实不懂互联网。二维码挂在此处是否会被平台封禁或者限流啊。那说明哥们配不上大家的打赏。
 

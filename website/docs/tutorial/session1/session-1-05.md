@@ -21,7 +21,7 @@ sidebar_position: 105
 onClick(event: (event?: ClickEvent) => void)
 ```
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MjY4YjMyZDA2NDE4MGRlNjU5ZGEwZTUwODUwMzUzZjNfYmNKMnl6WWNNNmZ1VXpMdkljYTV6am9IUWFZcmFXZGJfVG9rZW46UjNNYmJZdjVrb2dHMlN4S1BwVmNYZGMwbnNkXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![组件通用事件](img/组件通用事件.PNG)
 
 ```JavaScript
 // src/main/ets/pages/common/Click.ets
@@ -62,7 +62,7 @@ struct ClickExample {
 onTouch(event: (event?: TouchEvent) => void)
 ```
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NTMwNWNlMmNhYmRhNzIzODc0MmFiOTdkZTIyN2JlMjhfWW5aMzllcnVlOWZwekJ4clhaakRXSUV2ZXVQb1NTTE9fVG9rZW46QmxmMWJVRnNBb0RZOTJ4NUZ5aGNPcVpEbjlmXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![触摸事件](img/触摸事件.png)
 
 ```JavaScript
 // src/main/ets/pages/common/Touch.ets
@@ -119,7 +119,7 @@ struct TouchExample {
 onKeyEvent(event: (event?: KeyEvent) => void)
 ```
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=M2RjZmY4ODMxZjFlMGZjOTI5MzdmNjIxNzgzZWY2Y2RfS2hvd0NqUzJWOVVpeXpkV0FhdzZ6SjFlMWhuTDZ6NVJfVG9rZW46Rm41SGJBcXkwb1FqMXh4YlBja2NjTjlzbmJmXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![按键事件](img/按键事件.png)
 
 ```JavaScript
 // src/main/ets/pages/common/KeyEvent.ets
@@ -153,9 +153,9 @@ struct KeyEventExample {
 
 用于设置组件的宽高、边距。
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NDJjYWFiYWRiZGY5NGNiYWIzMmVhNzdhY2M4YzE5NWZfQVJ1SEZENmF4bXhFUW5PZjBtdUVtOVA1bTU4OHBzVlVfVG9rZW46Wk03UmIzNlRwb0JsaWl4UWxTZ2NiWWJqbmM1XzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![尺寸设置1](img/尺寸设置1.png)
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQyZDk3NGFiNWU5ZjZlMjNiNDQ1OGUzNDFlYjcwZDFfbEdjbTJuZnJSU1BqMmdNY1duQVpac0hLSHJMVXBqcEhfVG9rZW46STdmcmJUczdEbzQwMkh4Nm5EOGM2ZnJVbnlnXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![尺寸设置2](img/尺寸设置2.png)
 
 ```JavaScript
 // src/main/ets/pages/common/Width.ets
@@ -207,13 +207,13 @@ struct WidthExample {
 
 设置组件的对齐方式、布局方向和显示位置。
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YmFiYzJlNGQyMDczYjEwYjgxNzljMWI2MzlhZDA5ZmNfdm5oR1pQdXREOFBOVVowaXhpSzliRVRBT1IxQXBOdDBfVG9rZW46VlZYd2JkZnRRb3lmZDV4S2NkMmNGZkt5bjNKXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![位置](img/位置.png)
 
 align: 设置元素内容在元素绘制区域内的对齐方式。
 
 direction: 设置元素水平方向的布局。
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZGFkNjNmZWQ2YTkzNmExMDExNGQ3N2RmYzhhNzFiZDNfZzBzaVlhU1drZU1sUUJ2S2prcXdOM0tjZ3dSdldCUXRfVG9rZW46WThZNWJESU1Mb3FCYmt4Y3l3T2MwVlphbjNkXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![组件通用事件](img/组件通用事件.PNG)
 
 ```JavaScript
 // src/main/ets/pages/common/Position.ets
@@ -321,7 +321,7 @@ struct PositionExample {
 
 使用文本内容创建相应的按钮组件，此时Button无法包含子组件。
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MzE2ZWMwOGJhOGY1NGM4YjQ2N2RiNjkyNGU5ZGU1YmJfNGJTTUFVWmhCTzRncktkTEJpWlo5ZnlRYjNOaG9CNmJfVG9rZW46SkthYWJLdXVIb1puREx4dXI0d2MzN3lWbmt5XzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![button](img/button.png)
 
 ```JavaScript
 // src/main/ets/pages/basic/Button.etx
@@ -381,7 +381,7 @@ struct ButtonExample {
 Checkbox(options?: {name?: string, group?: string })
 ```
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NTcwYjFjOWRjZjk1MzZjOTAyYWIwM2MwYmU3ZWVkMzVfbEtQelBFWEJJNDNnd1h5UkVMUXNveTBYTUo0YUhNa0RfVG9rZW46U0RLTmI3eFowb2owQWd4cjlWemM1SEF1blNnXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![checkbox](img/checkbox.png)
 
 ```JavaScript
 // src/main/ets/pages/basic/Checkbox.ets
@@ -471,7 +471,7 @@ DatePicker(options?: {start?: Date, end?: Date, selected?: Date})
 onChange(callback: (value: DatePickerResult) => void)
 ```
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=YzEzOWNlMzJkOGYyOGUyYzdhMjExMzI0ODFkMTkxYTVfbzI3SmtTcGptWU9CTTE2UkprM25WYXd0dUc3ZEVUa3dfVG9rZW46WWZoeWJmOEhsb040R2l4dHliOWM2SURiblNlXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![DatePicker](img/DatePicker.png)
 
 ```JavaScript
 // src/main/ets/pages/basic/DatePicker.ets
@@ -508,7 +508,7 @@ struct DatePickerExample {
 
 一般作为Page页面的根容器，通过属性设置来展示页面的标题栏、工具栏、导航栏等。
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTgzMjAzMzFiNTAxMmNhODg3MTdiNTNiMzQ3YjA2NDVfMDRIVk5kckU4cjBWV3VhUHZKNUtCb1FLUWZpb0NlNndfVG9rZW46TGlra2JrdllGb0tFQXJ4WlZnMWMxNnJSbkNjXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![Navigation](img/Navigation.png)
 
 ```JavaScript
 // src/main/ets/pages/basic/Navigation.ets
@@ -610,7 +610,7 @@ struct NavigationExample {
 
 ## Column/Row/Flex
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=MjM3ZjhmZDIzODYzNDhlODEyNjMwM2RhYTE5MTRhYWVfVGpFVjg0RmRjOENQMU5XWGJ4NklDMkZWVzRuWlhLYXVfVG9rZW46V2VKTmJpTGJ6b0pIYjF4d3h2b2N4SzQ0bmxCXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![容器](img/容器.png)
 
 ```JavaScript
 // src/main/ets/pages/Column.ets
@@ -666,7 +666,7 @@ struct ColumnExample {
 
 # 实战案例：健康饮食（布局版）
 
-![img](https://mayw-teaching.feishu.cn/space/api/box/stream/download/asynccode/?code=NDhkZTkxNmJlNDMyYjA2Yzg3Nzk1YTFiMzNlMTdlZTZfQXJ4MzVMSHhTWU9JNUREdlBGYWlGM1BYU09hM0dsOUJfVG9rZW46QndGMmJkZ1RNb24zYUF4VVR1VWNGNzhlbjlnXzE3MDcyMzczMTY6MTcwNzI0MDkxNl9WNA)
+![健康](img/健康.gif)
 
 ```JavaScript
 // src/main/ets/pages/Index.ets
