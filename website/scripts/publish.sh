@@ -20,10 +20,10 @@ cd ./website
 pwd
 
 # 设置Node版本为18+
-sudo nvm -v
-echo "sudo nvm use 18"
-sudo nvm use 18
-sudo node -v
+nvm -v
+echo "nvm use 18"
+nvm use 18
+node -v
 
 # 执行 npm install 并等待完成，然后执行 npm run build
 sudo npm install && npm run build
