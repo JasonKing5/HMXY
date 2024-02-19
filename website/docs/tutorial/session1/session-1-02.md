@@ -26,7 +26,7 @@ sidebar_position: 102
 
 > https://developer.harmonyos.com/cn/develop/deveco-studio/
 
-![官网](img/官网.PNG)解压并安装
+![官网](img/hmos.PNG)解压并安装
 
 ![解压并安装](img/jieyaanzhuang.PNG)
 
