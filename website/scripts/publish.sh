@@ -3,7 +3,8 @@
 # 拉取指定git仓库的代码
 # git clone https://gitee.com/mayuanwei/harmonyOS_bilibili.git /tmp/website
 
-source ~/.bashrc
+# 加载 nvm
+source ~/.nvm/nvm.sh
 
 # 进入代码目录
 echo "cd /var/repo/harmonyOS_bilibili"
