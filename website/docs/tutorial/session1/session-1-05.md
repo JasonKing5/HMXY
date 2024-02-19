@@ -21,7 +21,7 @@ sidebar_position: 105
 onClick(event: (event?: ClickEvent) => void)
 ```
 
-![组件通用事件](img/组件通用事件.PNG)
+![组件通用事件](img/zjtysj.PNG)
 
 ```JavaScript
 // src/main/ets/pages/common/Click.ets
@@ -62,7 +62,7 @@ struct ClickExample {
 onTouch(event: (event?: TouchEvent) => void)
 ```
 
-![触摸事件](img/触摸事件.png)
+![触摸事件](img/cmsj.png)
 
 ```JavaScript
 // src/main/ets/pages/common/Touch.ets
@@ -119,7 +119,7 @@ struct TouchExample {
 onKeyEvent(event: (event?: KeyEvent) => void)
 ```
 
-![按键事件](img/按键事件.png)
+![按键事件](img/anjsj.png)
 
 ```JavaScript
 // src/main/ets/pages/common/KeyEvent.ets
@@ -153,9 +153,9 @@ struct KeyEventExample {
 
 用于设置组件的宽高、边距。
 
-![尺寸设置1](img/尺寸设置1.png)
+![尺寸设置1](img/size1.png)
 
-![尺寸设置2](img/尺寸设置2.png)
+![尺寸设置2](img/size2.png)
 
 ```JavaScript
 // src/main/ets/pages/common/Width.ets
@@ -207,13 +207,13 @@ struct WidthExample {
 
 设置组件的对齐方式、布局方向和显示位置。
 
-![位置](img/位置.png)
+![位置](img/weizhi1.png)
 
 align: 设置元素内容在元素绘制区域内的对齐方式。
 
 direction: 设置元素水平方向的布局。
 
-![组件通用事件](img/组件通用事件.PNG)
+![组件通用事件](img/zjtysj.PNG)
 
 ```JavaScript
 // src/main/ets/pages/common/Position.ets
@@ -610,7 +610,7 @@ struct NavigationExample {
 
 ## Column/Row/Flex
 
-![容器](img/容器.png)
+![容器](img/rq.png)
 
 ```JavaScript
 // src/main/ets/pages/Column.ets
@@ -666,7 +666,7 @@ struct ColumnExample {
 
 # 实战案例：健康饮食（布局版）
 
-![健康](img/健康.gif)
+![健康](img/jk.gif)
 
 ```JavaScript
 // src/main/ets/pages/Index.ets

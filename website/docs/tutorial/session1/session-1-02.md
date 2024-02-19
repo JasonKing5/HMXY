@@ -28,7 +28,7 @@ sidebar_position: 102
 
 ![官网](img/官网.PNG)解压并安装
 
-![解压并安装](img/解压并安装.PNG)
+![解压并安装](img/jieyaanzhuang.PNG)
 
 1. 一路next进行安装
 
@@ -50,25 +50,28 @@ sidebar_position: 102
 
 > 如果C盘空间足够。建议都默认。如果置顶路径。务必注意不要出现中文、特殊字符、花里胡哨东西
 
-![node安装](img/node安装.png)
+![node安装](img/nodeInstall.png)
 
 ![sdk](img/sdk.png)
 
-![下载sdk](img/下载sdk.png)
+![下载sdk](img/downsdk.png)
 
-![接受sdk](img/接受sdk.png)
+![接受sdk](img/jieshousdk.png)
 
-![准备安装](img/准备安装.png)
+![准备安装](img/zhunbei.png)
 
 > 如下截图出现了警告信息，根据提示信息点击Finish按钮。
 
-![安装依赖完成](img/安装依赖完成.png)
+![安装依赖完成](img/instasllok.png)
 
 - 双击桌面图标启动软件，校验环境
+- 
 
-![校验环境](img/校验环境.png)
 
-![校验完成](img/校验完成.png)
+
+![校验完成](img/jyhj.png)
+
+![校验环境](screenshots/jiaoyan.png)
 
 > 到此位置，安装完成，叉掉当前检测界面即可使用该编辑器。使用教程见课堂内容（**[环境搭建_指导视频](https://www.bilibili.com/video/BV1pb4y1g75m?p=3)**）。
 

@@ -58,7 +58,7 @@ animateTo(value: AnimateParam, event: () => void): void
 
 ##### 案例：位置变化
 
-![显示动画-位置变化](img/显示动画-位置变化.gif)
+![显示动画-位置变化](img/xianshi1.gif)
 
 ```JavaScript
 // 显示动画 ： 位置变化
@@ -104,7 +104,7 @@ struct LayoutChange {
 
 ##### 案例：尺寸变化
 
-![显示动画-尺寸变化](img/显示动画-尺寸变化.gif)
+![显示动画-尺寸变化](img/xianshi2.gif)
 
 ```JavaScript
 // 显示动画：尺寸变化
@@ -149,7 +149,7 @@ struct LayoutChange2 {
 
 ##### 案例：角度变化
 
-![显示动画-角度变化](img/显示动画-角度变化.gif)
+![显示动画-角度变化](img/xianshi3.gif)
 
 ```JavaScript
 // 显示动画-角度改变
@@ -223,7 +223,7 @@ animation(value: AnimateParam)
 > 2. 显式动画会对动画闭包前后造成的所有界面差异执行动画，且使用同一动画参数，适用于统一执行的场景。此外，显式动画也可以用于一些非属性变量造成的动画，如if/else的条件，ForEach使用的数组元素的删减。
 > 3. 如果一个属性配置了属性动画，且在显式动画闭包中改变该属性值，属性动画优先生效，会使用属性动画的动画参数。
 
-![属性动画](img/属性动画.gif)
+![属性动画](img/sx.gif)
 
 ```JavaScript
 // 属性动画
@@ -416,7 +416,7 @@ struct IfElseTransition {
 
 #### **ForEach****产生组件内转场动画**
 
-![组件内转场动画-forEach](img/组件内转场动画-forEach.gif)
+![组件内转场动画-forEach](img/zjnzc.gif)
 
 和`if`/`else`类似，`ForEach`可以通过控制数组中的元素个数，来控制组件的插入和删除。通过`ForEach`来产生组件内转场动画，仍然需要两个条件：
 
@@ -541,7 +541,7 @@ sharedTransition(id: string, options?: sharedTransitionOptions)
 
 下面介绍使用共享元素转场进行放大缩小图片的示例。
 
-![页面间共享元素转场](img/页面间共享元素转场.gif)
+![页面间共享元素转场](img/yemjgx.gif)
 
 案例效果
 
@@ -608,7 +608,7 @@ struct SharedTransitionDest {
 
 ### 页面转场动画
 
-![页面间转场动画](img/页面间转场动画.gif)
+![页面间转场动画](img/17076203173681.gif)
 
 两个页面间发生跳转，一个页面消失，另一个页面出现，这时可以配置各自页面的页面转场参数实现自定义的页面转场效果。[页面转场](https://developer.harmonyos.com/cn/docs/documentation/doc-references-V3/ts-page-transition-animation-0000001477981233-V3)效果写在pageTransition函数中，通过PageTransitionEnter和PageTransitionExit指定页面进入和退出的动画效果。
 
@@ -666,7 +666,7 @@ pageTransition() {
 
 #### 案例： 界面进场退场效果
 
-![页面间转场动画](img/页面间转场动画-17076203173681.gif)
+![页面间转场动画](img/17076203173681.gif)
 
 ```JavaScript
 import router from '@ohos.router'
@@ -870,7 +870,7 @@ httpRequest.request('接口地址',{
 
 ### 案例：诗词学习
 
-![网络请求获取诗词](img/网络请求获取诗词.gif)
+![网络请求获取诗词](img/wangluo.gif)
 
 获取诗词接公开API接口
 
