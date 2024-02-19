@@ -4,8 +4,8 @@
 # git clone https://gitee.com/mayuanwei/harmonyOS_bilibili.git /tmp/website
 
 # 进入代码目录
-echo "sudo cd /var/repo/harmonyOS_bilibili"
-sudo cd /var/repo/harmonyOS_bilibili
+echo "cd /var/repo/harmonyOS_bilibili"
+cd /var/repo/harmonyOS_bilibili
 pwd
 
 # 更新代码
@@ -13,8 +13,8 @@ echo "sudo git pull"
 sudo git pull
 
 # 进入网站代码根目录
-echo "sudo cd ./website"
-sudo cd ./website
+echo "cd ./website"
+cd ./website
 pwd
 
 # 设置Node版本为18+
