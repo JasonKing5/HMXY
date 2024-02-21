@@ -545,8 +545,9 @@ sharedTransition(id: string, options?: sharedTransitionOptions)
 
 案例效果
 
+`// src page`
+
 ```JavaScript
-// src page
 import router from '@ohos.router';
 
 @Entry
@@ -571,7 +572,11 @@ struct SharedTransitionSrc {
     .alignItems(HorizontalAlign.Start)
   }
 }
-// dest page
+```
+
+`// dest page`
+
+```javascript
 import router from '@ohos.router';
 @Entry
 @Component
@@ -603,6 +608,8 @@ struct SharedTransitionDest {
   }
 }
 ```
+
+
 
 上述示例中，第一个页面（src page)和第二个页面（dest page）都配置了id为"`sharedImage1`"的共享元素转场，使两个页面能匹配到这一组共享元素。从第一个页面跳转到第二个页面时，第一个页面为起始页，第二个页面为目标页。配置id为"`sharedImage1`"的组件按照目标页中500ms的时长进行共享元素转场，达到放大视图的效果，id为"`text`"的组件按照配置的`Static`类型`sharedTransition`参数中的`500ms`的时长进行共享元素转场，标题逐渐出现。从第二个页面返回到第一个页面时，第二个页面为起始页，第一个页面为目标页。配置id为"`sharedImage1`"的组件按照目标页中1000ms的时长进行共享元素转场，缩小为原始视图，id为"`text`"的组件按照配置的Static类型`sharedTransition`参数中的500ms的时长进行共享元素转场，标题逐渐隐藏。
 
@@ -642,6 +649,9 @@ pageTransition() {
   PageTransitionExit({ type: RouteType.None, duration: 1000 })
     .slide(SlideEffect.Left)
 }
+```
+
+```javascript
 // page B
 pageTransition() {
   // 定义页面进入时的效果，从右侧滑入，时长为1000ms，无论页面栈发生push还是pop操作均可生效
@@ -652,6 +662,8 @@ pageTransition() {
     .slide(SlideEffect.Right)
 }
 ```
+
+
 
 #### **禁用某页面的页面转场**
 
@@ -711,6 +723,9 @@ struct PageTransitionSrc {
     })
   }
 }
+```
+
+```javascript
 import router from '@ohos.router'
 @Entry
 @Component
@@ -750,6 +765,8 @@ struct PageTransitionDest {
   }
 }
 ```
+
+
 
 [页面转场动画-页面间的动画-使用动画-基于ArkTS的声明式开发范式-UI开发-开发-HarmonyOS应用开发](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-page-transition-animation-0000001450755574-V3)
 
