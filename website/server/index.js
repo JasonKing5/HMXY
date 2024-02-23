@@ -3,6 +3,13 @@ const { exec } = require("child_process");
 const app = express();
 const port = 3001;
 
+// 使用 cors 中间件，允许所有来源的跨域请求
+app.use(
+  cors({
+    origin: "https://www.hmosxy.com",
+  })
+);
+
 app.get("/config", (req, res) => {
   // 执行 publish.sh 文件
   exec("sh publish.sh", (error, stdout, stderr) => {
