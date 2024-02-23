@@ -5,7 +5,10 @@ import styles from './index.module.css';
 
 export default function Home() {
   const handlePublish = () => {
-    fetch('http://localhost:3001/config')
+    fetch('http://localhost:3001/config', {
+      method: 'GET',
+      referrerPolicy: 'no-referrer-when-downgrade' // 设置 referrerPolicy
+    })
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
