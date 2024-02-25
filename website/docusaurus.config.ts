@@ -68,7 +68,7 @@ const config: Config = {
       // title: '鸿蒙学苑',
       logo: {
         alt: '鸿蒙学苑 Logo',
-        src: 'img/logotext2.png',
+        src: 'img/logotext3.png',
       },
       // title: '鸿蒙学苑',
       // logo: {
