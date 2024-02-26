@@ -25,24 +25,18 @@ sidebar_position: 107
 ### 1. 判断题
 
 1. 云函数打包完成后，需要到 APPGallery Connect 创建对应函数的触发器才可以在端侧中调用 ❌
-
 2. 每一个自定义组件都有自己的生命周期 ✅
-
 3. 基于端云一体化开发，开发者需要精通前端，后端不同的开发语言。 ❌
-
 4. 首选项 preferences 是以 key-value 形式存储数据，其中 key 是可以重复。 ❌
-
 5. HarmonyOS 应用可以兼容 OpenHarmony 生态 ✅
-
 6. 每周用一次 router.pushUrl()方法，默认情况下，页面栈数量会加 1，页面栈支持的最大也能数量为 32。✅
-
 7. 只要使用端云一体化的云端资源就需要支付费用 ❌
-
 8. 首选项是非关系数据库，遵循 ACID 特性 ❌
-
 9. 在 Column 和 Row 容器组件中，alignItems 用于设置子组件在主轴方向上的对齐格式，justifyContent 用于设置子组件在交叉轴方向上的对齐格式 ❌
-
 10. 所有使用@Component 修饰的自定义组件都支持 onPageShow ，onBackPress 和 onPageHide 生命周期函数。 ❌
+11. 使用端云一体化开发，无需自己搭建服务器，并进行运维了 ✅
+12. ArkUI 是声明式开发范式 ✅
+13. Worker线程不支持UI操作 ✅
 
 ---
 
@@ -622,48 +616,27 @@ C.打包函数
 
 ### 判断题
 
-1.Ability 是系统调度应用的最小单元，是能够完成一个独立功能的组件。一个应用可以包含一个或多个 Ability。
+1.Ability 是系统调度应用的最小单元，是能够完成一个独立功能的组件。一个应用可以包含一个或多个 Ability。✅
 
-(正确)
+2.Tabs 组件仅可包含子组件 TabsContent，每一个页签对应一个内容视图即 TabContet 组件。✅
 
-2.Tabs 组件仅可包含子组件 TabsContent，每一个页签对应一个内容视图即 TabContet 组件。
+3.使用 http 模块发起网络请求时，必须要使用 on(‘headersReceive’）订阅请求头，请求才会成功。❌
 
-(正确)
+4.Web 组件对于所有的网页都可以使用 zoom(factor: number)方法进行缩放。❌
 
-3.使用 http 模块发起网络请求时，必须要使用 on(‘headersReceive’）订阅请求头，请求才会成功。
+5.首选项 preferences 是以 Key-Value 形式存储数据，其中 Key 是可以重复。❌
 
-(错误)
+6.每一个自定义组件都有自己的生命周期。✅
 
-4.Web 组件对于所有的网页都可以使用 zoom(factor: number)方法进行缩放。
-(错误)
+7.在 Column 和 Row 容器组件中，justifyContent 用于设置子组件在主轴方向上的对齐格式，alignItems 用于设置子组件在交叉轴方向上的对齐格式。✅
 
-5.首选项 preferences 是以 Key-Value 形式存储数据，其中 Key 是可以重复。
+8.@CustomDialog 装饰器用于装饰自定义弹窗组件，使得弹窗可以动态设置内容及样式。✅
 
-(错误)
+9.所有使用@Component 修饰的自定义组件都支持 onPageShow，onBackPress 和 onPageHide 生命周期函数。❌
 
-6.每一个自定义组件都有自己的生命周期。
+10.Video 组件可以支持本地视频路径和网络路径播放。播放网络视频时，需要申请权限 ohos.permission.INTERNET。✅
 
-(正确)
-
-7.在 Column 和 Row 容器组件中，justifyContent 用于设置子组件在主轴方向上的对齐格式，alignItems 用于设置子组件在交叉轴方向上的对齐格式。
-
-(正确)
-
-8.@CustomDialog 装饰器用于装饰自定义弹窗组件，使得弹窗可以动态设置内容及样式。
-
-(正确)
-
-9.所有使用@Component 修饰的自定义组件都支持 onPageShow，onBackPress 和 onPageHide 生命周期函数。
-
-(错误)
-
-10.Video 组件可以支持本地视频路径和网络路径播放。播放网络视频时，需要申请权限 ohos.permission.INTERNET。
-
-(正确)
-
-11.每调用一次 router.pushUrl()方法，默认情况下，页面栈数量会加 1，页面栈支持的最大页面数量为 32。
-
-(正确)
+11.每调用一次 router.pushUrl()方法，默认情况下，页面栈数量会加 1，页面栈支持的最大页面数量为 32。✅
 
 ---
 
