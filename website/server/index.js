@@ -17,7 +17,6 @@ app.use((req, res, next) => {
 
 // 处理部署请求
 app.get("/config", (req, res) => {
-  执行部署脚本;
   exec("sudo ./publish.sh", (error, stdout, stderr) => {
     if (error) {
       console.error(`执行脚本错误: ${error.message}`);
