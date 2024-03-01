@@ -20,16 +20,25 @@ app.get("/config", (req, res) => {
   exec("sudo ./publish.sh", (error, stdout, stderr) => {
     if (error) {
       console.error(`执行脚本错误: ${error.message}`);
-      res.status(500).send("部署失败");
+      res.status(500).send({
+        code: 501,
+        message: `部署失败 - 执行脚本错误:, ${error.message}`,
+      });
       return;
     }
     if (stderr) {
       console.error(`脚本错误输出: ${stderr}`);
-      res.status(500).send("部署失败");
+      res.status(500).send({
+        code: 502,
+        message: `部署失败 - 脚本错误输出:, ${stderr}`,
+      });
       return;
     }
     console.log(`脚本输出: ${stdout}`);
-    res.status(200).send("部署成功");
+    res.status(200).send({
+      code: 0,
+      message: `部署成功`,
+    });
   });
 });
 
