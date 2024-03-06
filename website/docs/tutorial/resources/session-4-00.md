@@ -1,8 +1,8 @@
 ---
-sidebar_position: 107
+sidebar_position: 100
 ---
 
-# 08：开发者认证题库
+# 开发者认证题库
 
 :::tip
 
