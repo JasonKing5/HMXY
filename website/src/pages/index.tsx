@@ -98,20 +98,13 @@ function TweetsSection() {
   const tweetColumns = [
     [
       {
-
         avatar: '/img/index_fans_0.png', 
         name: '尚硅谷', 
         content: '不吹不黑，讲的真细致，快更新，评论区小伙伴们都等不及了！[原神_生气]', 
         date: '2024-01-25 14:01', 
         url: 'https://space.bilibili.com/302417610',
       },
-      {
-        avatar: '/img/index_fans_1.png', 
-        name: '黑马pink讲前端', 
-        content: '不错不错，更新很快哈~加油~。看你视频，感觉咱俩风格很像哈，但是你声音更好听，而且很有诗意~~ 真的不错，加油加油~~有点意思哈~~。一起加油哈😊', 
-        date: '2023-11-23 16:06', 
-        url: 'https://space.bilibili.com/415434293',
-      },
+    
       
       {
         avatar: '/img/index_fans_7.png', 
@@ -121,17 +114,16 @@ function TweetsSection() {
         url: 'https://space.bilibili.com/697549960',
       },
       
-     
     ],
     [
-
       {
-        avatar: '/img/index_fans_2.png', 
-        name: '鸿蒙钊哥', 
-        content: '据说这个很受小白欢迎', 
-        date: '2023-11-23 23:33', 
-        url: 'https://space.bilibili.com/455592866',
+        avatar: '/img/index_fans_1.png', 
+        name: '黑马pink讲前端', 
+        content: '不错不错，更新很快哈~加油~。看你视频，感觉咱俩风格很像哈，但是你声音更好听，而且很有诗意~~ 真的不错，加油加油~~有点意思哈~~。一起加油哈😊', 
+        date: '2023-11-23 16:06', 
+        url: 'https://space.bilibili.com/415434293',
       },
+    
       {
         avatar: '/img/index_fans_3.png', 
         name: '真实z', 
@@ -148,6 +140,13 @@ function TweetsSection() {
       },
     ],
     [
+      {
+        avatar: '/img/index_fans_2.png', 
+        name: '鸿蒙钊哥', 
+        content: '据说这个很受小白欢迎', 
+        date: '2023-11-23 23:33', 
+        url: 'https://space.bilibili.com/455592866',
+      },
       {
         avatar: '/img/index_fans_5.png', 
         name: 'zachariahkk', 
