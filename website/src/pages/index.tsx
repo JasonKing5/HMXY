@@ -148,19 +148,20 @@ function TweetsSection() {
 
     ],
     [
-      {
-        avatar: '/img/index_fans_2.png', 
-        name: '鸿蒙钊哥', 
-        content: '据说这个很受小白欢迎', 
-        date: '2023-11-23 23:33', 
-        url: 'https://space.bilibili.com/455592866',
-      },
+     
       {
         avatar: '/img/index_fans_5.png', 
         name: 'zachariahkk', 
         content: '讲的挺细，不错。看了俩月鸿蒙了，之前做iOS，现在在西安找鸿蒙的岗位，几乎都只要前端和安卓的😂', 
         date: '2023-11-23 23:33', 
         url: 'https://space.bilibili.com/19061903',
+      },
+      {
+        avatar: '/img/index_fans_2.png', 
+        name: '鸿蒙钊哥', 
+        content: '据说这个很受小白欢迎', 
+        date: '2023-11-23 23:33', 
+        url: 'https://space.bilibili.com/455592866',
       },
       {
         avatar: '/img/index_fans_6.png', 
