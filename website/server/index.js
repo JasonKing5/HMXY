@@ -1,34 +1,47 @@
 const express = require("express");
 const { exec } = require("child_process");
-const cors = require("cors");
+
 const app = express();
-const port = 3001;
+const PORT = 3001; // 你的服务端口
 
-// 使用 cors 中间件，允许所有来源的跨域请求
-app.use(
-  cors({
-    origin: "https://www.hmosxy.com",
-  })
-);
+// 处理跨域请求
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Authorization, Content-Length, X-Requested-With"
+  );
+  next();
+});
 
+// 处理部署请求
 app.get("/config", (req, res) => {
-  // 执行 publish.sh 文件
-  exec("sh publish.sh", (error, stdout, stderr) => {
+  exec("sudo ./publish.sh", (error, stdout, stderr) => {
     if (error) {
-      console.error(`执行出错: ${error.message}`);
-      res.status(500).send("执行出错");
+      console.error(`执行脚本错误: ${error.message}`);
+      res.status(500).send({
+        code: 501,
+        message: `部署失败 - 执行脚本错误:, ${error.message}`,
+      });
       return;
     }
     if (stderr) {
-      console.error(`stderr: ${stderr}`);
-      res.status(500).send("执行出错");
+      console.error(`脚本错误输出: ${stderr}`);
+      res.status(500).send({
+        code: 502,
+        message: `部署失败 - 脚本错误输出:, ${stderr}`,
+      });
       return;
     }
-    console.log(`stdout: ${stdout}`);
-    res.send("publish.sh 文件执行成功");
+    console.log(`脚本输出: ${stdout}`);
+    res.status(200).send({
+      code: 0,
+      message: `部署成功`,
+    });
   });
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`服务器运行在 http://localhost:${PORT}`);
 });
