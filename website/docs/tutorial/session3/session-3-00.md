@@ -73,7 +73,7 @@ https://developer.huawei.com/consumer/cn/service/josp/agc/index.html#/
 
 ![image-20240307100935290](screenshots/image-20240307100935290.png)
 
-<img src="screenshots/image-20240307100949572.png" alt="image-20240307100949572" style="zoom:50%;" />
+<img src="screenshots/image-20240307100949572.png" alt="image-20240307100949572" />
 
 ![image-20240307101327808](screenshots/image-20240307101327808.png)
 
