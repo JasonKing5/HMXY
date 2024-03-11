@@ -125,3 +125,23 @@ struct NestedScroll {
   }
 }
 ```
+
+---
+## 2. 获取屏幕尺寸
+
+虽然鸿蒙的组件一般情况下会把屏幕自动撑满，但是有些时候还是需要使用屏幕的尺寸，方法如下：
+
+```javascript
+import display from '@ohos.display';
+
+
+@State screen_width:number = display.getDefaultDisplaySync().width
+@State screen_height:number = display.getDefaultDisplaySync().height
+
+```
+
+需要注意的是这个方法在预览器里是获取不到的，需要模拟器或真机，而且这样获取到的单位是px，在开发中默认的单位是vp，需要使用px2vp()转换一下：
+```javascript
+@State screen_width:number =  px2vp(display.getDefaultDisplaySync().width) 
+@State screen_height:number =  px2vp(display.getDefaultDisplaySync().height)
+```

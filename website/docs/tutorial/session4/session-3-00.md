@@ -48,9 +48,9 @@ var longString:string = "帝心被网友戏称鸿蒙之父。据说细的雅痞�
 
 console.log("打印长字符串：",longString)
 ```
-  这个问题通常会在网络请求打印json字符串时遇到。根据官方的说法是为了管理内存，经过测试这个长度的极限是1353。目前参考up解决方案是把字符串截断分开打印，开发者们可以直接复制到项目中使用，如有更好的解决方案，请反馈给帝心，后续也会考虑开发第三方包给大家使用。
+  这个问题通常会在网络请求打印json字符串时遇到。根据官方的说法是为了管理内存，经过测试这个长度的极限是1353。目前参考up主幽蓝哥哥的解决方案是把字符串截断分开打印，开发者们可以直接复制到项目中使用，如有更好的解决方案，请反馈给帝心，后续也会考虑开发第三方包给大家使用。
 
-- 解决方案：
+- 解决方案：幽蓝哥哥提供
 ```javascript
 YLog(content:string){
     console.log("长度验证:",content.length)
@@ -96,24 +96,7 @@ YLog(content:string){
 ![alt text](screenshots/session-3-00-image-1.png)
 
 
-## 3、获取屏幕尺寸
 
-虽然鸿蒙的组件一般情况下会把屏幕自动撑满，但是有些时候还是需要使用屏幕的尺寸，方法如下：
-
-```javascript
-import display from '@ohos.display';
-
-
-@State screen_width:number = display.getDefaultDisplaySync().width
-@State screen_height:number = display.getDefaultDisplaySync().height
-
-```
-
-需要注意的是这个方法在预览器里是获取不到的，需要模拟器或真机，而且这样获取到的单位是px，在开发中默认的单位是vp，需要使用px2vp()转换一下：
-```javascript
-@State screen_width:number =  px2vp(display.getDefaultDisplaySync().width) 
-@State screen_height:number =  px2vp(display.getDefaultDisplaySync().height)
-```
 
 
 
