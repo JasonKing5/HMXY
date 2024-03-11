@@ -5,15 +5,15 @@
   },
   "item.label.课程": {
     "message": "tutorial",
-    "description": "Navbar item with label tutorial"
+    "description": "Navbar item with label 课程"
   },
   "item.label.博客": {
     "message": "blog",
-    "description": "Navbar item with label blog"
+    "description": "Navbar item with label 博客"
   },
   "item.label.社区": {
     "message": "community",
-    "description": "Navbar item with label community"
+    "description": "Navbar item with label 社区"
   },
   "item.label.Gitee": {
     "message": "Gitee",

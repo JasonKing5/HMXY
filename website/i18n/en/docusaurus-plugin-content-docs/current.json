@@ -29,10 +29,34 @@
   },
   "sidebar.communitySidebar.category.基础教程": {
     "message": "pages - basic",
-    "description": "The label for category pages - basic in sidebar communitySidebar"
+    "description": "The label for category 基础教程 in sidebar communitySidebar"
   },
   "sidebar.communitySidebar.category.基础教程.link.generated-index.description": {
     "message": "5 minutes to learn the most important pages basic concepts.",
-    "description": "The generated-index page description for category pages - basic in sidebar communitySidebar"
+    "description": "The generated-index page description for category 基础教程 in sidebar communitySidebar"
+  },
+  "sidebar.tutorialSidebar.category.端云一体化学习笔记": {
+    "message": "端云一体化学习笔记",
+    "description": "The label for category 端云一体化学习笔记 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.端云一体化学习笔记.link.generated-index.description": {
+    "message": "端云一体化学习笔记记录",
+    "description": "The generated-index page description for category 端云一体化学习笔记 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.开发者认证资料": {
+    "message": "开发者认证资料",
+    "description": "The label for category 开发者认证资料 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.开发者认证资料.link.generated-index.description": {
+    "message": "开发者认证题库-高级认证+基础认证",
+    "description": "The generated-index page description for category 开发者认证资料 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.鸿蒙开发踩坑与技巧": {
+    "message": "鸿蒙开发踩坑与技巧",
+    "description": "The label for category 鸿蒙开发踩坑与技巧 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.鸿蒙开发踩坑与技巧.link.generated-index.description": {
+    "message": "鸿蒙开发踩坑与解决方案",
+    "description": "The generated-index page description for category 鸿蒙开发踩坑与技巧 in sidebar tutorialSidebar"
   }
 }
