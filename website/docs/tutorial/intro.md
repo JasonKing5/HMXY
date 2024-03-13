@@ -88,3 +88,30 @@ sidebar_position: 1
 2. [黑马-满一航-端云一体化](https://www.bilibili.com/video/BV1Aj421f7xK/)
     > 帝心基础课+电商严选
 
+## 鸿蒙认证
+
+### HarmonyOS应用开发：职业认证(收费)
+
+1. [华为职业认证](https://e.huawei.com/cn/talent/cert/#/careerCert)
+
+1. [HCIA-HarmonyOS Application Developer](https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=719&authenticationLevel=CTYPE_CARE_HCIA&technicalField=BSH&version=2.0)
+    鸿蒙`应用`开发：中级
+
+1. [HCIP-HarmonyOS Application Developer](https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=607&authenticationLevel=CTYPE_CARE_HCIP&technicalField=BSH&version=1.0)
+    鸿蒙`应用`开发： 高级
+
+1. [HCIA-HarmonyOS Device  Developer](https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=717&authenticationLevel=CTYPE_CARE_HCIA&technicalField=BSH&version=2.0)
+    鸿蒙`设备`开发：中级
+
+1. [HCIP-HarmonyOS Device Developer](https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=609&authenticationLevel=CTYPE_CARE_HCIP&technicalField=BSH&version=1.0)
+    鸿蒙`设备`开发： 高级
+
+### HarmonyOS应用开发：开发者认证（免费）
+1. [开发者能力认证官网](https://developer.huawei.com/consumer/cn/training/dev-certification/a617e0d3bc144624864a04edb951f6c4)
+
+1. [HarmonyOS应用开发者基础认证](https://developer.huawei.com/consumer/cn/training/dev-cert-detail/101666948302721398)
+
+1. [HarmonyOS应用开发者高级认证](https://developer.huawei.com/consumer/cn/training/dev-cert-detail/101684223987951077)
+
+
+1. [开发者认证题库](../tutorial/resources/session-4-00.md)
