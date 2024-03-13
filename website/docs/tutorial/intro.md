@@ -81,7 +81,7 @@ sidebar_position: 1
     > 帝心：专业机构，质量超级好。强烈建议！
 
 
-2. [黑马-鹏哥](https://www.bilibili.com/video/BV14t421W7pA/)
+2. [黑马-蒋鹏](https://www.bilibili.com/video/BV14t421W7pA/)
     > 帝心：专业机构，质量超级好。强烈建议！
 
 2. [python大本营-一凡老师](https://www.bilibili.com/video/BV1Aj421f7xK/)
