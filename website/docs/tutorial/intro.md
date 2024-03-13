@@ -81,12 +81,12 @@ sidebar_position: 1
     > 帝心：专业机构，质量超级好。强烈建议！
 
 2. [python大本营](https://www.bilibili.com/video/BV1Aj421f7xK/)
-    > 帝心基础课+电商严选
+    > 基础课（帝心）+电商严选（肖斌）
 
 
 
 2. [黑马-满一航-端云一体化](https://www.bilibili.com/video/BV1Aj421f7xK/)
-    > 帝心基础课+电商严选
+    
 
 ## 鸿蒙认证
 
