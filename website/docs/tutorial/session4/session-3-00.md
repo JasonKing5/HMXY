@@ -30,6 +30,8 @@ sidebar_position: 100
 
 解决办法：
 * 手动删除js和map文件即可。但是要注意的是，需要删除干净无遗漏。比如`entryability`目录下的也要删除。另外，有些朋友在删除的时候，会手误删掉`ets`文件。这种属于笨比。
+  > 帝友评价说在网站上称呼笨比是不太雅观的。建议称`小笨比`。
+  
 
 * 有人好心人提供了脚本文件。[点击下载](https://mayw-teaching.feishu.cn/file/IHvkbYhAJo96Z2xqIiccdIV4ncf?from=from_copylink)，放在根目录下双击运行，即可自动化删除。
 ![alt text](screenshots/session-3-00-image-2.png)
