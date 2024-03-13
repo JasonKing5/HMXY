@@ -13,9 +13,9 @@ sidebar_position: 1
 ### IDE下载
 1. [DevEco Studio 3.1](https://developer.huawei.com/consumer/cn/deveco-studio#download)
 
-1. [DevEco Studio 4.0](https://developer.huawei.com)
+1. [DevEco Studio 4.0](https://docs.openharmony.cn/pages/v4.0/zh-cn/release-notes/OpenHarmony-v4.0-release.md#%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB)
 
-1. [DevEco Studio NEXT](https://developer.huawei.com)
+1. [DevEco Studio NEXT](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-software-download-0000001507075446)
 
     > 帝心：需要权限或等未来全面公开
 
@@ -49,6 +49,11 @@ sidebar_position: 1
 
 5. [端云一体化AGC指南](https://developer.huawei.com/consumer/cn/doc/AppGallery-connect-Guides/agc-get-started-harmony-arkts-0000001683915520)
 
+
+#### 第三方库
+1. [OpenHarmony三方库中心仓](https://ohpm.openharmony.cn/#/cn/home)
+
+---
 ### 视频教程
 
 #### 官方视频教程
