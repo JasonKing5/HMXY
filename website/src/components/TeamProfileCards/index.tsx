@@ -98,7 +98,9 @@ export function ActiveTeamRow(): JSX.Element {
         wechatUrl="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzI0NDQ4MjE4MQ==&scene=1&album_id=3212803851943116806"
         bilibiliUrl="https://space.bilibili.com/110937561">
         <div>
-          喜欢吟诗，擅写故事，公众号里写尽人生百态。 略懂技术，偶写代码，IT教育中坚持开源精神。 庄生的大舅哥。
+          喜欢吟诗，擅写故事，公众号里写尽人生百态。 略懂技术，偶写代码，IT教育中坚持开源精神。
+          <br />
+          <code>庄生的大舅哥。</code>
         </div>
       </TeamProfileCardCol>
       <TeamProfileCardCol
