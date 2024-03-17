@@ -6,6 +6,7 @@
     "pages/todolist",
     "pages/Poem",
     "pages/Weather",
-    "pages/animation/Animation1"
+    "pages/animation/Animation1",
+    "pages/animation/Animation2"
   ]
 }

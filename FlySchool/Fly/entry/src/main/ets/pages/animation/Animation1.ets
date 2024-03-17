@@ -1,4 +1,4 @@
-// 动画：显示动画
+// 动画：显式动画
 @Entry
 @Component
 struct Animation1 {
@@ -17,14 +17,6 @@ struct Animation1 {
             .width('30%')
           Text('训练营')
         }
-        .width('90%')
-        .height(300)
-        .backgroundColor('#ffff9999')
-        .border({
-          width: 2
-        })
-        .justifyContent(FlexAlign.Center)
-        .alignItems(this.HoriAli)
         .onClick(() => {
           animateTo(
             {
@@ -43,6 +35,15 @@ struct Animation1 {
             }
           )
         })
+        .width('90%')
+        .height(300)
+        .backgroundColor('#ffff9999')
+        .border({
+          width: 2
+        })
+        .justifyContent(FlexAlign.Center)
+        .alignItems(this.HoriAli)
+        // .rotate({angle:60})
       }
       .width('100%')
     }
