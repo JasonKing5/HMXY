@@ -1,0 +1,49 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\73602\\.ohos\\config\\auto_debug_Fly_com.dxin.fly_2850086000522892254.cer",
+          "storePassword": "0000001B23CA41FF2E1DBD98594F7DF37C60E94856A9C83867432CD439AF9750DC3483CCE5CCE43869186B",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B2BE17715379B92D732E93C866E6BAF8621F3721DD3F0633300FA4A8DCE039FB2DFA19D837768D2",
+          "profile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_Fly_com.dxin.fly_2850086000522892254.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_Fly_com.dxin.fly_2850086000522892254.p12"
+        }
+      }
+    ],
+    "compileSdkVersion": 9,
+    "compatibleSdkVersion": 9,
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}
