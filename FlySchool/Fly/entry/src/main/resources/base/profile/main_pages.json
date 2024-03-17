@@ -4,6 +4,7 @@
     "pages/Skip1",
     "pages/Skip2",
     "pages/todolist",
-    "pages/Poem"
+    "pages/Poem",
+    "pages/Weather"
   ]
 }
