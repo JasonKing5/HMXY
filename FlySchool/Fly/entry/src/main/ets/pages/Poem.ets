@@ -22,7 +22,7 @@ struct Poem {
           this.auth = JSON.parse(`${data.result}`).result.from
         }
       })
-    },3000)
+    },10000)
   }
 
   build() {
