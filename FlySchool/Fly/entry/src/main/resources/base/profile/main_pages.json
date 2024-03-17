@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/Skip1",
     "pages/Skip2",
-    "pages/todolist"
+    "pages/todolist",
+    "pages/Poem"
   ]
 }
