@@ -259,4 +259,4 @@ tags: ["人生杂谈"]
 
 [灰撒大海和深山，钱惠妻儿勿墓碑](https://mp.weixin.qq.com/s/H6R-w58kgSgoRBa8yg12nw)
 
-原文链接：https://mp.weixin.qq.com/s/pKzewtwUjvhSEk4z2wafQg
+原文链接：[庄生说](https://mp.weixin.qq.com/s/pKzewtwUjvhSEk4z2wafQg)

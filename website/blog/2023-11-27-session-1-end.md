@@ -79,4 +79,4 @@ tags: [HarmonyOS, 视频教程]
 
 如果你也是这套教程的观众，可以转发这个文章了。让你的朋友们见证过，我们一起做成了这件美好的事情
 
-原文链接：https://mp.weixin.qq.com/s/JBNWPo0T70V9J1GnlQ8RLA
+原文链接：[第一季收官](https://mp.weixin.qq.com/s/JBNWPo0T70V9J1GnlQ8RLA)
