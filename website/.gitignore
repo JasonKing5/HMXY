@@ -18,6 +18,7 @@ src/config/agconnect-services.js
 
 yarn-error.log
 build
+dist
 coverage
 .docusaurus
 .cache-loader
@@ -46,5 +47,3 @@ website/i18n/**/*
 #!website/i18n/fr/**/*
 
 .netlify
-
-docs/tutorial/session4/*

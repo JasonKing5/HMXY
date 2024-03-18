@@ -2,6 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+/** @type {import('@docusaurus/types').Config} */
 const config: Config = {
   title: '鸿蒙学苑',
   tagline: '鸿蒙学苑',
@@ -12,11 +13,16 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  // Allow to customize the presence/absence of a trailing slash at the end of URLs/links, and how static HTML files are generated:
+  // undefined (default): keeps URLs untouched, and emit /docs/myDoc/index.html for /docs/myDoc.md
+  // true: add trailing slashes to URLs/links, and emit /docs/myDoc/index.html for /docs/myDoc.md
+  // false: remove trailing slashes from URLs/links, and emit /docs/myDoc.html for /docs/myDoc.md
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Joson', // Usually your GitHub org/user name.
-  projectName: 'HarmonyOS4.0', // Usually your repo name.
+  projectName: '鸿蒙学苑', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
