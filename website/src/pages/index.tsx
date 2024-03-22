@@ -247,7 +247,7 @@ function Resources() {
         <Heading as="h2" className={clsx('margin-bottom--lg', 'text--center')}>
           配套资料及学习交流群
         </Heading>
-        <div style={{textAlign: 'center'}}>文档资料：<Link to={'https://mayw-teaching.feishu.cn/drive/folder/Qm0LfbzjIlBwE8duFZ1cKEKinUd'}>访问飞书资料库</Link></div>
+        <div style={{textAlign: 'center'}}>文档资料：<Link to={'https://www.hmosxy.com/docs/tutorial/intro'}>访问资料库</Link></div>
         <div style={{textAlign: 'center'}}>代码地址：<Link to={'https://gitee.com//mayuanwei/harmonyOS_bilibili'}>访问 Gitee 代码库</Link></div>
         <div style={{display: 'flex', justifyContent: 'space-around', marginTop: '10px', flexWrap: 'wrap'}}>
           <div className={clsx('col col--6')}>
