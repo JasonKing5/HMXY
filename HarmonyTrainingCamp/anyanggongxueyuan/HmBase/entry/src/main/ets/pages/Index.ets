@@ -1,3 +1,4 @@
+import router from '@ohos.router';
 
 @Entry
 @Component
@@ -47,6 +48,11 @@ struct Index {
       // .alignItems(HorizontalAlign.End)
       // .justifyContent(FlexAlign.Start)
       // .justifyContent(FlexAlign.SpaceBetween)
+      .onClick(() => {
+        router.pushUrl({
+          url:"pages/MySwiper"
+        })
+      })
     }
 }
 
