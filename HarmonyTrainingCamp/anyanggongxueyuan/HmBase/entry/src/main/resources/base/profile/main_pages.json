@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/MySwiper"
+    "pages/MySwiper",
+    "pages/MyExtend"
   ]
 }
