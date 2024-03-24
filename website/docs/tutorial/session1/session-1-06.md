@@ -896,7 +896,10 @@ httpRequest.request('接口地址',{
 > 例如搜索关键词：公开的API接口地址。
 
 ```JavaScript
+// 获取随机诗词AIP
 https://api.apiopen.top/api/sentences
+// 藏头诗API
+https://py.myie9.com/hidepoem/****
 ```
 
 测试接口软件：https://www.apipost.cn/
