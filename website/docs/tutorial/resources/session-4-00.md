@@ -14,11 +14,11 @@ sidebar_position: 100
 
 本文档题目会有告知选项。答案也有加粗提示。如题目处和答案加粗不吻合。以题目处为准（毕竟加粗是后面手动加粗的，可能手误）
 
-**[鸿蒙高级开发者认证指路，点击跳转去官网考试，注意不能切屏哦](https://developer.huawei.com/consumer/cn/training/exam-detail/101684221791158147?ha_source=shenzhen)**
+<!-- **[鸿蒙高级开发者认证，注意不能切屏哦](https://developer.huawei.com/consumer/cn/training/exam-detail/101684221791158147?ha_source=shenzhen)** -->
 
 
-
-**[鸿蒙开发者认证指路，点击跳转去官网考试，注意不能切屏哦](https://developer.huawei.com/consumer/cn/training/exam-detail/101666925289749625?ha_source=shenzhen)**
+<!-- 
+**[鸿蒙开发者认证指路，点击跳转去官网考试，注意不能切屏哦](https://developer.huawei.com/consumer/cn/training/exam-detail/101666925289749625?ha_source=shenzhen)** -->
 
 :::
 
