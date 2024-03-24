@@ -1093,7 +1093,6 @@ struct FancyUse {
 @Component
 struct FancyUse {
   @State label: string = 'Hello World'
-
   build() {
     Row({ space: 10 }) {
       Text(`${this.label}`)
