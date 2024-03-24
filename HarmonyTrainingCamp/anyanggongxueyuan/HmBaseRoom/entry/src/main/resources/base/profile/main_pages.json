@@ -1,6 +1,9 @@
 {
   "src": [
     "pages/Index",
-    "pages/TodoList"
+    "pages/TodoList",
+    "pages/ArkUI",
+    "pages/ArkUIList",
+    "pages/ArkUITabs"
   ]
 }

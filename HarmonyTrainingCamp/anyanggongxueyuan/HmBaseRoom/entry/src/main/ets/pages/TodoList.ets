@@ -9,11 +9,17 @@ import RowItem from '../view/RowItem'
 struct TodoList {
 
   // lists:string[] = []
-  lists : Array<string> = ['皮蛋瘦肉粥',"大盘鸡",`烤生蚝`]
+  lists : Array<string> = []
+
+  //生命周期函数 页面加载之前
+  aboutToAppear(){
+    //获取网络数据  ['皮蛋瘦肉粥',"大盘鸡",`烤生蚝`]
+    this.lists = ['皮蛋瘦肉粥',"大盘鸡",`烤生蚝`]
+  }
 
   build() {
     Column({ space: 30 }) {
-      Text('todolist')
+      Text(Constants.TODOLISTTITLE)
         .fontSize(40)
         .fontWeight(FontWeight.Bold)
         .fontStyle(FontStyle.Italic)
