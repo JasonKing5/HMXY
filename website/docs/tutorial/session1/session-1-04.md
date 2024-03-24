@@ -1053,7 +1053,7 @@ struct FancyUse {
 
   build() {
     Row({ space: 10 }) {
-      Text(${this.label})
+      Text(`${this.label}`)
         .makeMeClick(this.onClickHandler.bind(this))
     }
   }
@@ -1096,15 +1096,15 @@ struct FancyUse {
 
   build() {
     Row({ space: 10 }) {
-      Text(${this.label})
+      Text(`${this.label}`)
         .fontStyle(FontStyle.Italic)
         .fontWeight(100)
         .backgroundColor(Color.Blue)
-      Text(${this.label})
+      Text(`${this.label}`)
         .fontStyle(FontStyle.Italic)
         .fontWeight(200)
         .backgroundColor(Color.Pink)
-      Text(${this.label})
+      Text(`${this.label}`)
         .fontStyle(FontStyle.Italic)
         .fontWeight(300)
         .backgroundColor(Color.Orange)
