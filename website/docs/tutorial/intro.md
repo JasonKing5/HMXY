@@ -8,9 +8,9 @@ sidebar_position: 1
 
 
 ## IDE下载
-1. [DevEco Studio 3.1](https://developer.huawei.com/consumer/cn/deveco-studio#download)
+1. [DevEco Studio 3.1](https://developer.huawei.com/consumer/cn/deveco-studio#download)不建议，bug太多。
 
-1. [DevEco Studio 4.0](https://docs.openharmony.cn/pages/v4.0/zh-cn/release-notes/OpenHarmony-v4.0-release.md#%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB)
+1. [DevEco Studio 4.0](https://docs.openharmony.cn/pages/v4.0/zh-cn/release-notes/OpenHarmony-v4.0-release.md#%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB)在没有next权限的时候，建议使用4.0版本。
 
 1. [DevEco Studio NEXT](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-software-download-0000001507075446)
 
