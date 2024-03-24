@@ -2,6 +2,8 @@
   "src": [
     "pages/Index",
     "pages/MySwiper",
-    "pages/MyExtend"
+    "pages/MyExtend",
+    "pages/MyStyle",
+    "pages/Render"
   ]
 }
