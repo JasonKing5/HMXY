@@ -4,6 +4,10 @@
     "pages/TodoList",
     "pages/ArkUI",
     "pages/ArkUIList",
-    "pages/ArkUITabs"
+    "pages/ArkUITabs",
+    "pages/AnimationStudy",
+    "pages/AnimationStudy1",
+    "pages/MyWeb",
+    "pages/MyHttp"
   ]
 }
