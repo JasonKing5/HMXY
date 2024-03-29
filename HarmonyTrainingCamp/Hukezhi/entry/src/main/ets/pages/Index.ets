@@ -1,4 +1,5 @@
 import router from '@ohos.router';
+import  Constants from  '../common/Constants'
 
 @Entry
 @Component
@@ -21,5 +22,6 @@ struct Index {
       .width('100%')
     }
     .height('100%')
+    .backgroundColor(Constants.BGC)
   }
 }

@@ -1,4 +1,5 @@
 import router from '@ohos.router'
+import Constants from '../common/Constants'
 
 @Entry
 @Component
@@ -43,7 +44,7 @@ struct Show{
       Button('change poem')
     //   交互事件
         .onClick( ()=>{
-          //把上门的文本修改别的内容
+          //把上面的文本修改别的内容
           this.poem = '劝君莫忘少年志，曾许人间第一流'
           console.log(this.poem)
         } )
@@ -56,7 +57,7 @@ struct Show{
     }
     .width('100%')
     .height('100%')
-    .backgroundColor(Color.Pink)
+    .backgroundColor(Constants.BGC)
 
   }
 }
