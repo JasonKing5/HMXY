@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/Show",
     "pages/TodoList",
-    "pages/Zuoye"
+    "pages/Zuoye",
+    "pages/MyImage"
   ]
 }
