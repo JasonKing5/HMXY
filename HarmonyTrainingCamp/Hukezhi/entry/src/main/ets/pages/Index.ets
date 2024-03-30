@@ -18,6 +18,12 @@ struct Index {
             url:"pages/Show"
           })
         })
+        Divider()
+        Button('goto todolist').onClick((event: ClickEvent) => {
+          router.pushUrl({
+            url:"pages/TodoList"
+          })
+        })
       }
       .width('100%')
     }

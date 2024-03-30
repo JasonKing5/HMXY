@@ -3,32 +3,14 @@ import Constants from '../common/Constants'
 
 @Entry
 @Component
-struct Show{
-  @State poem:string = '日拱一卒无有尽，功不唐捐终入海'
-  build(){
+struct Show {
+  @State poem: string = '日拱一卒无有尽，功不唐捐终入海'
+
+  build() {
     // 列容器
-    Column({space:30}){
-      Text('HarmonyOSHarmonyOSHarmonyOS')
-        // 属性方法用来修饰样式
-        .fontColor(Color.Blue)
-        .fontStyle(FontStyle.Italic)
-        .fontWeight(FontWeight.Bold)
-        .maxLines(1)
-        .textOverflow({
-          // overflow:TextOverflow.Ellipsis
-          // overflow:TextOverflow.None
-          overflow:TextOverflow.Clip
-        })
-        .fontSize(20)
-        .width('70%')
-        .height(150)
-        .backgroundColor(Color.Gray)
-        .decoration({
-          // type:TextDecorationType.Overline,
-          type:TextDecorationType.LineThrough,
-          color:Color.Red
-        })
-        .opacity(0.6)
+    Column({ space: 30 }) {
+      Text('HarmonyOSHarmonyOSHarmonyOS')// 属性方法用来修饰样式
+        .textStyle()
 
       Divider()
         .strokeWidth(20)
@@ -41,13 +23,13 @@ struct Show{
         .strokeWidth(20)
         .color('#ffe96909')
 
-      Button('change poem')
-    //   交互事件
-        .onClick( ()=>{
+      Button('change poem')//   交互事件
+        .onClick(() => {
           //把上面的文本修改别的内容
           this.poem = '劝君莫忘少年志，曾许人间第一流'
           console.log(this.poem)
-        } )
+        })
+
 
       Divider()
       Button('back to index')
@@ -65,8 +47,33 @@ struct Show{
 
 @Preview
 @Component
-struct Test{
-  build(){
+struct Test {
+  build() {
     Text('入门学习')
   }
+}
+
+
+//封装一个属性样式函数。给Text组件使用。
+@Extend(Text)
+function textStyle(){
+  .fontColor(Color.Blue)
+  .fontStyle(FontStyle.Italic)
+  .fontWeight(FontWeight.Bold)
+  .maxLines(1)
+  .textOverflow({
+    // overflow:TextOverflow.Ellipsis
+    // overflow:TextOverflow.None
+    overflow: TextOverflow.Clip
+  })
+  .fontSize(20)
+  .width('70%')
+  .height(150)
+  .backgroundColor(Color.Gray)
+  .decoration({
+    // type:TextDecorationType.Overline,
+    type: TextDecorationType.LineThrough,
+    color: Color.Red
+  })
+  .opacity(0.6)
 }

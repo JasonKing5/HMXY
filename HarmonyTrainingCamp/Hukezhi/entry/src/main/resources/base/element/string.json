@@ -2,7 +2,7 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "湖科技授课"
     },
     {
       "name": "EntryAbility_desc",
@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "schoolXun",
+      "value": "study"
     }
   ]
 }

@@ -2,6 +2,7 @@
   "src": [
     "pages/Index",
     "pages/Show",
-    "pages/TodoList"
+    "pages/TodoList",
+    "pages/Zuoye"
   ]
 }
