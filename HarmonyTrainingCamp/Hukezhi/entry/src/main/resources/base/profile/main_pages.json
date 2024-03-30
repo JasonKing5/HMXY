@@ -4,6 +4,7 @@
     "pages/Show",
     "pages/TodoList",
     "pages/Zuoye",
-    "pages/MyImage"
+    "pages/MyImage",
+    "pages/MyTabs"
   ]
 }

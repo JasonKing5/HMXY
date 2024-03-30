@@ -7,11 +7,16 @@ struct MyImage {
 
   build() {
     Row() {
-      Column() {
+      Column({space:30}) {
         Text(this.message)
         Divider()
         //加载网络图片 配置网络权限申请
         Image('https://www.hubstc.com.cn/images/logo.png')
+          .width('80%')
+        Divider()
+        //加载本地资源 media
+        //加载本地资源 rawfile
+        Image($rawfile('hkz.png'))
           .width('80%')
       }
       .width('100%')
