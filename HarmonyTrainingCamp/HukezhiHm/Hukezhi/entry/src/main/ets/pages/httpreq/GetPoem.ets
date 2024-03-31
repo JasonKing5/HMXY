@@ -4,8 +4,25 @@ import Constants from '../../common/Constants'
 @Entry
 @Component
 struct GetPoem {
-  @State poem: string = '何事人间频乞食物，此心已是负彩霞'
+  @State poem: string = '何事人间频乞乞食，此心已是负彩霞'
   @State auth: string = '帝心'
+
+
+
+  aboutToAppear(){
+    setInterval(() => {
+      let httpObj =  http.createHttp()
+      //切记不要忘记在src/main/module.json5中申请网络权限
+      httpObj.request('https://api.apiopen.top/api/sentences', (err,data) => {
+        if (!err) {
+          this.poem = JSON.parse(`${data.result}`).result.name
+          this.auth = JSON.parse(`${data.result}`).result.from
+        }
+      })
+    },1000)
+
+  }
+
 
   build() {
     Column({space:30}) {
