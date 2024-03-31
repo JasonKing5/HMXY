@@ -5,6 +5,9 @@
     "pages/TodoList",
     "pages/Zuoye",
     "pages/MyImage",
-    "pages/MyTabs"
+    "pages/MyTabs",
+    "pages/router/One",
+    "pages/router/Two",
+    "pages/httpreq/GetPoem"
   ]
 }
