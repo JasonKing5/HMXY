@@ -153,14 +153,16 @@ import display from '@ohos.display';
 懒加载是一种延迟加载技术，它允许在需要时才加载资源，如对象或数据，以提高系统性能和资源利用率。这样介绍比较抽象，举一个例子，当一个页面中加载大量图片时，下面分别是不使用懒加载和使用懒加载的效果：
 
 不使用懒加载：
+
 ![alt text](screenshots/session-3-01-image.png)
 
 使用懒加载：
+
 ![alt text](screenshots/session-3-01-image-1.png)
 
 明显看出使用懒加载加载速度更快，用户体验更佳，因为懒加载是先加载屏幕中正在展示的数据。
 
-在鸿蒙开发中，懒加载的使用方式一般是使用LazyForEach代替ForEach，但是数据源不能是通常的数组了，而是IDataSource类型，并且需要实现相关接口，下面是上文示例中的相关代码：
+在鸿蒙开发中，懒加载的使用方式一般是使用LazyForEach代替ForEach，但是**数据源不能是通常的数组了，而是IDataSource类型，并且需要实现相关接口**，下面是上文示例中的相关代码：
 ```
 class WaterFlowDataSource implements IDataSource {
 
