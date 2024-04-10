@@ -150,33 +150,28 @@ struct DialogDemo02 {
 ```
 * 方式三：
 ```ArkTS
+let storage = LocalStorage.GetShared()
 @CustomDialog
-struct CustomDialog02 {
-  private inputValue: string
-  changeInputValue: (val: string) => void
+struct CustomDialog03 {
+  @LocalStorageLink('inputVal')  inputValue: string = ''
   controller: CustomDialogController
   build() {
     Column() {
       Text('Change text').fontSize(20).margin({ top: 10, bottom: 10 })
       TextInput({ placeholder: '', text: this.inputValue }).height(60).width('90%')
         .onChange((value: string) => {
-          this.changeInputValue(value)
+          this.inputValue = value;
         })
     }
   }
 }
 
-@Entry
+@Entry(storage)
 @Component
-struct DialogDemo02 {
-  @State inputValue: string = 'click me'
+struct DialogDemo03 {
+  @LocalStorageLink('inputVal') inputValue: string = ''
   dialogController: CustomDialogController = new CustomDialogController({
-    builder: CustomDialog02({
-      inputValue: this.inputValue,
-      changeInputValue: (val: string) => {
-        this.inputValue = val
-      }
-    })
+    builder: CustomDialog03()
   })
 
   build() {
