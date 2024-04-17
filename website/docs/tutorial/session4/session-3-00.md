@@ -79,7 +79,7 @@ YLog(content:string){
   }
 ```
 
-
+---
 
 ### 1.2 情况2：字符串中遇到反引号即截断不打印
 
@@ -104,13 +104,52 @@ YLog(content:string){
 ```
 ![alt text](screenshots/session-3-00-image-1.png)
 
-
+---
 
 ## 3、 状态变量数据改变无法驱动UI更新的问题
   变量类型要小写！！！
   ![alt text](screenshots/session-3-00-image-3.png)
 
 
+---
+## 4、API问题
 
+### 4.1 API10的http请求没反应
 
+![alt text](screenshots/session-3-00-image-5.png)
+
+如下代码所示：在API10中，按照官方文档说明使用http请求，并不会进入回调函数。即，不论请求成功或者失败，均无响应。
+
+>
+```
+import http from '@ohos.net.http'
+import { BusinessError } from '@ohos.base'
+
+@Entry
+@Component
+struct TestHttpApi10 {
+  @State message: string = '测试http10'
+
+  build() {
+    Row() {
+      Column() {
+        Button(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            http.createHttp().request('https://api.apiopen.top/api/sentences', (err:BusinessError,data:http.HttpResponse) => {
+              // 不会触发回调。
+              console.log('API10的HTTP请求经测试有问题')
+            })
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+**解决方案：**
+>API10本就为过渡版本。经测试，API9和next版本中，均正常使用。
+---
 
