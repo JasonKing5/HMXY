@@ -4,15 +4,12 @@ sidebar_position: 102
 
 # 02：环境搭建
 
-# DevEco Studio3.1版本（23年11-21编写教程时最新版）
+> DevEco Studio3.1版本（23年11-21编写本教程时最新版）
+>
+> 但是该版本bug比较多，遂建议使用4.0版本。安装过程不变。
 
-> 此文档为安装DevEco Studio过程演示。
+> 此文档为安装DevEco Studio3.1时的过程演示。跟4.0安装过程基本一致。
 >
-> 也可参考官方网站指导教程：链接如下。
->
-> 
->
-> https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/deveco_overview-0000001053582387-V3?catalogVersion=V3
 
 # 开发工具下载安装
 
@@ -22,13 +19,11 @@ sidebar_position: 102
 
 ## 下载安装包
 
-1. 进入官网点击下载
+1. [点击本链接进入openHarmony的官网借用安装包下载并解压](https://docs.openharmony.cn/pages/v4.0/zh-cn/release-notes/OpenHarmony-v4.0-release.md#%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB)
 
-> https://developer.harmonyos.com/cn/develop/deveco-studio/
+![alt text](screenshots/session-1-02-image.png)
 
-![官网](img/hmos.PNG)解压并安装
-
-![解压并安装](img/jieyaanzhuang.PNG)
+![alt text](screenshots/session-1-02-image-1.png)
 
 1. 一路next进行安装
 
