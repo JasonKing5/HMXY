@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/One",
     "pages/Two",
-    "pages/ZhuangShiQi"
+    "pages/ZhuangShiQi",
+    "pages/Loop"
   ]
 }
