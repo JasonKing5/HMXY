@@ -1,13 +1,20 @@
 /*
  * todo: 待办列表，触类旁通。掌握布局知识。和arkts。
  * */
+import todo from '../dataModel/TodoListData'
+import RowItem from '../view/RowItem'
 
 @Entry
 @Component
 struct TodoList {
-  @State flag: boolean = false
   // listArr:Array<string> = []
-  listArr:string[] = ['收徒','勤能补拙','还活着','jacklove','uzi','faker']
+  // 页面数据不是直接就给了。
+  listArr:string[] = []
+  // 再也没build之前再给数据 。生命周期函数。
+  aboutToAppear() {
+    // 很可能有网络请求
+    this.listArr = todo.getData()
+  }
   build() {
     Column({ space: 20 }) {
       Text('HarmonyOS4.0')
@@ -17,24 +24,8 @@ struct TodoList {
       ForEach(
         this.listArr,
         (item: string, index: number) => {
-          Row({ space: 30 }) {
-            Image(this.flag ? $r('app.media.done') : $r('app.media.undo'))
-              .width(40)
-              .fillColor(Color.Gray)
-
-            Text(item)
-              .fontSize(25)
-              .fontColor(Color.Blue)
-              .decoration({
-                type: this.flag ? TextDecorationType.LineThrough : TextDecorationType.None,
-                color: Color.Red
-              })
-              .opacity(this.flag ? .5 : 1)
-          }
-          .rowStyle()
-          .onClick(() => {
-            this.flag = !this.flag
-          })
+          // rowItem({item:item})
+          RowItem({item})
         }
       )
     }
@@ -47,20 +38,9 @@ struct TodoList {
 function clmStyle() {
   .width('100%')
   .height('100%')
-  .backgroundColor('#ffe8eeee')
+  .backgroundColor($r('app.color.app_background'))
   .justifyContent(FlexAlign.Center)
 }
 
-// 这个函数是用来封装样式代码
-@Extend(Row)
-function rowStyle(){
-  .width('80%')
-  .height(60)
-  .backgroundColor('#ffc4cee3')
-  .padding({
-    left: 40
-  })
-  .borderRadius(30)
-}
 
 
