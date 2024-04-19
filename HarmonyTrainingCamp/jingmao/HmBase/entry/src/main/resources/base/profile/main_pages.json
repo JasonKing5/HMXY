@@ -5,6 +5,7 @@
     "pages/Two",
     "pages/ZhuangShiQi",
     "pages/Loop",
-    "pages/Skip7"
+    "pages/Skip7",
+    "pages/TodoList"
   ]
 }
