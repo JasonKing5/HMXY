@@ -4,6 +4,7 @@
     "pages/One",
     "pages/Two",
     "pages/ZhuangShiQi",
-    "pages/Loop"
+    "pages/Loop",
+    "pages/Skip7"
   ]
 }
