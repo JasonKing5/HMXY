@@ -5,34 +5,62 @@
 @Entry
 @Component
 struct TodoList {
-
+  @State flag: boolean = false
+  // listArr:Array<string> = []
+  listArr:string[] = ['收徒','勤能补拙','还活着','jacklove','uzi','faker']
   build() {
-    Column({space:20}) {
+    Column({ space: 20 }) {
       Text('HarmonyOS4.0')
         .fontSize(40)
         .fontWeight(FontWeight.Bold)
       Divider()
+      ForEach(
+        this.listArr,
+        (item: string, index: number) => {
+          Row({ space: 30 }) {
+            Image(this.flag ? $r('app.media.done') : $r('app.media.undo'))
+              .width(40)
+              .fillColor(Color.Gray)
 
-      Row({space:30}){
-        Image($r('app.media.logo'))
-          .width(40)
-        Text('收徒')
-          .fontSize(25)
-          .fontColor(Color.Gray)
-          .decoration({type:TextDecorationType.LineThrough,color:Color.Red})
-      }
-      .width('80%')
-      .height(60)
-      .backgroundColor('#ffc4cee3')
-      .padding({
-        left:40
-      })
-      .borderRadius(30)
-
+            Text(item)
+              .fontSize(25)
+              .fontColor(Color.Blue)
+              .decoration({
+                type: this.flag ? TextDecorationType.LineThrough : TextDecorationType.None,
+                color: Color.Red
+              })
+              .opacity(this.flag ? .5 : 1)
+          }
+          .rowStyle()
+          .onClick(() => {
+            this.flag = !this.flag
+          })
+        }
+      )
     }
-    .width('100%')
-    .height('100%')
-    .backgroundColor('#ffe8eeee')
-    .justifyContent(FlexAlign.Center)
+    .clmStyle()
   }
 }
+
+// 封装最外层的布局容器的样式效果
+@Extend(Column)
+function clmStyle() {
+  .width('100%')
+  .height('100%')
+  .backgroundColor('#ffe8eeee')
+  .justifyContent(FlexAlign.Center)
+}
+
+// 这个函数是用来封装样式代码
+@Extend(Row)
+function rowStyle(){
+  .width('80%')
+  .height(60)
+  .backgroundColor('#ffc4cee3')
+  .padding({
+    left: 40
+  })
+  .borderRadius(30)
+}
+
+
