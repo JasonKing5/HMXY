@@ -6,6 +6,8 @@
     "pages/ZhuangShiQi",
     "pages/Loop",
     "pages/Skip7",
-    "pages/TodoList"
+    "pages/TodoList",
+    "pages/QuanXian",
+    "pages/UseHttp"
   ]
 }
