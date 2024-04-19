@@ -6,7 +6,6 @@ import http from '@ohos.net.http'
 struct UseHttp {
   @State message: string = '访问服务端展示数据'
   @State poem:string  = ''
-
   aboutToAppear(){
     // 定时器函数
     setInterval(() => {
@@ -22,19 +21,8 @@ struct UseHttp {
           .fontSize(30)
           .fontWeight(FontWeight.Bold)
         Divider()
-        // Button('发请求')
-          // .onClick(() => {
-          //   //可以发送网络请求了。 得知道请求谁啊。api。https://api.apiopen.top/api/sentences
-          //   http.createHttp().request('https://api.apiopen.top/api/sentences', (err, data) => {
-          //     if (!err) {
-          //       this.poem = JSON.parse( `${data.result}` ).result.name
-          //     }
-          //   })
-          // })
-
         Divider()
         Text(this.poem)
-
       }
       .width('100%')
     }
