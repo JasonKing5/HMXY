@@ -1,6 +1,8 @@
 {
   "src": [
     "pages/Index",
-    "pages/FirstAcquaintance"
+    "pages/FirstAcquaintance",
+    "pages/SrcPage",
+    "pages/TargetPage"
   ]
 }

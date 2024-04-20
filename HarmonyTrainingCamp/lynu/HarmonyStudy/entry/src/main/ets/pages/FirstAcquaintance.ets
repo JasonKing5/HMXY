@@ -17,7 +17,6 @@ struct FirstAcquaintance {
           .opacity(1)
           .fontColor('red')
 
-
         Divider()
 
         Button('按钮')
