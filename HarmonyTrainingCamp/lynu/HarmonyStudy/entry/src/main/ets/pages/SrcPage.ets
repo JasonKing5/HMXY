@@ -5,6 +5,8 @@ import router from '@ohos.router'
 struct SrcPage {
   @State message: string = '少年不惧岁月长，彼方尚有荣光在'
 
+ poem:string = '洛阳亲友如相问，我在郑州送外卖'
+
   build() {
     Row() {
       Column({space:30}) {

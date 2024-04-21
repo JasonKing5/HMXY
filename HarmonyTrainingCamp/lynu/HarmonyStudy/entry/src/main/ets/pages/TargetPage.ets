@@ -16,12 +16,14 @@ struct TargetPage {
 
       //   点击按钮返回按钮
         Button('返回')
-          .onClick(()=>{
-             router.back()
+          .onClick(() => {
+            router.back()
           })
+
       }
       .width('100%')
     }
     .height('100%')
   }
 }
+

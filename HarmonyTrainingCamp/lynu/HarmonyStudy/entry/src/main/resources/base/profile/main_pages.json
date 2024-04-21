@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/FirstAcquaintance",
     "pages/SrcPage",
-    "pages/TargetPage"
+    "pages/TargetPage",
+    "pages/PoemStudy"
   ]
 }
