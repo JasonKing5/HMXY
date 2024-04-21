@@ -4,6 +4,7 @@
     "pages/FirstAcquaintance",
     "pages/SrcPage",
     "pages/TargetPage",
-    "pages/PoemStudy"
+    "pages/PoemStudy",
+    "pages/Poem"
   ]
 }
