@@ -3,60 +3,41 @@
 @Component
 struct PoemStudy {
   @State message: string = '诗文学习'
+  @State flag: boolean = false
 
   build() {
     Row() {
-      Column({space:20}) {
+      Column({ space: 20 }) {
         Text(this.message)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
         Divider()
         // 行布局  还不会背
-        Row({space:10}) {
+        Row({ space: 10 }) {
           //   图片
-          Image($r('app.media.undo'))
+          Image( this.flag? $r('app.media.done') : $r('app.media.undo')  )
             .width(40)
             .height(40)
-            .fillColor(Color.Red)
+            .fillColor( this.flag ? Color.Green : Color.Red)
           //   诗句
           Text('我到洛阳不吟诗，牡丹少年即文章')
             .fontSize(17)
-            .opacity(1)
+            .opacity(this.flag ? .5 : 1)
             .decoration({
-              type:TextDecorationType.None
+              type:  this.flag ? TextDecorationType.LineThrough : TextDecorationType.None
             })
         }
         .width('89%')
         .height(50)
         .backgroundColor(Color.Pink)
         .padding({
-          left:10
+          left: 10
         })
         .borderRadius(25)
-
-        // 已经掌握
-        Row({space:10}) {
-          //   图片
-          Image($r('app.media.done'))
-            .width(40)
-            .height(40)
-            .interpolation(ImageInterpolation.High)//插值效果，图片放大保持高清，抗锯齿状
-            .fillColor(Color.Green)
-          //   诗句
-          Text('垂杨紫陌洛城东，明年花胜去年红')
-            .fontSize(17)
-            .opacity(.5)
-            .decoration({
-              type:TextDecorationType.LineThrough
-            })
-        }
-        .width('89%')
-        .height(50)
-        .backgroundColor(Color.Pink)
-        .padding({
-          left:10
+        .onClick(() => {
+          //修改样式属性  比如换一张图，文字透明度，文字样式的贯穿
+          this.flag = !this.flag
         })
-        .borderRadius(25)
       }
       .width('100%')
     }
