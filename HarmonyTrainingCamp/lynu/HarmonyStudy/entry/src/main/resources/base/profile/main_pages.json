@@ -5,6 +5,7 @@
     "pages/SrcPage",
     "pages/TargetPage",
     "pages/PoemStudy",
-    "pages/Poem"
+    "pages/Poem",
+    "pages/HttpStudy"
   ]
 }

@@ -2,6 +2,20 @@
 @Component
 struct Poem {
   @State message: string = '诗文学习'
+  @State arr:string[]  =[  ]
+
+// build之前自动调用
+  aboutToAppear(){
+    // 去获取服务端的数据。
+
+    // 将数据设置给数组
+    this.arr = [
+      '东隅已逝，桑榆非晚',
+      '豫章故郡，洪都新府',
+      '星分翼珍，地接衡庐',
+      '日拱一卒无有尽，功不唐捐终入海'
+    ]
+  }
 
   build() {
     Row() {
@@ -10,15 +24,15 @@ struct Poem {
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
 
-        PoemItem()
-        PoemItem({content:'东隅已逝，桑榆非晚'})
-        PoemItem({content:'豫章故郡，洪都新府'})
-        PoemItem({content:'星分翼珍，地接衡庐'})
+        ForEach(this.arr, (item:string,index:number) => {
+          PoemItem({content:item})
+        })
 
       }
       .width('100%')
     }
     .height('100%')
+    .backgroundColor('#ccc')
   }
 }
 
