@@ -2,9 +2,9 @@
 sidebar_position: 101
 ---
 
-# CSS
+# JavaScript
 
 
-> CSS样式学习
+> JavaScript 教程
 
 ---
