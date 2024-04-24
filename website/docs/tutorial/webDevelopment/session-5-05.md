@@ -2,9 +2,9 @@
 sidebar_position: 105
 ---
 
-# xxxx
+#  ECharts
 
 
-> xxxx 教程
+>  ECharts 教程
 
 ---
