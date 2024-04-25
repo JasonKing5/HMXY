@@ -4,7 +4,7 @@ sidebar_position: 110
 
 # node入门
 
-> 整理node学习知识点
+> 整理node学习知识点：持续更新
 
 ---
 

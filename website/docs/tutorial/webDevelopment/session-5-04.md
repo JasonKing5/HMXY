@@ -5,6 +5,6 @@ sidebar_position: 104
 # bootstrap
 
 
-> bootstrap 教程
+> bootstrap 教程：待更新
 
 ---
