@@ -3,6 +3,10 @@
     {
       "name": "start_window_background",
       "value": "#FFFFFF"
+    },
+    {
+      "name": "app_theme",
+      "value": "#FFCAF3D9"
     }
   ]
 }

@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "河南科技学院"
+    },
+    {
+      "name": "appName",
+      "value": "youngDream"
     }
   ]
 }

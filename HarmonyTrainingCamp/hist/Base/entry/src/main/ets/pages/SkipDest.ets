@@ -24,6 +24,6 @@ struct SkipDest {
       .width('100%')
     }
     .height('100%')
-    .backgroundColor('#ffc6e9de')
+    .backgroundColor($r('app.color.app_theme'))
   }
 }

@@ -2,7 +2,7 @@
 @Component
 struct Index {
   // 设置注释的颜色
-  @State message: string = '日拱一卒无有尽，功不唐捐终入海'
+  @State message: Resource = $r('app.string.appName')
 
   build() {
     Row() {
@@ -14,6 +14,6 @@ struct Index {
       .width('100%')
     }
     .height('100%')
-    .backgroundColor('#ffc6e9de')
+    .backgroundColor($r('app.color.app_theme'))
   }
 }
