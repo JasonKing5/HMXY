@@ -3,8 +3,7 @@
 @Component
 struct TodoList {
   @State title: string = '电竞选手'
-
-  LolUser:string []=[
+  LolUser: string [] = [
     'thyshe',
     'UZI',
     'faker',
@@ -23,27 +22,49 @@ struct TodoList {
 }
 
 
-
 @Component
 struct myRow {
-  name:string = 'pdd'
+  name: string = 'pdd'
+  @State flag: boolean = true
+
   build() {
     Row({ space: 20 }) {
-      Image($r('app.media.done'))
+      Image( this.flag  ? $r('app.media.done') : $r('app.media.undo') )
         .width(30)
         .height(30)
+
       Text(this.name)
+        .opacity(this.flag ? .5 : 1)
+        .decoration({
+          type: this.flag ? TextDecorationType.LineThrough : TextDecorationType.None
+        })
+        .fontColor(this.flag ? Color.Red : Color.Green)
     }
-    .rowStyle()
+    .rowStyle(this.flag)
+    .onClick(() => {
+      this.flag = !this.flag
+    })
   }
 }
 
+@Extend(Row)
+function rowStyle(flag:boolean) {
+  .width('90%')
+  .height(50)
+  .backgroundColor( flag ? '#fff6b5b5' : '#fff')
+  .padding({
+    left: 15
+  })
+  .borderRadius(25)
+}
+
+
 @Component
 struct myTitle {
-  tt :string = '默认值'
+  tt: string = '默认值'
 
   build() {
-    Column({space:30}){
+    Column({ space: 30 }) {
       Text(this.tt)
         .fontStyle(FontStyle.Italic)
         .fontWeight(FontWeight.Bold)
@@ -63,13 +84,4 @@ function bjStyle() {
   .justifyContent(FlexAlign.Center)
 }
 
-@Extend(Row)
-function rowStyle() {
-  .width('90%')
-  .height(50)
-  .backgroundColor('#fff6b5b5')
-  .padding({
-    left: 15
-  })
-  .borderRadius(25)
-}
+
