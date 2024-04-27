@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/SkipSrc",
     "pages/SkipDest",
-    "pages/UseImage"
+    "pages/UseImage",
+    "pages/TodoList"
   ]
 }
