@@ -4,6 +4,8 @@
     "pages/SkipSrc",
     "pages/SkipDest",
     "pages/UseImage",
-    "pages/TodoList"
+    "pages/TodoList",
+    "pages/myHttp",
+    "pages/Weather"
   ]
 }

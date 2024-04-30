@@ -3,12 +3,12 @@
 @Component
 struct TodoList {
   @State title: string = '电竞选手'
-  LolUser: string [] = [
-    'thyshe',
-    'UZI',
-    'faker',
-    'jacklove'
-  ]
+  LolUser: string [] = []
+
+  aboutToAppear(){
+
+    this.LolUser = ['thyshe', 'UZI', 'faker', 'jacklove']
+  }
 
   build() {
     Column({ space: 30 }) {
