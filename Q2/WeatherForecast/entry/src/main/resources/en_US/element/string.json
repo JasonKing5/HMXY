@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "天气预报"
+    },
+    {
+      "name": "App_title",
+      "value": "weather_app"
     }
   ]
 }

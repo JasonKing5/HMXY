@@ -26,3 +26,10 @@
 *  阿里巴巴矢量图标库： https://www.iconfont.cn/home/index 
 * 在`src/main/module.json5` 文件中，修改 `"abilities"`配置项中的 `"icon"`和`"label"`
 
+## 获取天气数据
+* 聚合数据网站：https://www.juhe.cn/
+* 天气接口：http://apis.juhe.cn/simpleWeather/query
+  * city
+  * key
+* > 我们要发送的api地址：
+  > http://apis.juhe.cn/simpleWeather/query?city=荥阳&key=个人的key
