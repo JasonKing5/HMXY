@@ -6,9 +6,9 @@ import { fromToAuthorAndSubject } from '../fun/Utils'
 @Entry
 @Component
 struct PoemMain {
-  @State poem: string = '日拱一卒无有尽，功不唐捐终入海'
-  @State author: string = '李商隐'
-  @State subject: string = '无题'
+  @State poem: string = '何须浅碧深红色，自是花中第一流'
+  @State author: string = '李清照'
+  @State subject: string = '鹧鸪天·桂花'
 
   aboutToAppear() {
     setInterval( () => {
