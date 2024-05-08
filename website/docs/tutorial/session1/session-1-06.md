@@ -898,6 +898,13 @@ httpRequest.request('接口地址',{
 ```JavaScript
 // 获取随机诗词AIP
 https://api.apiopen.top/api/sentences
+```
+```JavaScript
+// 获取随机诗词AIP 这个更好用
+https://v1.jinrishici.com/all.json
+```
+
+```JavaScript
 // 藏头诗API
 https://py.myie9.com/hidepoem/****
 ```
