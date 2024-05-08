@@ -8,6 +8,5 @@ export  function  fromToAuthorAndSubject(from:string) :string[]{
   // 截取目标字符串。多种方式。
   // let subject:string = temp.substring(0,temp.length-1)    //'123'
   let subject:string = temp.substring(0,temp.indexOf('》'))    //'123'
-
   return [author,subject]
 }

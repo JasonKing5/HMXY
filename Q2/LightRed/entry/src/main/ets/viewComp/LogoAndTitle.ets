@@ -12,5 +12,6 @@ export default struct LogoAndTitle {
         .fontColor($r('app.color.title'))
     }
     .margin({top:5})
+    .height('7%')
   }
 }

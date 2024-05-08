@@ -1,22 +1,22 @@
+import Poem from '../model/Poem'
+
 @Component
 export default struct ShowPoem {
-  @Prop poem: string
-  @Prop author: string
-  @Prop subject: string
+  @Prop poem:Poem
 
   build() {
     Row({ space: 30 }) {
       Row() {
-        Text(this.author)
+        Text(this.poem.author)
           .textStyle()
       }
       .authorArea()
 
       Row({ space: 30 }) {
-        Text(this.poem)
+        Text(this.poem.content)
           .textStyle()
           .height('100%')
-        Text(this.subject)
+        Text(this.poem.subject)
           .textStyle()
       }
       .height('100%')
@@ -42,8 +42,8 @@ function authorArea() {
 @Extend(Row)
 function poemArea() {
   .width('80%')
-  .height('70%')
-  .backgroundColor('#fff1d7d7')
+  .height('96%')
+  .backgroundColor('#ffb9f1cb')
   .padding(30)
   .borderRadius(10)
   .justifyContent(FlexAlign.SpaceBetween)
