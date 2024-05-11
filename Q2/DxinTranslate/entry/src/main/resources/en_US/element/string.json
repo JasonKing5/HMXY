@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "翻译软件，帝心和玖彰同学一起学习"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "dxinTranslate"
+    },
+    {
+      "name": "tab1",
+      "value": "translate"
+    },
+    {
+      "name": "tab2",
+      "value": "history"
+    }
+  ]
+}
