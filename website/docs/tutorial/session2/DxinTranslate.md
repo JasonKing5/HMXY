@@ -19,9 +19,15 @@ sidebar_position: 101
 ### 配置国际化资源
 ![alt text](screenshots/DxinTranslate-image-2.png)
 
+---
 ### 配置app图标+名称+网络权限
 ![alt text](screenshots/DxinTranslate-image-1.png)
 
+* 配置图标和名称后，效果如下：
+
+![alt text](screenshots/DxinTranslate-image-6.png)
+
+---
 ### 配置app主题色和主要文本颜色
 > 在 `src/main/resources/base/element/color.json` 文件中追加配置项。
 
