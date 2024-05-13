@@ -25,8 +25,10 @@ struct LanguageChoice {
                 LanguageItem({item})
                 .onClick(() => {
                   //通过点击事件，保存当前所选语种。即 item.lang。供翻译页使用
-                  // AppStorage.SetOrCreate('lang',item.lang)
-                  AppStorage.setOrCreate('lang',item.lang)
+                  // API9
+                  AppStorage.SetOrCreate('lang',item.lang)
+                  // API10+
+                  // AppStorage.setOrCreate('lang',item.lang)
                   //点击返回
                   router.back()
                 })

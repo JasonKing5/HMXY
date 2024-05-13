@@ -14,8 +14,10 @@ struct Index {
 
   // 一加载就需要获取当前所要翻译的目标语种: 页面返回,没有UI更新。不触发  aboutToAppear()
   onPageShow() {
-    // this.lang = AppStorage.Get('lang') || Constants.lang
-    this.lang = AppStorage.get('lang') || Constants.lang
+    // API9
+    this.lang = AppStorage.Get('lang') || Constants.lang
+    // API11
+    // this.lang = AppStorage.get('lang') || Constants.lang
   }
 
   build() {

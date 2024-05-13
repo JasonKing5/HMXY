@@ -1,7 +1,4 @@
 //导入axios网络请求模块
-import axios from '@ohos/axios'
-import CryptoJS from '@ohos/crypto-js'
-import Constants from '../common/Constants'
 
 // 语种
 export class Language {

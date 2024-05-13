@@ -1,6 +1,5 @@
 // 封装常量数据
 import { Language, TianXingParams } from '../model/Data'
-import CryptoJS from '@ohos/crypto-js'
 
 export default class Constants {
   //可选语种

@@ -20,24 +20,28 @@ export function saveHistory(tranObj: TianXingResp) {
   //从本地存储中获取数组对象
   let historyArr: TianXingResp[] = getHistory()
   // 查重
-  let flag = historyArr.some(item => item.src === tranObj.src)
+  let flag = historyArr.some(item => item.src === tranObj.src && item.dst === tranObj.dst)
   // 如果不存在 存入
   if (!flag) {
-    historyArr.push(tranObj)
+    historyArr.unshift(tranObj)
   }
-  //存进去
-  // AppStorage.SetOrCreate(Constants.histroy, historyArr)
-  AppStorage.setOrCreate(Constants.histroy, historyArr)
+  //存进去 API9
+  AppStorage.SetOrCreate(Constants.histroy, historyArr)
+
+  // next
+  // AppStorage.setOrCreate(Constants.histroy, historyArr)
   console.log('存储结束')
 }
 
 // 获取历史数据
 export function getHistory(): TianXingResp[] {
-  // return AppStorage.Get(Constants.histroy) || []
-  return AppStorage.get(Constants.histroy) || []
+  // API9
+  return AppStorage.Get(Constants.histroy) || []
+  // next
+  // return AppStorage.get(Constants.histroy) || []
 }
 
-// 给我一个语言标记 从数组中查出来对应语种进行返回
+// 给我一个语言标记 从数组中查出来对应中文给你
 export function getLanguageText(lang:string):string{
   let obj:Language = Constants.languageItem.find( (item:Language) => item.lang === lang ) as Language
   return obj.chinese
