@@ -3,6 +3,8 @@ sidebar_position: 101
 ---
 
 # 帝心翻译
+![alt text](screenshots/DxinTranslate-recording.gif)
+
 >  东北某大学的 玖璋同学 在编写该程序是遇到一些bug，联系到 帝心。遂，本项目为帮助其解决bug而录制。
 >
 >本项目基于 NEXT 版本开发，考虑到录制视频时，众多网友还没有 NEXT 权限。
@@ -51,7 +53,7 @@ sidebar_position: 101
 ---
 
 ### 真机运行效果
-![alt text](screenshots/DxinTranslate-image-5.png)
+![alt text](screenshots/DxinTranslate-recording.gif)
 
 
 ## 4. NEXT版本迁移
