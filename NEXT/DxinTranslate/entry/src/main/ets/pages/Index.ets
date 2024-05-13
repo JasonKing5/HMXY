@@ -9,7 +9,9 @@ import Translate from '../view/Translate';
 @Component
 struct Index {
   @State historyArr: TianXingResp [] = getHistory()
+
   @State lang: string = Constants.lang
+
   @State currentIndex: number = 0
 
   // 一加载就需要获取当前所要翻译的目标语种: 页面返回,没有UI更新。不触发  aboutToAppear()

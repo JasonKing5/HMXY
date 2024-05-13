@@ -1,8 +1,8 @@
-// 封装常量数据
-import { Language, TianXingParams } from '../model/Data'
+// 常量数据。
+import { Language } from '../model/Data'
 
-export default class Constants {
-  //可选语种
+export default class Constants{
+  //可选的语种
   static readonly languageItem: Language[] = [
     new Language("en", "英语"),
     new Language("zh", "中文"),
@@ -18,12 +18,7 @@ export default class Constants {
     new Language("it", "意大利语")
   ]
 
-  // 如果用户未选择时 默认翻译的目标语种
-  static readonly lang: string = 'zh'
+  //默认的语种 字母标记
+  static readonly lang:string = 'zh'
 
-    //   天行数据
-  static readonly tianXing: TianXingParams =   new TianXingParams('d94776b74d81b54caacefdaa560cb77c','https://apis.tianapi.com/fanyi/index')
-
-//   历史数据 键名
-  static readonly histroy:string  = 'history'
 }

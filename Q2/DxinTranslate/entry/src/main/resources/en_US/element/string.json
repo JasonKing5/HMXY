@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "translateApp...."
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "帝心翻译"
+    },
+    {
+      "name": "tab1",
+      "value": "translate"
+    },
+    {
+      "name": "tab2",
+      "value": "history"
+    }
+  ]
+}
