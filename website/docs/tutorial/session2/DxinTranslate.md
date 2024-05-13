@@ -2,7 +2,7 @@
 sidebar_position: 101
 ---
 
-# 帝心翻译
+# 帝心翻译 `DxinTranslate`
 ![alt text](screenshots/DxinTranslate-recording.gif)
 
 >  东北某大学的 玖璋同学 在编写该程序是遇到一些bug，联系到 帝心。遂，本项目为帮助其解决bug而录制。
