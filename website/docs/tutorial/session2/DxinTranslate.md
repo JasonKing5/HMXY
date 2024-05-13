@@ -5,7 +5,7 @@ sidebar_position: 101
 # 帝心翻译 `DxinTranslate`
 ![alt text](screenshots/DxinTranslate-recording.gif)
 
->  东北某大学的 玖璋同学 在编写该程序是遇到一些bug，联系到 帝心。遂，本项目为帮助其解决bug而录制。
+>  东北某大学的 玖璋同学 在编写该程序时遇到一些bug，联系到 帝心。遂，本项目为帮助其解决bug而录制。
 >
 >本项目基于 NEXT 版本开发，考虑到录制视频时，众多网友还没有 NEXT 权限。
 > 所以基于4.0IDE,API9版本进行编写笔记+视频录制。
@@ -23,7 +23,7 @@ sidebar_position: 101
 │  ├──model
 │  │  └── Data.ets                    // 数据模型类
 │  ├──pages
-│  │  └── IndexPage.ets               // 帝心翻译 页面入口
+│  │  └── IndexPage.ets               // 帝心翻译 程序入口页
 │  │  └── LanguageChoice.ets          // 语言选择 页面
 │  ├──view
 │  │  ├── History.ets                 // 翻译历史 组件
@@ -62,7 +62,7 @@ sidebar_position: 101
 
 ## 3. 页面开发
 > 由于代码量大健康，不在此赘述。请移步本网站右上角gitee进行查看。
-看在免费公益为大学生提供教程的份上，不要脸色你的start呦。
+看在免费公益为大学生提供教程的份上，不要吝啬你的start呦。
 
 ### 项目首页
 ![alt text](screenshots/DxinTranslate-image-4.png)
