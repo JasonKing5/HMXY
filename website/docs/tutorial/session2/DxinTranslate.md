@@ -11,6 +11,27 @@ sidebar_position: 101
 > 所以基于4.0IDE,API9版本进行编写笔记+视频录制。
 > 
 
+* 项目目录
+```
+├──entry/src/main/ets                // 代码区
+│  ├──common
+│  │  └── Constants.ets               // 常量类
+│  ├──entryability
+│  │  └── EntryAbility.ets            // 程序入口类
+│  ├──fun
+│  │  └── getData.ets                 // 获取数据的函数
+│  ├──model
+│  │  └── Data.ets                    // 数据模型类
+│  ├──pages
+│  │  └── IndexPage.ets               // 帝心翻译 页面入口
+│  │  └── LanguageChoice.ets          // 语言选择 页面
+│  ├──view
+│  │  ├── History.ets                 // 翻译历史 组件
+│  │  └── Languageltem.ets            //目标语言选择每一项 组件
+│  │  └── Translate.ets               //翻译布局 组件
+└──entry/src/main/resources           // 资源文件
+```
+
 ## 1. 项目介绍
 
 本项目为翻译app，可切换语种进行翻译。可升级扩展为多中接口翻译（`百度翻译`/`天行数据`/`聚合数据`/`个人搭建服务端`等）。
