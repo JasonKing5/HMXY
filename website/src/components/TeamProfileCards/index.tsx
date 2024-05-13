@@ -48,7 +48,7 @@ function TeamProfileCard({
             <img
               className="avatar__photo avatar__photo--xl"
               src={`${avatarUrl}`}
-              alt={`${name}'s avatar`}
+              alt={`${name}`}
             />
             <div className="avatar__intro">
               <Heading as="h3" className="avatar__name">
@@ -107,7 +107,8 @@ export function ActiveTeamRow(): JSX.Element {
       <TeamProfileCardCol
         name="漆海标"
         bilibiliUrl="https://space.bilibili.com/349810785"
-        avatarUrl="https://ai1123.com/wp-content/uploads/2024/01/%E6%B5%B7%E5%AD%90%E8%87%AA%E6%8B%9F%E5%A4%B4%E5%83%8F2.jpg"
+        // avatarUrl="https://ai1123.com/wp-content/uploads/2024/01/%E6%B5%B7%E5%AD%90%E8%87%AA%E6%8B%9F%E5%A4%B4%E5%83%8F2.jpg"
+        avatarUrl="https://img.zcool.cn/community/01a6575afe768ea801218cf4a57892.jpg@1280w_1l_2o_100sh.jpg"
       >
         <div>
           喜欢哲学，前瞻未来。对自组织有所研究，与共开放社区发起人。在B站学鸿蒙课，结识为爱发电的帝心老师。与各位一起打造易交易平台。为数字时代探索经济模型而奋斗。
