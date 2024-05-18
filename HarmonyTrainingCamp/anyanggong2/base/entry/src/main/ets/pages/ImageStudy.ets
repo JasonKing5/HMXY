@@ -1,4 +1,6 @@
 // 图片使用
+import TopBack from '../view/TopBack'
+
 @Entry
 @Component
 struct ImageStudy {
@@ -7,6 +9,8 @@ struct ImageStudy {
   build() {
     Row() {
       Column({space:30}) {
+        TopBack()
+
         Text(this.message)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)

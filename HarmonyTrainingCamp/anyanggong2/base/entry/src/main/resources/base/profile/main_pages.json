@@ -2,6 +2,7 @@
   "src": [
     "pages/Index",
     "pages/ZuJianStudy",
-    "pages/ImageStudy"
+    "pages/ImageStudy",
+    "pages/Poem"
   ]
 }
