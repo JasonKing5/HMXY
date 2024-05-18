@@ -30,3 +30,18 @@ Row(){
 > 上面的代码，就是两个文本，一行显示。同理，如何多个文本按列显示。不解释。
 > 
 容器布局可以多层来回反复嵌套。看你布局需求。
+
+
+## 图片
+### 本地png/svg
+### 网络图片必须申请网络权限
+在 `src/main/module.json5` 中，追加
+```typescript
+"requestPermissions": [
+    {
+      "name"
+      :
+      "ohos.permission.INTERNET"
+    }
+]
+```
