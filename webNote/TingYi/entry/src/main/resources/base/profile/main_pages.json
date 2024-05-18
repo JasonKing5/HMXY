@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/ChooseList"
+    "pages/ChooseList",
+    "pages/History"
   ]
 }

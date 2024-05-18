@@ -1,6 +1,7 @@
 import router from '@ohos.router'
 import { Constants } from '../common/Constants'
 import { LanguageMap } from '../model/Data'
+import Title from '../view/Title'
 
 @Entry
 @Component
@@ -10,6 +11,7 @@ struct ChooseList {
 
   build() {
     Column({ space: 30 }) {
+      Title()
       Text('点击选择目标语种').fontSize(20).fontColor('#ffd02f2f')
 
       List({space:30}){
@@ -27,13 +29,11 @@ struct ChooseList {
               .backgroundColor('#eee')
               .onClick(() => {
                 // 全局的对象存储
-                AppStorage.SetOrCreate('lang',item.lang)
+                AppStorage.SetOrCreate('lang',item)
                 router.back()
               })
             }
           })
-
-
       }
       .alignListItem(ListItemAlign.Center)
 

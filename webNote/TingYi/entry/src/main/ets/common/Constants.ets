@@ -19,7 +19,12 @@ export class Constants{
   ]
 
   // 天行数据的 api 和 key  一个变量 既可以保存api 还可以保存 key
-  // static readonly api:string = 'https://apis.tianapi.com/t/index'
-  // static readonly key:string = 'd94776b74d81b54caacefdaa560cb77c'
   static readonly tianXingUserInfo:UserInfo = new UserInfo('https://apis.tianapi.com/fanyi/index','d94776b74d81b54caacefdaa560cb77c')
+
+  //   存取历史翻译数据的标记字段名 history
+  static readonly history:string = 'history'
+
+  // 翻译接口的标记字段
+  static readonly tianxing:string = 'tianxing'
+
 }

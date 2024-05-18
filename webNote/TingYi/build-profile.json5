@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\73602\\.ohos\\config\\auto_debug_TingYi_com.dxin.myapplication_2850086000522892254.cer",
+          "storePassword": "0000001BD51F702E3FF040742B176272521C8613808CE2E916ED8027F99FD9F6EFE44A101518B1B6801664",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B40C61EF075184776F2F7C09D8051D62BE8ADE14B12565CD49F29893602007A21EE7FCFEB90523C",
+          "profile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_TingYi_com.dxin.myapplication_2850086000522892254.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_TingYi_com.dxin.myapplication_2850086000522892254.p12"
+        }
+      }
+    ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
     "products": [

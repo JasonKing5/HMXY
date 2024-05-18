@@ -1,15 +1,15 @@
 {
-  "name": "tingyi",
-  "version": "1.0.0",
-  "description": "Please describe the basic information.",
-  "main": "",
-  "author": "",
   "license": "",
-  "dependencies": {
-    "@ohos/axios": "^2.2.0"
-  },
   "devDependencies": {
     "@ohos/hypium": "1.0.11"
   },
-  "dynamicDependencies": {}
+  "author": "",
+  "name": "tingyi",
+  "description": "Please describe the basic information.",
+  "main": "",
+  "version": "1.0.0",
+  "dynamicDependencies": {},
+  "dependencies": {
+    "@ohos/axios": "^2.2.0"
+  }
 }
