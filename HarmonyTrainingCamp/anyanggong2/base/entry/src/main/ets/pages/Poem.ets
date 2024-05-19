@@ -1,5 +1,6 @@
 import http from '@ohos.net.http'
 import router from '@ohos.router'
+import Cantants from '../common/Cantants'
 import { PoemModel } from '../model/Model'
 import TopBack from '../view/TopBack'
 
@@ -7,12 +8,11 @@ import TopBack from '../view/TopBack'
 @Entry
 @Component
 struct Poem {
-  @State message: string = '诗词学习'
-  @State poemObj: PoemModel = new PoemModel('劝君莫负艳阳天，努力学习趁少年', '念奴娇-劝学', '不多先生', '现代-劝学-鸡汤')
+  @State message: string = Cantants.titile
+  @State poemObj: PoemModel =Cantants.homePoem
   @State isCollection: boolean = false // 标记是否收藏过这个诗词
-  @State angleNum:number  = 0
-
-  @State changPoemBtn:string = '#ffe55353'
+  @State angleNum: number = 0
+  @State changPoemBtn: string = '#ffe55353'
 
   build() {
     Row() {
@@ -39,29 +39,29 @@ struct Poem {
           Button('更换诗词')
             .backgroundColor(this.changPoemBtn)
             .rotate({
-              angle:this.angleNum
+              angle: this.angleNum
             })
             .margin({
               top: 50
             })
             .onClick(() => {
               //骚操作一下
-            animateTo({
-              // duration:1000
-              // delay:2000
-              curve:Curve.Linear
-            },()=>{
-              // this.angleNum = 360
-              if (this.angleNum == 360) {
-                this.changPoemBtn = '#ff176fc6'
-                this.angleNum = 0
-              }else {
-                this.angleNum = 360
-                this.changPoemBtn = '#ffe55353'
-              }
-            })
+              animateTo({
+                // duration:1000
+                // delay:2000
+                curve: Curve.Linear
+              }, () => {
+                // this.angleNum = 360
+                if (this.angleNum == 360) {
+                  this.changPoemBtn = '#ff176fc6'
+                  this.angleNum = 0
+                } else {
+                  this.angleNum = 360
+                  this.changPoemBtn = '#ffe55353'
+                }
+              })
               //数据从哪来。我一个前端。我一个移动端。我管你数据从哪来啊。我问后端要。后端就得给我。
-              http.createHttp().request('https://v1.jinrishici.com/all.json').then((data) => {
+              http.createHttp().request(Cantants.poemApi).then((data) => {
                 let content = JSON.parse(data.result + '').content
                 let origin = JSON.parse(data.result + '').origin
                 let author = JSON.parse(data.result + '').author
@@ -85,11 +85,17 @@ struct Poem {
               //业务操作。。 去保存一下【当前】这句诗词 只保存诗句本身 升级后可以保存整个诗词对象的内容。方便查看的时候，看看zz 看看ly
 
               let poemArr: PoemModel [] = AppStorage.Get('poem') || []
-              poemArr.push(this.poemObj)
+              // 优化：如果存过这句诗词。别存了。去重复。
+              //想办法知道 poemArr里面有没有  this.poemObj.content
+              // some方法判定数组中是否有某个数据  find方法找出数组中某个数据
+              let flag: boolean = poemArr.some((item: PoemModel) => item.content === this.poemObj.content)
+              if (flag) return
+
+              poemArr.unshift(this.poemObj)
 
               // todo 将变化后的该数组重新存一下。覆盖之前的 poem
 
-              AppStorage.SetOrCreate('poem',poemArr)
+              AppStorage.SetOrCreate('poem', poemArr)
 
               // 收藏----> 已收藏
               this.isCollection = !this.isCollection
@@ -110,7 +116,7 @@ struct Poem {
       }
       .width('100%')
       .padding({
-        bottom:30
+        bottom: 30
       })
     }
     .height('100%')
