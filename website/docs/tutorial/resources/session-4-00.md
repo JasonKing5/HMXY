@@ -890,17 +890,7 @@ D. package.json
 
 ### 多选题
 
-33.下面哪些容器组件是可以滚动的(A,B,C)
 
-**A. Scroll**
-
-**B. List**
-
-**C. Row**
-
-D. Grid
-
-E. Column
 
 34.针对包含文本元素的组件，例如 Text、Button、TextInput 等，可以使用下列哪些属性：(A,B,C,D,E)
 
