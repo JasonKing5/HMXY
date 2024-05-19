@@ -3,6 +3,14 @@
     {
       "name": "start_window_background",
       "value": "#FFFFFF"
+    },
+    {
+      "name": "app_bgc",
+      "value": "#ffd8efb7"
+    },
+    {
+      "name": "backarrRow",
+      "value": "#FF822685"
     }
   ]
 }

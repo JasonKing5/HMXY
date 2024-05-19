@@ -7,6 +7,7 @@ export default  struct TopBack {
     Row(){
       Image($r('app.media.back'))
         .width(50)
+        .fillColor($r('app.color.backarrRow'))
       Text('返回上一页')
     }
     .width('80%')
