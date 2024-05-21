@@ -33,7 +33,7 @@ struct Index {
           this.message = val;
         })
 
-      Button('点击翻译')
+      Button('天行翻译')
         .btnStyle()
         .onClick(async () => {
           let objResp: Record = await getDataTianXing(this.message, this.language.lang);
@@ -42,8 +42,17 @@ struct Index {
           saveHistory(objResp);
         })
 
+      Button('百度翻译')
+        .btnStyle()
+
       TextInput({ text: this.dst, placeholder: '翻译结果' })
         .tiptStyle()
+        .onClick(() => {
+         // let objBai =  getDataBaiDu('原文','语种')
+         //  this.dst = objBai.dst
+         //  //保存这个objbai
+
+        })
 
       Row({ space: 30 }) {
         Text('翻译记录').fontSize(20).fontColor('#ff127679')
