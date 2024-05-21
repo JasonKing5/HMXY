@@ -1,6 +1,7 @@
 import axios, { AxiosResponse } from '@ohos/axios'
 import { Constants } from '../common/Constants'
 import { LanguageMap, Record } from '../model/Data'
+import { CryptoJS } from '@ohos/crypto-js'
 
 // // 1： 给我一个英文的字母标记。我就给你返回该语种对照表的中文
 export function langToChinese(lang: string) {
@@ -8,7 +9,6 @@ export function langToChinese(lang: string) {
     Constants.langaugeList.find((item: LanguageMap) => item.lang === lang) || new LanguageMap('zh', '中文')
   return obj.chinese
 }
-
 
 // 发送请求 【天行翻译】 返回一个数据
 export async function getDataTianXing(message: string, lang: string) {
@@ -27,6 +27,23 @@ export async function getDataTianXing(message: string, lang: string) {
   return new Record(from, to, src, dst, Constants.tianxing)
 }
 
+// 发送请求 【百度翻译】 返回一个数据
+export function getDataBaiDu(message: string, lang: string) {
+  let api: string = Constants.baiDuUserInfo.api
+  let appid: string = Constants.baiDuUserInfo.key
+  //获取一个随机数。获取当前日期的毫秒值
+  let salt: string = Date.now().toString()
+  //密钥
+  let bdPassWord:string = Constants.baiDuPassword
+  // 需要签名 : 注意细节
+  let sign: string = CryptoJS.MD5(appid + message + salt + bdPassWord)
+  console.log('签名：',sign)
+  // 完整的拼接：http://api.fanyi.baidu.com/api/trans/vip/translate?q=apple&from=en&to=zh&appid=2015063000000001&salt=1435660288&sign=f89f9594663708c1605f3d736d01d2d4
+
+  let url = `${api}?q=${message}&from=${'auto'}&to=${lang}&appid=${appid}&salt=${salt}&sign=${sign}`
+  console.log('拼接后的url:',url)
+  
+}
 
 // 取出来历史数据
 export function getHistory(): Record[] {

@@ -1,5 +1,5 @@
 import router from '@ohos.router'
-import { getDataTianXing, saveHistory } from '../viewModel/FunUtils'
+import { getDataBaiDu, getDataTianXing, saveHistory } from '../viewModel/FunUtils'
 import { LanguageMap, Record } from '../model/Data'
 import Title from '../view/Title'
 
@@ -44,15 +44,12 @@ struct Index {
 
       Button('百度翻译')
         .btnStyle()
+        .onClick(() => {
+          getDataBaiDu(this.message,this.language.lang)
+        })
 
       TextInput({ text: this.dst, placeholder: '翻译结果' })
         .tiptStyle()
-        .onClick(() => {
-         // let objBai =  getDataBaiDu('原文','语种')
-         //  this.dst = objBai.dst
-         //  //保存这个objbai
-
-        })
 
       Row({ space: 30 }) {
         Text('翻译记录').fontSize(20).fontColor('#ff127679')

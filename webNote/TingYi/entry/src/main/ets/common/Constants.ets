@@ -21,6 +21,12 @@ export class Constants{
   // 天行数据的 api 和 key  一个变量 既可以保存api 还可以保存 key
   static readonly tianXingUserInfo:UserInfo = new UserInfo('https://apis.tianapi.com/fanyi/index','d94776b74d81b54caacefdaa560cb77c')
 
+  // 百度翻译的api和 appid
+  static readonly baiDuUserInfo:UserInfo = new UserInfo('https://fanyi-api.baidu.com/api/trans/vip/translate','20240510002047733')
+  // 百度翻译还需要一个密钥
+  static readonly baiDuPassword:string = 'xphFCeytICtN_NXI5Yf8'
+
+
   //   存取历史翻译数据的标记字段名 history
   static readonly history:string = 'history'
 
