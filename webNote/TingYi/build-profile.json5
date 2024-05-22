@@ -6,9 +6,9 @@
         "type": "HarmonyOS",
         "material": {
           "certpath": "C:\\Users\\73602\\.ohos\\config\\auto_debug_TingYi_com.dxin.myapplication_2850086000522892254.cer",
-          "storePassword": "0000001BD51F702E3FF040742B176272521C8613808CE2E916ED8027F99FD9F6EFE44A101518B1B6801664",
+          "storePassword": "0000001B3517219199A689BA9F72A5C4D624E6D60BE40E6854143C4D4B567830B3C3E63D1BBAC1053A7B05",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001B40C61EF075184776F2F7C09D8051D62BE8ADE14B12565CD49F29893602007A21EE7FCFEB90523C",
+          "keyPassword": "0000001B0C41160B44BC90A32F7D19D163745FE690DE4CBE92B0879DF68EA5067631AA2F26705E29B416B6",
           "profile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_TingYi_com.dxin.myapplication_2850086000522892254.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_TingYi_com.dxin.myapplication_2850086000522892254.p12"

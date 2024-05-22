@@ -1,4 +1,5 @@
 import router from '@ohos.router'
+import { Constants } from '../common/Constants'
 import { Record } from  '../model/Data'
 import Title from '../view/Title'
 import { getHistory, langToChinese } from '../viewModel/FunUtils'
@@ -34,7 +35,7 @@ struct History {
               Text(index + '').fontSize(20)
               Text( langToChinese(item.from) ).fontColor('#ff724444')
               Text(item.src).fontSize(20)
-              Text('----->')
+              Text(`<---${item.tranApi}-->`)
               Text(item.dst).fontSize(20)
               Text( langToChinese(item.to)).fontColor('#ff1e9fb0')
             }
@@ -42,7 +43,7 @@ struct History {
             .width('100%')
             .height(40)
             .borderRadius(10)
-            .backgroundColor(index%2 ==0 ? '#eee' : '#ccc')
+            .backgroundColor(item.tranApi === Constants.tianxing ? '#ffc88888' : '#ffaec644')
           }
         })
       }

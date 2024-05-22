@@ -44,8 +44,12 @@ struct Index {
 
       Button('百度翻译')
         .btnStyle()
-        .onClick(() => {
-          getDataBaiDu(this.message,this.language.lang)
+        .onClick(async () => {
+          let objResp: Record = await getDataBaiDu(this.message,this.language.lang)
+          console.log('baidu--> 响应对象：',JSON.stringify(objResp))
+          this.dst = objResp.dst;
+          // 保存起来这个 objResp 方便历史tab去展示。
+          saveHistory(objResp);
         })
 
       TextInput({ text: this.dst, placeholder: '翻译结果' })

@@ -28,7 +28,7 @@ export async function getDataTianXing(message: string, lang: string) {
 }
 
 // 发送请求 【百度翻译】 返回一个数据
-export function getDataBaiDu(message: string, lang: string) {
+export async function getDataBaiDu(message: string, lang: string) {
   let api: string = Constants.baiDuUserInfo.api
   let appid: string = Constants.baiDuUserInfo.key
   //获取一个随机数。获取当前日期的毫秒值
@@ -41,8 +41,18 @@ export function getDataBaiDu(message: string, lang: string) {
   // 完整的拼接：http://api.fanyi.baidu.com/api/trans/vip/translate?q=apple&from=en&to=zh&appid=2015063000000001&salt=1435660288&sign=f89f9594663708c1605f3d736d01d2d4
 
   let url = `${api}?q=${message}&from=${'auto'}&to=${lang}&appid=${appid}&salt=${salt}&sign=${sign}`
-  console.log('拼接后的url:',url)
-  
+  console.log('baidu拼接后的url:',url)
+
+  let resObj: AxiosResponse = await axios.get(url)
+  let resData = resObj.data
+  console.log('baidu-->服务端数据：',JSON.stringify(resData))
+  console.log('baidu-->服务端数据：',resData.trans_result[0].dst)
+
+  let src: string = message //原文
+  let dst: string = resData.trans_result[0].dst //翻译结果
+  let from: string = resData.from //原语种
+  let to: string = lang //目标语种
+  return new Record(from, to, src, dst, Constants.baidu)
 }
 
 // 取出来历史数据

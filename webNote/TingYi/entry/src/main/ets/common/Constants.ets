@@ -21,10 +21,18 @@ export class Constants{
   // 天行数据的 api 和 key  一个变量 既可以保存api 还可以保存 key
   static readonly tianXingUserInfo:UserInfo = new UserInfo('https://apis.tianapi.com/fanyi/index','d94776b74d81b54caacefdaa560cb77c')
 
-  // 百度翻译的api和 appid
-  static readonly baiDuUserInfo:UserInfo = new UserInfo('https://fanyi-api.baidu.com/api/trans/vip/translate','20240510002047733')
+  // 马老师百度翻译的api和 appid
+  // static readonly baiDuUserInfo:UserInfo = new UserInfo('https://fanyi-api.baidu.com/api/trans/vip/translate','20240510002047733')
   // 百度翻译还需要一个密钥
-  static readonly baiDuPassword:string = 'xphFCeytICtN_NXI5Yf8'
+  // static readonly baiDuPassword:string = 'xphFCeytICtN_NXI5Yf8'
+
+  // 闫晨阳 的百度api和密钥
+  // static readonly baiDuUserInfo:UserInfo = new UserInfo('https://fanyi-api.baidu.com/api/trans/vip/translate','20240521002057645')
+  // static readonly baiDuPassword:string = 'N1ohWbndIJwALGedYLwZ'
+
+  // 玖彰的百度api和密钥
+  static readonly baiDuUserInfo:UserInfo = new UserInfo('https://fanyi-api.baidu.com/api/trans/vip/translate','20240427002036435')
+  static readonly baiDuPassword:string = '5Jr6jLCTA4r5ZabkPz6I'
 
 
   //   存取历史翻译数据的标记字段名 history
@@ -32,5 +40,8 @@ export class Constants{
 
   // 翻译接口的标记字段
   static readonly tianxing:string = 'tianxing'
+  static readonly baidu:string = 'baidu'
+
+
 
 }
