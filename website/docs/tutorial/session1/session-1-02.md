@@ -8,8 +8,7 @@ sidebar_position: 102
 >
 > 但是该版本bug比较多，遂建议使用4.0版本。安装过程不变。
 
-> 此文档为安装DevEco Studio3.1时的过程演示。跟4.0安装过程基本一致。
->
+
 
 # 开发工具下载安装
 
@@ -19,9 +18,10 @@ sidebar_position: 102
 
 ## 下载安装包
 
-1. [点击本链接进入openHarmony的官网借用安装包下载并解压](https://docs.openharmony.cn/pages/v4.0/zh-cn/release-notes/OpenHarmony-v4.0-release.md#%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB)
+1. [点击本链接进入openHarmony的官网借用其安装包下载并解压安装](https://docs.openharmony.cn/pages/v4.0/zh-cn/release-notes/OpenHarmony-v4.0-release.md#%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB)
 
 ![alt text](screenshots/session-1-02-image.png)
+> 看不懂这个截图的三个超链接该选哪个的同学，自行问一下宿舍的义父。
 
 ![alt text](screenshots/session-1-02-image-1.png)
 
@@ -29,55 +29,73 @@ sidebar_position: 102
 
 ![next](img/next.PNG)
 
-![next1](img/next1.PNG)
+![alt text](screenshots/session-1-02/image.png)
 
-![next2](img/next2.png)
+![alt text](screenshots/session-1-02/image-1.png)
 
-![next3](img/next3.png)
+![alt text](screenshots/session-1-02/image-2.png)
 
-![finish](img/finish.png)
+![alt text](screenshots/session-1-02/image-3.png)
 
-![agree](img/agree.png)
+---
+## 安装完成开始配置环境
+![alt text](screenshots/session-1-02/image-4.png)
 
-![import](img/import.png)
+![alt text](screenshots/session-1-02/image-5.png)
 
-## 下载相关依赖：此后过程请不要使用校园网，需要确保网络稳定。很重要。
+### 安装node和ohpm环境
 
-> 如果C盘空间足够。建议都默认。如果置顶路径。务必注意不要出现中文、特殊字符、花里胡哨东西
-
-![node安装](img/nodeInstall.png)
-
-![sdk](img/sdk.png)
-
-![下载sdk](img/downsdk.png)
-
-![接受sdk](img/jieshousdk.png)
-
-![准备安装](img/zhunbei.png)
-
-> 如下截图出现了警告信息，根据提示信息点击Finish按钮。
-
-![安装依赖完成](img/instasllok.png)
-
-- 双击桌面图标启动软件，校验环境
-- 
+> 很多同学因为自己电脑上曾经安装过node，便选用本地node。大可不必，你最好选择此处教程中临时安装的node，因为不同版本编辑器对不同版本node有要求。
+> 
+> 同一台电脑本就可以安装多版本node共存，切勿纠结此处。
 
 
+![alt text](screenshots/session-1-02/image-6.png)
 
-![校验完成](img/jyhj.png)
+### 安装sdk环境
 
-![校验环境](screenshots/jiaoyan.png)
+> 注意选择正经目录
 
-> 到此位置，安装完成，叉掉当前检测界面即可使用该编辑器。使用教程见课堂内容（**[环境搭建_指导视频](https://www.bilibili.com/video/BV1pb4y1g75m?p=3)**）。
+![alt text](screenshots/session-1-02/image-7.png)
+
+### 同意两个条款
+![alt text](screenshots/session-1-02/image-8.png)
+
+### 安装相关环境
+> 保证网络稳定，不要动辄中断。如果校园网特别离谱。请用自己流量。
+
+![alt text](screenshots/session-1-02/image-9.png)
+
+![alt text](screenshots/session-1-02/image-10.png)
+
+![alt text](screenshots/session-1-02/image-11.png)
+
+
+## 环境校验
+
+> 程序员一般情况都比较喜欢黄色，代表警告。不用担心。正常使用。
+> 程序员一般最怕红色。代表错误。需要处理。
+
+![alt text](screenshots/session-1-02/image-12.png)
+
+
+
+---
 
 # 卸载软件
 
 > 安装失败原因很多人是因为网络不稳定。不要使用校园网（不稳定）或者内网（需要代理）。
 
-如果安装失败，可以卸载重装。推荐好用的卸载软件：[geek-最好用的卸载工具.exe](https://mayw-teaching.feishu.cn/file/PzOSbHyZOoObtmxEAeKcxgZ3nhg?from=from_copylink) （6.3M）
+如果安装失败，按照网络解决办法又处理不好。
+
+可以卸载重装。推荐好用的卸载软件：[geek-最好用的卸载工具.exe](https://mayw-teaching.feishu.cn/file/PzOSbHyZOoObtmxEAeKcxgZ3nhg?from=from_copylink) 
+
+如果卸载重装还不好使，那很可能需要重装系统。
 
 # 开发者注册与个人实名认证
 
-点击如下链接，参考文档指导，完成开发者注册与**个人**实名认证。（多种认证方式，任选其一。好像是银行卡认证效率最高，建议选择）
+[点击此处链接，参考文档指导，完成开发者注册与**个人**实名认证。](https://developer.huawei.com/consumer/cn/doc/start/registration-and-verification-0000001053628148?ha_linker=eyJ0cyI6MTY5NjkyMDE3ODQ3MiwiaWQiOiIwYjdmODYzNjY3OGE5ZWY2MWE4MjRlYjk2ZjMxNTg5YSJ9)
 
-https://developer.huawei.com/consumer/cn/doc/start/registration-and-verification-0000001053628148?ha_linker=eyJ0cyI6MTY5NjkyMDE3ODQ3MiwiaWQiOiIwYjdmODYzNjY3OGE5ZWY2MWE4MjRlYjk2ZjMxNTg5YSJ9
+> 不论是后续开发使用远程模拟器或者真机，还是考试认证。亦或者参加鸿蒙训练营获取证书。
+>
+>均需要有该账号，并且实名认证。不如提前完成。 
