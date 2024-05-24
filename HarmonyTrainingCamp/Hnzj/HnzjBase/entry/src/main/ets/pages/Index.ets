@@ -10,6 +10,15 @@ struct Index {
         Text(this.message)
           .titleStyle()
         Divider()
+        Button('状态装饰器学习')
+          .btnStyle(Color.Pink,FontWeight.Bold,()=>{
+            router.pushUrl({
+              url: "pages/TextComp",
+              params: {
+                title: '状态装饰器学习'
+              }
+            })
+          })
         Button('文本组件')
           .btnStyle(Color.Pink,FontWeight.Bold,()=>{
             router.pushUrl({
@@ -25,6 +34,15 @@ struct Index {
               url: "pages/ImageComp",
               params:{
                 title:'图片组件学习'
+              }
+            })
+          })
+        Button('List')
+          .btnStyle('#fffc1212',FontWeight.Lighter, () => {
+            router.pushUrl({
+              url: "pages/ListComp",
+              params:{
+                title:'List'
               }
             })
           })
