@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\73602\\.ohos\\config\\auto_debug_HnzjBase_com.dixin.hnzj_2850086000522892254.cer",
+          "storePassword": "0000001B5B7615AB4800DD9BCFC0CFF2C39905637E491495F7700386F4118756566F4E273099A7F4D83D48",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BE156288A5669FD7B645C8DD6F4C66CD39A0757674DC62631EC72EE0ED96CE7EFBE1BADB00C3DF3",
+          "profile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_HnzjBase_com.dixin.hnzj_2850086000522892254.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_HnzjBase_com.dixin.hnzj_2850086000522892254.p12"
+        }
+      }
+    ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
     "products": [
