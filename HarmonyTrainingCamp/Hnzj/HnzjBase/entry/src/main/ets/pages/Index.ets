@@ -1,51 +1,36 @@
 import router from '@ohos.router';
+import Contants from '../common/Contants';
+import { BtnNavigation } from '../data/HzData';
 
 @Entry
 @Component
 struct Index {
-  @State message: string = '河职训练营';
+  message: string = '河职训练营';
+  btnNavigation: BtnNavigation [] = []
+
+  aboutToAppear() {
+    this.btnNavigation = Contants.btnNavigation
+  }
+
   build() {
+
     Row() {
-      Column({space:20}) {
+      Column({ space: 20 }) {
         Text(this.message)
           .titleStyle()
         Divider()
-        Button('状态装饰器学习')
-          .btnStyle(Color.Pink,FontWeight.Bold,()=>{
-            router.pushUrl({
-              url: "pages/TextComp",
-              params: {
-                title: '状态装饰器学习'
-              }
+
+        ForEach(this.btnNavigation, (item: BtnNavigation, index: number) => {
+          Button(`${index}-${item.title}`)
+            .btnStyle(Color.Pink, FontWeight.Bold, () => {
+              router.pushUrl({
+                url: item.url,
+                params: {
+                  title: item.title
+                }
+              })
             })
-          })
-        Button('文本组件')
-          .btnStyle(Color.Pink,FontWeight.Bold,()=>{
-            router.pushUrl({
-              url: "pages/TextComp",
-              params: {
-                title: '文本学习'
-              }
-            })
-          })
-        Button('图片学习')
-          .btnStyle('#fffc1212',FontWeight.Lighter, () => {
-            router.pushUrl({
-              url: "pages/ImageComp",
-              params:{
-                title:'图片组件学习'
-              }
-            })
-          })
-        Button('List')
-          .btnStyle('#fffc1212',FontWeight.Lighter, () => {
-            router.pushUrl({
-              url: "pages/ListComp",
-              params:{
-                title:'List'
-              }
-            })
-          })
+        })
       }
       .width('100%')
     }
@@ -63,7 +48,7 @@ function titleStyle() {
 }
 
 @Extend(Button)
-function btnStyle(fc:string | Color | Resource , fw:FontWeight,ock:Function) {
+function btnStyle(fc: string | Color | Resource, fw: FontWeight, ock: Function) {
   .width('50%')
   .fontSize(20)
   .fontColor(fc)

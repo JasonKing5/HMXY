@@ -4,6 +4,7 @@
     "pages/TextComp",
     "pages/ImageComp",
     "pages/Decorators",
-    "pages/ListComp"
+    "pages/ListComp",
+    "pages/ArkTStudy"
   ]
 }
