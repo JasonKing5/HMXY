@@ -1,5 +1,6 @@
 // 基本语法快速学习
 import { Poem } from '../data/HzData'
+import TopTitle from '../view/base/TopTitle'
 
 class Person {
   name: string
@@ -33,7 +34,7 @@ struct ArkTStudy {
 
   build() {
     Column({ space: 30 }) {
-      Text(this.message)
+      TopTitle({message:this.message})
       Divider()
       ForEach(this.poemArr, (item: Poem, index: number) => {
         Text(`${item.index}<->${item.content}<->${item.origin}`)

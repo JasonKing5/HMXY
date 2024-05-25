@@ -5,6 +5,9 @@
     "pages/ImageComp",
     "pages/Decorators",
     "pages/ListComp",
-    "pages/ArkTStudy"
+    "pages/ArkTStudy",
+    "pages/CustomComp",
+    "pages/DecoratorsStudy",
+    "pages/IfEl"
   ]
 }

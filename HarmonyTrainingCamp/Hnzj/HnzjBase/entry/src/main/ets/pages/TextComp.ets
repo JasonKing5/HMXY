@@ -1,4 +1,5 @@
 import router from '@ohos.router'
+import TopTitle from '../view/base/TopTitle'
 
 @Entry
 @Component
@@ -8,7 +9,7 @@ struct TextComp {
 
   build() {
     Column({ space: 30 }) {
-      Text(this.message).fontSize(20)
+      TopTitle({message:this.message})
       Divider()
       // 文本组件只能写两种内容。字符串和资源类型
       Text('字符串资源1：${this.age}单引号')

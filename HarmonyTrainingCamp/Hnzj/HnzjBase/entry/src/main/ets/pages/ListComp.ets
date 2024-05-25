@@ -1,5 +1,6 @@
 // 常用布局组件不能滑动。
 import router from '@ohos.router'
+import TopTitle from '../view/base/TopTitle'
 
 @Entry
 @Component
@@ -8,25 +9,11 @@ struct ListComp {
 
   build() {
     Column({ space: 30 }) {
-      Text(this.message).fontSize(30)
+      TopTitle({ message: this.message })
       Divider()
-      List({space:20}){
+      List({ space: 20 }) {
         // 暂时伪代码，明天forEach
-        ListItem(){
-          Row({ space: 20 }) {
-            Text("河职第一帅哥陈自豪")
-            Text('河职第一美女王红霞')
-          }
-          .rowInListStyle()
-        }
-        ListItem(){
-          Row({ space: 20 }) {
-            Text("河职第一帅哥陈自豪")
-            Text('河职第一美女王红霞')
-          }
-          .rowInListStyle()
-        }
-        ListItem(){
+        ListItem() {
           Row({ space: 20 }) {
             Text("河职第一帅哥陈自豪")
             Text('河职第一美女王红霞')
@@ -34,14 +21,31 @@ struct ListComp {
           .rowInListStyle()
         }
 
-        ListItem(){
+        ListItem() {
           Row({ space: 20 }) {
             Text("河职第一帅哥陈自豪")
             Text('河职第一美女王红霞')
           }
           .rowInListStyle()
         }
-        ListItem(){
+
+        ListItem() {
+          Row({ space: 20 }) {
+            Text("河职第一帅哥陈自豪")
+            Text('河职第一美女王红霞')
+          }
+          .rowInListStyle()
+        }
+
+        ListItem() {
+          Row({ space: 20 }) {
+            Text("河职第一帅哥陈自豪")
+            Text('河职第一美女王红霞')
+          }
+          .rowInListStyle()
+        }
+
+        ListItem() {
           Row({ space: 20 }) {
             Text("河职第一帅哥陈自豪")
             Text('河职第一美女王红霞')
@@ -50,14 +54,17 @@ struct ListComp {
         }
       }
       .alignListItem(ListItemAlign.Center)
-
-
     }
-    .width('100%')
-    .height('100%')
-    .backgroundColor($r('app.color.theme_color'))
-    .justifyContent(FlexAlign.Center)
+    .clmStyle()
   }
+}
+
+@Extend(Column)
+function clmStyle() {
+  .width('100%')
+  .height('100%')
+  .backgroundColor($r('app.color.theme_color'))
+  .justifyContent(FlexAlign.Center)
 }
 
 @Extend(Row)

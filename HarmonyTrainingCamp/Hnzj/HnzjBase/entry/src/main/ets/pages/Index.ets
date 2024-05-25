@@ -42,6 +42,11 @@ struct Index {
 
 @Extend(Text)
 function titleStyle() {
+  // .width('100')
+  // .maxLines(1)
+//   跑马灯 api10+
+// overflow:TextOverflow.MARQUEE
+  // .backgroundColor('red')
   .fontSize(30)
   .fontWeight(FontWeight.Bold)
   .fontColor($r('app.color.title_color'))

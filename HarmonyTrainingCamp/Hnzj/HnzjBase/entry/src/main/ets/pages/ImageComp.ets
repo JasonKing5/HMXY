@@ -1,4 +1,5 @@
 import router from '@ohos.router'
+import TopTitle from '../view/base/TopTitle'
 
 @Entry
 @Component
@@ -8,9 +9,7 @@ struct ImageComp {
   build() {
     Row() {
       Column({space:30}) {
-        Text(this.message)
-          .fontSize(20)
-          .fontWeight(FontWeight.Bold)
+        TopTitle({message:this.message})
         Divider()
         // 图片组件：字符串和资源类型
         // 字符串的src可以写相对目录和在线图片
