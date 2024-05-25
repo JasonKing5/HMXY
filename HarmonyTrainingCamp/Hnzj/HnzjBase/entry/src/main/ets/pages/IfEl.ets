@@ -12,11 +12,7 @@ struct IfEl {
     Column({ space: 30 }) {
       TopTitle({ message: this.message })
       Divider()
-      if (this.flag){
-        Text('帝心')
-      }else {
-        Text('马园威')
-      }
+      Text(this.flag ? '帝心' : '不多先生')
 
       Button('change Flage')
         .onClick(() => {
