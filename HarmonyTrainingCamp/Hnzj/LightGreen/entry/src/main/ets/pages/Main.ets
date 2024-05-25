@@ -19,10 +19,10 @@ struct Main {
     Column({ space: 20 }) {
       Title()
       Divider()
-      Tabs({ barPosition: BarPosition.Start}) {
+      Tabs({ barPosition: BarPosition.Start }) {
         //获取诗句
         TabContent() {
-            BaiPoem()
+          BaiPoem()
         }
         .tabBar(this.myTab($r('app.media.logo'), '百诗斩'))
 

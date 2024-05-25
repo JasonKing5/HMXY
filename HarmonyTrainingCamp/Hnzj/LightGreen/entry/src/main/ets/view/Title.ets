@@ -4,6 +4,9 @@ export default struct Title{
     Row() {
       Image($r('app.media.logo'))
         .width('60')
+        // 测试图片是否可以拖拽
+        .copyOption(CopyOptions.InApp)
+        .draggable(true)
       Text($r('app.string.EntryAbility_label'))
         .fontSize(30)
         .fontColor('#ffa11bd4')
