@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "why Light green"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "best"
+    },
+    {
+      "name": "origin",
+      "value": "i am no.1"
+    }
+  ]
+}
