@@ -1,3 +1,4 @@
+import router from '@ohos.router'
 import Constants from '../common/Constants'
 import Title from '../view/Title'
 
@@ -8,23 +9,30 @@ struct Index {
   @State angleVal: number = 0
 
   aboutToAppear() {
-    //定时执行
+    // 定时执行
     let timerId: number = setInterval(() => {
       this.countdown--
-
-      // 动画效果。
-      animateTo({
-        curve:Curve.Linear
-      }, () => {
-        this.angleVal += 360
-      })
       if (this.countdown === 0) {
         //停止定时器。
         clearInterval(timerId)
         // 跳转页面
-
+        router.pushUrl({
+          url:"pages/Main"
+        })
       }
+
+      // 动画效果。
+      animateTo({
+        curve: Curve.Linear,
+        duration:1000,
+        iterations:-1
+      }, () => {
+        this.angleVal = 360
+      })
     }, 1000)
+
+
+
   }
 
   build() {
