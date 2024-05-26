@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/Main"
+    "pages/Main",
+    "pages/ShowColl"
   ]
 }

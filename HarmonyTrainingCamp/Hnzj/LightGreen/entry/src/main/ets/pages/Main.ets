@@ -1,4 +1,5 @@
 import BaiPoem from '../view/BaiPoem'
+import Recomment from '../view/Recomment'
 import Title from '../view/Title'
 
 @Entry
@@ -26,9 +27,9 @@ struct Main {
         }
         .tabBar(this.myTab($r('app.media.logo'), '百诗斩'))
 
-        // ***
+        // 帝心推荐
         TabContent() {
-
+          Recomment()
         }
         .tabBar(this.myTab($r('app.media.di'), '帝心推荐'))
       }

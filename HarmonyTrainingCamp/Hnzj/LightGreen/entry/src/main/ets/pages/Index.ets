@@ -13,7 +13,7 @@ struct Index {
     let timerId: number = setInterval(() => {
       this.countdown--
       if (this.countdown === 0) {
-        //停止定时器。
+        //停止定时器。  建议停止
         clearInterval(timerId)
         // 跳转页面
         router.pushUrl({
