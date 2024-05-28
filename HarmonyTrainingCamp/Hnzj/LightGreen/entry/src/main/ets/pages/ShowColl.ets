@@ -24,7 +24,7 @@ struct ShowColl {
       List({space:20}) {
         ForEach(this.collPoems, (item:PoemFromApi,index:number) => {
           ListItem() {
-            ShowCollItem({item})
+            ShowCollItem({item,collPoems:this.collPoems})
           }
         })
       }

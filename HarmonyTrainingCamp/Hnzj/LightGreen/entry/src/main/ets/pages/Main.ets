@@ -5,14 +5,16 @@ import Title from '../view/Title'
 @Entry
 @Component
 struct Main {
+  @State currentIndex:number = 0
   // 自定义build函数组件
   @Builder
-  myTab(imgSrc: Resource, tabBarName: string) {
+  myTab(imgSrc: Resource, tabBarName: string,index:number) {
     Column({ space: 10 }) {
       Image(imgSrc)
         .width(30)
-        .fillColor('#ff0e7cea')
+        .fillColor(this.currentIndex === index ? '#ff0e7cea' : '#ffde1bb0')
       Text(tabBarName)
+        .fontColor(this.currentIndex === index ? '#ff0e7cea' : '#ffde1bb0')
     }
   }
 
@@ -25,18 +27,21 @@ struct Main {
         TabContent() {
           BaiPoem()
         }
-        .tabBar(this.myTab($r('app.media.logo'), '百诗斩'))
+        .tabBar(this.myTab($r('app.media.logo'), '百诗斩',0))
 
         // 帝心推荐
         TabContent() {
           Recomment()
         }
-        .tabBar(this.myTab($r('app.media.di'), '帝心推荐'))
+        .tabBar(this.myTab($r('app.media.di'), '帝心推荐',1))
       }
       .vertical(false)
       .layoutWeight(1)
       .margin({
         bottom: 30
+      })
+      .onChange((index:number) => {
+        this.currentIndex = index
       })
     }
     .width('100%')

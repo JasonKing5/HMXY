@@ -14,7 +14,7 @@ export async function getPoemDate(): Promise<PoemFromApi> {
       let author: string = JSON.parse(`${data.result}`).author
       let category: string = JSON.parse(`${data.result}`).category
       tempObj = new PoemFromApi(content, origin, author, category)
-      console.log('请求到的tempObj:=>', JSON.stringify(tempObj))
+      // console.log('请求到的tempObj:=>', JSON.stringify(tempObj))
     })
 
 

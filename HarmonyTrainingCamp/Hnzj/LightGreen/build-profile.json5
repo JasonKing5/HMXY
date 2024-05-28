@@ -6,9 +6,9 @@
         "type": "HarmonyOS",
         "material": {
           "certpath": "C:\\Users\\73602\\.ohos\\config\\auto_debug_LightGreen_com.dixin.myapplication_2850086000522892254.cer",
-          "storePassword": "0000001B67E0A863B54D07A01B3FFA9A9B098BFA150637189AB01E0D57E7DD7105A4F5E371321B9B2B3A2C",
+          "storePassword": "0000001BC9C41A710602ACC7400695E0492A59B30CB776594DFB0480A4FECCA72C0D750ECD6D814895C499",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001BFDE31B6258878487F1A7928EC09E70E195EE6A9992AC067B624096EDF49B70310CE7D43D7AD780",
+          "keyPassword": "0000001B2CD0D840198E35B60983B2F43A1D644E0D300045835D7F9307BC4569F56A2E0C99003290BDF750",
           "profile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_LightGreen_com.dixin.myapplication_2850086000522892254.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_LightGreen_com.dixin.myapplication_2850086000522892254.p12"

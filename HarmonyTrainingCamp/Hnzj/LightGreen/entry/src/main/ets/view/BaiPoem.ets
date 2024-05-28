@@ -49,18 +49,18 @@ export default struct BaiPoem {
       //还应该更新按钮的收藏状态
       this.isCollection = false
       // 旋转一下特效
-      animateTo({}, () => {
+      animateTo({duration:500}, () => {
         this.angleVal = this.angleVal === 0 ? 360 : 0
       })
     })
     .height('90%')
     .justifyContent(FlexAlign.SpaceEvenly)
-    .backgroundColor('#ffbcb8b8')
-    .borderRadius(10)
+    // .backgroundColor('#ffbcb8b8')
+    // .borderRadius(150)
     .rotate({
       // x:1,
-      y:1,
-      // z:1,
+      // y:1,
+      z:1,
       angle: this.angleVal
     })
   }
