@@ -4,7 +4,7 @@ import { cancelColl, getColl, stringToArr } from '../viewModel/MyUtils'
 
 @Component
 export default struct ShowCollItem{
-  item:PoemFromApi
+  item:PoemFromApi = new PoemFromApi('temp','temp','temp','temp-temp')
   @Link collPoems: PoemFromApi[]
   build() {
     Column({space:10}){

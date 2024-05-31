@@ -1,26 +1,14 @@
 {
   "app": {
     "signingConfigs": [
-      {
-        "name": "default",
-        "type": "HarmonyOS",
-        "material": {
-          "certpath": "C:\\Users\\73602\\.ohos\\config\\auto_debug_LightGreen_com.dixin.myapplication_2850086000522892254.cer",
-          "storePassword": "0000001BC9C41A710602ACC7400695E0492A59B30CB776594DFB0480A4FECCA72C0D750ECD6D814895C499",
-          "keyAlias": "debugKey",
-          "keyPassword": "0000001B2CD0D840198E35B60983B2F43A1D644E0D300045835D7F9307BC4569F56A2E0C99003290BDF750",
-          "profile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_LightGreen_com.dixin.myapplication_2850086000522892254.p7b",
-          "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\73602\\.ohos\\config\\auto_debug_LightGreen_com.dixin.myapplication_2850086000522892254.p12"
-        }
-      }
+
     ],
-    "compileSdkVersion": 9,
-    "compatibleSdkVersion": 9,
     "products": [
       {
         "name": "default",
         "signingConfig": "default",
+        "compatibleSdkVersion": "4.0.0(10)",
+        "runtimeOS": "HarmonyOS"
       }
     ],
     "buildModeSet": [

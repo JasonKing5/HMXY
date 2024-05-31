@@ -5,7 +5,7 @@ import { PoemFromApi } from '../data/LightGreenData'
 
 //发送http请求,获取诗词
 export async function getPoemDate(): Promise<PoemFromApi> {
-  let tempObj: PoemFromApi
+  let tempObj: PoemFromApi = new PoemFromApi('temp','temp','temp','temp-temp')
   //发送网络请求，获取真实的数据覆盖原来
   await http.createHttp().request(Constants.poemApi)
     .then((data: http.HttpResponse) => {
@@ -16,8 +16,6 @@ export async function getPoemDate(): Promise<PoemFromApi> {
       tempObj = new PoemFromApi(content, origin, author, category)
       // console.log('请求到的tempObj:=>', JSON.stringify(tempObj))
     })
-
-
   return tempObj
 }
 
@@ -32,17 +30,17 @@ export function saveCurrentPoem(obj: PoemFromApi) {
 
   baiShiArr.unshift(obj)
   // API9版本。到next时会移除。
-  AppStorage.SetOrCreate(Constants.baiShi, baiShiArr)
+  // AppStorage.SetOrCreate(Constants.baiShi, baiShiArr)
   //  next版本
-  // AppStorage.setOrCreate(Constants.baiShi,baiShiArr)
+  AppStorage.setOrCreate(Constants.baiShi,baiShiArr)
 }
 
 // 获取存过的百诗斩的 收藏数组
 export function getColl(fieldName: string): Array<PoemFromApi> {
   // API9
-  return (AppStorage.Get(fieldName) || []) as PoemFromApi[]
+  // return (AppStorage.Get(fieldName) || []) as PoemFromApi[]
   // API11
-  // return (AppStorage.get(fieldName) || []) as PoemFromApi[]
+  return (AppStorage.get(fieldName) || []) as PoemFromApi[]
 }
 
 
@@ -57,7 +55,7 @@ export function cancelColl(content: string) {
   //当前数组中肯定有该对象 filter 函数用来过滤数组。去除掉符合规则的数据。
   let newArr: PoemFromApi[] = baiShiArr.filter((item: PoemFromApi) => item.content !== content)
   // API9
-  AppStorage.SetOrCreate(Constants.baiShi, newArr)
+  // AppStorage.SetOrCreate(Constants.baiShi, newArr)
   // next
-  // AppStorage.setOrCreate(Constants.baiShi,newArr)
+  AppStorage.setOrCreate(Constants.baiShi,newArr)
 }

@@ -30,25 +30,18 @@ struct Index {
         this.angleVal = 360
       })
     }, 1000)
-
-
-
   }
 
   build() {
     Column({ space: 30 }) {
       Row() {
         Blank()
-        Text() {
-          Span(this.countdown.toString())
-            .fontSize(30)
-            .width(50)
-          Span('秒进入')
-        }
-        .margin(30)
+        Text(this.countdown + '秒进入')
+          .fontSize(30)
       }
       .width('100%')
       .height(50)
+      .backgroundColor('#eee')
 
       Blank()
       Image($rawfile('loading.jpg'))

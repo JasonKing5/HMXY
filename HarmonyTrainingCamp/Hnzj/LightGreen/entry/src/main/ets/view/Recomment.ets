@@ -34,8 +34,8 @@ function dxinListStyle() {
 
 @Component
  struct ItemRow{
-  item:string
-  index:number
+  item:string = '日拱一卒无有尽，功不唐捐终入海'
+  index:number = 0
   // 控制 每一行 ListItem 的颜色
   // @State itemColor:string = '#ffde5353'
   @State isColl:boolean = false
