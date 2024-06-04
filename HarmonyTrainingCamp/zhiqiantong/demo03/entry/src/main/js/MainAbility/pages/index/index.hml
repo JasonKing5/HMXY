@@ -1,0 +1,5 @@
+<div class="container" onclick="goTwo()">
+    <text class="title" >
+        首屏
+    </text>
+</div>

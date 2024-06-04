@@ -1,0 +1,15 @@
+{
+  "src": [
+    "pages/PageTransition1",
+    "pages/Index",
+    "pages/AttrAnimation",
+    "pages/AnimateTo",
+    "pages/PageTransition1To",
+    "pages/PageTransition2",
+    "pages/PageTransition2To",
+    "pages/Transition",
+    "pages/SharedTransiton",
+    "pages/TransitionTo",
+    "pages/MotionPath"
+  ]
+}
