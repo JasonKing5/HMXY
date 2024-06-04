@@ -3,6 +3,7 @@ sidebar_position: 111
 ---
 
 # 实战：帝心翻译 `DxinTranslate`
+> 翻译软件，基于NEXT
 ![alt text](screenshots/DxinTranslate-recording.gif)
 
 >  东北某大学的 玖璋同学 在编写该程序时遇到一些bug，联系到 帝心。遂，本项目为帮助其解决bug而录制。
