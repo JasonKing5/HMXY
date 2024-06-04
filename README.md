@@ -1,11 +1,11 @@
-# HarmonyOS4.0应用开发教程_bilibili
+# 全网首发HarmonyOS4.0应用开发教程
 
 ### 这可能是你看过最细的HarmonyOS应用开发教程！！！
-[哔哩哔哩HarmonyOS4.0应用开发教程配套代码。](https://www.bilibili.com/video/BV1pb4y1g75m)
+[哔哩哔哩HarmonyOS应用开发教程（保姆级）](https://www.bilibili.com/video/BV1pb4y1g75m)
 
 ---
 
-### 配套内容
+### 配套网站
 
 https://hm.codefe.cn/
 
