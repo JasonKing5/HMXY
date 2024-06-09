@@ -2,7 +2,7 @@
 
 slug: write to student
 
-title: 写给大学生: 曾许人间第一流
+title: 写给大学生-曾许人间第一流
 
 authors: [mayuanwei]
 
