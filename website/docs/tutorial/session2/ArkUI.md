@@ -1,8 +1,10 @@
 ---
 sidebar_position: 103
 ---
+> ArkUI组件系统过一遍
 
-# ArkUI组件学习
+
+# ArkUI
 
 ## Slider滑块组件
 
