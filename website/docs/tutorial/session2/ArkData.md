@@ -1,5 +1,5 @@
 ---
-sidebar_position: 101
+sidebar_position: 111
 ---
 
 
@@ -7,27 +7,27 @@ sidebar_position: 101
 > 
 > 本文档基于NEXT版本DevEco Studio5.0API12
 
-# 首选项
+## 首选项
 
-## 场景介绍
+### 场景介绍
 
 ​		用户首选项为应用提供Key-Value键值型的数据处理能力，支持应用持久化轻量级数据，并对其修改和查询。当用户希望有一个全局唯一存储的地方，可以采用用户首选项来进行存储。Preferences会将该数据缓存在内存中，当用户读取的时候，能够快速从内存中获取数据，当需要持久化时可以使用flush接口将内存中的数据写入持久化文件中。`Preferences`会随着存放的数据量越多而导致应用占用的内存越大，因此，`Preferences`不适合存放过多的数据，适用的场景一般为应用保存用户的个性化设置（字体大小，是否开启夜间模式）等。
 
 
 
-## 运作机制
+### 运作机制
 
 如图所示，用户程序通过`ArkTS`接口调用用户首选项读写对应的数据文件。开发者可以将用户首选项持久化文件的内容加载到`Preferences`实例，每个文件唯一对应到一个`Preferences`实例，系统会通过静态容器将该实例存储在内存中，直到主动从内存中移除该实例或者删除该文件。
 
 ![img](screenshots/Preferences.jpg)
 
-## 约束限制
+### 约束限制
 
 - `Key`键为`string`类型，要求非空且长度不超过80个字节。
 - 如果`Value`值为`string`类型，请使用UTF-8编码格式，可以为空，不为空时长度不超过`8192`个字节。
 - 内存会随着存储数据量的增大而增大，所以存储的数据量应该是轻量级的，建议存储的数据不超过一万条，否则会在内存方面产生较大的开销。
 
-## 接口说明
+### 接口说明
 
 以下是用户首选项持久化功能的相关接口，更多接口及使用方式请见[用户首选项](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-data-preferences-0000001813416160)。
 
@@ -45,7 +45,7 @@ sidebar_position: 101
 
 
 
-## 开发步骤
+### 开发步骤
 
 1. 导入`@ohos.data.preferences`模块。
 
@@ -181,9 +181,9 @@ dataPreferences.deletePreferences(this.context, options, (err: BusinessError) =>
 
 ---
 
-## 工具类抽取
+### 工具类抽取
 
-### 1. 准备一个类型，方便封装数据
+#### 1. 准备一个类型，方便封装数据
 
 > `src/main/ets/model/MyPreferenceData.ets`
 
@@ -204,7 +204,7 @@ export  default class MyPreferenceData{
 
 ---
 
-### 2. 封装常量数据方便工具类使用
+#### 2. 封装常量数据方便工具类使用
 
 > `src/main/ets/common/Constants.ets`
 
@@ -220,7 +220,7 @@ export default class Constants {
 
 ---
 
-### 3. 封装工具类
+#### 3. 封装工具类
 
 > `src/main/ets/common/PreferencesUtil.ets`
 
@@ -290,7 +290,7 @@ export default new PreferencesUtil()
 
 ---
 
-### 4. 在入口类中初始化首选项对象
+#### 4. 在入口类中初始化首选项对象
 
 > `src/main/ets/entryability/EntryAbility.ets`
 
@@ -306,7 +306,7 @@ export default new PreferencesUtil()
 
 ---
 
-### 5 . 在业务处设置首选项数据
+#### 5 . 在业务处设置首选项数据
 
 ```typescript
 Slider({
@@ -324,7 +324,7 @@ Slider({
 
 ---
 
-### 6. 在业务处读取首选项数据
+#### 6. 在业务处读取首选项数据
 
 ```typescript
   aboutToAppear(): void {
