@@ -4,17 +4,17 @@ sidebar_position: 103
 
 # ArkUI组件学习
 
-# Slider滑块组件
+## Slider滑块组件
 
 滑动条组件，通常用于快速调节设置值，如音量调节、亮度调节等应用场景。
 
-## 接口
+### 接口
 
 ```typescript
 Slider(options?: SliderOptions)
 ```
 
-## SliderOptions对象说明
+### SliderOptions对象说明
 
 > 详细内容请参考官方文档，此处只以代码展示
 
@@ -42,7 +42,7 @@ Slider(options?: SliderOptions)
         })
 ```
 
-## 案例：风车效果
+### 案例：风车效果
 
 ![SliderCase](screenshots/ArkUI/SliderCase.gif)
 
