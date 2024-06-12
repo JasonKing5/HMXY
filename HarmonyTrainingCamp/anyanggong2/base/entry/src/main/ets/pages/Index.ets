@@ -1,5 +1,9 @@
 import router from '@ohos.router';
 
+// api12之前。null 可以?.访问
+let name: string | null = null;
+let len = name?.length
+
 @Entry
 @Component
 struct Index {
