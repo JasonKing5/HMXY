@@ -1,9 +1,13 @@
-# HarmonyOS-NEXT
+---
+sidebar_position: 101
+---
 
-## 环境安装与IDE基本使用
 
+>  HarmonyOS-NEXT-ArkTS
+> 
+> 本文档基于NEXT版本DevEco Studio5.0API12
 
-
+#  ArkTS基础语法
 ---
 
 ## ArkTS基础语法
