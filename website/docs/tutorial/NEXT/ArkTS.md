@@ -3,11 +3,11 @@ sidebar_position: 101
 ---
 
 
->  HarmonyOS-NEXT-ArkTS
-> 
-> 本文档基于NEXT版本DevEco Studio5.0API12
 
-#  ArkTS基础语法
+
+#  HarmonyOS-NEXT-ArkTS
+>  
+> 本文档基于NEXT版本DevEco Studio5.0API12
 ---
 
 ## ArkTS基础语法
