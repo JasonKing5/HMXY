@@ -2,7 +2,7 @@
 sidebar_position: 131
 ---
 
-# 实战：帝心翻译 `DxinTranslate`
+# `DxinTranslate`-翻译软件 
 > 翻译软件，基于NEXT
 
 * [帝心翻译视频教程](https://www.bilibili.com/video/BV1jy411e79G)

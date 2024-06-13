@@ -2,12 +2,12 @@
 sidebar_position: 121
 ---
 
-# LightRed-何浅红-诗词应用
+# LightRed-诗词应用
 > 何须浅碧深红色，自是花中第一流
 >
 > 本项目基于`API12`进行开发。
 
-## [何浅红项目源码](https://gitee.com/mayuanwei/harmonyOS_bilibili/tree/master/NEXT/project)
+* [何浅红项目源码](https://gitee.com/mayuanwei/harmonyOS_bilibili/tree/master/NEXT/project)
 
 ### 环境搭建
 
