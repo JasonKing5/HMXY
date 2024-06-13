@@ -4,11 +4,11 @@ sidebar_position: 131
 
 # 实战：帝心翻译 `DxinTranslate`
 > 翻译软件，基于NEXT
-![alt text](screenshots/DxinTranslate-recording.gif)
+![alt text](screenshots/DxinTranslate/DxinTranslate-recording.gif)
 
->  东北某大学的 玖璋同学 在编写该程序时遇到一些bug，联系到 帝心。遂，本项目为帮助其解决bug而录制。
+>  东北某大学的 玖璋同学 在编写该程序时遇到一些bug，联系到 `帝心`。遂，本项目为帮助其解决bug而录制。
 >
->本项目基于 NEXT 版本开发，考虑到录制视频时，众多网友还没有 NEXT 权限。
+>本项目基于 `NEXT` 版本开发，考虑到录制视频时，众多网友还没有 `NEXT` 权限。
 > 所以基于4.0IDE,API9版本进行编写笔记+视频录制。
 > 
 
@@ -38,18 +38,18 @@ sidebar_position: 131
 本项目为翻译app，可切换语种进行翻译。可升级扩展为多中接口翻译（`百度翻译`/`天行数据`/`聚合数据`/`个人搭建服务端`等）。
 
 ## 2. 项目创建和基本配置
-![alt text](screenshots/DxinTranslate-image.png)
+![alt text](screenshots/DxinTranslate/DxinTranslate-image.png)
 
 ### 配置国际化资源
-![alt text](screenshots/DxinTranslate-image-2.png)
+![alt text](screenshots/DxinTranslate/DxinTranslate-image-2.png)
 
 ---
 ### 配置app图标+名称+网络权限
-![alt text](screenshots/DxinTranslate-image-1.png)
+![alt text](screenshots/DxinTranslate/DxinTranslate-image-1.png)
 
 * 配置图标和名称后，效果如下：
 
-![alt text](screenshots/DxinTranslate-image-6.png)
+![alt text](screenshots/DxinTranslate/DxinTranslate-image-6.png)
 
 ---
 ### 配置app主题色和主要文本颜色
@@ -57,7 +57,7 @@ sidebar_position: 131
 
 > 本项目页面数量少，公用数据不多。如果是商用app。则很有必要进行配置。
 
-![alt text](screenshots/DxinTranslate-image-3.png)
+![alt text](screenshots/DxinTranslate/DxinTranslate-image-3.png)
 
 ---
 
@@ -66,16 +66,16 @@ sidebar_position: 131
 看在免费公益为大学生提供教程的份上，不要吝啬你的start呦。
 
 ### 项目首页
-![alt text](screenshots/DxinTranslate-image-4.png)
+![alt text](screenshots/DxinTranslate/DxinTranslate-image-4.png)
 
 ---
 ### 语言选择页面
-![alt text](screenshots/DxinTranslate-image-5.png)
+![alt text](screenshots/DxinTranslate/DxinTranslate-image-5.png)
 
 ---
 
 ### 真机运行效果
-![alt text](screenshots/DxinTranslate-recording.gif)
+![alt text](screenshots/DxinTranslate/DxinTranslate-recording.gif)
 
 
 ## 4. NEXT版本迁移
