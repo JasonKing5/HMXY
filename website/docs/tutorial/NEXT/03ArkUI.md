@@ -302,6 +302,192 @@ Image($r('app.media.cloud'))
 
 通过在`Image`组件上绑定`onComplete`事件，图片加载成功后可以获取图片的必要信息。如果图片加载失败，也可以通过绑定`onError`回调来获得结果。
 
+> 也可以绑定通用事件，如点击、触摸等
+
+---
+
+## 文本输入 (TextInput/TextArea)
+
+`TextInput`、`TextArea`是输入框组件，通常用于响应用户的输入操作，比如评论区的输入、聊天框的输入、表格的输入等，也可以结合其它组件构建功能页面，例如登录注册页面。具体用法请参考[TextInput](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-basic-components-textinput-V5)、[TextArea](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-basic-components-textarea-V5)。
+
+### 创建输入框
+
+`TextInput`为单行输入框、TextArea为多行输入框。通过以下接口来创建。
+
+```typescript
+TextInput(value?:{placeholder?: ResourceStr, text?: ResourceStr, controller?: TextInputController})
+```
+
+```typescript
+TextArea(value?:{placeholder?: ResourceStr, text?: ResourceStr, controller?: TextAreaController})
+```
+
+- 单行输入框
+
+```typescript
+TextInput()
+```
+
+- 多行输入框
+
+  > 多行输入框文字超出一行时会自动折行。
+
+```typescript
+TextArea()
+```
+
+### 设置输入框类型
+
+`TextInput`有9种可选类型，通过type属性进行设置：
+
+1. `Normal`基本输入模式
+2. `Password`密码输入模式
+3. `Email`邮箱地址输入模式
+4. `Number`纯数字输入模式
+5. `PhoneNumber`电话号码输入模式
+6. `USER_NAME`用户名输入模式
+7. `NEW_PASSWORD`新密码输入模式
+8. `NUMBER_PASSWORD`纯数字密码输入模式
+9. `NUMBER_DECIMAL`带小数点的数字输入模式。
+
+例如：
+
+```typescript
+TextInput()
+  .type(InputType.Password)
+```
+
+### 样式
+
+- `placeholder` 设置无输入时的提示文本。`text` 设置输入框当前的文本内容。
+
+  ```typescript
+  TextInput({placeholder:'我是提示文本',text:'我是当前文本内容'})
+  ```
+
+- 通用属性方法：`尺寸`、`背景色`等
+
+### 事件
+
+文本框主要用于获取用户输入的信息，把信息处理成数据进行上传，绑定`onChange`事件可以获取输入框内改变的内容。用户也可以使用`通用事件`来进行相应的交互操作。
+
+```typescript
+TextInput()
+  .onChange((value: string) => {
+    console.info(value);
+  })
+  .onFocus(() => {
+    console.info('获取焦点');
+  })
+```
+
+---
+
+## 进度条 (Progress)
+
+`Progress`是进度条显示组件，显示内容通常为目标操作的当前进度。具体用法请参考[Progress](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-basic-components-progress-V5)。
+
+### 创建进度条
+
+`Progress`通过调用接口来创建，接口调用形式如下：
+
+```typescript
+Progress(options: {value: number, total?: number, type?: ProgressType})
+```
+
+其中，`value`用于设置初始进度值，`total`用于设置进度总长度，`type`用于设置`Progress`样式。
+
+```typescript
+Progress({ value: 24, total: 100, type: ProgressType.Linear }) // 创建一个进度总长为100，初始进度值为24的线性进度条
+```
+
+### 设置进度条样式
+
+> 从API version9开始，组件高度大于宽度时，自适应垂直显示；组件高度等于宽度时，保持水平显示。
+
+`Progress`有**5**种可选类型，通过`ProgressType`可以设置进度条样式，`ProgressType`类型包括：
+
+1. `ProgressType.Linear`（线性样式）
+2. `ProgressType.Ring`（环形无刻度样式）
+3. `ProgressType.ScaleRing`（环形有刻度样式）
+4. `ProgressType.Eclipse`（圆形样式）
+5. `ProgressType.Capsule`（胶囊样式）。
+
+### 属性方法
+
+- 环形无刻度样式进度条
+
+```typescript
+// 从左往右，1号环形进度条，默认前景色为蓝色渐变，默认strokeWidth进度条宽度为2.0vp
+Progress({ value: 40, total: 150, type: ProgressType.Ring })
+    .width(100)
+    .height(100)
+// 从左往右，2号环形进度条
+Progress({ value: 40, total: 150, type: ProgressType.Ring })
+    .width(100)
+    .height(100)
+    .color(Color.Grey)    // 进度条前景色为灰色
+    .style({ strokeWidth: 15})    // 设置strokeWidth进度条宽度为15.0vp
+```
+
+- 环形有刻度样式进度条
+
+```typescript
+Progress({ value: 20, total: 150, type: ProgressType.ScaleRing })
+    .width(100)
+    .height(100)
+    .backgroundColor(Color.Black)
+    .style({ scaleCount: 20, scaleWidth: 5 })    // 设置环形有刻度进度条总刻度数为20，刻度宽度为5vp
+Progress({ value: 20, total: 150, type: ProgressType.ScaleRing })
+    .width(100)
+    .height(100)
+    .backgroundColor(Color.Black)
+    .style({ strokeWidth: 15, scaleCount: 20, scaleWidth: 5 })    // 设置环形有刻度进度条宽度15，总刻度数为20，刻度宽度为5vp
+Progress({ value: 20, total: 150, type: ProgressType.ScaleRing })
+    .width(100)
+    .height(100)
+    .backgroundColor(Color.Black)
+    .style({ strokeWidth: 15, scaleCount: 20, scaleWidth: 3 })    // 设置环形有刻度进度条宽度15，总刻度数为20，刻度宽度为3vp
+```
+
+- 圆形样式进度条
+- 胶囊样式进度条
+- ...
+
+### 场景示例
+
+​		更新当前进度值，如应用安装进度条。可通过点击`Button`增加`progressValue`，`value`属性将`progressValue`设置给`Progress`组件，进度条组件即会触发刷新，更新当前进度。
+
+```typescript
+@Entry
+@Component
+struct ProgressCase1 { 
+  @State progressValue: number = 0    // 设置进度条初始值为0
+  build() {
+    Column() {
+      Column() {
+        Progress({value:0, total:100, type:ProgressType.Capsule})
+            .width(200)
+            .height(50)
+            .value(this.progressValue)
+        Row()
+            .width('100%')
+            .height(5)
+        Button("进度条+5")
+          .onClick(()=>{
+            this.progressValue += 5
+            if (this.progressValue > 100){
+              this.progressValue = 0
+            }
+          })
+      }
+    }
+      .width('100%')
+      .height('100%')
+  }
+}
+```
+
 ---
 
 ## Slider滑块组件
@@ -501,4 +687,354 @@ function windmillStyle(angleVal:number,scaleVal:number){
   })
 }
 ```
+
+---
+
+## 单选框 (Radio)
+
+`Radio`是单选框组件，通常用于提供相应的用户交互选择项，同一组的`Radio`中只有一个可以被选中。具体用法请参考[Radio](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-basic-components-radio-V5)
+
+### 创建单选框
+
+`Radio`通过调用接口来创建，接口调用形式如下：
+
+```typescript
+Radio(options: {value: string, group: string})
+```
+
+​		其中，`value`是单选框的名称，`group`是单选框的所属群组名称。`checked`属性可以设置单选框的状态，状态分别为`false`和`true`，设置为`true`时表示单选框被选中。
+
+`Radio`支持设置选中状态和非选中状态的样式，不支持自定义形状。
+
+```typescript
+Radio({ value: 'Radio1', group: 'radioGroup' })  
+    .checked(false)
+Radio({ value: 'Radio2', group: 'radioGroup' })  
+    .checked(true)
+```
+
+### 添加事件
+
+除支持[通用事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-universal-events-click-V5)外，`Radio`还用于选中后触发某些操作，可以绑定`onChange`事件来响应选中操作后的自定义行为。
+
+```typescript
+  Radio({ value: 'Radio1', group: 'radioGroup' })
+    .onChange((isChecked: boolean) => {
+      if(isChecked) {
+        //需要执行的操作
+      }
+    })
+  Radio({ value: 'Radio2', group: 'radioGroup' })
+    .onChange((isChecked: boolean) => {
+      if(isChecked) {
+        //需要执行的操作
+      }
+    })
+```
+
+### 场景演示：
+
+通过点击Radio切换声音模式。
+
+![RadioCase](screenshots/03ArkUI/RadioCase.gif)
+
+```typescript
+// radio案例
+@Entry
+@Component
+struct RadioCase {
+  @State soundModel: string = '响铃';
+
+  build() {
+    Column({ space: 50 }) {
+      // 一行三个单选框
+      Row(){
+        RadioItem({
+          radioVal:'sound1',
+          soundModel:this.soundModel,
+          modelName:'响铃',
+          currentState:true
+        })
+        RadioItem({
+          radioVal:'sound2',
+          soundModel:this.soundModel,
+          modelName:'静音'
+        })
+        RadioItem({
+          radioVal:'sound3',
+          soundModel:this.soundModel,
+          modelName:'震动'
+        })
+      }
+      .width('100%')
+      .justifyContent(FlexAlign.SpaceEvenly)
+      Text(){
+        Span('当前为：')
+          .fontSize(20)
+        Span(this.soundModel)
+          .fontSize(20)
+          .fontWeight(700)
+          .fontColor('#ffb926d9')
+        Span('模式')
+          .fontSize(20)
+      }
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor($r('app.color.theme_color'))
+    .justifyContent(FlexAlign.Center)
+  }
+}
+
+@Component
+struct RadioItem {
+  modelName:string ='模式'
+  radioVal:string = 'radio0'
+  //默认状态
+  currentState:boolean = false
+  //和父组件同步数据
+  @Link soundModel :string
+  build() {
+    Column({space:10}){
+      Radio({value:this.radioVal,group:'soundModel'})
+        .width(50)
+        .height(50)
+        .onChange((isChecked:boolean) => {
+          if (isChecked) this.soundModel =  this.modelName
+        })
+        .checked(this.currentState)
+      Text( this.modelName).fontSize(20)
+    }
+  }
+}
+```
+
+---
+
+## 切换按钮 (Toggle)
+
+`Toggle`组件提供状态按钮样式、勾选框样式和开关样式，一般用于两种状态之间的切换。具体用法请参考[Toggle](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-basic-components-toggle-V5)。
+
+### 创建切换按钮
+
+`Toggle`通过调用接口来创建，接口调用形式如下：
+
+```typescript
+Toggle(options: { type: ToggleType, isOn?: boolean })
+```
+
+其中，`ToggleType`为开关类型，包括`Button`、`Checkbox`和`Switch`，`isOn`为切换按钮的状态。
+
+>  API version 11开始，`Checkbox`默认样式由圆角方形变为圆形。
+
+接口调用有以下两种形式：
+
+- 创建不包含子组件的`Toggle`。
+
+  当`ToggleType`为`Checkbox`或者`Switch`时，用于创建不包含子组件的Toggle：
+
+  ```typescript
+  Toggle({ type: ToggleType.Checkbox, isOn: false })
+  Toggle({ type: ToggleType.Checkbox, isOn: true })
+  ```
+
+![img](screenshots/03ArkUI/ToggleCheckbox.png)
+
+```typescript
+Toggle({ type: ToggleType.Switch, isOn: false })
+Toggle({ type: ToggleType.Switch, isOn: true })
+```
+
+![img](screenshots/03ArkUI/ToggleSwitch.png)
+
+- 创建包含子组件的`Toggle`。
+
+当`ToggleType`为`Button`时，只能包含一个子组件，如果子组件有文本设置，则相应的文本内容会显示在按钮上。
+
+```typescript
+Toggle({ type: ToggleType.Button, isOn: false }) {
+  Text('status button')
+    .fontColor('#182431')
+    .fontSize(12)
+}.width(100)
+Toggle({ type: ToggleType.Button, isOn: true }) {
+  Text('status button')
+    .fontColor('#182431')
+    .fontSize(12)
+}.width(100)
+```
+
+![img](screenshots/03ArkUI/ToggleButton.png)
+
+### 自定义样式
+
+- 通过`selectedColor`属性设置`Toggle`打开选中后的背景颜色。
+- 通过`switchPointColor`属性设置`Switch`类型的圆形滑块颜色，仅对`type`为`ToggleType.Switch`生效。
+
+### 添加事件
+
+除支持[通用事件](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-universal-events-click-V5)外，`Toggle`还用于选中和取消选中后触发某些操作，可以绑定`onChange`事件来响应操作后的自定义行为。
+
+```typescript
+Toggle({ type: ToggleType.Switch, isOn: false })
+  .onChange((isOn: boolean) => {
+      if(isOn) {
+        // 需要执行的操作
+      }
+  })
+```
+
+### 场景示例
+
+`Toggle`用于切换蓝牙开关状态。
+
+![ToggoleCase](screenshots/03ArkUI/ToggoleCase.gif)
+
+```typescript
+// Toggle用于切换蓝牙开关状态。
+@Entry
+@Component
+struct ToggleCase {
+  @State BluetoothState: string = 'off';
+
+  build() {
+    Column({ space: 30 }) {
+      Text("Bluetooth Mode")
+        .height(50)
+        .fontSize(30)
+      Row() {
+        Text("Bluetooth")
+          .fontSize(16)
+        Toggle({ type: ToggleType.Switch })
+          .width(50)
+          .onChange((isOn: boolean) => {
+            this.BluetoothState = isOn ? ' on' : ' off'
+          })
+      }
+      .width('90%')
+      .height(50)
+      .justifyContent(FlexAlign.SpaceBetween)
+      .padding({
+        left:10,
+        right:20
+      })
+      .backgroundColor(0xFFFFFF)
+
+      Text() {
+        Span('bluetooth is ')
+          .font({ size: 30, weight: 700 })
+        Span(this.BluetoothState)
+          .font({ size: 30, weight: 700 })
+          .fontColor('#bb2b2b')
+      }
+
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor($r('app.color.theme_color'))
+  }
+}
+```
+
+---
+
+## 自定义弹窗 (CustomDialog)
+
+​		`CustomDialog`是自定义弹窗，可用于广告、中奖、警告、软件更新等与用户交互响应操作。开发者可以通过`CustomDialogController`类显示自定义弹窗。具体用法请参考[自定义弹窗](https://developer.huawei.com/consumer/cn/doc/harmonyos-references-V5/ts-methods-custom-dialog-box-V5)。
+
+### 创建自定义弹窗
+
+1. 使用`@CustomDialog`装饰器装饰自定义弹窗。
+
+2. `@CustomDialog`装饰器用于装饰自定义弹框，此装饰器内进行自定义内容（也就是弹框内容）。
+
+   ```typescript
+   @CustomDialog
+   struct CustomDialogExample {
+     controller: CustomDialogController = new CustomDialogController({
+       builder: CustomDialogExample({}),
+     })
+   
+     build() {
+       Column() {
+         Text('弹窗内容：帝心')
+           .fontSize(20)
+           .margin({ top: 10, bottom: 10 })
+       }
+     }
+   }
+   ```
+
+3. 创建构造器，与装饰器呼应相连。
+
+   ```typescript
+    @Entry
+    @Component
+    struct CustomDialogUser {
+      dialogController: CustomDialogController = new CustomDialogController({
+        builder: CustomDialogExample(),
+      })
+    }
+   ```
+
+4. 点击与onClick事件绑定的组件使弹窗弹出。
+
+   ```typescript
+   @Entry
+   @Component
+   struct CustomDialogUser {
+     dialogController: CustomDialogController = new CustomDialogController({
+       builder: CustomDialogExample(),
+     })
+   
+     build() {
+       Column() {
+         Button('click me')
+           .onClick(() => {
+             this.dialogController.open()
+           })
+       }.width('100%').margin({ top: 5 })
+     }
+   }
+   ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+## 视频播放 (Video)
+
+
+
+
+
+
+
+
 
