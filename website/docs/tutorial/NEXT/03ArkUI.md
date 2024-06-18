@@ -55,7 +55,10 @@ Button有三种可选类型，分别为胶囊类型（Capsule）、圆形按钮�
 此类型按钮的圆角自动设置为高度的一半，**不支持**通过`borderRadius`属性重新设置圆角。
 
 ```typescript
-Button('Disable', { type: ButtonType.Capsule, stateEffect: false })   .backgroundColor(0x317aff)   .width(90)  .height(40)
+Button('Disable', { type: ButtonType.Capsule, stateEffect: false })   
+    .backgroundColor(0x317aff)   
+    .width(90)  
+    .height(40)
 ```
 
 ![img](screenshots/03ArkUI/btnDisable.png)
@@ -65,7 +68,10 @@ Button('Disable', { type: ButtonType.Capsule, stateEffect: false })   .backgroun
 此类型按钮为圆形，**不支持**通过`borderRadius`属性重新设置圆角。
 
 ```typescript
-Button('Circle', { type: ButtonType.Circle, stateEffect: false })   .backgroundColor(0x317aff)   .width(90)   .height(90)
+Button('Circle', { type: ButtonType.Circle, stateEffect: false })   
+    .backgroundColor(0x317aff)   
+    .width(90)   
+    .height(90)
 ```
 
 ![img](screenshots/03ArkUI/btnCircle.png)
@@ -75,7 +81,11 @@ Button('Circle', { type: ButtonType.Circle, stateEffect: false })   .backgroundC
 此类型的按钮默认圆角为0，**支持**通过`borderRadius`属性重新设置圆角。
 
 ```typescript
-Button('Ok', { type: ButtonType.Normal, stateEffect: true })   .borderRadius(8)   .backgroundColor(0x317aff)   .width(90)  .height(40)
+Button('Ok', { type: ButtonType.Normal, stateEffect: true })   
+    .borderRadius(8)   
+    .backgroundColor(0x317aff)   
+    .width(90)  
+    .height(40)
 ```
 
 ![img](screenshots/03ArkUI/btnOK.png)
