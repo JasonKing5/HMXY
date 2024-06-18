@@ -10,7 +10,7 @@ sidebar_position: 101
 > 本文档基于NEXT版本DevEco Studio5.0API12
 ---
 
-## ArkTS基础语法
+## 01 ArkTS基础语法
 
 ### 编程语言介绍
 
