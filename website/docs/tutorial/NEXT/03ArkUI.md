@@ -132,14 +132,35 @@ Text('我是Text') {
 ### 常见属性方法
 
 - 通过`decoration`设置文本装饰线及颜色。
+
 - 通过`textCase`设置文字一直保持大写或者小写状态。
+
 - 通过`textAlign`属性设置文本对齐样式
+
 - 通过`textAlign`属性设置文本对齐样式。
+
 - 通过`textOverflow`属性控制文本超长处理，`textOverflow`需配合`maxLines`一起使用（默认情况下文本自动折行）。
+
+  - ```typescript
+    textOverflow({ overflow: TextOverflow.None })
+    ```
+
+  - ```typescript
+    textOverflow({ overflow: TextOverflow.Ellipsis })
+    ```
+
+  - ```typescript
+    textOverflow({ overflow: TextOverflow.MARQUEE })    
+    ```
+
 - 通过`lineHeight`属性设置文本行高。
+
 - 通过`baselineOffset`属性设置文本基线的偏移量。
+
 - 通过`letterSpacing`属性设置文本字符间距。
+
 - 通过`minFontSize`与`maxFontSize`自适应字体大小，`minFontSize`设置文本最小显示字号，`maxFontSize`设置文本最大显示字号，`minFontSize`与`maxFontSize`必须搭配同时使用，以及需配合`maxline`或布局大小限制一起使用，单独设置不生效。
+
 - 通过`copyOption`属性设置文本是否可复制粘贴。
 
 ### 事件
@@ -149,6 +170,130 @@ Text('我是Text') {
 由于`Span`组件无尺寸信息，事件仅支持添加点击事件`onClick`。
 
 ---
+## 显示图片 (`Image`)
+
+开发者经常需要在应用中显示一些图片，例如：按钮中的`icon`、网络图片、本地图片等。在应用中显示图片需要使用`Image`组件实现，`Image`支持多种图片格式，包括`png`、`jpg`、`bmp`、svg`和``gif`，具体用法请参考[Image](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-basic-components-image-0000001815927572)组件。
+
+`Image`通过调用接口来创建，接口调用形式如下：
+
+```typescript
+Image(src: PixelMap | ResourceStr | DrawableDescriptor)
+```
+
+该接口通过图片数据源获取图片，支持本地图片和网络图片的渲染展示。其中，src是图片的数据源，加载方式请参考[加载图片资源](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-graphics-display-0000001813416088#ZH-CN_TOPIC_0000001813416088__加载图片资源)。
+
+### 加载图片资源
+
+`Image`支持加`载存档图`、`多媒体像素图`两种类型。
+
+#### 存档图类型数据源
+
+存档图类型的数据源可以分为`本地资源`、网络资源、`Resource资源`、`媒体库资源`和`base64`。
+
+- 本地资源
+
+  创建文件夹，将本地图片放入ets文件夹下的任意位置。
+
+  `Image`组件引入本地图片路径，即可显示图片（根目录为`ets`文件夹）。
+
+  ```typescript
+  Image('images/view.jpg').width(200)
+  ```
+
+- 网络资源
+
+  引入网络图片需申请权限`ohos.permission.INTERNET`，具体申请方式请参考[声明权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/declare-permissions-0000001820999665)。此时，`Image`组件的`src`参数为网络图片的链接。
+
+  `Image`组件首次加载网络图片时，需要请求网络资源，非首次加载时，默认从缓存中直接读取图片，更多图片缓存设置请参考[setImageCacheCount](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-system-app-0000001821000765#ZH-CN_TOPIC_0000001857876165__setimagecachecount7)、[setImageRawDataCacheSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-system-app-0000001821000765#ZH-CN_TOPIC_0000001857876165__setimagerawdatacachesize7)、[setImageFileCacheSize](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-system-app-0000001821000765#ZH-CN_TOPIC_0000001857876165__setimagefilecachesize7)。
+
+  > 如果是预览器，未申请网络权限时，也可以打开
+
+  ```typescript
+  Image('https://foruda.gitee.com/avatar/1680571445959229147/9556293_mayuanwei_1680571445.png') 
+  ```
+
+- `Resource`资源 : 使用资源格式可以`跨包`/`跨模块`引入图片，`resources文件夹`下的图片都可以通过`$r`资源接口读 取到并转换到`Resource格式`。
+
+  **图1** `resources`
+
+![img](screenshots/03ArkUI/media.jpg)
+
+```typescript
+Image($r('app.media.icon'))
+```
+
+**图2** `rawfile` : 还可以将图片放在rawfile文件夹下。
+
+![rawfile.jpg](screenshots/03ArkUI/rawfile.jpg)
+
+```typescript
+Image($rawfile('example1.png'))
+```
+
+- 媒体库 `file://data/storage`
+
+支持`file://`路径前缀的字符串，用于访问通过[媒体库](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-file-picker-0000001774121766)提供的图片路径。从媒体库获取的url格式通常如下。
+
+```typescript
+Image('file://media/Photos/5')
+.width(200)
+```
+
+- base64
+
+  路径格式为 `data:image/[png|jpeg|bmp|webp];base64,[base64 data]` ，其中 `[base64 data]` 为`Base64`字符串数据。
+
+  `Base64`格式字符串可用于存储图片的像素数据，在网页上使用较为广泛。
+
+#### 多媒体像素图
+
+`PixelMap`是图片解码后的像素图，具体用法请参考[图片开发指导](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/image-overview-0000001821000129)。以下示例将加载的网络图片返回的数据解码成`PixelMap`格式，再显示在`Image`组件上，
+
+
+
+### 显示矢量图
+
+`Image`组件可显示矢量图（`svg`格式的图片），支持的`svg`标签为：`svg`、`rect`、`circle`、`ellipse`、`path`、`line`、`polyline`、`polygon`和`animate`。
+
+`svg`格式的图片可以使用`fillColor`属性改变图片的绘制颜色。
+
+```typescript
+Image($r('app.media.cloud'))
+  .width(50)
+  .fillColor(Color.Blue) 
+```
+
+
+
+### 属性
+
+- 设置图片缩放类型：通过`objectFit`属性使图片缩放到高度和宽度确定的框内。
+
+- 图片插值：当原图分辨率较低并且放大显示时，图片会模糊出现锯齿。这时可以使用`interpolation`属性对图片进行插值，使图片显示得更清晰。
+
+- 设置图片重复样式：通过`objectRepeat`属性设置图片的重复样式方式，重复样式请参考[ImageRepeat](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ts-appendix-enums-0000001815927712#ZH-CN_TOPIC_0000001815927712__imagerepeat)枚举说明。
+
+- 设置图片渲染模式：通过`renderMode`属性设置图片的渲染模式为原色或黑白。
+
+- 设置图片解码尺寸：通过`sourceSize`属性设置图片解码尺寸，降低图片的分辨率。
+
+- 为图片添加滤镜效果：通过`colorFilter`修改图片的像素颜色，为图片添加滤镜。
+
+- 同步加载图片：一般情况下，图片加载流程会异步进行，以避免阻塞主线程，影响UI交互。但是特定情况下，图片刷新时会出现闪烁，这时可以使用`syncLoad`属性，使图片同步加载，从而避免出现闪烁。不建议图片加载较长时间时使用，会导致页面无法响应。
+
+  ```typescript
+  Image($r('app.media.icon'))
+    .syncLoad(true)
+  ```
+
+  
+
+### 事件调用
+
+通过在`Image`组件上绑定`onComplete`事件，图片加载成功后可以获取图片的必要信息。如果图片加载失败，也可以通过绑定`onError`回调来获得结果。
+
+---
+
 ## Slider滑块组件
 
 滑动条组件，通常用于快速调节设置值，如音量调节、亮度调节等应用场景。
