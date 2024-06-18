@@ -1,7 +1,7 @@
 ---
 sidebar_position: 103
 ---
-> ArkUI组件系统过一遍
+> ArkUI基础组件
 
 
 # 03 ArkUI
@@ -107,7 +107,7 @@ Text可通过以下两种方式来创建：
 1. `string`字符串
 
 ```typescript
-Text('帝心同学细的雅痞')
+Text('我以江月敬浮生')
 ```
 
 2. 引用`Resource`资源
@@ -132,8 +132,8 @@ Text($r('app.string.module_desc'))
 `Span`组件需要写到`Text`组件内，单独写`Span`组件不会显示信息，`Text`与`Span`同时配置文本内容时，`Span`内容**覆盖**`Text`内容。
 
 ```typescript
-Text('我是Text') {
-  Span('我是Span')
+Text('我以江月敬浮生') {
+  Span('郁江孤影憾不平')
 }
 .padding(10)
 .borderWidth(1)
@@ -360,6 +360,8 @@ TextInput()
 ### 样式
 
 - `placeholder` 设置无输入时的提示文本。`text` 设置输入框当前的文本内容。
+
+  > 如果同时设置，则显示`text`内容
 
   ```typescript
   TextInput({placeholder:'我是提示文本',text:'我是当前文本内容'})
@@ -957,7 +959,7 @@ struct ToggleCase {
    
      build() {
        Column() {
-         Text('弹窗内容：帝心')
+         Text(`我家猫会后空翻`)
            .fontSize(20)
            .margin({ top: 10, bottom: 10 })
        }
