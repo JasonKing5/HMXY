@@ -951,60 +951,209 @@ struct ToggleCase {
 2. `@CustomDialog`装饰器用于装饰自定义弹框，此装饰器内进行自定义内容（也就是弹框内容）。
 
    ```typescript
+   // 1. 自定义弹窗 CustomDialog1  弹窗控制器中需要给出 builder，配置弹出哪个弹窗
    @CustomDialog
-   struct CustomDialogExample {
-     controller: CustomDialogController = new CustomDialogController({
-       builder: CustomDialogExample({}),
+   struct CustomDialog1{
+     dialogController:CustomDialogController = new CustomDialogController({
+       builder:CustomDialog1()
      })
-   
      build() {
        Column() {
          Text(`我家猫会后空翻`)
            .fontSize(20)
-           .margin({ top: 10, bottom: 10 })
        }
      }
    }
    ```
-
+   
 3. 创建构造器，与装饰器呼应相连。
-
-   ```typescript
-    @Entry
-    @Component
-    struct CustomDialogUser {
-      dialogController: CustomDialogController = new CustomDialogController({
-        builder: CustomDialogExample(),
-      })
-    }
-   ```
 
 4. 点击与onClick事件绑定的组件使弹窗弹出。
 
    ```typescript
+   /*
+    * 1. 使用`@CustomDialog`装饰器装饰自定义弹窗。
+    * 2. 在自定义弹窗内完成： 控制器+布局
+    * 3. 在入口组件：控制器 + 根据业务触发弹窗
+    * */
    @Entry
    @Component
-   struct CustomDialogUser {
-     dialogController: CustomDialogController = new CustomDialogController({
-       builder: CustomDialogExample(),
+   struct CustomDialogDemo1 {
+     // 入口组件 控制器
+     dialogController:CustomDialogController = new CustomDialogController({
+       builder:CustomDialog1()
      })
    
      build() {
-       Column() {
-         Button('click me')
+       Column({ space: 30 }) {
+         Button('click me open CustomDialog1...')
            .onClick(() => {
              this.dialogController.open()
            })
-       }.width('100%').margin({ top: 5 })
+       }
+       .width('100%')
+       .height('100%')
+       .backgroundColor($r('app.color.theme_color'))
+       .justifyContent(FlexAlign.Center)
      }
    }
+   
    ```
 
+   
 
+### 弹窗的交互
 
+弹窗可用于数据交互，完成用户一系列响应操作。
 
+1. 在@CustomDialog装饰器内添加按钮，同时添加数据函数。
 
+```typescript
+// 带有取消和确认按钮的弹窗
+@CustomDialog
+struct CustomDialog2 {
+  cancel?: () => void
+  confirm?: () => void
+  // 定义弹窗时，该控制器 需要默认值。否则预览报错。而如果设置？表示可选，即默认null。按钮业务中调用close方法又会编译不通过
+  controller: CustomDialogController = new CustomDialogController({
+    builder:CustomDialog2()
+  })
 
+  build() {
+    Column() {
+      Text('我是CustomDialogDemo2内容').fontSize(20).margin({ top: 10, bottom: 10 })
+      Flex({ justifyContent: FlexAlign.SpaceAround }) {
+        Button('取消')
+          .backgroundColor(0xffffff).fontColor(Color.Black)
+          .onClick(() => {
+            this.controller.close() // 关闭弹窗
+            if (this.cancel) {
+              this.cancel() //调用处传递
+            }
+          })
+        Button('确认')
+          .backgroundColor(0xffffff).fontColor(Color.Red)
+          .onClick(() => {
+            this.controller.close() // 关闭弹窗
+            if (this.confirm) {
+              this.confirm() //调用处传递
+            }
+          })
+      }
+    }
+  }
+}
+```
+
+2. 页面内需要在构造器内进行接收，同时创建相应的函数操作。
+
+```typescript
+// 弹窗的交互
+@Entry
+@Component
+struct CustomDialogDemo2 {
+  dialogController: CustomDialogController = new CustomDialogController({
+    builder: CustomDialog2({
+      // 点击【取消】按钮时执行
+      cancel: () => {
+        this.onCancel()
+      },
+      // 点击【确认】按钮时执行
+      confirm: () => {
+        this.onAccept()
+      }
+    })
+  })
+
+  onCancel() {
+    console.info('当【取消】按钮被点击时执行业务代码')
+  }
+
+  onAccept() {
+    console.info('当【确认】按钮被点击时执行业务代码')
+  }
+
+  build() {
+    Column({ space: 30 }) {
+      Button('click me open CustomDialog2...')
+        .onClick(() => {
+          this.dialogController.open()
+        })
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor($r('app.color.theme_color'))
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+### 弹窗的动画
+
+弹窗通过定义`openAnimation`控制弹窗出现动画的持续时间，速度等参数。
+
+```typescript
+// 弹窗的动画
+@Entry
+@Component
+struct CustomDialogDemo3 {
+  @State textValue: string = ''
+  dialogController: CustomDialogController | null = new CustomDialogController({
+    builder: CustomDialog3(),
+    // 弹窗动画效果
+    openAnimation: {
+      duration: 1200,
+      curve: Curve.Friction,
+      delay: 500,
+      playMode: PlayMode.Alternate,
+      onFinish: () => {
+        console.info('play end')
+      }
+    },
+    autoCancel: true,
+    alignment: DialogAlignment.Bottom,
+    // 弹窗位置
+    offset: { dx: 0, dy: -50 },
+    // 弹窗的尺寸
+    gridCount: 4,
+    customStyle: false,
+    backgroundColor: 0xd9ffffff,
+    cornerRadius: 10,
+  })
+
+  // 在自定义组件即将析构销毁时将dialogController置空
+  aboutToDisappear() {
+    this.dialogController = null // 将dialogController置空
+  }
+
+  build() {
+    Column({ space: 30 }) {
+      Button(`弹窗动画效果`)
+        .backgroundColor('#bb2b2b')
+        .onClick(() => {
+          if (this.dialogController != null) {
+            this.dialogController.open()
+          }
+        })
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor($r('app.color.theme_color'))
+    .justifyContent(FlexAlign.Center)
+  }
+}
+
+@CustomDialog
+struct CustomDialog3 {
+  controller?: CustomDialogController
+
+  build() {
+    Column() {
+      Text('Whether to change a text?').fontSize(16).margin({ bottom: 10 })
+    }
+  }
+}
+```
 
 
 
