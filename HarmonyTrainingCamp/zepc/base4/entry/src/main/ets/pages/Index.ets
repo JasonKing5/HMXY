@@ -36,6 +36,17 @@ struct Index {
             })
           })
 
+        Button('图片Image')
+          .width('50%')
+          .height(50)
+          .backgroundColor('#74011a14')
+          .onClick(() => {
+            //业务逻辑，页面跳转
+            router.pushUrl({
+              url:"pages/ImageDemo"
+            })
+          })
+
       }
       .width('100%')
     }

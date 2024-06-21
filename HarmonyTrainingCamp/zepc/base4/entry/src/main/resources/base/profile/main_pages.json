@@ -2,6 +2,7 @@
   "src": [
     "pages/Index",
     "pages/TextDemo",
-    "pages/ButtonDemo"
+    "pages/ButtonDemo",
+    "pages/ImageDemo"
   ]
 }
