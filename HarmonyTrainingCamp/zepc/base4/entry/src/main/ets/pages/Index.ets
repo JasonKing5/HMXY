@@ -7,7 +7,7 @@ struct Index {
 
   build() {
     Row() {
-      Column() {
+      Column({space:20}) {
         Text(this.message)
           .fontColor('green')
           .fontSize(30)
@@ -25,6 +25,17 @@ struct Index {
               url:'pages/TextDemo'
             })
           })
+        Button('按钮Button')
+          .width('50%')
+          .height(50)
+          .backgroundColor('#74011a14')
+          .onClick(() => {
+            //业务逻辑，页面跳转
+            router.pushUrl({
+              url:'pages/ButtonDemo'
+            })
+          })
+
       }
       .width('100%')
     }
