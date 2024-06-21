@@ -8,26 +8,11 @@ sidebar_position: 1
 
 
 ## IDE下载
-1. [DevEco Studio 3.1](https://developer.huawei.com/consumer/cn/deveco-studio#download)不建议，bug太多。
-
-1. [DevEco Studio 4.0](https://docs.openharmony.cn/pages/v4.0/zh-cn/release-notes/OpenHarmony-v4.0-release.md#%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB)在没有next权限的时候，建议使用4.0版本。
-
-1. [DevEco Studio NEXT](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-software-download-0000001507075446)
-
-    > 帝心：需要权限或等未来全面公开
+1. [官方下载NEXT](https://developer.huawei.com/consumer/cn/deveco-studio#download)
 
 ## 学习文档
 ### HarmonyOS
 1. [鸿蒙开发者官网](https://developer.huawei.com/consumer/cn/)
-
-2. [鸿蒙应用开发指南(4.0)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V2/start-overview-0000001478061421-V2)
-
-1. [鸿蒙开发API9到NEXT版本语法变化内容，适配指导](https://docs.openharmony.cn/pages/v4.0/zh-cn/application-dev/quick-start/introduction-to-arkts.md)
-
-3. [鸿蒙应用开发Codelabs(4.0)](https://developer.huawei.com/consumer/cn/codelabsPortal/serviceTypes/harmonyos-cn?ha_source=neibu&ha_sourceId=89000231)
-
-3. [鸿蒙应用开发Codelabs(NEXT)](https://developer.huawei.com/consumer/cn/doc/harmonyos-codelabs/codelabs-0000001443855957)
-    > 帝心：需要权限或等未来全面公开
 
 
 ### OpenHarmony
@@ -55,14 +40,9 @@ sidebar_position: 1
 
 ### 官方视频教程
 
-1. [官方视频教程(4.0)](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V2/video-tutorials-0000001443535745-V2)
-    > 帝心： 言简意赅，但是对小白不太友好。
-
 1. [官方视频教程(NEXT)](https://developer.huawei.com/consumer/cn/doc/harmonyos-video-courses/video-tutorials-0000001443535745)
 
-    > 帝心：质量极好，需要权限或等未来全面公开
-
-
+    > 帝心：质量极好
 
 ### 优质视频教程
 
@@ -71,22 +51,26 @@ sidebar_position: 1
     > 网友戏称：鸿蒙之父。鸿蒙诗人。全网最细。
 
 2. [黑马-虎翼](https://www.bilibili.com/video/BV1Sa4y1Z7B1/)
+    
     > 帝心：专业机构，质量超级好。强烈建议！
-
+    
 2. [尚硅谷-刘波](https://www.bilibili.com/video/BV1Ti4y1s79B/)
+    
     > 帝心：专业机构，质量超级好。强烈建议！
 
 
 2. [黑马-蒋鹏](https://www.bilibili.com/video/BV14t421W7pA/)
+    
     > 帝心：专业机构，质量超级好。强烈建议！
-
+    
 2. [python大本营](https://www.bilibili.com/video/BV1Aj421f7xK/)
+    
     > 基础课（帝心）+电商严选（肖斌）
 
 
 
 2. [黑马-满一航-端云一体化](https://www.bilibili.com/video/BV1Aj421f7xK/)
-    
+   
 
 ## 鸿蒙认证
 
