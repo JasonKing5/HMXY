@@ -1,37 +1,5 @@
 ---
 sidebar_position: 100
 ---
-
-# 电脑必装软件
-
-
-* 浏览器配置
-* 视频播放器：PotPlayer
-* 截图工具：Pinxin
-
-* 解开压缩软件：7-Zip
-
-* 卸载工具：Geek Uninstaller
-
-* MD编辑器：Typora
-* 板书工具：Zoomit
-
-* 文件管理器：Everything
-
-* ftp:mobaxterm
-* 远程工具向日葵
-*
-*
-*IDE：
-* git:
-*
-*邮箱：foxmail
-*
-*视频录制软件：
-*
-* adobo
-
-* 网盘
-* 会议：华为云，腾讯
-
-* api接口调试
+# 软件安装
+[各种软件安装教程，后续转移到该网站](https://gitee.com/mayuanwei/codeLife/tree/master/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85-%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B)
