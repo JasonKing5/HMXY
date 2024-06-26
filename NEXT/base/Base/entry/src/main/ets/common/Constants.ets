@@ -20,5 +20,15 @@ export default class Constants {
     new MyRouterInfo('pages/ArkUI/SliderBase', 'Slider组件基础'),
     new MyRouterInfo('pages/ArkUI/SliderCase', 'Slider组件案例'),
   ]
+
+  // Network home 路由
+  // "pages/NetworkKit/NetworkKitHome",
+  // "pages/NetworkKit/HttpStudy",
+  // "pages/NetworkKit/WebComp"
+  static readonly networkRouters: Array<MyRouterInfo> = [
+
+    new MyRouterInfo("pages/NetworkKit/HttpStudy", 'SHttpStudy'),
+    new MyRouterInfo("pages/NetworkKit/WebComp", 'WebComp'),
+  ]
 }
 

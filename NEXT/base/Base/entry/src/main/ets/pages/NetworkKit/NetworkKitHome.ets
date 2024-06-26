@@ -1,3 +1,5 @@
+import Constants from '../../common/Constants';
+import RouterList from '../../view/RouterList';
 import TopTitle from '../../view/TopTitle';
 
 @Entry
@@ -8,6 +10,8 @@ struct NetworkKitHome {
   build() {
     Column({ space: 30 }) {
       TopTitle({ message: this.message })
+
+      RouterList({currentRouters:Constants.networkRouters})
     }
     .width('100%')
     .height('100%')

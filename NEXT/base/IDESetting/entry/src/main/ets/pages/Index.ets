@@ -2,26 +2,50 @@
 
 // todo: 注解标识。可以使用任务栏中TODO快速找到
 
-// 当前行
+
+// TODO $FILE_NAME$ 待完成: $END$
+// TODO Index.ets 待完成: 
 
 @Entry
 @Component
 struct Index {
   @State message: string = 'Hello World';
+  // 诗词数组
+  pmArr: string [] = [
+    `我醉欲眠卿且去 明朝有意抱琴来`,
+    `卡布奇诺今犹在 不见当年倒茶人`,
+    `时来运转皆同力 运去英雄不自由`,
+    `堪笑一场梦颠倒 元来此生恰浮云`,
+    `再见少年拉满弓 不惧岁月不俱风`,
+    `我今因病魂颠倒 唯梦闲人不梦君`,
+    `君埋泉下泥削骨 我寄人间雪满头`,
+    `南来北往徒自老 故人稀`,
+    `日拱一卒无有尽 功不唐捐终入海`,
+    `何事人间频乞食 此心已是负彩霞`,
+    `峨眉山月半轮秋 影入平羌江水流`,
+    `天生我才必有用 千金散尽还复来`,
+    `垂杨紫陌洛城东 今年花胜去年红`,
+    `劝君莫负艳阳天 恩爱欢愉趁少年`,
+    `何须浅碧深红色 自是花中第一流`,
+    `我醉欲眠卿且去 明朝有意抱琴来`,
+    `山有木兮木有枝 心悦君兮君不知`,
+    `曾经沧海难为水 除却巫山不是云`,
+    `玲珑骰子安红豆 入骨相思知不知`,
+    `直道相思了无益 未妨惆怅是清狂`,
+    `金风玉露一相逢 便胜却人间无数`,
+    `从此无心爱良夜 任他明月下西楼`,
+    `欲寄彩笺兼尺素 山长水阔知何处`,
+    `若似月轮终皎洁 不辞冰雪为卿热`,
+    `得成比目何辞死 愿作鸳鸯不羡仙`,
+  ]
 
-
-
+  // todo: 待声明的状态变量
   build() {
-
     RelativeContainer() {
+      //   todo:首页布局
+      Text()
+        .onClick(() => {
 
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize(50)
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
         })
     }
     .height('100%')
