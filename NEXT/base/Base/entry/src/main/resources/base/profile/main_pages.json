@@ -1,0 +1,19 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/NetworkKit/HttpStudy",
+    "pages/AbilityKit/UIAbilityStudy",
+    "pages/ArkUI/RelativeContainerStudy",
+    "pages/ArkUI/SliderCase",
+    "pages/ArkUI/ArkUIHome",
+    "pages/ArkData/ArkDataHome",
+    "pages/AbilityKit/AbilityKitHome",
+    "pages/NetworkKit/NetworkKitHome",
+    "pages/ArkUI/SliderBase",
+    "pages/ArkUI/RadioCase",
+    "pages/ArkUI/ToggleCase",
+    "pages/ArkUI/CustomDialogDemo1",
+    "pages/ArkUI/CustomDialogDemo2",
+    "pages/ArkUI/CustomDialogDemo3"
+  ]
+}
