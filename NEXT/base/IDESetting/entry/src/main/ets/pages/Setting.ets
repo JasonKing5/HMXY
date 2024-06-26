@@ -8,9 +8,8 @@ struct Setting {
     Column({ space: 30 }) {
       Button()
         .onClick(() => {
-          router.pushUrl({
-            url: ''
-          })
+
+
         })
     }
     .width('100%')

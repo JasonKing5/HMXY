@@ -45,6 +45,8 @@ struct Index {
       //   todo:首页布局
       Text()
         .onClick(() => {
+          // 路由跳转
+
 
         })
     }
