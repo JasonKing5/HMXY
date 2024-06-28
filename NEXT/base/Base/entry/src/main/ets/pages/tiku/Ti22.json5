@@ -1,0 +1,45 @@
+//{
+//  "module": {
+//    "name": "entry",
+//    // ...
+//    "abilities": [
+//      {
+//        "name": "EntryAbility",
+//        "srcEntry": "./ets/entryability/EntryAbility.ets",
+//          // ...
+//        "skills": [
+//          {
+//            "entities": [
+//              "entity.system.home"
+//            ],
+//            "actions": [
+//              "action.want.action.home"
+//            ]
+//          }
+//        ],
+//        "metadata": [
+//          {
+//            "name":"ohos.entry.shortcuts",
+//            "resource":"$profile:shortcuts_config"
+//          }
+//        ]
+//      }
+//    ]
+//  }
+//}
+{
+  "shortcuts":[
+    {
+      "shortcutId":"id_test1",
+      "label":"shortcutLabel",
+      "icon":"$media:shortcutIcon",
+      "wants": [
+        {
+          "bundleName":"com.ohos.hello",
+          "moduleName":"entry",
+          "abilityName":"EntryAbility"
+        }
+      ]
+    }
+  ]
+}
