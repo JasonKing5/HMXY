@@ -409,13 +409,13 @@ D、在发现应用性能不佳时，直接查看代码逻辑，凭经验修改�
 
 21. 开发者在编写ArkUI代码时，想要提前预览下所编写的组件的效果，下述哪个组件可以使用DevEcoStudioPreviewer正常预览？
 
-A、@Preview @Component struct TitleSample{@StorageProp('title）)title: string =PlaceHolder';buildO{Text（this.title）}}
+A、`@Preview @Component struct TitleSample{@StorageProp('title）)title: string =PlaceHolder';buildO{Text（this.title）}}`
 
-B、@Preview@Component structLinkSample{@Linkmessage:string;build0{Text(this.message)}}
+B、`@Preview@Component structLinkSample{@Linkmessage:string;build0{Text(this.message)}}`
 
-C、@Preview@Component struct ConsumeSample{@Consume name:string;build0{Text(this.name)}}
+C、`@Preview@Component struct ConsumeSample{@Consume name:string;build0{Text(this.name)}}`
 
-D、import{add}fromlibnative.so';@Preview@ComponentstructNativeSample{count:number=add（1,2);build0{Text（current count is${this.count}）}}
+D、`import{add}fromlibnative.so';@Preview@ComponentstructNativeSample{count:number=add（1,2);build0{Text（current count is${this.count}）}}`
 
 
 
@@ -1010,13 +1010,13 @@ B、foo3
 
 47. 下面关于ArkTS中export用法，正确的是
 
-A、export*from“etsfilename"
+A、`export * from "etsfilename"`
 
-B、export*as namefrom“etsfilename"
+B、`export * as name from "etsfilename"`
 
-C、export{export1}from“etsfilename”;
+C、`export { export1 } from“etsfilename";`
 
-D、export{export1asalias1}from"etsfilename”;
+D、`export { export1 as alias1 } from "etsfilename";`
 
 
 
@@ -1091,13 +1091,13 @@ taskpool.execute(task).then(()=>{});
 w.postMessage(a);
 ```
 
-A、taskpool.execute(task).then(O=>0);，TaskPool共享传输实现方式
+A、`taskpool.execute(task).then(O=>0);`，TaskPool共享传输实现方式
 
-B、w.postMessage(a);，Worker共享传输实现方式
+B、`w.postMessage(a);`，Worker共享传输实现方式
 
-C、w.postMessageWithSharedSendable(a);，Worker共享传输实现方式
+C、`w.postMessageWithSharedSendable(a);`，Worker共享传输实现方式
 
-D、task.setCloneList([a]);taskpool.execute(task).then(O=>0);，TaskPool共享传输实现方式
+D、`task.setCloneList([a]);taskpool.execute(task).then(O=>0);`，TaskPool共享传输实现方式
 
 
 
