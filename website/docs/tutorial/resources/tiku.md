@@ -297,7 +297,7 @@ D、
 
 A、`{offsetX:75,offsetY:-100,surfaceWidth:150,surfaceHeight:500}`
 
-B、{offsetX:81,offsetY:-89,surfaceWidth:150,surfaceHeight:500}
+B、`{offsetX:81,offsetY:-89,surfaceWidth:150,surfaceHeight:500}`
 
 C、 `{offsetX:81,offsetY:-89,surfaceWidth:200,surfaceHeight:0}`
 
