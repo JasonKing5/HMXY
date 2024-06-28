@@ -3,6 +3,7 @@ sidebar_position: 101
 ---
 
 # 开发者认证题库版本2
+[本题库源md文件](https://gitee.com/mayuanwei/harmonyOS_bilibili/blob/master/website/docs/tutorial/resources/tiku.md)
 
 ## 单选题
 
