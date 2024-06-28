@@ -281,17 +281,17 @@ D、
 
 
 
-12. 现有一个宽高分别为200px的xcomponent组件，其绑定了一个xComponentController（xcController），依次进行如下操作：
+12. 现有一个宽高分别为200px的`xcomponent`组件，其绑定了一个`xComponentController（xcController）`，依次进行如下操作：
 
-    (1)xcController.setxComponentSurfaceRect( {surfaceWidth:150,surfaceHeight:500})
+1、`xcController.setxComponentSurfaceRect( {surfaceWidth:150,surfaceHeight:500})`
 
-    (2）设置xcomponent组件的padding为{top：5px，left：10px，bottom:15px,right:20px}
+2、设置`xcomponent`组件的`padding`为 `{top：5px，left：10px，bottom:15px,right:20px}`
 
-    （3）将xComponent组件大小改为300pxx300px
+3、将`xComponent`组件大小改为300px x 300px
 
-    （4）给xComponent组件设置一个宽度为2px的边框
+4、给`xComponent`组件设置一个宽度为2px的边框
 
-    (5）xcController.setxcomponentSurfaceRect({offsetx:-20,offsetY:50,surfaceWidth:200,surfaceHeight:-100})
+5、`xcController.setxcomponentSurfaceRect({offsetx:-20,offsetY:50,surfaceWidth:200,surfaceHeight:-100})`
 
     之后，调用xcController·getXComponentSurfaceRect（)的返回值为
 
