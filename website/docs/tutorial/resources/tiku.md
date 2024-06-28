@@ -295,13 +295,13 @@ D、
 
     之后，调用xcController·getXComponentSurfaceRect（)的返回值为
 
-A、{offsetX:75,offsetY:-100,surfaceWidth:150,surfaceHeight:500}
+A、`{offsetX:75,offsetY:-100,surfaceWidth:150,surfaceHeight:500}`
 
 B、{offsetX:81,offsetY:-89,surfaceWidth:150,surfaceHeight:500}
 
-C、 {offsetX:81,offsetY:-89,surfaceWidth:200,surfaceHeight:0}
+C、 `{offsetX:81,offsetY:-89,surfaceWidth:200,surfaceHeight:0}`
 
-D、{offsetX:-20,offsetY:50,surfaceWidth:200,surfaceHeight:500}
+D、`{offsetX:-20,offsetY:50,surfaceWidth:200,surfaceHeight:500}`
 
 
 
