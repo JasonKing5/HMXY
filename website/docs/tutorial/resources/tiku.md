@@ -16,7 +16,7 @@ C、 `Object.keys();`
 
 D、`Object.isExtensible();`
 
-
+---
 
 2. 以下哪个装饰器用来表示并发共享对象
 
@@ -28,7 +28,7 @@ C、`@Style`
 
 D、`@State`
 
-
+---
 
 3. ArkTS支持以下哪个函数？
 
@@ -40,7 +40,7 @@ C、`Object.hasOwnProperty();`
 
 D、`Object.getOwnPropertyDescriptor();`
 
-
+---
 
 4. 下面关于方舟字节码格式IMM16_ID16_IMM8描述正确的是
 
@@ -64,7 +64,7 @@ C、8位操作码，8位立即数，16位id，8位寄存器
 
 D、8位操作码，8位立即数，2个8位寄存器
 
-
+---
 
 6. 已知下列代码`PageOne`页面为`navigation`中的某一子页面，依次点击`PageOne`页面中`toPageTwo`按钮，`PageTwo`页面中`toPageOne`按钮，此时点击`get`按钮获取全部名为`name`的`NavDestination`页面的位置索引为
 
@@ -133,7 +133,7 @@ C、[2,1]
 
 D、[0,1]
 
-
+---
 
 7. 根据上面代码，以下解释正确的是
 
@@ -196,7 +196,7 @@ C、在自定义组件`Page`的`build`方法里改变状态变量是非法操作
 
 D、在`ChangeMode`里改变`mode`的值，会触发其父组件`Page`的Title`内容`的切换。
 
-
+---
 
 8. 使用promptAction.showToast如何设置显示在其他应用之上？
 
@@ -208,39 +208,143 @@ C、无需配置，默认显示在其他应用之上
 
 D、ToastShowMode.TOP_MOAST
 
-
+---
 
 9. Text组件不支持以下哪种使用方式？
 
 A、
 
 ```typescript
-
+@Entry
+@Component
+struct styledStringDemo {
+  scroll: Scroller = new Scroller();
+  mutableStyledString: MutableStyledString = new MutableStyledString("test",[{
+    start:0,
+    length:5,
+    styledKey:StyledStringKey.FONT,
+    styledValue:new TextStyle({fontColor:Color.Pink})
+  }])
+  controller1:TextController=new TextController();
+  async onPageShow() {
+    this.controller1.setStyledString(this.mutableStyledString)
+  }
+  build() {
+    Column(){
+      Text(undefined,{controller:this.controller1})
+    }.width('100%')
+  }
+}
 ```
 
 B、
 
 ```typescript
-
+@Entry
+@Component
+struct SpanExample {
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start, justifyContent:FlexAlign.Start}){
+      Text(){
+        Span('In line')
+        Span('Component')
+        Span('!')
+      }
+    }.width('100%').height(250).padding({left:35,right:35,top:35 })
+  }
+}
 ```
 
 C、
 
 ```typescript
+@Entry
+@Component
+struct styledStringDemo {
+  scroll: Scroller = new Scroller();
+  layout: TextLayoutManager = new  TextLayoutManager()
 
+  controller1: TextController = new TextController()
+
+  async onPageShow() {
+    this.controller1.setLayout(this.layout)
+  }
+
+  build() {
+    Column(){
+      Text(undefined,{ controller:this.controller1 })
+    }.width('100%')
+  }
+}
 ```
 
 D、
 
 ```typescript
+@Entry
+@Component
+struct TextExample{
+  build() {
+    Column({space:8}){
+      Text('textShadow').fontSize(9).fontColor(0xcccccc).margin(15).width('95%')
+    }
+  }
+}
 ```
 
-
+---
 
 10. 已知下列代码PageOne页面为navigation中的某一子页面，依次点击PageOne页面中toPageTwo按钮，PageTwo页面中toPageOne按钮，此时获取当前页面的路由栈数量为多少
 
 ```typescript
+// PageOne.ets
+@Component
+struct PageOneTmp {
+  @Consume('pageInfos') pageInfos: NavPathStack;
 
+  build() {
+    NavDestination() {
+      Column(){
+        Button('toPageTwo', { stateEffect: true, type: ButtonType.Capsule })
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfos.pushPathByName("pageTwo", "")
+          })
+      } .width('100%').height("100%")
+    }.title('pageOne')
+    .onBackPressed(() => {
+      const popDestinationInfo = this.pageInfos.pop()
+      console.log('pop'+'返回值'+JSON.stringify(proDestinationInfo))
+      return true
+    })
+  }
+}
+
+// PageTwo.ets
+export class Pages{
+  names:string =''
+  values:NavPathStack | null = null
+}
+@Builder
+export function pageTwoTmp(info: Pages){
+  NavDestination() {
+    Column(){
+      Button('toPageOne', { stateEffect: true, type: ButtonType.Capsule })
+        .width('80%')
+        .height(40)
+        .margin(20)
+        .onClick(() => {
+          (info.values as NavPathStack).pushPathByName("pageOne", null)
+        })
+    } .width('100%').height("100%")
+  }.title('pageTwo')
+  .onBackPressed(() => {
+    (info.values as NavPathStack).pop()
+    return true
+  })
+}
 ```
 
 A、4
@@ -251,35 +355,185 @@ C、3
 
 D、1
 
+---
 
+11. 为了使`isShow`参数值与半模态界面的状态同步，可以使用下列那种方式双向绑定`isShow`参数？
 
-11. 为了使isShow参数值与半模态界面的状态同步，可以使用下列那种方式双向绑定isShow参数？
-
-A、
+A、`&&`
 
 ```typescript
+@Entry
+@Component
+struct SheetTransitionExample {
+  @State isShow: boolean = false
+  @State isShow2: boolean = false
+  @State sheetHeight: number = 300;
 
+  @Builder
+  myBuilder() {
+    Column() {
+      Button("change height")
+        .margin(10)
+        .fontSize(20)
+        .onClick(() => {
+          this.sheetHeight = 500
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+
+  build() {
+    Column() {
+      Button("transition modal 1")
+        .onClick(() => {
+          this.isShow = true
+        })
+        .fontSize(20)
+        .margin(10)
+        .bindSheet(&&this.isShow,this.myBuilder(),{
+          height:this.sheetHeight
+      })
+    }
+    .justifyContent(FlexAlign.Center)
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
-B、
+B、`@@`
 
 ```typescript
+@Entry
+@Component
+struct SheetTransitionExample {
+  @State isShow: boolean = false
+  @State isShow2: boolean = false
+  @State sheetHeight: number = 300;
 
+  @Builder
+  myBuilder() {
+    Column() {
+      Button("change height")
+        .margin(10)
+        .fontSize(20)
+        .onClick(() => {
+          this.sheetHeight = 500
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+
+  build() {
+    Column() {
+      Button("transition modal 1")
+        .onClick(() => {
+          this.isShow = true
+        })
+        .fontSize(20)
+        .margin(10)
+        .bindSheet(@@this.isShow,this.myBuilder(),{
+          height:this.sheetHeight
+      })
+    }
+    .justifyContent(FlexAlign.Center)
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
-C、
+**C、正确`$$`**
 
 ```typescript
+// xxx.ets
+@Entry
+@Component
+struct SheetTransitionExample {
+  @State isShow: boolean = false
+  @State isShow2: boolean = false
+  @State sheetHeight: number = 300;
 
+  @Builder
+  myBuilder() {
+    Column() {
+      Button("change height")
+        .margin(10)
+        .fontSize(20)
+        .onClick(() => {
+          this.sheetHeight = 500
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+
+  build() {
+    Column() {
+      Button("transition modal 1")
+        .onClick(() => {
+          this.isShow = true
+        })
+        .fontSize(20)
+        .margin(10)
+        .bindSheet($$this.isShow,this.myBuilder(),{
+          height:this.sheetHeight
+      })
+    }
+    .justifyContent(FlexAlign.Center)
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 D、
 
 ```typescript
+// xxx.ets
+@Entry
+@Component
+struct SheetTransitionExample {
+  @State isShow: boolean = false
+  @State isShow2: boolean = false
+  @State sheetHeight: number = 300;
 
+  @Builder
+  myBuilder() {
+    Column() {
+      Button("change height")
+        .margin(10)
+        .fontSize(20)
+        .onClick(() => {
+          this.sheetHeight = 500
+        })
+    }
+    .width('100%')
+    .height('100%')
+  }
+
+  build() {
+    Column() {
+      Button("transition modal 1")
+        .onClick(() => {
+          this.isShow = true
+        })
+        .fontSize(20)
+        .margin(10)
+        .bindSheet(this.isShow,this.myBuilder(),{
+          height:this.sheetHeight
+      })
+    }
+    .justifyContent(FlexAlign.Center)
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
-
+---
 
 12. 现有一个宽高分别为200px的`xcomponent`组件，其绑定了一个`xComponentController（xcController）`，依次进行如下操作：
 
@@ -305,23 +559,72 @@ D、`{offsetX:-20,offsetY:50,surfaceWidth:200,surfaceHeight:500}`
 
 
 
+---
 
-
-13. 从桌面冷启动如下应用代码，点击Change按钮5次，整个过程中，代码中的2条log依次出现的次数是：
+13. 从桌面冷启动如下应用代码，点击`Change`按钮`5`次，整个过程中，代码中的2条`log`依次出现的次数是：
 
     ```typescript
+    class Data{
+      num:number
+      type: string
+      constructor(num: number, type: string) {
+        this.num = num;
+        this.type = type;
+      }
+    }
+    
+    @Reusable
+    @Component
+    struct Item{
+      @State data:Data | undefined =undefined;
+      aboutToAppear():void {
+        console.log("Demo log1");
+      }
+      aboutToReuse(params: ESObject): void {
+        console.log("Demo log2")
+        this.data = params.data
+      }
+    
+      build() {
+        Text("num = " + this.data?.num + ", type = " + this.data?.type)
+      }
+    }
+    
+    @Entry
+    @Component
+    struct Index {
+      data1: Data = new Data(1, "type1");
+      data2: Data = new Data(2, "type2");
+      @State data:Data  = this.data1
+      build() {
+        Column(){
+          if (this.data.type == "type1"){
+            Item({ data: this.data }).reuseId(this.data.type)
+          }else{
+            Item({ data: this.data }).reuseId(this.data.type)
+          }
+          Button('Change').onClick(() =>{
+            if(this.data === this.data1){
+              this.data = this.data2
+            }else {
+              this.data = this.data1
+            }
+          })
+        }
+      }
+    }
     
     ```
 
 A、1,5
 
-B、1,0
+**B、1,0**
 
 C、2,4
 
 D、6,0
 
-
+---
 
 14. 小李正在使用DevEco Studio进行Harmonyos应用的开发工作，他需要对一个频繁被调用的函数calculateData()进行重构，为了帮助小李高效地找到calculateData（)函数的所有引用位置，并确保重构时考虑周全，以下哪个步骤是正确的使用DevEcoStudio的"FindUsages"功能的操作方法
 
@@ -333,7 +636,7 @@ C、小李应将光标置于calculateDataO函数的名称上，按下Ctrl+Shift+
 
 D、小李应当在项目目录树中找到calculateDataO函数所在的文件，直接双击打开文件然后逐行扫描代码以手动查找该函数的所有调用位置。
 
-
+---
 
 15.   项目中包含多个模块和数千行代码。随着开发的深入，项目中的ArkTS源代码文件逐渐积累了大量import语句，其中不乏未使用的import以及不规范的排序情况，关于DevEcoStudio的编辑器的“optimizeImports”，以下说法正确的是
 
@@ -345,7 +648,7 @@ C、应该手动遍历每个ArkTS文件，逐一检查并删除未使用的impor
 
 D、为了快速清理未使用的import，可以选中项目根目录，按下快捷键Ctrl+Alt+O（在macOS上为Control+Option+O），让DevEcoStudio自动识别并移除所有未使用的impor，并自动按照预设规则排序和合并import。
 
-
+---
 
 16. 在一个包含多个模块（如entry、feature、har、hsp等）的大型Harmonyos应用项目中，如果要对某个静态共享模块构建出静态构建包产物，如何通过DevEcoStudio进行构建
 
@@ -357,7 +660,7 @@ C、选中har模块，点击build菜单栏`build hap（s）`
 
 D、选中har模块，点击build菜单栏`make module 'har'`
 
-
+---
 
 17. 在Harmonyos应用开发中，当开发者遇到需要分析Release版本应用的崩溃或异常堆栈信息时，为了准确地将堆栈追踪信息对应到源代码的具体位置，以下哪个描述是正确的做法或理解
 
@@ -369,7 +672,7 @@ C、DevEcoStudio通过集成的Release应用堆栈解析功能，自动利用构
 
 D、因为Release应用经过优化和去除Debug信息，直接从堆栈跟踪到源代码行号是不可能的，开发者只能依靠日志信息手工推测问题所在
 
-
+---
 
 18. Harmonyos应用开发团队正着手优化一款面向全球市场的在线教育应用，该应用在特定课程直播环节出现了性能波动和响应延迟的问题，严重影响用户体验。打算利用DevEcoProfiler来进行性能优化。DevEcoProfiler其设计核心和主要优势是什么
 
@@ -381,7 +684,7 @@ C、DevEco Profiler采用Bottom-Up设计原则，从底层代码细节开始逐�
 
 D、DevEco Profiler依据Top-Down设计理念，通过高度整合的数据展示范式，提供从宏观到微观的性能数据分析，加速开发者定位和解决问题的过程
 
-
+---
 
 19. 在一个包含多个模块（如entry、feature、service、library等）的大型Harmonyos应用项目中，如果某个模块feature对另外一个公共库模块library有依赖，如何通过DevEcoStudio正确配置项目依赖关系
 
@@ -393,7 +696,7 @@ C、在feature的build-profile.json5文件的dependencies字段中配置library�
 
 D、无需配置，直接在代码中编写importxxxfrom 'library'
 
-
+---
 
 20. 在使用DevEcoStudio的Profiler进行Harmonyos应用性能优化的流程中，以下哪个步骤最恰当地描述了开发者利用Profiler工具进行性能问题识别、定位、优化及验证的完整过程
 
@@ -405,7 +708,7 @@ C、仅通过创建深度分析任务，利用perf数据详细分析性能瓶颈
 
 D、在发现应用性能不佳时，直接查看代码逻辑，凭经验修改后，利用Profiler的“RealtimeMonitor”确认资源消耗是否降低
 
-
+---
 
 21. 开发者在编写ArkUI代码时，想要提前预览下所编写的组件的效果，下述哪个组件可以使用DevEcoStudioPreviewer正常预览？
 
@@ -417,7 +720,7 @@ C、`@Preview@Component struct ConsumeSample{@Consume name:string;build0{Text(th
 
 D、`import{add}fromlibnative.so';@Preview@ComponentstructNativeSample{count:number=add（1,2);build0{Text（current count is${this.count}）}}`
 
-
+---
 
 22. 下面的配置存在有几处错误
 
@@ -482,7 +785,7 @@ C、4
 
 D、2
 
-
+---
 
 23. want参数的entities匹配规则错误的是
 
@@ -494,7 +797,7 @@ C、调用方传入的want参数的entities不为空，待匹配应用组件的s
 
 D、调用方传入的want参数的entities不为空，待匹配应用组件的skills配置中的entities不为空且包含调用方传入的want参数的entities，则entities匹配成功。
 
-
+---
 
 24. 应用开发中使用的各类资源文件，需要放入特定子目录中存储管理，以下关于资源说法错误的是
 
@@ -506,7 +809,7 @@ C、rawfile目录，支持创建多层子目录，子目录名称可以自定义
 
 D、D.stage模型多工程情况下，共有的资源文件放到AppScope下的resources目录。
 
-
+---
 
 25. 在组件中，经常需要使用字符串、图片等资源。HSP中的组件需要使用资源时，一般将其所用资源放在HSP包内，而非放在HSP的使用方处，以符合高内聚低耦合的原则。下面访问HSP资源错误的是
 
@@ -534,7 +837,7 @@ export class ResManager{
 export{ResManager}from'/src/main/ets/ResManager'
 ```
 
-
+---
 
 26. ```
     通过aa工具拉起com.example.test的EntryAbility，并传参给EntryAbility，
@@ -551,7 +854,7 @@ C、 `aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps 
 
 D、`aa start -b com.example.test -a EntryAbility --pi key1 1 key 2 2 --ps key3 testString --psn key4`
 
-
+---
 
 27. .在UIAbility的onCreate生命周期中通过EventHub的on注册"event1"和"event2"事件。
 
@@ -650,7 +953,7 @@ D、
 [Example].[Entry].[EntryAbility]]receive.[2,"test2"]
 ```
 
-
+---
 
 28. 某个应用开发了一个UIAbilityA，其启动模式是specified，并且对应的AbilityStage的实现如下：
 
@@ -707,7 +1010,7 @@ C、3个
 
 D、4个
 
-
+---
 
 30. 应用发生崩溃，（）接口可以获取到崩溃时调用栈
 
@@ -719,7 +1022,7 @@ C、hiDebug
 
 D、hiAppEvent
 
-
+---
 
 31. hiAppEvent提供的watcher接口，（）属性不配置，会导致编译报错，产生"ArkTS Compiler Error"
 
@@ -731,7 +1034,7 @@ C、triggerCondition
 
 D、onReceive
 
-
+---
 
 32. 当使用状态变量进行ArkUI组件间数据通信的时候，如果两个组件间没有直接的嵌套关系（非父子和祖孙关系组件），但是他们又属于同一页面，最佳的装饰器应该选用哪个？
 
@@ -743,7 +1046,7 @@ C、LocalStorage
 
 D、AppStorage
 
-
+---
 
 33. 关于ArkUI的ForEach和LazyForEach，下列说法错误的是？
 
@@ -755,7 +1058,7 @@ B、ForEach和LazyForEach会根据定义的键值生成规则为数据源的每�
 
 D、当在滚动容器中使用了LazyForEach，框架会根据滚动容器可视区域按需创建组件，当组件滑出可视区域外时，框架会进行组件销毁回收以降低内存占用。
 
-
+---
 
 34. 我们需要避免在逐帧调用的接口中执行耗时操作，下面哪个选项不属于上述的接口？
 
@@ -767,7 +1070,7 @@ C、onScroll
 
 D、onTouch
 
-
+---
 
 35. 下面持续交付&持续部署描述哪个是正确的：
 
@@ -779,7 +1082,7 @@ C、在持续交付实践中，要考虑处理故障回滚和紧急修复，以�
 
 D、持续部署是将代码库中的任何更改都应该自动且快速地投入生产环境。持续部署等同于持续交付。
 
-
+---
 
 36. 在moduleA（HAP类型）中有一个图片名为image.png，在moduleB（HAR类型）也存在一个图片名为image.png，而moduleA依赖于moduleB，那么在moduleA的编译产物hap包中，image.png存在情况是：
 
@@ -791,7 +1094,7 @@ C、两者都不存在
 
 D、仅存在moduleB的image.png
 
-
+---
 
 37. 某App依赖了3个ohpm库，这3个库占用的体积都比较大。在App的技术架构中，有多个hap和多个hsp均依赖这3个库，为了减少app的首包大小，以下哪些做法是无效的？
 
@@ -803,7 +1106,7 @@ C、将3个ohpm库分别封装成3个hsp，并对外提供必要的接口。
 
 D、将3个ohpm库封装成1个hsp，并对外提供必要的接口。
 
-
+---
 
 38. 以下关于HAP（HarmonyAbilityPackage）说法正确的是（）
 
@@ -815,7 +1118,7 @@ C、HAP是应用安装和运行的基本单位，在DevEcoStudio工程目录中�
 
 D、应用工程编出的app文件中，只能包含一个hap文件。
 
-
+---
 
 39. 以下关于应用架构技术选型说法不正确的是（)
 
@@ -827,7 +1130,7 @@ C、对于初始版本的应用，功能比较简单，可以考虑采用单HAP�
 
 D、元服务和应用可以共用一个代码工程，采用多目标产物构建方式，构建出应用和元服务两个产物，用于上架。
 
-
+---
 
 40. 关于代理提醒开发使用的接口是
 
@@ -873,7 +1176,7 @@ Web(...).enableNativeEmbedMode(true)
 <embed id="view" type="native/contents" width="100%" height="100%" style="background-color:red"/>
 ```
 
-
+---
 
 42. 使用ArkUI组件复用之后，还是没有显著提升列表滑动场景的性能，属于组件复用未生效可能的原因有？
 
@@ -885,7 +1188,7 @@ C、复用的自定义组件中使用if等条件染语句导致结构不相同�
 
 D、页面嵌套了过多自定义组件。
 
-
+---
 
 43. Navigation组件是路由导航的根视图容器，一般作为Page页面的根容器使用，以下关于Navigation组件说法正确的是（)
 
@@ -897,7 +1200,7 @@ C、Navigation只能在entry类型的Module中使用
 
 D、Navigation的页面显示模式有单页面、分栏和自适应三种显示模式
 
-
+---
 
 44. 下面代码符合ArkTS编程规范的是
 
@@ -933,7 +1236,7 @@ let pointX = 0;
 let pointY = 0;
 ```
 
-
+---
 
 45. 下面代码符合ArkTS编程规范的是
 
@@ -969,7 +1272,7 @@ if (isJedi){
 const arr = [1,2,3]
 ```
 
-
+---
 
 46. 以下代码片段哪几个函数违反了ArkTS语法规范。
 
@@ -1006,7 +1309,7 @@ B、foo3
 
 
 
-
+---
 
 47. 下面关于ArkTS中export用法，正确的是
 
@@ -1018,7 +1321,7 @@ C、`export { export1 } from“etsfilename";`
 
 D、`export { export1 as alias1 } from "etsfilename";`
 
-
+---
 
 48. 下面代码符合Node-API开发规范的是
 
@@ -1071,7 +1374,7 @@ static napi_value Demo2(napi_env env,napi_callback_info info){
 
 
 
-
+---
 
 49. 以下关于ArkTS线程实例间传输实现方式描述正确的是
 
@@ -1099,7 +1402,7 @@ C、`w.postMessageWithSharedSendable(a);`，Worker共享传输实现方式
 
 D、`task.setCloneList([a]);taskpool.execute(task).then(O=>0);`，TaskPool共享传输实现方式
 
-
+---
 
 50. 下面关于Node-API数据类型描述正确的是
 
@@ -1111,7 +1414,7 @@ C、napi_threadsafe_function_call_mode：该枚举类型定义了两个常量，
 
 D、napi_threadsafe_function_release_mode：该枚举类型定义了两个常量，用于指定线程安全函数的调用模式
 
-
+---
 
 51. 在ArkTS中，以下哪些属性的声明是正确的。
 
@@ -1132,7 +1435,7 @@ B、value2
 
 **D、value3**
 
-
+---
 
 52. 以下哪些是可以在Navigation中使用pushPathByName接口传递的params的参数类型
 
@@ -1144,7 +1447,7 @@ C、`map<string,string>`
 
 D、`string`
 
-
+---
 
 53. 依次点击A、B、C、D四个按钮，其中不会触发UI刷新的是：
 
@@ -1197,9 +1500,7 @@ B、C
 
 D、D
 
-
-
-
+---
 
 54. 如何实现类似下图布局
 
@@ -1208,60 +1509,379 @@ D、D
 A、
 
 ```
+@Entry
+@Component
+struct Demo {
+  // 忽略其他辅助代码
+  dataSource: ItemDataSource = new ItemDataSource(100)
+  itemHeightArray: number[] = []
+  colors: number[] = [0xFFc0CB, 0xDA70D6, 0x688E23, 0x66A5ACD, 0X00FFFF, 0X00FF7f]
+  scroller: Scroller = new Scroller()
 
+  aboutToAppear(): void {
+    this.getItemSizeArray()
+  }
+
+  build() {
+    Scroll() {
+      Column() {
+        Grid() {
+          GridItem() {
+            Text('GoodsTypeList')
+          }
+          .backgroundColor(this.colors[0])
+
+          GridItem() {
+            Text('AppletService')
+          }
+          .backgroundColor(this.colors[1])
+
+          GridItem() {
+            Text('ReloadData')
+          }
+          .backgroundColor(this.colors[2])
+
+        }
+        .rowsGap(10)
+        .columnsTemplate('1fr')
+        .rowsTemplate('1fr 1fr 1fr')
+        .width('100%')
+        .height('100%')
+        .margin({
+          top: 10,
+          left: 5,
+          bottom: 10,
+          right: 5
+        })
+
+        Grid() {
+          LazyForEach(this.dataSource, (item: number) => {
+            GridItem() {
+              //使用可复用自定义组件
+              ReusableItem({ item: item })
+            }
+            .width('100%')
+            .height(this.itemHeightArray[item%100])
+            .backgroundColor(this.colors[item %5])
+          }, (item:number) => '' + item + this.itemHeightArray[item % 100])
+        }
+        .columnsTemplate("1fr 1fr")
+        .columnsGap(10)
+        .rowsGap(5)
+        .width('100%')
+        .nestedScroll({
+          scrollForward:NestedScrollMode.PARENT_FIRST,
+          scrollBackward:NestedScrollMode.SELF_FIRST
+        })
+      }
+    }
+  }
+}
 ```
 
 B、
 
 ```
+@Entry
+@Component
+struct Demo {
+  // 忽略其他辅助代码
+  dataSource: ItemDataSource = new ItemDataSource(100)
+  itemHeightArray: number[] = []
+  colors: number[] = [0xFFc0CB, 0xDA70D6, 0x688E23, 0x66A5ACD, 0X00FFFF, 0X00FF7f]
+  scroller: Scroller = new Scroller()
+  @State sections: WaterFlowSections = new WaterFlowSections()
+  sectionMargin: Margin = {
+    top: 10,
+    left: 5,
+    bottom: 10,
+    right: 5
+  }
+  oneColumnSection: SectionOptions = {
+    itemsCount: 3,
+    crossCount: 1,
+    rowsGap: 10,
+    margin: this.sectionMargin,
+    onGetItemMainSizeByIndex: (index: number) => {
+      return this.itemHeightArray[index % 100]
+    }
+  }
+  lastSection: SectionOptions = {
+    itemsCount: 97,
+    crossCount: 2,
+    margin: this.sectionMargin,
+    onGetItemMainSizeByIndex: (index: number) => {
+      return this.itemHeightArray[index % 100]
 
+    }
+  }
+
+  aboutToAppear(): void {
+    this.setItemSizeArray()
+    //初始化瀑布流分组信息
+    let sectionOptions: SectionOptions[] = []
+    sectionOptions.push(this.oneColumnSection)
+    sectionOptions.push(this.lastSection)
+    this.sections.splice(0, 0, sectionOptions)
+  }
+
+  build() {
+    WaterFlow({ scroller: this.scroller, sections: this.sections }) {
+      LazyForEach(this.dataSource, (item: number) => {
+        FlowItem() {
+          ReusableFlowItem({item:item})
+        }
+        .width('100%')
+        .backgroundColor(this.colors[item % 5])
+      }, (item:string) => item)
+    }
+    .columnsGap(10)
+    .rowsGap(5)
+    .backgroundColor(0xfaeee0)
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
 C、
 
 ```
+@Entry
+@Component
+struct Demo {
+  // 忽略其他辅助代码
+  dataSource: ItemDataSource = new ItemDataSource(100)
+  itemHeightArray: number[] = []
+  colors: number[] = [0xFFc0CB, 0xDA70D6, 0x688E23, 0x66A5ACD, 0X00FFFF, 0X00FF7f]
+  scroller: Scroller = new Scroller()
 
+  aboutToAppear(): void {
+    this.getItemSizeArray()
+  }
+
+  build() {
+    Scroll() {
+      List({ scroller: this.scroller, space: 10 }) {
+        ListItem() {
+          Grid() {
+            GridItem() {
+              Text('GoodsTypeList')
+            }.backgroundColor(this.colors[0])
+
+            GridItem() {
+              Text('AppletService')
+            }.backgroundColor(this.colors[1])
+
+            GridItem() {
+              Text('ReloadData'）
+            }.backgroundColor(this.colors[2])
+          }
+          .rowsGap(10)
+          .columnsTemplate('1fr')
+          .rowsTemplate('1fr 1fr 1fr')
+          .width('100%')
+          .height(100)
+        }
+
+        ListItem() {
+          WaterFlow() {
+            LazyForEach(this.dataSource, (item: number, index: number) => {
+              FlowItem(){
+                // ...
+              }
+            })
+          }
+          .id('waterflow')
+          .columnsTemplate("1fr 1fr")
+          .columnsGap(10)
+          .rowsGap(5)
+          .width('100%')
+          .height('100%')
+          .nestedScroll({
+            scrollForward:NestedScrollMode.PARENT_FIRST,
+            scrollBackward:NestedScrollMode.SELF_FIRST
+          })
+        }
+      }
+    }
+    .scrollBar(BarState.Off)
+    .edgeEffect(EdgeEffect.None)
+    .height('100%')
+    .margin({left:10,right:10})
+  }
+}
 ```
 
-D、
-
-```
-
-```
-
-
+---
 
 55. 如下哪些方式可实现图片动态播放？
 
-A、
+**A、**
 
 ```
+@Entry
+@Component
+struct ImageAnimatorExample {
+  @State iterations: number = 1
 
+  build() {
+    Column({ space: 10 }) {
+      ImageAnimator()
+        .images([
+          {
+            src: $r('app.media.img1')
+          },
+          {
+            src: $r('app.media.img2')
+          },
+          {
+            src: $r('app.media.img3')
+          },
+          {
+            src: $r('app.media.img4')
+          },
+        ])
+        .duration(2000)
+        .fillMode(FillMode.None)
+        .iterations(this.iterations)
+        .width(340)
+        .height(240)
+        .margin({ top: 100 })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
 
-B、
+**B、**
 
 ```
-
+@Entry
+@Component
+struct ImageExample {
+  build() {
+    Column({space:10}){
+      Image($r('app.media.earth'))//对应资源图片名后缀为gif
+        .width(100)
+        .height(100)
+    }
+  }
+}
 ```
 
 C、
 
 ```
+import { AnimatedDrawableDescriptor, AnimationOptions } from '@ohos.arkui.drawableDescriptor';
+import { image } from '@kit.ImageKit';
 
+@Entry
+@Component
+struct ImageExample {
+  pixelmaps: Array<PixelMap> = [];
+  options: AnimationOptions = { duration: 2000, iterations: 1 };
+  @State animated: AnimatedDrawableDescriptor | undefined = undefined;
+
+  async aboutToAppear() {
+    this.pixelmaps = await this.getPixelMaps();
+    this.animated = new AnimatedDrawableDescriptor(this.pixelmaps, this.options)
+  }
+
+  private async getPixmapListFromMedia(resource: Resource) {
+    let unit8Array = await getContext(this)?.resourceManager?.getMediaContent({
+      bundleName: resource.bundleName,
+      moduleName: resource.moduleName,
+      id: resource.id
+    })
+    let imageSource = image.createImageSource(unit8Array.buffer.slice(0, unit8Array.buffer.byteLength))
+    let createPixelMap: Array<image.PixelMap> = await imageSource.createPixelMapList({
+      desiredPixelFormat:image.PixelMapFormat.RGBA_8888
+    })
+    imageSource.release()
+    return createPixelMap
+  }
+
+  private async getPixelMaps() {
+    let Mypixelmaps: Array<PixelMap> = await this.getPixmapListFromMedia($r('app.media.icon')) //对应资源图片名后缀为gif
+    return Mypixelmaps;
+  }
+
+  build() {
+    Column() {
+      Row() {
+        Image(this.animated).width('500px').height('280px')
+      }.height('50%')
+
+      Row() {
+        Button('once').width(100).padding(5).onClick(() => {
+          this.options = { duration: 2000, iterations: 1 };
+          this.animated = new AnimatedDrawableDescriptor(this.pixelmaps, this.options)
+        }).margin(5)
+      }
+    }
+  }
+}
 ```
 
 D、
 
 ```
+import { AnimationOptions, AnimatedDrawableDescriptor } from '@ohos.arkui.drawableDescriptor'
 
+import image from '@ohos.multimedia.image'
+
+@Entry
+@Component
+struct mageExampl {
+  pixelmaps: Array<PixelMap> = [];
+  options: AnimationOptions = { duration: 2000, iterations: 1 };
+  @State animated: AnimatedDrawableDescriptor | undefined = undefined;
+
+  async aboutToAppear() {
+    this.pixelmaps = await this.getPixelMaps();
+    this.animated = new AnimatedDrawableDescriptor(this.pixelmaps, this.options)
+  }
+
+  build() {
+    Column() {
+      Row() {
+        Image(this.animated).width('500px').height('280px')
+      }.height('50%')
+
+      Row() {
+        Button('once').width(100).padding(5).onClick(() => {
+          this.options = { duration: 2000, iterations: 1 };
+          this.animated = new AnimatedDrawableDescriptor(this.pixelmaps, this.options)
+        }).margin(5)
+      }.width('50%')
+    }
+  }
+
+  private async getPixmapFromMedia(resource: Resource) {
+    let unit8Array = await getContext(this)?.resourceManager?.getMediaContent({
+      bundleName: resource.bundleName,
+      moduleName: resource.moduleName,
+      id: resource.id
+    })
+    let imageSource = image.createImageSource(unit8Array.buffer.slice(0, unit8Array.buffer.byteLength))
+    let createPixelMap: image.PixelMap = await imageSource.createPixelMap({
+      desiredPixelFormat:image.PixelMapFormat.RGBA_8888
+    })
+    await imageSource.release()
+    return createPixelMap
+  }
+  private async getPixelMaps() {
+    Mypixelmaps.push(await this.getPixmapFromMedia($r('app.media.icon'))) //对应资源图片名后缀为gif
+    return Mypixelmaps;
+  }
+}
 ```
 
-
+---
 
 56. 在使用DevEcoStudio进行HarmonyoS应用开发和调试过程中，开发者小张遇到应用运行时意外终止的情况，他需要快速定位并解决导致应用崩溃的问题。以下哪些做法可以帮助小张有效分析和处理这些问题
-
-
 
 A、查看DevEcoStudiolog工具栏输出的错误日志，根据日志提示分析应用崩溃的具体原因及代码位置
 
@@ -1271,7 +1891,7 @@ C、利用系统自动生成的FaultLog，包括AppFreeze、CPPCrash、JS Crash�
 
 D、若遇到App运行卡顿或系统整体无响应（AppFreeze，SystemFreeze）的情况，可以通过性能分析工具中的FrameInsight和AllocationInsight功能，分析应用的资源消耗情况，寻找可能的瓶颈
 
-
+---
 
 57. 在大型软件工程中，一般会伴随着多团队开发，各团队开发自己的业务模块，最后再由集成交付团队集成到一起，下面哪些是大型应用模块化开发最佳实践
 
@@ -1283,7 +1903,7 @@ C、一次上架多端部署。
 
 D、使用路由表进行模块间解耦。
 
-
+---
 
 58. 一个应用通常会包含多种功能，将不同的功能特性按模块来划分和管理是一种良好的设计方式。在开发过程中，我们可以将每个功能模块作为一个独立的Module进行开发，下面关于Module的说法正确的是
 
@@ -1295,7 +1915,7 @@ C、feature类型的Module，应用的动态特性模块，一个应用中可以
 
 D、Ability类型的Module，用于实现应用的功能和特性，有两种类型，分别为entry和feature。
 
-
+---
 
 59. 某个应用的启动框架配置文件详细信息如下，以下说法正确的是：
 
@@ -1359,7 +1979,7 @@ C、StartupTask_001会在StartupTask_004之后执行；
 
 D、StartupTask_003会在StartupTask_004之后执行
 
-
+---
 
 60. 在基于Stage模型开发的应用项目代码下，都存在一个app.json5配置文件，用于配置应用的全局信息，以下appjson5配置文件错误的是
 
