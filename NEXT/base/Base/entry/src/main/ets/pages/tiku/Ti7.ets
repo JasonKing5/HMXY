@@ -620,3 +620,17 @@
 //     return Mypixelmaps;
 //   }
 // }
+@Component
+@Entry
+struct Test {
+  build() {
+    Column({ space: 30 }) {
+      Text($r('sys.string.ohos_unstable_connect_server'))
+        .fontSize('50fp')
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor($r('app.color.theme_color'))
+    .justifyContent(FlexAlign.Center)
+  }
+}
