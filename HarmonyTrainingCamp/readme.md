@@ -2,7 +2,9 @@
 
 > 河南师范大学暑期鸿蒙课程7月1日-12日使用WeLink会议进行授课。
 
-## WeLink会议号：`913 858 732` [WeLink下载](https://www.huaweicloud.com/product/welink-download.html)
+## WeLink会议号：`938 353 022`，密码：`245 496`
+
+##  [WeLink下载](https://www.huaweicloud.com/product/welink-download.html)
 
 
 
