@@ -14,3 +14,10 @@
 
 ## 腾讯会议：`471-616-7727 `[腾讯会议下载](https://meeting.tencent.com/download?mfrom=OfficialIndex_TopBanner1_Download)
 
+
+
+
+
+## 河南师范大学微信交流群（鸿蒙课程）
+
+![b34d33e6c4cc5a1b43e7a98ce9dff41](screenshots/readme/b34d33e6c4cc5a1b43e7a98ce9dff41.jpg)
