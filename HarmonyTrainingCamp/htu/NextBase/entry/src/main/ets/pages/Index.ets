@@ -1,20 +1,35 @@
+import { router } from '@kit.ArkUI';
+import TopTitle from '../view/TopTitle';
+
 @Entry
 @Component
 struct Index {
-  @State message: string = '河师大 鸿蒙';
+  @State title: string = '星河版鸿蒙学习';
 
+  // build函数 构建页面  NEXT版本中默认 相对布局容器。
   build() {
-    RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
-        .fontSize(50)
-        .fontWeight(FontWeight.Bold)
-        .alignRules({
-          center: { anchor: '__container__', align: VerticalAlign.Center },
-          middle: { anchor: '__container__', align: HorizontalAlign.Center }
+    // 暂时使用线性布局容器 Column
+    Column({space:30}){
+      TopTitle({title:this.title,isBack:false})
+
+      // 跳转按钮。
+      Button('学习ArkUI')
+        .onClick(() => {
+          router.pushUrl({
+            url:  "pages/ArkUI/ArkUIHome"
+          })
         })
+      Button('学习NetWorkKit')
+        .onClick(() => {
+          router.pushUrl({
+            url:  "pages/NetworkKit/NetWorkKitHome"
+          })
+        })
+
     }
-    .height('100%')
     .width('100%')
+    .height('100%')
+    .backgroundColor($r('app.color.theme_color'))
   }
+
 }

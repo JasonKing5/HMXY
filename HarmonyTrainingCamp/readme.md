@@ -18,6 +18,6 @@
 
 
 
-## 河南师范大学微信交流群（鸿蒙课程）
+## 哔哩哔哩同步直播
 
-![b34d33e6c4cc5a1b43e7a98ce9dff41](screenshots/readme/b34d33e6c4cc5a1b43e7a98ce9dff41.jpg)
+> 哔哩哔哩ID：`编程世界-帝心`

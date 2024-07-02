@@ -1,5 +1,7 @@
 {
   "src": [
-    "pages/Index"
+    "pages/Index",
+    "pages/ArkUI/ArkUIHome",
+    "pages/NetworkKit/NetWorkKitHome"
   ]
 }
