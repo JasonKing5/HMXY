@@ -2,6 +2,8 @@
   "src": [
     "pages/Index",
     "pages/ArkUI/ArkUIHome",
-    "pages/NetworkKit/NetWorkKitHome"
+    "pages/NetworkKit/NetWorkKitHome",
+    "pages/ArkData/ArkDataHome",
+    "pages/ArkUI/TextDemo"
   ]
 }

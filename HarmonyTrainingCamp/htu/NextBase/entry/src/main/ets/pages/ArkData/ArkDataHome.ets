@@ -3,12 +3,11 @@ import { router } from '@kit.ArkUI'
 
 @Entry
 @Component
-struct NetWorkKitHome {
+struct ArkDataHome {
   title: string = (router.getParams() as Record<string, string>)?.title as string
-
   build() {
     Column({ space: 30 }) {
-     TopTitle({title:this.title})
+      TopTitle({title:this.title})
     }
     .width('100%')
     .height('100%')
