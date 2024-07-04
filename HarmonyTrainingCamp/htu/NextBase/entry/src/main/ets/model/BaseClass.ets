@@ -16,4 +16,26 @@ export  class NavigationModel{
   }
 }
 
+// 列表组件处用到的通讯录相关类型
+// 通讯录类联系人 类型
+export class Contacts{
+  name:string
+  icon:Resource
+
+  constructor(name: string, icon: Resource) {
+    this.name = name
+    this.icon = icon
+  }
+}
+
+// 联系人分组类型
+export class ContactsGroup{
+  title:string = ''
+  contacts: Array<Contacts> | null= null
+  constructor(title: string, contacts: Array<Contacts> | null) {
+    this.title = title
+    this.contacts = contacts
+  }
+}
+
 

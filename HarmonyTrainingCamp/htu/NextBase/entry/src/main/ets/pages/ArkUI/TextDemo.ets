@@ -64,8 +64,60 @@ struct TextDemo {
         })
       }
       Column(){
-        Text('常用属性')
+        Text('常用属性font')
           .font({weight:FontWeight.Bold,size:20,style:FontStyle.Italic,family:'HarmonyOS Sans'})
+        Text('decoration装饰线'){
+          Span('decoration1').decoration({type:TextDecorationType.Underline,color: '#ffe00f48' })
+          Span('decoration2').decoration({type:TextDecorationType.LineThrough,style:TextDecorationStyle.DASHED})
+          Span('decoration3').decoration({type:TextDecorationType.Overline,style:TextDecorationStyle.WAVY})
+        }
+
+        Text('字母大小'){
+          Span('harmonyos').fontColor('#fff66868').textCase(TextCase.UpperCase)
+          Span('HARMONY').fontColor('#ff209898').textCase(TextCase.LowerCase)
+          Span('HarmonyOS').fontColor('#ffe7b805').textCase(TextCase.Normal)
+        }
+
+        Text('对齐方式love text')
+          .fontSize(30)
+          .width(200)
+          .height(40)
+          .backgroundColor('#aaa')
+          .textAlign(TextAlign.Center)
+          .textAlign(TextAlign.End)
+          .textAlign(TextAlign.JUSTIFY)
+          .wordBreak(WordBreak.NORMAL)  // 默认效果 会认识单词。让单词当作整体
+          .wordBreak(WordBreak.BREAK_ALL) // 正常塞满，直到阶段
+          .wordBreak(WordBreak.BREAK_WORD) // 按照单词进行超出阶段
+
+        Text('超长文本阶段效果演示textOverflow属性使用')
+          .margin({top:30})
+          .width('50%')
+          .wordBreak(WordBreak.BREAK_ALL)
+          .backgroundColor('#ffeeb6b6')
+          //最大行 配合使用
+          .maxLines(1)
+          // .textOverflow({overflow:TextOverflow.None})
+          // .textOverflow({overflow:TextOverflow.Clip})
+          // .textOverflow({overflow:TextOverflow.Ellipsis})  // 省略号
+          .textOverflow({overflow:TextOverflow.MARQUEE})  // 跑马灯
+
+        Text('基线偏移量baselineOffset')
+          .baselineOffset(30)
+        // 其实文字是有基线的。
+        //  正数：我自己要向上位移。位移出来的空间（我下面的空间）。就是我占用的了。
+        //  负数：我自己要向下位移。位移出来的空间（我上面的空间）。就是我占用的了。
+        Text('测试偏移量')
+
+        Text('文本字符间距letterSpacing')
+          .letterSpacing(3)
+        Text('是否可复制copyOption')
+          .copyOption(CopyOptions.None)
+          .copyOption(CopyOptions.InApp)    // 在应用中进行复制
+          .copyOption(CopyOptions.LocalDevice)  // 在设备内的过应用中进行复制粘贴
+          .onCopy((value:string) => {
+            console.log('@@@进行了复制。。。' + value)
+          })
       }
 
     }

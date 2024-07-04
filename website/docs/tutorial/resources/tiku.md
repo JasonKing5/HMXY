@@ -5,6 +5,12 @@ sidebar_position: 101
 # 开发者认证题库版本2
 [本题库源md文件](https://gitee.com/mayuanwei/harmonyOS_bilibili/blob/master/website/docs/tutorial/resources/tiku.md)
 
+> 题目尚未完全，答案也未完全确认。
+>
+> 感谢网友`浪漫E族`进行解题，您辛苦了，好人一生平安。考学考公必上岸。LOL必五杀，买彩票必中奖，世间好运都奔赴您。
+>
+> 期待更多网友参与题目的提供和解题。您知道如何联系我的。将您的题目及答案告知我。更新到此处，以惠后人。
+
 ## 单选题
 
 1. ArkTS支持以下哪些函数
@@ -13,7 +19,7 @@ A、`Object.isPrototypeOf();`
 
 B、`Object.getOwnPropertySymbols()`
 
-C、 `Object.keys();`
+**C、 `Object.keys();`**
 
 D、`Object.isExtensible();`
 
@@ -35,7 +41,7 @@ D、`@State`
 
 A、`Object.getOwnPropertyDescriptors();`
 
-B、`Object.values();`
+**B、`Object.values();`**
 
 C、`Object.hasOwnProperty();`
 
@@ -45,7 +51,7 @@ D、`Object.getOwnPropertyDescriptor();`
 
 4. 下面关于方舟字节码格式IMM16_ID16_IMM8描述正确的是
 
-A、8位操作码，16位立即数，16位id，8位立即数
+**A、8位操作码，16位立即数，16位id，8位立即数**
 
 B、8位操作码，16位立即数，2个8位寄存器
 
@@ -59,7 +65,7 @@ D、16位前缀操作码，16位立即数，8位寄存器
 
 A、16位前缀操作码，16位立即数，8位寄存器
 
-B、16位前缀操作码，16位立即数，2个8位寄存器
+**B、16位前缀操作码，16位立即数，2个8位寄存器**
 
 C、8位操作码，8位立即数，16位id，8位寄存器
 
@@ -130,7 +136,7 @@ A、[1,2]
 
 B、[0,2]
 
-C、[2,1]
+**C、[2,1]**    `参考待确认`
 
 D、[0,1]
 
@@ -207,7 +213,7 @@ B、ToastShowMode.SYSTEM_TOP_MOST
 
 C、无需配置，默认显示在其他应用之上
 
-D、ToastShowMode.TOP_MOAST
+**D、ToastShowMode.TOP_MOAST**
 
 ---
 
@@ -256,7 +262,7 @@ struct SpanExample {
 }
 ```
 
-C、
+**C、** `参考待确认`
 
 ```typescript
 @Entry
@@ -350,7 +356,7 @@ export function pageTwoTmp(info: Pages){
 
 A、4
 
-B、2
+**B、2**  `参考待确认`
 
 C、3
 
@@ -556,7 +562,7 @@ B、`{offsetX:81,offsetY:-89,surfaceWidth:150,surfaceHeight:500}`
 
 C、 `{offsetX:81,offsetY:-89,surfaceWidth:200,surfaceHeight:0}`
 
-D、`{offsetX:-20,offsetY:50,surfaceWidth:200,surfaceHeight:500}`
+**D、`{offsetX:-20,offsetY:50,surfaceWidth:200,surfaceHeight:500}`** `参考待确认`
 
 
 
@@ -629,7 +635,7 @@ D、6,0
 
 14. 小李正在使用DevEco Studio进行Harmonyos应用的开发工作，他需要对一个频繁被调用的函数calculateData()进行重构，为了帮助小李高效地找到calculateData（)函数的所有引用位置，并确保重构时考虑周全，以下哪个步骤是正确的使用DevEcoStudio的"FindUsages"功能的操作方法
 
-A、小李只需将光标定位在calculateData()函数名上，右键点击并选择“Find Usages”，或者直接使用快捷键Alt+F7（macOS为Option+F7），DevEco Studio会自动列出该函数在项目中的所有引用位置。
+**A、小李只需将光标定位在calculateData()函数名上，右键点击并选择“Find Usages”，或者直接使用快捷键Alt+F7（macOS为Option+F7），DevEco Studio会自动列出该函数在项目中的所有引用位置。**
 
 B、小李应该在菜单栏中选择“Navigate”>“Class"来打开类浏览器，从中找到calculateData()函数，并在此界面中手动检查所有引用。
 
@@ -659,7 +665,7 @@ B、选中hap模块，点击通过菜单栏`make module 'hsp'`
 
 C、选中har模块，点击build菜单栏`build hap（s）`
 
-D、选中har模块，点击build菜单栏`make module 'har'`
+**D、选中har模块，点击build菜单栏`make module 'har'`**
 
 ---
 
@@ -669,7 +675,7 @@ A、DevEcoStudio提供的Release应用堆栈解析功能，要求开发者在遇
 
 B、开发者需手动将Release构建生成的so文件与源代码进行映射，配合第三方工具进行堆栈信息还原，虽然过程繁琐，但最终能定位到问题代码位置
 
-C、DevEcoStudio通过集成的Release应用堆栈解析功能，自动利用构建时产生的so文件、sourcemap文件、nameCache文件等，无需额外操作即可直接在Release应用中提供详细的源码级堆栈追踪信息
+**C、DevEcoStudio通过集成的Release应用堆栈解析功能，自动利用构建时产生的so文件、sourcemap文件、nameCache文件等，无需额外操作即可直接在Release应用中提供详细的源码级堆栈追踪信息**
 
 D、因为Release应用经过优化和去除Debug信息，直接从堆栈跟踪到源代码行号是不可能的，开发者只能依靠日志信息手工推测问题所在
 
@@ -683,7 +689,7 @@ B、DevEco Profiler专注于用户界面设计的美化，使开发者操作更�
 
 C、DevEco Profiler采用Bottom-Up设计原则，从底层代码细节开始逐步构建性能模型
 
-D、DevEco Profiler依据Top-Down设计理念，通过高度整合的数据展示范式，提供从宏观到微观的性能数据分析，加速开发者定位和解决问题的过程
+**D、DevEco Profiler依据Top-Down设计理念，通过高度整合的数据展示范式，提供从宏观到微观的性能数据分析，加速开发者定位和解决问题的过程**
 
 ---
 
@@ -691,7 +697,7 @@ D、DevEco Profiler依据Top-Down设计理念，通过高度整合的数据展�
 
 A、在library的oh-package.json5文件的dependencies字段中配置feature的依赖
 
-B、在feature的oh-packagejson5文件的dependencies字段中配置library的依赖
+**B、在feature的oh-packagejson5文件的dependencies字段中配置library的依赖**
 
 C、在feature的build-profile.json5文件的dependencies字段中配置library的依赖
 
@@ -701,7 +707,7 @@ D、无需配置，直接在代码中编写importxxxfrom 'library'
 
 20. 在使用DevEcoStudio的Profiler进行Harmonyos应用性能优化的流程中，以下哪个步骤最恰当地描述了开发者利用Profiler工具进行性能问题识别、定位、优化及验证的完整过程
 
-A、利用“RealtimeMonitor”初步识别性能瓶颈，创建深度分析任务定位根因，根据分析结果优化代码，再用“RealtimeMmmor”验证优化效果
+**A、利用“RealtimeMonitor”初步识别性能瓶颈，创建深度分析任务定位根因，根据分析结果优化代码，再用“RealtimeMmmor”验证优化效果**
 
 B、首先使用“RealtimeMonitor"实时监控，观察应用资源消耗，一旦发现CPU或内存异常，直接修改代码并重新编译
 
@@ -713,7 +719,7 @@ D、在发现应用性能不佳时，直接查看代码逻辑，凭经验修改�
 
 21. 开发者在编写ArkUI代码时，想要提前预览下所编写的组件的效果，下述哪个组件可以使用DevEcoStudioPreviewer正常预览？
 
-A、`@Preview @Component struct TitleSample{@StorageProp('title）)title: string =PlaceHolder';buildO{Text（this.title）}}`
+**A、`@Preview @Component struct TitleSample{@StorageProp('title）)title: string =PlaceHolder';buildO{Text（this.title）}}`**
 
 B、`@Preview@Component structLinkSample{@Linkmessage:string;build0{Text(this.message)}}`
 
@@ -780,7 +786,7 @@ D、`import{add}fromlibnative.so';@Preview@ComponentstructNativeSample{count:num
 
 A、3
 
-B、1
+**B、1**  `参考待确认`
 
 C、4
 
@@ -790,7 +796,7 @@ D、2
 
 23. want参数的entities匹配规则错误的是
 
-A、调用方传入的want参数的entities为空，待匹配应用组件的skills配置中的entities不为空，则entities匹配失败。
+**A、调用方传入的want参数的entities为空，待匹配应用组件的skills配置中的entities不为空，则entities匹配失败。**
 
 B、调用方传入的want参数的entities为空，待匹配应用组件的skills配置中的entities为空，则entities匹配成功。
 
@@ -806,7 +812,7 @@ A、base目录是默认存在的目录，二级子目录element用于存放字�
 
 B、resfile目录，应用安装后，resfile资源会被解压到应用沙箱路径，通过Context属性resourceDir获取到resfile资源目录后，可通过文件路径访问。
 
-C、rawfile目录，支持创建多层子目录，子目录名称可以自定义，文件夹内可以自由放置各类资源文件。目录中的资源文件会被编译成二进制文件，并赋予资源文件ID。
+**C、rawfile目录，支持创建多层子目录，子目录名称可以自定义，文件夹内可以自由放置各类资源文件。目录中的资源文件会被编译成二进制文件，并赋予资源文件ID。**
 
 D、D.stage模型多工程情况下，共有的资源文件放到AppScope下的resources目录。
 
@@ -814,9 +820,9 @@ D、D.stage模型多工程情况下，共有的资源文件放到AppScope下的r
 
 25. 在组件中，经常需要使用字符串、图片等资源。HSP中的组件需要使用资源时，一般将其所用资源放在HSP包内，而非放在HSP的使用方处，以符合高内聚低耦合的原则。下面访问HSP资源错误的是
 
-A、使用相对路径的方式，访问HSP中的资源。Image("././resources/base/media/example.png").id('example).borderRadius(48px)
+**A、使用相对路径的方式，访问HSP中的资源。`Image("././resources/base/media/example.png").id('example).borderRadius(48px)`**
 
-B、通过$r访问HSP中的资源。Image（$r（app.media.example).id（example).borderRadius("48px")
+B、通过$r访问HSP中的资源。`Image（$r（app.media.example).id（example).borderRadius("48px")`
 
 C、跨包访问HSP内资源时，推荐实现一个资源管理类，以封装对外导出的资源。将需要对外提供的资源封装为一个资源管理类：
 
@@ -831,7 +837,7 @@ export class ResManager{
 }
 ```
 
-对外暴露的接口，需要在入口文件index.ets中声明：
+对外暴露的接口，需要在入口文件`index.ets`中声明：
 
 ```ty
 //library/index.ets
@@ -844,12 +850,12 @@ export{ResManager}from'/src/main/ets/ResManager'
     通过aa工具拉起com.example.test的EntryAbility，并传参给EntryAbility，
     具体参数是number类型的[key1,1][key2,2]和string类型的[key3,testString][key4,''],
     
-    那边下面那个aa命令是正确的：
+    那边下面那个aa命令是正确的：（AB选项重复了）
     ```
 
-A、`aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps key3 testString --psn key4`
+**A、`aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps key3 testString --psn key4`**
 
-B、 `aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps key3 testString --psn key4`
+**B、 `aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps key3 testString --psn key4`**
 
 C、 `aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps key3 testString --ps key4`
 
@@ -922,7 +928,7 @@ D、`aa start -b com.example.test -a EntryAbility --pi key1 1 key 2 2 --ps key3 
     }
     ```
 
-A、
+**A、**
 
 ```
 [Example].[Entry].[EntryAbility]receive.[]
@@ -1005,7 +1011,7 @@ function testSpecified(context,value){
 
 A、2个
 
-B、1个
+**B、1个**
 
 C、3个
 
@@ -1015,7 +1021,7 @@ D、4个
 
 30. 应用发生崩溃，（）接口可以获取到崩溃时调用栈
 
-A、hiLog
+**A、hiLog**
 
 B、hiTraceMeter
 
@@ -1029,7 +1035,7 @@ D、hiAppEvent
 
 A、onTrigger
 
-B、name
+**B、name**
 
 C、triggerCondition
 
@@ -1065,7 +1071,7 @@ D、当在滚动容器中使用了LazyForEach，框架会根据滚动容器可�
 
 A、aboutToReuse
 
-B、onAreaChange
+**B、onAreaChange**
 
 C、onScroll
 
@@ -1079,7 +1085,7 @@ A、持续交付（CD，ContinuousDelivery)：指的是，频繁的将软件的�
 
 B、持续交付可以随时随地部署到生产环境
 
-C、在持续交付实践中，要考虑处理故障回滚和紧急修复，以确保系统在出现问题时能够快速恢复和修复。
+**C、在持续交付实践中，要考虑处理故障回滚和紧急修复，以确保系统在出现问题时能够快速恢复和修复。**
 
 D、持续部署是将代码库中的任何更改都应该自动且快速地投入生产环境。持续部署等同于持续交付。
 
@@ -1089,7 +1095,7 @@ D、持续部署是将代码库中的任何更改都应该自动且快速地投�
 
 A、两者都存在
 
-B、仅存在moduleA的image.png
+**B、仅存在moduleA的image.png**
 
 C、两者都不存在
 
@@ -1099,7 +1105,7 @@ D、仅存在moduleB的image.png
 
 37. 某App依赖了3个ohpm库，这3个库占用的体积都比较大。在App的技术架构中，有多个hap和多个hsp均依赖这3个库，为了减少app的首包大小，以下哪些做法是无效的？
 
-A、将这3个ohpm库封装到har包中，并对外提供必要的接口。
+**A、将这3个ohpm库封装到har包中，并对外提供必要的接口。**
 
 B、将某些特性做成按需加载模块，若这3个ohpm仅在按需加载模块里面使用，则将其打包在按需加载模块中。
 
@@ -1113,7 +1119,7 @@ D、将3个ohpm库封装成1个hsp，并对外提供必要的接口。
 
 A、DevEcoStudio会在编译构建时，不需要对HAP进行一致性校验。
 
-B、应用工程如果包含多个Module，在应用市场上架时，会将多个.hap文件打包成一个.app文件。
+**B、应用工程如果包含多个Module，在应用市场上架时，会将多个.hap文件打包成一个.app文件。**
 
 C、HAP是应用安装和运行的基本单位，在DevEcoStudio工程目录中，一个HAP对应一个Module。应用打包时，所有的Module都只能生成.hap文件。
 
@@ -1123,7 +1129,7 @@ D、应用工程编出的app文件中，只能包含一个hap文件。
 
 39. 以下关于应用架构技术选型说法不正确的是（)
 
-A、A.一些应用的扩展能力，比如备份、服务卡片，可以采用ExtensionAbility做成单独的featureHAP包，独立分发。
+**A、A.一些应用的扩展能力，比如备份、服务卡片，可以采用ExtensionAbility做成单独的featureHAP包，独立分发。**
 
 B、随着业务的发展，应用功能会越来越多，某些功能可以做成动态加载，动态加载的模块采用HAR工程来构建，方便复用和共享。
 
@@ -1137,7 +1143,7 @@ D、元服务和应用可以共用一个代码工程，采用多目标产物构�
 
 A、使用startWork申请任务，使用stopWork取消任务，使用getWorkStatus获取任务状态
 
-B、使用publishReminder发布一个提醒类通知，使用cancelReminder取消一个指定的提醒类通知
+**B、使用publishReminder发布一个提醒类通知，使用cancelReminder取消一个指定的提醒类通知**
 
 C、使用startBackgroundRunning申请任务，使用stopBackgroundRunning取消任务
 

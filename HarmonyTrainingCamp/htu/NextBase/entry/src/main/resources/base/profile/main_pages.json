@@ -4,6 +4,11 @@
     "pages/ArkUI/ArkUIHome",
     "pages/NetworkKit/NetWorkKitHome",
     "pages/ArkData/ArkDataHome",
-    "pages/ArkUI/TextDemo"
+    "pages/ArkUI/TextDemo",
+    "pages/ArkUI/ButtonDemo",
+    "pages/ArkUI/ImageDemo",
+    "pages/ArkUI/RowColumn",
+    "pages/ArkUI/ListDemo",
+    "pages/ArkUI/StackDemo"
   ]
 }

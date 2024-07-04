@@ -17,6 +17,13 @@ export default class RouterCfg {
   ]
   // ArkUIHome 页面知识点的数组
   static readonly arkUIHome: NavigationModel [] = [
-    new NavigationModel('Text', "pages/ArkUI/TextDemo", "Text组件"),
+    new NavigationModel('Stack', "pages/ArkUI/StackDemo", "Stack 组件"),
+    new NavigationModel('List', "pages/ArkUI/ListDemo", "List 组件"),
+    new NavigationModel('RowColumn', "pages/ArkUI/RowColumn", "Row/Column 组件"),
+    new NavigationModel('Image', "pages/ArkUI/ImageDemo", "Image 组件"),
+    new NavigationModel('Button', "pages/ArkUI/ButtonDemo", "Button 组件"),
+    new NavigationModel('Text', "pages/ArkUI/TextDemo", "Text 组件"),
+
+
   ]
 }
