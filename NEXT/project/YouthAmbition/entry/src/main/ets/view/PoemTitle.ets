@@ -12,13 +12,13 @@ export default struct PoemTitle {
         }
         .fontSize(26)
 
-
         Image($r('app.media.setting'))
           .height('50%')
       }
       .width('80%')
       .height(60)
       .justifyContent(FlexAlign.SpaceBetween)
+
       Divider().strokeWidth(3).color($r('app.color.appColor1'))
     }
   }
