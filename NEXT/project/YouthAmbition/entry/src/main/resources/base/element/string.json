@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "劝君莫负少年志 曾许人间第一流"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "少年志"
+    }
+  ]
+}
