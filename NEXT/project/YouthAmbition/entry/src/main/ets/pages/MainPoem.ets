@@ -44,7 +44,7 @@ struct MySwiper {
   }
 }
 
-// 诗词主题自定义组件
+// 诗词主题展示区域 自定义组件
 @Component
 struct  PoemArea{
   @State angleVal:number  = 0
