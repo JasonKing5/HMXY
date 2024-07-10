@@ -1,4 +1,6 @@
 // 常量数据文件
+import { Category } from '../model/poemData'
+
 export default class Constants{
   // 主页轮播诗词 数组
  static readonly  swiperPoemArr:string[] = [
@@ -12,7 +14,17 @@ export default class Constants{
   static readonly URL_All : string = 'https://v1.jinrishici.com/all'
 
   // 存储诗词的时候弄个数组标记
-  static readonly poemArr:string ='poemArr'
+  static readonly poemList:string ='poemArr'
 
+
+  // 服务端设计的诗词 分类 分隔符 -
+  static readonly separator: string = '-'
+
+  // 所有分类 类型
+  static readonly categoryTypeArr:string[] = ['抒情', '四季', '山水', '天气', '人物', '人生', '生活', '节日', '动物','食物', '植物']
+
+
+  // 所有分类列表
+  static  categoryList:Category[] = [  ]
 
 }

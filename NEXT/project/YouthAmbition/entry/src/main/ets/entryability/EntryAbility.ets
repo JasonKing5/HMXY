@@ -1,10 +1,17 @@
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
+import Constants from '../common/Constants';
+import { Category } from '../model/poemData';
 
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    // 加载需要初始化的资源
+    for (let i = 0; i< Constants.categoryTypeArr.length ; i++) {
+      Constants.categoryList.push(
+        new Category(Constants.categoryTypeArr[i],[])
+      )
+    }
   }
 
   onDestroy(): void {

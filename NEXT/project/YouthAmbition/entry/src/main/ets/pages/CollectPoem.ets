@@ -1,33 +1,32 @@
-import { router } from '@kit.ArkUI'
-import Constants from '../common/Constants'
-import { CategoryPoem, Poem } from '../model/poemData'
+import { Category, Poem } from '../model/poemData'
 import PoemTitle from '../view/PoemTitle'
 import poemVM from '../viewModel/PoemVM'
-import { JSON } from '@kit.ArkTS'
 
 @Entry
 @Component
 struct CollectPoem {
 
-  categoryPoemArr: CategoryPoem[] = [
-    new CategoryPoem('山水', [
-      new Poem(`劝君莫忘少年志劝君莫忘少年志劝君莫忘少年志，曾许人间第一流曾许人间第一流`, '少年志',
-        '马老师','山水'),
-      new Poem(`劝君莫忘少年志，曾许人间第一流`, '少年志', '马老师','山水'),
-      new Poem(`劝君莫忘少年志，曾许人间第一流`, '少年志', '马老师','山水'),
-      new Poem(`劝君莫忘少年志，曾许人间第一流`, '少年志', '马老师','山水'),
-    ]),
-    new CategoryPoem('风景', [
-      new Poem('何须浅碧深红色，自是花中第一流', '桂花', '帝心','风景'),
-      new Poem('何须浅碧深红色，自是花中第一流', '桂花', '帝心','风景'),
-      new Poem('何须浅碧深红色，自是花中第一流', '桂花', '帝心','风景'),
-      new Poem('何须浅碧深红色，自是花中第一流', '桂花', '帝心','风景'),
-    ])
+  categoryList: Category[] = [
+    // new CategoryPoem('山水', [
+    //   new Poem(`劝君莫忘少年志劝君莫忘少年志劝君莫忘少年志，曾许人间第一流曾许人间第一流`, '少年志',
+    //     '马老师','山水'),
+    //   new Poem(`劝君莫忘少年志，曾许人间第一流`, '少年志', '马老师','山水'),
+    //   new Poem(`劝君莫忘少年志，曾许人间第一流`, '少年志', '马老师','山水'),
+    //   new Poem(`劝君莫忘少年志，曾许人间第一流`, '少年志', '马老师','山水'),
+    // ]),
+    // new CategoryPoem('风景', [
+    //   new Poem('何须浅碧深红色，自是花中第一流', '桂花', '帝心','风景'),
+    //   new Poem('何须浅碧深红色，自是花中第一流', '桂花', '帝心','风景'),
+    //   new Poem('何须浅碧深红色，自是花中第一流', '桂花', '帝心','风景'),
+    //   new Poem('何须浅碧深红色，自是花中第一流', '桂花', '帝心','风景'),
+    // ])
   ]
 
   // build函数构建之前执行的代码
   aboutToAppear(): void {
     // TODO CollectPoem.ets 待完成: 对categoryPoemArr 赋值目标数据
+
+    this.categoryList = poemVM.getCategoryPoemList()
   }
 
   // 分组名称 自定义构建函数
@@ -52,7 +51,7 @@ struct CollectPoem {
     .margin(10)
     .backgroundColor('#eee')
     .onClick(() => {
-      poemVM.deletePoem(currentPoem)
+      // poemVM.deletePoem(currentPoem)
     })
   }
 
@@ -60,9 +59,9 @@ struct CollectPoem {
     Column({ space: 30 }) {
       PoemTitle()
       List({ space: 10 }) {
-        ForEach(this.categoryPoemArr, (categoryPoem: CategoryPoem, index1: number) => {
+        ForEach(this.categoryList, (categoryPoem: Category, index1: number) => {
           ListItemGroup({ space: 5, header: this.category(categoryPoem.categoryName) }) {
-            ForEach(categoryPoem.categoryArr, (item: Poem, index2: number) => {
+            ForEach(categoryPoem.categoryPoem, (item: Poem, index2: number) => {
               ListItem() {
                 Column() {
                   Text(item.content)

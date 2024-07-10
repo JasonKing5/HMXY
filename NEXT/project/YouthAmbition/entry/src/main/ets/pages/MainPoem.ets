@@ -80,12 +80,10 @@ struct PoemArea {
       .poemAreaContent()
       .rotate({ angle: this.angleVal })
       .onClick(async () => {
-
         //获取诗词内容 从API接口获取 https://v1.jinrishici.com/all
         await http.createHttp().request(Constants.URL_All)
           .then((data) => {
             this.poem = JSON.parse(data.result + '')
-            console.log('1请求结束时对象：',JSON.stringify(this.poem))
           })
           .catch((err: Error) => {
             console.log('err => 获取all里面的随机诗词出错了' + err.message);
@@ -113,9 +111,8 @@ struct PoemArea {
               if (isOn) {
                 poemVM.collectPoem(this.poem)
               } else {
-                console.log('2滑块取消时：',JSON.stringify(this.poem))
                 // todo 如果是false 就说明你一定是先点了一下收藏过。又点了一下。此时才会出现false的执行。删除这一条
-                poemVM.deletePoem(this.poem)
+                // poemVM.deletePoem(this.poem)
               }
             })
         }

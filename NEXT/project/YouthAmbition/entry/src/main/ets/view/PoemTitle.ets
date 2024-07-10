@@ -1,3 +1,5 @@
+import { router } from '@kit.ArkUI'
+
 @Component
 export default struct PoemTitle {
   isShowSetting:boolean = false
@@ -8,6 +10,9 @@ export default struct PoemTitle {
 
         Image(this.imgSrc)
           .height('50%')
+          .onClick(() => {
+            router.back()
+          })
 
         Text() {
           Span('少').fontColor($r('app.color.appColor1'))

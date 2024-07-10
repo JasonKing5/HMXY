@@ -16,13 +16,15 @@ export  class Poem{
 }
 
 // 在收藏页面需要用到分组诗词。分组诗词的类型
-export class CategoryPoem{
-  categoryName:string
-  categoryArr:Poem[]
+export class Category{
 
-  constructor(categoryName: string, categoryArr: Poem[]) {
+  categoryName:string
+  categoryPoem:Poem[]
+
+  constructor(categoryName: string, categoryPoem: Poem[]) {
     this.categoryName = categoryName
-    this.categoryArr = categoryArr
+    this.categoryPoem = categoryPoem
+
   }
 }
 
