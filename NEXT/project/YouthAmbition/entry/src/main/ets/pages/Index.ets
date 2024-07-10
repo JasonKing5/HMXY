@@ -9,6 +9,9 @@ struct Index {
   // 图标旋转效果
   @State angleVal: number = 0
 
+  // 图片透明度
+  @State opacityVal: number = 0
+
   aboutToAppear(): void {
     let timerID = setInterval(() => {
       this.second--
@@ -26,8 +29,8 @@ struct Index {
         iterations: -1  // 一直转，旋转次数
       }, () => {
         this.angleVal += 360
+        this.opacityVal += .5
       })
-
     }, 1000)
   }
 
@@ -45,18 +48,8 @@ struct Index {
 
       Image($r('app.media.logo'))
         .width('50%')
-        .rotate({
-          // x:1,
-          // y:1,
-          // z:1,
-          angle: this.angleVal
-        })
-
-      // Text($r('app.string.EntryAbility_desc'))
-      //   .fontSize(20)
-      //   .width(240)
-      //   .maxLines(1)
-      //   .textOverflow({overflow:TextOverflow.MARQUEE})
+        .rotate({ angle: this.angleVal })
+        .opacity(this.opacityVal)
 
       Marquee({ start: true, src: '劝君莫负少年志 曾许人间第一流' })
         .fontSize(20)

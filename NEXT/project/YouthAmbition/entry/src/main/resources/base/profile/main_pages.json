@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/MainPoem"
+    "pages/MainPoem",
+    "pages/CollectPoem"
   ]
 }

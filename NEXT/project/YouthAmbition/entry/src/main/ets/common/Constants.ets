@@ -8,5 +8,11 @@ export default class Constants{
     `菩提本无树，明镜亦非台`
   ]
 
+  // 获取全部类型诗句的随机诗词 的API地址
+  static readonly URL_All : string = 'https://v1.jinrishici.com/all'
+
+  // 存储诗词的时候弄个数组标记
+  static readonly poemArr:string ='poemArr'
+
 
 }
