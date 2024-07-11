@@ -23,8 +23,29 @@ export default class Constants{
   // 所有分类 类型
   static readonly categoryTypeArr:string[] = ['抒情', '四季', '山水', '天气', '人物', '人生', '生活', '节日', '动物','食物', '植物']
 
-
   // 所有分类列表
   static  categoryList:Category[] = [  ]
 
+  // 在收藏页面 CollectPoem.ets 和主体展示页面 MainPoem.ets 双向数据联动 的一个标记
+  // static readonly isCollectCuttentPoem:string = 'isCollectCuttentPoem'
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

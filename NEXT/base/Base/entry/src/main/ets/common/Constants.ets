@@ -10,6 +10,8 @@ export default class Constants {
     new MyPreferenceData(this.PreferencesFileName, 'indexFontSize', 22)
   // index页面路由数组 对象
   static readonly indexRouters: Array<MyRouterInfo> = [
+    new MyRouterInfo("pages/ArkTS/Local1", 'loca1'),
+    new MyRouterInfo("pages/ArkTS/Local2", 'loca2'),
     new MyRouterInfo('pages/ArkUI/ArkUIHome', 'ArkUI 组件'),
     new MyRouterInfo('pages/AbilityKit/AbilityKitHome', 'AbilityKitHome 应用程序框架'),
     new MyRouterInfo('pages/NetworkKit/NetworkKitHome', 'NetworkKit 网络请求'),

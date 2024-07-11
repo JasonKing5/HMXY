@@ -4,11 +4,14 @@ import { http } from '@kit.NetworkKit'
 import { Poem } from '../model/poemData'
 import { router } from '@kit.ArkUI'
 import poemVM from '../viewModel/PoemVM'
+import { JSON } from '@kit.ArkTS'
 
+let cuttrenPoemState = LocalStorage.getShared()
 
-@Entry
+@Entry(cuttrenPoemState)
 @Component
 struct MainPoem {
+  @LocalStorageLink('isCollectCuttentPoem') isCollect :boolean = false
   build() {
     Column() {
       // 1 顶部标题栏
@@ -50,17 +53,16 @@ struct MySwiper {
 // 诗词主体展示区域 自定义组件
 @Component
 struct PoemArea {
-  // 决定当前诗词是否收藏的一个效果
-  @State isCollect: boolean = false
+  // 决定当前诗词是否收藏的一个效果 也决定收藏页面是否删除
+  // @State isCollect: boolean = false
+  @LocalStorageLink('isCollectCuttentPoem') isCollect: boolean = false
+
   // 诗词主体展示区域的旋转角度
   @State angleVal: number = 0
   // 在4.0语法。API9版本。非纯血鸿蒙中。可以使用字面量直接当对象用
   // 在NEXT版本中 使用对象，需要提前准备好类或者接口
   @State poem: Poem = new Poem('日拱一卒无有尽，功不唐捐终入海', '无题', '帝心','古诗文-抒情-默认')
-
-
   build() {
-
     Column() {
       Row() {
         Text(this.poem.author)
@@ -83,7 +85,9 @@ struct PoemArea {
         //获取诗词内容 从API接口获取 https://v1.jinrishici.com/all
         await http.createHttp().request(Constants.URL_All)
           .then((data) => {
-            this.poem = JSON.parse(data.result + '')
+            this.poem = JSON.parse(data.result + '') as Poem
+            // 将当前的 this.poem 存起来  方便在 collectPoem.ets页面对比时使用。
+            AppStorage.setOrCreate('currentShowPoem',this.poem)
           })
           .catch((err: Error) => {
             console.log('err => 获取all里面的随机诗词出错了' + err.message);
@@ -107,12 +111,11 @@ struct PoemArea {
             .height(30)
             .selectedColor($r('app.color.appColor2'))
             .onChange((isOn: boolean) => {
-              // todo 如果true。我们就把这句诗词 收录起来  向 数据库/首选项/全局变量/... 中存储起来
               if (isOn) {
                 poemVM.collectPoem(this.poem)
               } else {
                 // todo 如果是false 就说明你一定是先点了一下收藏过。又点了一下。此时才会出现false的执行。删除这一条
-                // poemVM.deletePoem(this.poem)
+                poemVM.deletePoem(poemVM.getCategoryPoemList(),poemVM.getPoemType(this.poem),this.poem)
               }
             })
         }

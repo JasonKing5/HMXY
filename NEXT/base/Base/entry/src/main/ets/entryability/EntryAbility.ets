@@ -4,6 +4,8 @@ import Constants from '../common/Constants';
 import PreferencesUtil from '../common/PreferencesUtil';
 
 export default class EntryAbility extends UIAbility {
+   para:Record<string, boolean> = { 'flag': false };
+   storage: LocalStorage = new LocalStorage(this.para);
 
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     // 获取UIAbility实例的上下文
@@ -14,6 +16,7 @@ export default class EntryAbility extends UIAbility {
   }
 
   onWindowStageCreate(windowStage: window.WindowStage): void {
+
     // 设置WindowStage的事件订阅（获焦/失焦、可见/不可见）
     try {
       windowStage.on('windowStageEvent', (data) => {
@@ -39,7 +42,7 @@ export default class EntryAbility extends UIAbility {
       console.error('Failed to enable the listener for window stage event changes. Cause:' + JSON.stringify(exception));
     }
     // 设置UI加载
-    windowStage.loadContent('pages/Index', (err, data) => {
+    windowStage.lentoadCont('pages/ArkTS/Local1',this.storage,(err, data) => {
       // ...
     });
   }

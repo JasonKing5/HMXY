@@ -15,11 +15,12 @@ export  class Poem{
   }
 }
 
+@ObservedV2
 // 在收藏页面需要用到分组诗词。分组诗词的类型
 export class Category{
 
   categoryName:string
-  categoryPoem:Poem[]
+  @Trace categoryPoem:Poem[]
 
   constructor(categoryName: string, categoryPoem: Poem[]) {
     this.categoryName = categoryName
