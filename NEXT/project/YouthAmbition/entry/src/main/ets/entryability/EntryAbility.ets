@@ -17,6 +17,7 @@ export default class EntryAbility extends UIAbility {
         new Category(Constants.categoryTypeArr[i],[])
       )
     }
+    console.log('Poem 项目初始化成功。默认list诗词：',JSON.stringify(Constants.categoryList))
   }
 
   onDestroy(): void {

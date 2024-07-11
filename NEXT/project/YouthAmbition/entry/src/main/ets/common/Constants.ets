@@ -14,7 +14,7 @@ export default class Constants{
   static readonly URL_All : string = 'https://v1.jinrishici.com/all'
 
   // 存储诗词的时候弄个数组标记
-  static readonly poemList:string ='poemArr'
+  static readonly poemList:string ='poemList'
 
 
   // 服务端设计的诗词 分类 分隔符 -
@@ -25,11 +25,6 @@ export default class Constants{
 
   // 所有分类列表
   static  categoryList:Category[] = [  ]
-
-  // 在收藏页面 CollectPoem.ets 和主体展示页面 MainPoem.ets 双向数据联动 的一个标记
-  // static readonly isCollectCuttentPoem:string = 'isCollectCuttentPoem'
-
-
 
 
 }

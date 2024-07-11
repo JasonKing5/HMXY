@@ -8,15 +8,16 @@ let cuttrenPoemState = LocalStorage.getShared()
 @Entry(cuttrenPoemState)
 @Component
 struct CollectPoem {
-
   @LocalStorageLink('isCollectCuttentPoem') isCollect :boolean = false
-
-
  @State categoryList: Category[] = []
+  //是初始化的默认列表吗
+  @State isInitList:boolean = true
 
   // build函数构建之前执行的代码
   aboutToAppear(): void {
     this.categoryList = poemVM.getCategoryPoemList()
+    // console.log('CollectPoem.ets => aboutToAppear => this.categoryList :',JSON.stringify(this.categoryList))
+    this.isInitList = poemVM.isInitList(this.categoryList)
   }
 
   // 分组名称 自定义构建函数
@@ -56,36 +57,48 @@ struct CollectPoem {
   build() {
     Column({ space: 30 }) {
       PoemTitle()
+      // 如果没有收藏过任何诗句。 也就是 this.categoryList 中的任何一个categoryPoem数组都是空。那就提示去收藏
+      if (this.isInitList){
+        Text('你还未收藏，快去收藏吧')
+          .fontSize(20)
+          .width(20)
+          .fontColor($r('app.color.appColor2'))
+        Marquee({start:true,src:'残霞明灭日脚沈，水面浮光天一色',loop:-1,step:20})
+          .fontSize(30)
+          .fontColor($r('app.color.appColor1'))
+      }
       List({ space: 10 }) {
         ForEach(this.categoryList, (categoryPoem: Category, index1: number) => {
-          ListItemGroup({ space: 5, header: this.category(categoryPoem.categoryName) }) {
-            ForEach(categoryPoem.categoryPoem, (item: Poem, index2: number) => {
-              ListItem() {
-                Column() {
-                  Text(item.content)
-                    .fontSize(20)
-                    .fontColor($r('app.color.appColor2'))
-                    .width(300)
-                    .maxLines(1)
-                    .textOverflow({ overflow: TextOverflow.MARQUEE })
-                  Row() {
-                    Text(item.origin)
-                    Text(item.author)
+          if (categoryPoem.categoryPoem.length != 0) {
+            ListItemGroup({ space: 5, header: this.category(categoryPoem.categoryName) }) {
+              ForEach(categoryPoem.categoryPoem, (item: Poem, index2: number) => {
+                ListItem() {
+                  Column() {
+                    Text(item.content)
+                      .fontSize(20)
+                      .fontColor($r('app.color.appColor2'))
+                      .width(300)
+                      .maxLines(1)
+                      .textOverflow({ overflow: TextOverflow.MARQUEE })
+                    Row() {
+                      Text(item.origin)
+                      Text(item.author)
+                    }
+                    .width('100%')
+                    .height(30)
+                    // .backgroundColor('#ff2985e0')
+                    .justifyContent(FlexAlign.SpaceBetween)
                   }
-                  .width('100%')
-                  .height(30)
-                  // .backgroundColor('#ff2985e0')
-                  .justifyContent(FlexAlign.SpaceBetween)
+                  .height(80)
+                  .width('96%')
+                  .backgroundColor($r('app.color.appColor1'))
+                  .justifyContent(FlexAlign.SpaceAround)
+                  .borderRadius(10)
+                  .padding({ left: 10, right: 10 })
                 }
-                .height(80)
-                .width('96%')
-                .backgroundColor($r('app.color.appColor1'))
-                .justifyContent(FlexAlign.SpaceAround)
-                .borderRadius(10)
-                .padding({ left: 10, right: 10 })
-              }
-              .swipeAction({ end: this.deleteBtn(this.categoryList,categoryPoem.categoryName,item), edgeEffect: SwipeEdgeEffect.Spring })
-            })
+                .swipeAction({ end: this.deleteBtn(this.categoryList,categoryPoem.categoryName,item), edgeEffect: SwipeEdgeEffect.Spring })
+              })
+            }
           }
         })
       }
