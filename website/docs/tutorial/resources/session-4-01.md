@@ -10,28 +10,9 @@ sidebar_position: 103
 ## ArkTS语法使用常见问题
 
 ---
-### 说-下@State、@Link、@Builder、@Provide和@Consume?
+### 说-下@State、@Link、@Builder、@Provide和@Consume等常用装饰器?
 > 这题说不明白就别面鸿蒙了
 
----
-### ArkUI如何通过代码动态创建组件
->   
->   ArkUI使用ArkTS声明式开发范式，开发者无法持有组件实例，在声明时通过渲染控制语法以及动态构建UI元素的方式，控制组件的创建。
->
-```ArkTS
-// 条件渲染语句创建组件
-if(this.isTrue) {
-  Text("创建文本组件").fontSize(30)
-}
-// 循环渲染语句创建组件
-ForEach(this.nums,(item) => {
-  Text(item + '').fontSize(30)
-},item => JSON.stringify(item))
-```
----
-### 子组件使用@Link修饰成员变量时，如何通过父组件传值
->   
->   * 子组件使用@Link接受父组件的值时，需要使用’$'建立变量之间的引用关系。才能实现同步。
 ---
 ### 如何监听屏幕旋转
 >屏幕旋转可使用媒体查询接口进行监听。
@@ -184,3 +165,7 @@ struct DialogDemo03 {
   }
 }
 ```
+
+### 简述LocalStorage和AppStorage的区别及应用场景
+
+### 有哪些持久化存储方案及简述如何应用
