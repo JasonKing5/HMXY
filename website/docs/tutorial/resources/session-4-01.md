@@ -169,3 +169,8 @@ struct DialogDemo03 {
 ### 简述LocalStorage和AppStorage的区别及应用场景
 
 ### 有哪些持久化存储方案及简述如何应用
+
+### 简述 ForEach 和 Repeat
+
+### 在V1和V2版本的状态管理中，如何深度观测类的属性。
+
