@@ -109,6 +109,11 @@ const config: Config = {
           label: 'Gitee',
           position: 'right',
         },
+        {
+          href: 'https://gitcode.com/Dxin/harmonyOS_bilibili/',
+          label: 'GitCode',
+          position: 'right',
+        },
         // {
         //   href: '/login',
         //   // label: '登录',
