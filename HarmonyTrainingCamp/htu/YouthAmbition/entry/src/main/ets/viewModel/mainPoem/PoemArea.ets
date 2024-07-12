@@ -1,95 +1,20 @@
-import Constants from '../common/Constants'
-import PoemTitle from '../view/PoemTitle'
-import { http } from '@kit.NetworkKit'
-import { Poem } from '../model/poemData'
-import { router } from '@kit.ArkUI'
-import poemVM from '../viewModel/PoemVM'
-import { JSON } from '@kit.ArkTS'
-import SettingPanel from '../viewModel/mainPoem/SettingPanel'
-
-let cuttrenPoemState = LocalStorage.getShared()
-
-@Entry(cuttrenPoemState)
-@Component
-struct MainPoem {
-  @LocalStorageLink('isCollectCuttentPoem') isCollect :boolean = false
-
-  @Provide isShowSettingPanel : boolean = false
-
-  @Provide fontSizeScale :number = 1
-
-
-  build() {
-    Stack(){
-      Column() {
-        // 1 顶部标题栏
-        PoemTitle({isShowSettingIcon:true,imgSrc:$r('app.media.logo')})
-        // 2  轮播区域
-        MySwiper()
-        // 3 展示诗词主体区域
-        PoemArea()
-
-
-      }
-      .width('100%')
-      .height('100%')
-      .backgroundColor($r('app.color.theme_color'))
-
-      // 4 个性化配置首选项区域
-      if (this.isShowSettingPanel){
-        SettingPanel()
-          .offset({
-            y:240
-          })
-      }
-    }
-
-  }
-}
-
-// 轮播 自定义组件
-@Component
-struct MySwiper {
-
-  // 当前的文字缩放倍数
-  @Consume fontSizeScale: number
-
-  // 轮播时候的 索引值
-  @State idx: number = 0
-
-  build() {
-    Swiper() {
-      ForEach(Constants.swiperPoemArr, (item: string, index: number) => {
-        // 设置文本颜色和下方的选中条颜色相同。同学们思考一下如何设计
-        Text(item)
-          .fontSize((22 * this.fontSizeScale).toFixed(0) )
-          .textAlign(TextAlign.Center)
-          .fontColor(this.idx === index ? $r('app.color.appColor2') : $r('app.color.appColor1'))
-      })
-    }
-    .swiperStyle()
-    .onChange((idx: number) => {
-      this.idx = idx
-    })
-  }
-}
-
 // 诗词主体展示区域 自定义组件
-@Component
-struct PoemArea {
+import { Poem } from '../../model/poemData'
+import { http } from '@kit.NetworkKit'
+import Constants from '../../common/Constants'
+import poemVM from '../PoemVM'
+import { router } from '@kit.ArkUI'
 
+@Component
+export default struct PoemArea {
   // 当前的文字缩放倍数
   @Consume fontSizeScale: number
-
   // 决定当前诗词是否收藏的一个效果 也决定收藏页面是否删除
-  // @State isCollect: boolean = false
-  @LocalStorageLink('isCollectCuttentPoem') isCollect: boolean = false
-
+  @LocalStorageLink(Constants.isCollectCurrentPoem) isCollect: boolean = false
   // 诗词主体展示区域的旋转角度
   @State angleVal: number = 0
-  // 在4.0语法。API9版本。非纯血鸿蒙中。可以使用字面量直接当对象用
-  // 在NEXT版本中 使用对象，需要提前准备好类或者接口
   @State poem: Poem = new Poem('日拱一卒无有尽，功不唐捐终入海', '无题', '帝心','古诗文-抒情-默认')
+
   build() {
     Column() {
       Row() {
@@ -157,7 +82,6 @@ struct PoemArea {
         .width('80')
         .backgroundColor('#abc')
         .onClick(() => {
-          // todo: 跳转到收藏页面去展示自己收藏过的诗句内容
           router.pushUrl({
             url: "pages/CollectPoem"
           })
@@ -170,7 +94,6 @@ struct PoemArea {
   }
 }
 
-
 @Extend(Row)
 function poemAreaContent() {
   .width('100%')
@@ -179,34 +102,3 @@ function poemAreaContent() {
   .backgroundColor('#fff1dada')
   .borderRadius(10)
 }
-
-@Extend(Swiper)
-function swiperStyle() {
-  .width('100%')
-  .autoPlay(true)
-  .loop(true)
-  .interval(2000) // 轮播的时间
-  .aspectRatio(2) // 宽高比 宽度是高度的2倍
-  .indicator(
-    new DotIndicator()
-      .itemWidth(30)
-      .itemHeight(5)
-      .color($r('app.color.appColor1'))
-      .selectedItemWidth(50)
-      .selectedItemHeight(5)
-      .selectedColor($r('app.color.appColor2'))
-    // new DigitIndicator()
-    //   .fontColor('#ffe71684')
-    //   .selectedFontColor('#ff17b856')
-    //   .digitFont({
-    //     size:20,
-    //     weight:700
-    //   })
-    //   .selectedDigitFont({
-    //     size:20,
-    //     weight:700
-    //   })
-  )
-}
-
-

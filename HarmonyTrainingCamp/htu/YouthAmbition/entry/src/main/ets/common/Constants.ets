@@ -26,6 +26,8 @@ export default class Constants{
   // 所有分类列表
   static  categoryList:Category[] = [  ]
 
+  // 诗词主体页面 和 收藏页面 公用一个 页面级的 状态变量 删除收藏中的某一句诗词时候，确定当前诗词主体页面 正在显示的诗词是否取消收藏
+  static readonly isCollectCurrentPoem:string = 'isCollectCurrentPoem'
 
 }
 

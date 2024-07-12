@@ -1,24 +1,25 @@
+import Constants from '../common/Constants'
 import { Category, Poem } from '../model/poemData'
 import PoemTitle from '../view/PoemTitle'
 import poemVM from '../viewModel/PoemVM'
 
 
-let cuttrenPoemState = LocalStorage.getShared()
+let currentPoemState = LocalStorage.getShared()
 
-@Entry(cuttrenPoemState)
+@Entry(currentPoemState)
 @Component
 struct CollectPoem {
-  @LocalStorageLink('isCollectCuttentPoem') isCollect :boolean = false
- @State categoryList: Category[] = []
+  @Provide fontSizeScale: number = 1
+  @Provide isShowSettingPanel : boolean = false
+
+  @LocalStorageLink(Constants.isCollectCurrentPoem) isCollect: boolean = false
+  @State categoryList: Category[] = []
   //是初始化的默认列表吗
-  @State isInitList:boolean = true
+  @State isInitList: boolean = true
 
   // build函数构建之前执行的代码
   aboutToAppear(): void {
     this.categoryList = poemVM.getCategoryPoemList()
-    // console.log('CollectPoem.ets => aboutToAppear => this.categoryList :',JSON.stringify(this.categoryList))
-    // let isTempList:boolean = poemVM.isInitList(this.categoryList)
-    // console.log('CollectPoem.ets => isTempList : true 初始化 空 ' , isTempList)
     this.isInitList = poemVM.isInitList(this.categoryList)
   }
 
@@ -34,7 +35,7 @@ struct CollectPoem {
 
   // 左划 listitem 时删除效果
   @Builder
-  deleteBtn(categoryList:Category[],categoryTitle:string,currentPoem: Poem) {
+  deleteBtn(categoryList: Category[], categoryTitle: string, currentPoem: Poem) {
     Button({ type: ButtonType.Circle }) {
       Image($r('app.media.delete_filled'))
         .objectFit(ImageFit.Contain)
@@ -46,12 +47,12 @@ struct CollectPoem {
     .onClick(() => {
       // 修改 MianPoem中的变量联动。 其实修改的是页面级的 localStorage 的变量 
       // 别直接删  要取消收藏的 currentPoem  和 主体界面的 当前显示的 poem 是否为同一个诗句。如果是，设置收藏滑块的状态为false，。
-      let currentShowPoem:Poem = AppStorage.get('currentShowPoem') as Poem
+      let currentShowPoem: Poem = AppStorage.get('currentShowPoem') as Poem
       if (currentPoem.content === currentShowPoem.content) {
         this.isCollect = false
-      }else{
+      } else {
         // 如果不是的话  调用删除方法。取消收藏这句诗词
-        poemVM.deletePoem(categoryList,categoryTitle,currentPoem)
+        poemVM.deletePoem(categoryList, categoryTitle, currentPoem)
       }
     })
   }
@@ -60,12 +61,17 @@ struct CollectPoem {
     Column({ space: 30 }) {
       PoemTitle()
       // 如果没有收藏过任何诗句。 也就是 this.categoryList 中的任何一个categoryPoem数组都是空。那就提示去收藏
-      if (this.isInitList){
+      if (this.isInitList) {
         Text('你还未收藏，快去收藏吧')
           .fontSize(20)
           .width(20)
           .fontColor($r('app.color.appColor2'))
-        Marquee({start:true,src:'残霞明灭日脚沈，水面浮光天一色',loop:-1,step:20})
+        Marquee({
+          start: true,
+          src: '残霞明灭日脚沈，水面浮光天一色',
+          loop: -1,
+          step: 20
+        })
           .fontSize(30)
           .fontColor($r('app.color.appColor1'))
       }
@@ -98,7 +104,10 @@ struct CollectPoem {
                   .borderRadius(10)
                   .padding({ left: 10, right: 10 })
                 }
-                .swipeAction({ end: this.deleteBtn(this.categoryList,categoryPoem.categoryName,item), edgeEffect: SwipeEdgeEffect.Spring })
+                .swipeAction({
+                  end: this.deleteBtn(this.categoryList, categoryPoem.categoryName, item),
+                  edgeEffect: SwipeEdgeEffect.Spring
+                })
               })
             }
           }

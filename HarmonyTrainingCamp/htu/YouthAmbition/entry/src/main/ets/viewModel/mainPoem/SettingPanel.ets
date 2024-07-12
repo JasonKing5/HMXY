@@ -24,9 +24,6 @@ export default struct SettingPanel {
       }
       .width('100%')
       .justifyContent(FlexAlign.Center)
-
-
-
     }
     .width('95%')
     .height(200)
