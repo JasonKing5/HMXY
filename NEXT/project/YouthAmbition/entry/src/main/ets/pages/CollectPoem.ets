@@ -17,6 +17,8 @@ struct CollectPoem {
   aboutToAppear(): void {
     this.categoryList = poemVM.getCategoryPoemList()
     // console.log('CollectPoem.ets => aboutToAppear => this.categoryList :',JSON.stringify(this.categoryList))
+    // let isTempList:boolean = poemVM.isInitList(this.categoryList)
+    // console.log('CollectPoem.ets => isTempList : true 初始化 空 ' , isTempList)
     this.isInitList = poemVM.isInitList(this.categoryList)
   }
 

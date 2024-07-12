@@ -2,8 +2,13 @@ import { router } from '@kit.ArkUI'
 
 @Component
 export default struct PoemTitle {
-  isShowSetting:boolean = false
+  isShowSettingIcon:boolean = false
   imgSrc:Resource = $r('app.media.back')
+
+  // 当前的文字缩放倍数
+  @Consume fontSizeScale: number
+
+  @Consume isShowSettingPanel:boolean
   build() {
     Column(){
       Row() {
@@ -19,11 +24,14 @@ export default struct PoemTitle {
           Span('年').fontColor($r('app.color.appColor2'))
           Span('志').fontColor($r('app.color.appColor1'))
         }
-        .fontSize(26)
+        .fontSize((26 * this.fontSizeScale).toFixed(0) )
 
-        if (this.isShowSetting){
+        if (this.isShowSettingIcon){
           Image($r('app.media.setting'))
             .height('50%')
+            .onClick(() => {
+              this.isShowSettingPanel = !this.isShowSettingPanel
+            })
         }
       }
       .width('80%')

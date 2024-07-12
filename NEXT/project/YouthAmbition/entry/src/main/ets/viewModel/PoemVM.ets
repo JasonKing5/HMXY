@@ -5,7 +5,7 @@ class PoemVM {
   // 获取存储的诗词数组  分类
   getCategoryPoemList(): Category[] {
     let list:Category[] = AppStorage.get(Constants.poemList) || Constants.categoryList
-    console.log('collectPoem 1=> getCategoryPoemList 取最新',JSON.stringify(list))
+    // console.log('collectPoem 1=> getCategoryPoemList 取最新',JSON.stringify(list))
     return list
   }
   // 收藏功能
@@ -15,7 +15,6 @@ class PoemVM {
     console.log('collectPoem 1=> poemType',poemType)
     // 1: 从分类数组中根据 分类名称 获取该分类的 Poem 数组
     let categoryArr :Category[] = this.getCategoryPoemList()
-
     console.log('collectPoem 2=> categoryArr 获取到的外层数组列表', JSON.stringify(categoryArr) )
     // 2: 根据  poemType 找出来 当前类型对象 包含分类  标题+诗词数组
     let currentTypeObj = categoryArr.find((item: Category) => item.categoryName === poemType )
@@ -44,9 +43,10 @@ class PoemVM {
     let currentCategoryObj :Category =  categoryList.find( item => item.categoryName === categoryTitle ) as Category
     // 找到 当前分类里的诗词数组
     let currentCategoryPoemArr =  currentCategoryObj?.categoryPoem as Poem []
-
-    // 当前分类数组中删除当前诗句后的新的数组
-    let tempArr:Poem[] = currentCategoryPoemArr.filter( item => {currentPoem.content !== item.content} )
+    console.log('deletePoem => 待删除诗句的数组',JSON.stringify(currentCategoryPoemArr) )
+    // 当前分类数组中删除当前 诗句后 的新的数组
+    let tempArr:Poem[] = currentCategoryPoemArr?.filter( item =>  currentPoem.content !== item.content )
+    console.log('deletePoem => 已删除诗句的数组',JSON.stringify(tempArr))
 
     // 覆盖  当前分类对象里的 categoryPoem
     currentCategoryObj.categoryPoem = tempArr

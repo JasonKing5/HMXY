@@ -5,6 +5,7 @@ import { Poem } from '../model/poemData'
 import { router } from '@kit.ArkUI'
 import poemVM from '../viewModel/PoemVM'
 import { JSON } from '@kit.ArkTS'
+import SettingPanel from '../viewModel/mainPoem/SettingPanel'
 
 let cuttrenPoemState = LocalStorage.getShared()
 
@@ -12,24 +13,47 @@ let cuttrenPoemState = LocalStorage.getShared()
 @Component
 struct MainPoem {
   @LocalStorageLink('isCollectCuttentPoem') isCollect :boolean = false
+
+  @Provide isShowSettingPanel : boolean = false
+
+  @Provide fontSizeScale :number = 1
+
+
   build() {
-    Column() {
-      // 1 顶部标题栏
-      PoemTitle({isShowSetting:true,imgSrc:$r('app.media.logo')})
-      // 2  轮播区域
-      MySwiper()
-      // 3 展示诗词主体区域
-      PoemArea()
+    Stack(){
+      Column() {
+        // 1 顶部标题栏
+        PoemTitle({isShowSettingIcon:true,imgSrc:$r('app.media.logo')})
+        // 2  轮播区域
+        MySwiper()
+        // 3 展示诗词主体区域
+        PoemArea()
+
+
+      }
+      .width('100%')
+      .height('100%')
+      .backgroundColor($r('app.color.theme_color'))
+
+      // 4 个性化配置首选项区域
+      if (this.isShowSettingPanel){
+        SettingPanel()
+          .offset({
+            y:240
+          })
+      }
     }
-    .width('100%')
-    .height('100%')
-    .backgroundColor($r('app.color.theme_color'))
+
   }
 }
 
 // 轮播 自定义组件
 @Component
 struct MySwiper {
+
+  // 当前的文字缩放倍数
+  @Consume fontSizeScale: number
+
   // 轮播时候的 索引值
   @State idx: number = 0
 
@@ -38,7 +62,7 @@ struct MySwiper {
       ForEach(Constants.swiperPoemArr, (item: string, index: number) => {
         // 设置文本颜色和下方的选中条颜色相同。同学们思考一下如何设计
         Text(item)
-          .fontSize(22)
+          .fontSize((22 * this.fontSizeScale).toFixed(0) )
           .textAlign(TextAlign.Center)
           .fontColor(this.idx === index ? $r('app.color.appColor2') : $r('app.color.appColor1'))
       })
@@ -53,6 +77,10 @@ struct MySwiper {
 // 诗词主体展示区域 自定义组件
 @Component
 struct PoemArea {
+
+  // 当前的文字缩放倍数
+  @Consume fontSizeScale: number
+
   // 决定当前诗词是否收藏的一个效果 也决定收藏页面是否删除
   // @State isCollect: boolean = false
   @LocalStorageLink('isCollectCuttentPoem') isCollect: boolean = false
@@ -66,15 +94,15 @@ struct PoemArea {
     Column() {
       Row() {
         Text(this.poem.author)
-          .fontSize(20)
+          .fontSize((20 * this.fontSizeScale).toFixed(0) )
           .width(20)
           .alignSelf(ItemAlign.End)
           .fontColor($r('app.color.appColor2'))
         Text(this.poem.content)
-          .fontSize(16)
+          .fontSize((16 * this.fontSizeScale).toFixed(0) )
           .width(16)
         Text(this.poem.origin)
-          .fontSize(20)
+          .fontSize((20 * this.fontSizeScale).toFixed(0) )
           .width(20)
           .alignSelf(ItemAlign.Start)
           .fontColor($r('app.color.appColor1'))
