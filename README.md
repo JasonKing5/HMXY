@@ -11,12 +11,9 @@
 
 ### 目录结构：
 
-- HarmonyTrainingCamp：高校鸿蒙训练营
+- HarmonyTrainingCamp：高校鸿蒙训练营（大学生看过来）。
 - Q1 :  第一季
 - Q2 :  第二季项目教程
 - NEXT：next教程
 - 帝友分享：帝友分享的内容
 - website ： 鸿蒙学苑网站源码
-
-
-
