@@ -7,9 +7,8 @@ sidebar_position: 101
 
 > 题目尚未完全，答案也未完全确认。
 >
-> 感谢网友`浪漫E族`进行解题，您辛苦了，好人一生平安。考学考公必上岸。LOL必五杀，买彩票必中奖，世间好运都奔赴您。
->
-> 期待更多网友参与题目的提供和解题。您知道如何联系我的。将您的题目及答案告知我。更新到此处，以惠后人。
+> 参考于网友 `王杨璵璠` 的[博客文章](http://t.csdnimg.cn/qYiNv)。在此处对该网友表示感谢。
+> 
 
 ## 单选题
 
@@ -19,7 +18,7 @@ A、`Object.isPrototypeOf();`
 
 B、`Object.getOwnPropertySymbols()`
 
-C、 `Object.keys();`
+**C、 `Object.keys();`**
 
 D、`Object.isExtensible();`
 
@@ -27,9 +26,9 @@ D、`Object.isExtensible();`
 
 2. 以下哪个装饰器用来表示并发共享对象
 
-**A、`@Shared`**
+A、`@Shared`
 
-B、@Sendable
+**B、`@Sendable`**
 
 C、`@Style`
 
@@ -41,7 +40,7 @@ D、`@State`
 
 A、`Object.getOwnPropertyDescriptors();`
 
-B、`Object.values();`
+**B、`Object.values();`**
 
 C、`Object.hasOwnProperty();`
 
@@ -51,7 +50,7 @@ D、`Object.getOwnPropertyDescriptor();`
 
 4. 下面关于方舟字节码格式IMM16_ID16_IMM8描述正确的是
 
-A、8位操作码，16位立即数，16位id，8位立即数
+**A、8位操作码，16位立即数，16位id，8位立即数**
 
 B、8位操作码，16位立即数，2个8位寄存器
 
@@ -65,7 +64,7 @@ D、16位前缀操作码，16位立即数，8位寄存器
 
 A、16位前缀操作码，16位立即数，8位寄存器
 
-B、16位前缀操作码，16位立即数，2个8位寄存器
+**B、16位前缀操作码，16位立即数，2个8位寄存器**
 
 C、8位操作码，8位立即数，16位id，8位寄存器
 
@@ -199,7 +198,7 @@ A、本例子可以运行起来，所以代码没有问题。
 
 B、为了避免`@Prop`的拷贝，可以优化使用`@Lin`k，在该例子中行为和`@Prop`一样。
 
-C、在自定义组件`Page`的`build`方法里改变状态变量是非法操作，可能导致未定义的异常UI行为
+**C、在自定义组件`Page`的`build`方法里改变状态变量是非法操作，可能导致未定义的异常UI行为**
 
 D、在`ChangeMode`里改变`mode`的值，会触发其父组件`Page`的Title`内容`的切换。
 
@@ -213,7 +212,7 @@ B、ToastShowMode.SYSTEM_TOP_MOST
 
 C、无需配置，默认显示在其他应用之上
 
-D、ToastShowMode.TOP_MOAST
+**D、ToastShowMode.TOP_MOAST**
 
 ---
 
@@ -556,7 +555,7 @@ struct SheetTransitionExample {
 
     之后，调用xcController·getXComponentSurfaceRect（)的返回值为
 
-A、`{offsetX:75,offsetY:-100,surfaceWidth:150,surfaceHeight:500}`
+**A、`{offsetX:75,offsetY:-100,surfaceWidth:150,surfaceHeight:500}`**
 
 B、`{offsetX:81,offsetY:-89,surfaceWidth:150,surfaceHeight:500}`
 
@@ -625,7 +624,7 @@ D、`{offsetX:-20,offsetY:50,surfaceWidth:200,surfaceHeight:500}`
 
 A、1,5
 
-B、1,0
+**B、1,0**
 
 C、2,4
 
@@ -635,7 +634,7 @@ D、6,0
 
 14. 小李正在使用DevEco Studio进行Harmonyos应用的开发工作，他需要对一个频繁被调用的函数calculateData()进行重构，为了帮助小李高效地找到calculateData（)函数的所有引用位置，并确保重构时考虑周全，以下哪个步骤是正确的使用DevEcoStudio的"FindUsages"功能的操作方法
 
-A、小李只需将光标定位在calculateData()函数名上，右键点击并选择“Find Usages”，或者直接使用快捷键Alt+F7（macOS为Option+F7），DevEco Studio会自动列出该函数在项目中的所有引用位置。
+**A、小李只需将光标定位在calculateData()函数名上，右键点击并选择“Find Usages”，或者直接使用快捷键Alt+F7（macOS为Option+F7），DevEco Studio会自动列出该函数在项目中的所有引用位置。**
 
 B、小李应该在菜单栏中选择“Navigate”>“Class"来打开类浏览器，从中找到calculateData()函数，并在此界面中手动检查所有引用。
 
@@ -649,7 +648,7 @@ D、小李应当在项目目录树中找到calculateDataO函数所在的文件�
 
 A、在DevEcoStudio中，没有直接的“OptimizeImports"功能，需要安装第三方插件来实现这个需求。
 
-B、可以在菜单栏中依次点击“Code”>“ReformatCode”来达到优化import的目的，因为“OptimizeImports”功能已整合进“ReformatCode”中。
+**B、可以在菜单栏中依次点击“Code”>“ReformatCode”来达到优化import的目的，因为“OptimizeImports”功能已整合进“ReformatCode”中。**
 
 C、应该手动遍历每个ArkTS文件，逐一检查并删除未使用的import语句，然后按照字母顺序手动排序剩余的import。
 
@@ -665,13 +664,13 @@ B、选中hap模块，点击通过菜单栏`make module 'hsp'`
 
 C、选中har模块，点击build菜单栏`build hap（s）`
 
-D、选中har模块，点击build菜单栏`make module 'har'`
+**D、选中har模块，点击build菜单栏`make module 'har'`**
 
 ---
 
 17. 在Harmonyos应用开发中，当开发者遇到需要分析Release版本应用的崩溃或异常堆栈信息时，为了准确地将堆栈追踪信息对应到源代码的具体位置，以下哪个描述是正确的做法或理解
 
-A、DevEcoStudio提供的Release应用堆栈解析功能，要求开发者在遇到问题时，需上传构建产物中的特定文件（如so、sourcemap、nameCache等）到指定工具或界面，借助这些文件辅助解析堆栈信息，实现从Release堆栈到源码的映射，便于快速定位问题
+**A、DevEcoStudio提供的Release应用堆栈解析功能，要求开发者在遇到问题时，需上传构建产物中的特定文件（如so、sourcemap、nameCache等）到指定工具或界面，借助这些文件辅助解析堆栈信息，实现从Release堆栈到源码的映射，便于快速定位问题**
 
 B、开发者需手动将Release构建生成的so文件与源代码进行映射，配合第三方工具进行堆栈信息还原，虽然过程繁琐，但最终能定位到问题代码位置
 
@@ -681,7 +680,7 @@ D、因为Release应用经过优化和去除Debug信息，直接从堆栈跟踪�
 
 ---
 
-18. Harmonyos应用开发团队正着手优化一款面向全球市场的在线教育应用，该应用在特定课程直播环节出现了性能波动和响应延迟的问题，严重影响用户体验。打算利用DevEcoProfiler来进行性能优化。DevEcoProfiler其设计核心和主要优势是什么
+18. Harmonyos应用开发团队正着手优化一款面向全球市场的在线教育应用，该应用在特定课程直播环节出现了性能波动和响应延迟的问题，严重影响用户体验。打算利用DevEco Profiler来进行性能优化。DevEco Profiler其设计核心和主要优势是什么
 
 A、DevEco Profiler主要是一个自动化修复工具，能自动检测并解决所有HarmonyOS应用的性能问题
 
@@ -689,15 +688,15 @@ B、DevEco Profiler专注于用户界面设计的美化，使开发者操作更�
 
 C、DevEco Profiler采用Bottom-Up设计原则，从底层代码细节开始逐步构建性能模型
 
-D、DevEco Profiler依据Top-Down设计理念，通过高度整合的数据展示范式，提供从宏观到微观的性能数据分析，加速开发者定位和解决问题的过程
+**D、DevEco Profiler依据Top-Down设计理念，通过高度整合的数据展示范式，提供从宏观到微观的性能数据分析，加速开发者定位和解决问题的过程**
 
 ---
 
-19. 在一个包含多个模块（如entry、feature、service、library等）的大型Harmonyos应用项目中，如果某个模块feature对另外一个公共库模块library有依赖，如何通过DevEcoStudio正确配置项目依赖关系
+19. 在一个包含多个模块（如`entry`、`feature`、`service`、`library`等）的大型Harmonyos应用项目中，如果某个模块`feature`对另外一个公共库模块`library`有依赖，如何通过`DevEcoStudio`正确配置项目依赖关系
 
 A、在library的oh-package.json5文件的dependencies字段中配置feature的依赖
 
-B、在feature的oh-packagejson5文件的dependencies字段中配置library的依赖
+**B、在`feature`的`oh-package.json5`文件的`dependencies`字段中配置`library`的依赖**
 
 C、在feature的build-profile.json5文件的dependencies字段中配置library的依赖
 
@@ -707,7 +706,7 @@ D、无需配置，直接在代码中编写importxxxfrom 'library'
 
 20. 在使用DevEcoStudio的Profiler进行Harmonyos应用性能优化的流程中，以下哪个步骤最恰当地描述了开发者利用Profiler工具进行性能问题识别、定位、优化及验证的完整过程
 
-A、利用“RealtimeMonitor”初步识别性能瓶颈，创建深度分析任务定位根因，根据分析结果优化代码，再用“RealtimeMmmor”验证优化效果
+**A、利用“Realtime Monitor”初步识别性能瓶颈，创建深度分析任务定位根因，根据分析结果优化代码，再用“RealtimeMmmor”验证优化效果**
 
 B、首先使用“RealtimeMonitor"实时监控，观察应用资源消耗，一旦发现CPU或内存异常，直接修改代码并重新编译
 
@@ -717,7 +716,8 @@ D、在发现应用性能不佳时，直接查看代码逻辑，凭经验修改�
 
 ---
 
-21. 开发者在编写ArkUI代码时，想要提前预览下所编写的组件的效果，下述哪个组件可以使用DevEcoStudioPreviewer正常预览？
+21. 开发者在编写ArkUI代码时，想要提前预览下所编写的
+21. ，下述哪个组件可以使用`DevEcoStudio Previewer`正常预览？
 
 A、`@Preview @Component struct TitleSample{@StorageProp('title）)title: string =PlaceHolder';buildO{Text（this.title）}}`
 
@@ -786,7 +786,7 @@ D、`import{add}fromlibnative.so';@Preview@ComponentstructNativeSample{count:num
 
 A、3
 
-B、1  
+**B、1**  
 
 C、4
 
@@ -796,7 +796,7 @@ D、2
 
 23. want参数的entities匹配规则错误的是
 
-A、调用方传入的want参数的entities为空，待匹配应用组件的skills配置中的entities不为空，则entities匹配失败。
+**A、调用方传入的want参数的entities为空，待匹配应用组件的skills配置中的entities不为空，则entities匹配失败。**
 
 B、调用方传入的want参数的entities为空，待匹配应用组件的skills配置中的entities为空，则entities匹配成功。
 
@@ -812,7 +812,7 @@ A、base目录是默认存在的目录，二级子目录element用于存放字�
 
 B、resfile目录，应用安装后，resfile资源会被解压到应用沙箱路径，通过Context属性resourceDir获取到resfile资源目录后，可通过文件路径访问。
 
-C、rawfile目录，支持创建多层子目录，子目录名称可以自定义，文件夹内可以自由放置各类资源文件。目录中的资源文件会被编译成二进制文件，并赋予资源文件ID。
+**C、rawfile目录，支持创建多层子目录，子目录名称可以自定义，文件夹内可以自由放置各类资源文件。目录中的资源文件会被编译成二进制文件，并赋予资源文件ID。**
 
 D、D.stage模型多工程情况下，共有的资源文件放到AppScope下的resources目录。
 
@@ -853,17 +853,11 @@ export{ResManager}from'/src/main/ets/ResManager'
     那边下面那个aa命令是正确的：（AB选项重复了）
     ```
 
-A、`aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps key3 testString --psn key4`
-
-B、 `aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps key3 testString --psn key4`
-
-C、 `aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps key3 testString --ps key4`
-
-D、`aa start -b com.example.test -a EntryAbility --pi key1 1 key 2 2 --ps key3 testString --psn key4`
+答案：**`aa start -b com.example.test -a EntryAbility --pi key1 1 --pi key2 2 --ps key3 testString – psn key4`**
 
 ---
 
-27. .在UIAbility的onCreate生命周期中通过EventHub的on注册"event1"和"event2"事件。
+27.  在`UIAbility`的`onCreate`生命周期中通过`EventHub`的on注册"`event1`"和"`event2`"事件。
 
     ```typescript
     import{hilog}from'@kit.PerformanceAnalysisKit';
@@ -892,7 +886,7 @@ D、`aa start -b com.example.test -a EntryAbility --pi key1 1 key 2 2 --ps key3 
     }
     ```
 
-    2.在Ul组件的click处理事件中调用如下的eventHubFunc，连续点击2次该控件后，运行日志输出是什么：
+    在Ul组件的click处理事件中调用如下的`eventHubFunc`，连续点击2次该控件后，运行日志输出是什么：
 
     ```typescript
     import common from '@kit.AbilityKit';
@@ -1013,7 +1007,7 @@ A、2个
 
 B、1个
 
-C、3个
+**C、3个**
 
 D、4个
 
@@ -1027,7 +1021,7 @@ B、hiTraceMeter
 
 C、hiDebug
 
-D、hiAppEvent
+**D、hiAppEvent**
 
 ---
 
@@ -1035,7 +1029,7 @@ D、hiAppEvent
 
 A、onTrigger
 
-B、name
+**B、name**
 
 C、triggerCondition
 
@@ -1069,7 +1063,7 @@ D、当在滚动容器中使用了LazyForEach，框架会根据滚动容器可�
 
 34. 我们需要避免在逐帧调用的接口中执行耗时操作，下面哪个选项不属于上述的接口？
 
-A、aboutToReuse
+**A、aboutToReuse**
 
 B、onAreaChange
 
@@ -1085,7 +1079,7 @@ A、持续交付（CD，ContinuousDelivery)：指的是，频繁的将软件的�
 
 B、持续交付可以随时随地部署到生产环境
 
-C、在持续交付实践中，要考虑处理故障回滚和紧急修复，以确保系统在出现问题时能够快速恢复和修复。
+**C、在持续交付实践中，要考虑处理故障回滚和紧急修复，以确保系统在出现问题时能够快速恢复和修复。**
 
 D、持续部署是将代码库中的任何更改都应该自动且快速地投入生产环境。持续部署等同于持续交付。
 
@@ -1099,7 +1093,7 @@ B、仅存在moduleA的image.png
 
 C、两者都不存在
 
-D、仅存在moduleB的image.png
+**D、仅存在moduleB的image.png**
 
 ---
 
@@ -1119,7 +1113,7 @@ D、将3个ohpm库封装成1个hsp，并对外提供必要的接口。
 
 A、DevEcoStudio会在编译构建时，不需要对HAP进行一致性校验。
 
-B、应用工程如果包含多个Module，在应用市场上架时，会将多个.hap文件打包成一个.app文件。
+**B、应用工程如果包含多个Module，在应用市场上架时，会将多个.hap文件打包成一个.app文件。**
 
 C、HAP是应用安装和运行的基本单位，在DevEcoStudio工程目录中，一个HAP对应一个Module。应用打包时，所有的Module都只能生成.hap文件。
 
@@ -1131,7 +1125,7 @@ D、应用工程编出的app文件中，只能包含一个hap文件。
 
 A、一些应用的扩展能力，比如备份、服务卡片，可以采用ExtensionAbility做成单独的featureHAP包，独立分发。
 
-B、随着业务的发展，应用功能会越来越多，某些功能可以做成动态加载，动态加载的模块采用HAR工程来构建，方便复用和共享。
+**B、随着业务的发展，应用功能会越来越多，某些功能可以做成动态加载，动态加载的模块采用HAR工程来构建，方便复用和共享。**
 
 C、对于初始版本的应用，功能比较简单，可以考虑采用单HAP加上多个HAR工程构建代码工程。
 
@@ -1143,7 +1137,7 @@ D、元服务和应用可以共用一个代码工程，采用多目标产物构�
 
 A、使用startWork申请任务，使用stopWork取消任务，使用getWorkStatus获取任务状态
 
-B、使用publishReminder发布一个提醒类通知，使用cancelReminder取消一个指定的提醒类通知
+**B、使用publishReminder发布一个提醒类通知，使用cancelReminder取消一个指定的提醒类通知**
 
 C、使用startBackgroundRunning申请任务，使用stopBackgroundRunning取消任务
 
@@ -1162,7 +1156,7 @@ Web(...).enableNativeEmbedMode(true)
 <object id="view" type="native/contents" width="100%" height="100%" style="background-color:red"/>
 ```
 
-B、
+**B、**
 
 ```
 Web(...).enableNativeEmbedMode(true).registerNativeEmbedRule('object','test')
@@ -1176,7 +1170,7 @@ Web(...).enableNativeEmbedMode(true).registerNativeEmbedRule('native','test')
   <object id="view" type="native/contents" width="100%" height="100%" style="background-color:red"/>
 ```
 
-D、
+**D、**
 
 ```
 Web(...).enableNativeEmbedMode(true)
@@ -1189,11 +1183,11 @@ Web(...).enableNativeEmbedMode(true)
 
 A、没有在aboutToReuse更新关联的状态变量数据。
 
-B、在aboutToReuse回调函数中更新了余的状态变量
+**B、在aboutToReuse回调函数中更新了冗余的状态变量**
 
-C、复用的自定义组件中使用if等条件染语句导致结构不相同，未使用reuseld标记。
+**C、复用的自定义组件中使用if等条件染语句导致结构不相同，未使用reuseld标记。**
 
-D、页面嵌套了过多自定义组件。
+**D、页面嵌套了过多自定义组件。**
 
 ---
 
@@ -1201,11 +1195,11 @@ D、页面嵌套了过多自定义组件。
 
 A、Navigation子页面的根容器可以采用如Column、Row这些容器组件。
 
-B、Navigation的子页面可以来自不同的Module
+**B、Navigation的子页面可以来自不同的Module**
 
 C、Navigation只能在entry类型的Module中使用
 
-D、Navigation的页面显示模式有单页面、分栏和自适应三种显示模式
+**D、Navigation的页面显示模式有单页面、分栏和自适应三种显示模式**
 
 ---
 
@@ -1320,13 +1314,13 @@ B、foo3
 
 47. 下面关于ArkTS中export用法，正确的是
 
-A、`export * from "etsfilename"`
+**A、`export * from "ets file name"`**
 
-B、`export * as name from "etsfilename"`
+**B、`export * as name from "ets file name"`**
 
-C、`export { export1 } from“etsfilename";`
+**C、`export { export1 } from "ets file name";`**
 
-D、`export { export1 as alias1 } from "etsfilename";`
+**D、`export { export1 as alias1 } from "ets file name";`**
 
 ---
 
@@ -1354,7 +1348,7 @@ static napi_value Demo4(napi_env env,napi_callback_info info){
 }
 ```
 
-C、
+**C、**
 
 ```
 static napi_value Demo3(napi_env env,napi_callback_info info){
@@ -1366,7 +1360,7 @@ static napi_value Demo3(napi_env env,napi_callback_info info){
 }
 ```
 
-D、
+**D、**
 
 ```
 static napi_value Demo2(napi_env env,napi_callback_info info){
@@ -1401,21 +1395,25 @@ taskpool.execute(task).then(()=>{});
 w.postMessage(a);
 ```
 
-A、`taskpool.execute(task).then(O=>0);`，TaskPool共享传输实现方式
+**A、`taskpool.execute(task).then(()=>{});`，TaskPool共享传输实现方式**
 
 B、`w.postMessage(a);`，Worker共享传输实现方式
 
-C、`w.postMessageWithSharedSendable(a);`，Worker共享传输实现方式
+**C、`w.postMessageWithSharedSendable(a);`，Worker共享传输实现方式**
 
-D、`task.setCloneList([a]);taskpool.execute(task).then(O=>0);`，TaskPool共享传输实现方式
+D、
+
+`task.setCloneList([a]);`
+
+`taskpool.execute(task).then(()=>{});`，TaskPool共享传输实现方式
 
 ---
 
 50. 下面关于Node-API数据类型描述正确的是
 
-A、napi_env:用于表示Node-API执行时的上下文
+**A、napi_env:用于表示Node-API执行时的上下文**
 
-B、napi_status:是一个枚举数据类型，表示Node-APl接口返回的状态信息
+**B、napi_status:是一个枚举数据类型，表示Node-APl接口返回的状态信息**
 
 C、napi_threadsafe_function_call_mode：该枚举类型定义了两个常量，用于指定在何时释放线程安全函数的回调函数
 
@@ -1446,13 +1444,13 @@ B、value2
 
 52. 以下哪些是可以在Navigation中使用pushPathByName接口传递的params的参数类型
 
-A、`arrayBuffer`
+**A、`arrayBuffer`**
 
-B、`record<string,string>`
+**B、`record<string,string>`**
 
 C、`map<string,string>`
 
-D、`string`
+**D、`string`**
 
 ---
 
@@ -1586,7 +1584,7 @@ struct Demo {
 }
 ```
 
-B、
+**B、**
 
 ```
 @Entry
@@ -1651,7 +1649,7 @@ struct Demo {
 }
 ```
 
-C、
+**C、**
 
 ```
 @Entry
@@ -1778,7 +1776,7 @@ struct ImageExample {
 }
 ```
 
-C、
+**C、**
 
 ```
 import { AnimatedDrawableDescriptor, AnimationOptions } from '@ohos.arkui.drawableDescriptor';
@@ -1902,25 +1900,25 @@ D、若遇到App运行卡顿或系统整体无响应（AppFreeze，SystemFreeze�
 
 57. 在大型软件工程中，一般会伴随着多团队开发，各团队开发自己的业务模块，最后再由集成交付团队集成到一起，下面哪些是大型应用模块化开发最佳实践
 
-A、若多个模块依赖了不同版本的HAR，使用OHPM的overrides机制配置指定使用哪个版本的HAR，以减少包大小。
+**A、若多个模块依赖了不同版本的HAR，使用OHPM的overrides机制配置指定使用哪个版本的HAR，以减少包大小。**
 
-B、避免用户首次下载应用耗时过长，及过多占用用户空间，不常用功能做成按需加载。
+**B、避免用户首次下载应用耗时过长，及过多占用用户空间，不常用功能做成按需加载。**
 
-C、一次上架多端部署。
+**C、一次上架多端部署。**
 
-D、使用路由表进行模块间解耦。
+**D、使用路由表进行模块间解耦。**
 
 ---
 
 58. 一个应用通常会包含多种功能，将不同的功能特性按模块来划分和管理是一种良好的设计方式。在开发过程中，我们可以将每个功能模块作为一个独立的Module进行开发，下面关于Module的说法正确的是
 
-A、Library类型的Module，用于实现代码和资源的共享，有两种类型，分别为Static Library和SharedLibrary两种类型。
+**A、Library类型的Module，用于实现代码和资源的共享，有两种类型，分别为Static Library和SharedLibrary两种类型。**
 
 B、entry类型的Module，是应用的主模块，一个应用只能包含唯一一个entry类型的HAP。
 
-C、feature类型的Module，应用的动态特性模块，一个应用中可以包含一个或多个feature类型的模块，也可以不包
+**C、feature类型的Module，应用的动态特性模块，一个应用中可以包含一个或多个feature类型的模块，也可以不包**
 
-D、Ability类型的Module，用于实现应用的功能和特性，有两种类型，分别为entry和feature。
+**D、Ability类型的Module，用于实现应用的功能和特性，有两种类型，分别为entry和feature。**
 
 ---
 
@@ -1978,17 +1976,17 @@ D、Ability类型的Module，用于实现应用的功能和特性，有两种类
 }
 ```
 
-A、StartupTask_005会在主线程执行
+**A、StartupTask_005会在主线程执行**
 
-B、StartupTask_006会在AbilityStage的onCreate前初始化完成
+**B、StartupTask_006会在AbilityStage的onCreate前初始化完成**
 
-C、StartupTask_001会在StartupTask_004之后执行；
+**C、StartupTask_001会在StartupTask_004之后执行；**
 
 D、StartupTask_003会在StartupTask_004之后执行
 
 ---
 
-60. 在基于Stage模型开发的应用项目代码下，都存在一个app.json5配置文件，用于配置应用的全局信息，以下appjson5配置文件错误的是
+60. 在基于Stage模型开发的应用项目代码下，都存在一个app.json5配置文件，用于配置应用的全局信息，以下app.json5配置文件错误的是
 
 A、
 
@@ -2021,7 +2019,7 @@ B、
 }
 ```
 
-C、
+**C、**
 
 ```
 {
@@ -2037,7 +2035,7 @@ C、
 }
 ```
 
-D、
+**D、**
 
 ```
 {

@@ -10,6 +10,7 @@ let currentPoemState = LocalStorage.getShared()
 @Component
 struct MainPoem {
   @LocalStorageLink(Constants.isCollectCurrentPoem) isCollect :boolean = false
+
   @Provide isShowSettingPanel : boolean = false
 
   @Provide fontSizeScale :number = 1

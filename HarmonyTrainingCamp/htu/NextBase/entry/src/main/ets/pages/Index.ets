@@ -12,10 +12,8 @@ struct Index {
     // 暂时使用线性布局容器 Column
     Column({ space: 30 }) {
       TopTitle({ title: this.title, isBack: false })
-
       // 导航列表
       NavigationList({homeArr:RouterCfg.homeArr})
-
     }
     .width('100%')
     .height('100%')

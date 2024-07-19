@@ -1,0 +1,7 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/ArkData/ArkDataHome",
+    "pages/ArkData/ArkDataAbility/ArkDataDemo"
+  ]
+}
