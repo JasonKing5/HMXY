@@ -14,13 +14,13 @@ sidebar_position: 101
 
 应用发生崩溃，（）接口可以获取到崩溃时调用栈
 
-A、hiLog
+A、`hiLog`
 
-B、hiTraceMeter
+B、`hiTraceMeter`
 
-C、hiDebug
+C、`hiDebug`
 
-**D、hiAppEvent**
+**D、`hiAppEvent`**
 
 ---
 
@@ -147,28 +147,35 @@ struct Page_EventHub {
 
 **A、**
 
+```
 **[Example].[Entry].[EntryAbility]receive.[]**
 
 **[Example].[Entry].[EntryAbility] receive.[2,"test2"]**
 
 **[Example].[Entry].[EntryAbility] receive. [2,"test2"]**
+```
 
 B、
 
+```
 [Example].[Entry].[EntryAbility]receive.[]
 
 [Example].[Entry].[EntryAbility]receive.[2,"test2"]
 
 [Example].[Entry].[EntryAbility]receive.[]
+```
 
 C、
 
+```
 [Example].[Entry].[EntryAbility]receive.[]
 
 [Example].[Entry].[EntryAbility] receive. [2,"test2"] 
+```
 
 D、
 
+```
 [Example].[Entry].[EntryAbility]receive.[]
 
 [Example].[Entry].[EntryAbility]]receive.[2,"test2"]
@@ -176,6 +183,9 @@ D、
 [Example].[Entry].[EntryAbility]receive.[]
 
 [Example].[Entry].[EntryAbility]]receive.[2,"test2"]
+```
+
+
 
 ---
 
@@ -183,9 +193,9 @@ D、
 
 A.`new.Target`、函数对象本身、`this`
 
-B．`this`、函数对象本身、new.Target
+B．`this`、函数对象本身、`new.Target`
 
-**C.  函数对象本身、\****`new.Target`** **`this`**
+**C.  函数对象本身、\`new.Target`，`this`** 
 
 D. `new.Target`、`this`、函数对象本身
 
@@ -205,35 +215,35 @@ D. TaskPool和Worker的任务执行时长上限都是无限制
 
 如果要实现Row组件内的子元素均匀排列，且第一个元素与行首对齐，最后一个元素与行尾对齐，需要使用justifycontent的哪个枚举值
 
-**A.SpaceBetween**
+**A.`SpaceBetween`**
 
-B.SpaceEvenly
+B.`SpaceEvenly`
 
-C.Start
+C.`Start`
 
-D.End
+D.`End`
 
 ---
 
 下面哪种转场效果在入场动画时，表现为从透明度为0、相对于组件正常显示位置×方向平移100vp的状态，到默认的透明度为1、相对于组件不平移的状态，且透明度动画和平移动画的动画时长均为2000ms
 
-A.TransitionEffect.translate(( x:100 ).combine(TransitionEffect.OPACITY.animation(( duration: 2000 )
+A.`TransitionEffect.translate(( x:100 ).combine(TransitionEffect.OPACITY.animation(({duration: 2000} )`
 
-**B.TransitionEffect.OPACITY.animation(( duration: 2000 ).combine(TransitionEffect.translate( x:100 )**
+**B.`TransitionEffect.OPACITY.animation(( duration: 2000 ).combine(TransitionEffect.translate( x:100 )`**
 
-C.TransitionEffect.OPACiTY.combine(TransitionEffect.translate({x:100}).animation((duration:2000})
+C.`TransitionEffect.OPACiTY.combine(TransitionEffect.translate({x:100}).animation((duration:2000})`
 
-D. TransitionEffect.asymmetric(TransitionEffect.OPACITY.animation(t duration:2000 ), TransitionEffectranslate(f x:100).animation(( duration:2000 })
+D. `TransitionEffect.asymmetric(TransitionEffect.OPACITY.animation(t duration:2000 ), TransitionEffectranslate(f x:100).animation(( duration:2000 })`
 
-如果想让outer button响应事件，hitTestBehavior该怎么配
+如果想让`router` `button`响应事件，`hitTestBehavior`该怎么配
 
-A.HitTestMode.None
+A.`HitTestMode.None`
 
-B.HitTestMode.Default
+B.`HitTestMode.Default`
 
-**C.HitTestMode.Transparent**
+**C.`HitTestMode.Transparent`**
 
-D.HitTestMode.Block
+D.`HitTestMode.Block`
 
 依次点击A、B、C、D四个按钮，其中不会触发UI刷新的是
 
@@ -259,13 +269,13 @@ D.A
 
 下关于ArkUI NavDestination组件的生命周期执行顺序中正确的是
 
-**A. onWillappear->onAppear->onWillShow->onShow->onWillHide->onHidden->onWilIDisappear->onDisappear** 
+**A. `onWillappear->onAppear->onWillShow->onShow->onWillHide->onHidden->onWilIDisappear->onDisappear`** 
 
-B. onWillappear->onAppear->onWillShow->onShow->onWillHide->onWillDisappear->onHiden->onDisappear
+B. `onWillappear->onAppear->onWillShow->onShow->onWillHide->onWillDisappear->onHiden->onDisappear`
 
-C.onWillappear->onWillShow->onShow->onAppear->onWillHide->onHidden->onWillDisappear->onDisappear 
+C.`onWillappear->onWillShow->onShow->onAppear->onWillHide->onHidden->onWillDisappear->onDisappear` 
 
-D. onWillappear->onAppear->onWilShow->onShow->onWilIDisappear->onWillHide->onHidden->onDisappear
+D. `onWillappear->onAppear->onWilShow->onShow->onWilIDisappear->onWillHide->onHidden->onDisappear`
 
 ---
 
@@ -279,19 +289,19 @@ C.代码静态分析：提供静态代码检查工具，通过语法和逻辑分
 
 D.传统调试模式：仅允许在当前断点暂停代码执行，查看调用堆栈和当前变量信息，但无法追溯历史执行状态
 
-目前您在开发一个ArkTS、Stage 模型的 Harmonyos工程，关于当前ArkTs 工程目录结构，下列选项说法错误的是？
+目前您在开发一个`ArkTS`、`Stage` 模型的 `Harmonyos`工程，关于当前`ArkTs` 工程目录结构，下列选项说法错误的是？
 
-A.oh-packagejson5:描述依赖配置，如:依赖覆盖盖(overides)、依赖关系重写(overideDependencyMap)和参数化配置(parameterFle)等
+A.`oh-packagejson5`:描述依赖配置，如:依赖覆盖盖(`overides`)、依赖关系重写(`overideDependencyMap`)和参数化配置(`parameterFle`)等
 
-**B.build-profilejson5:应用级编译构建任务脚本。**
+**B.`build-profilejson5`:应用级编译构建任务脚本。**
 
-C.AppScope>appjson5:应用的全局配置信息。
+C.`AppScope>appjson5`:应用的全局配置信息。
 
-D.entry> src> main >moduejson5：Stage 模型模块配置文件，主要包含 HAP 的配置信息、应用在具体设备上的配置信息以及应用的全局配置信息
+D.`entry> src> main >moduejson5`：Stage 模型模块配置文件，主要包含 HAP 的配置信息、应用在具体设备上的配置信息以及应用的全局配置信息
 
 ---
 
-EcoStudio提供Harmonyos应用/服务的ui预览界面与源代码文件间的双向预览功能，支持ets文件与预览器界面的双向预览。关于双向预览，下列选项说法错误的是
+`EcoStudio`提供`Harmonyos`应用/服务的ui预览界面与源代码文件间的双向预览功能，支持ets文件与预览器界面的双向预览。关于双向预览，下列选项说法错误的是
 
 A.选中预览器ui界面中的组件，则组件树上对应的组件将被选中，同时代码编辑器中的布局文件中对应的代码块高亮显示。
 
@@ -496,13 +506,13 @@ D. a3
 
 singleton模式的ulAbility，在冷启动时生命周期的执行顺序是：
 
-A. onCreate -> onForeground -> onWindowStageCreate
+A. `onCreate -> onForeground -> onWindowStageCreate`
 
-B. onCreate -> onBackground -> onForeground
+B. `onCreate -> onBackground -> onForeground`
 
-C. onCreate -> onBackground -> onWindowStageCreate
+C. `onCreate -> onBackground -> onWindowStageCreate`
 
-**D. onCreate -> onWindowStageCreate -> onForeground**
+**D. `onCreate -> onWindowStageCreate -> onForeground`**
 
 ---
 
@@ -532,13 +542,13 @@ C.2
 
 应用程序开发调试过程中经常需要安装新应用进行调测，下面安装应用操作错误的是+
 
-**A. hdc install -p ohosapp.hap** 
+**A. `hdc install -p ohosapp.hap**` 
 
-B. bm install -p /data/app/
+B. `bm install -p /data/app/`
 
-C. bm install -p ohosapp.hap
+C. `bm install -p ohosapp.hap`
 
-D. bm install -p ohosapp.hap -r
+D. `bm install -p ohosapp.hap -r`
 
 ---
 
@@ -656,11 +666,11 @@ C.foo(1,2);
 
 下面关于Node-API数据类型描述正确的是
 
-**A、napi_env:用于表示Node-API执行时的上下文**
+**A、`napi_env`:用于表示Node-API执行时的上下文**
 
-**B、napi_status:是一个枚举\****数据类型，表示Node-APl接口返回的状态信息**
+**B、`napi_status`:是一个枚举数据类型，表示Node-APl接口返回的状态信息**
 
-C、napi_threadsafe_function_call_mode：该枚举类型定义了两个常量，用于指定在何时释放线程安全函数的回调函数
+C、`napi_threadsafe_function_call_mode`：该枚举类型定义了两个常量，用于指定在何时释放线程安全函数的回调函数
 
 D、napi_threadsafe_function_release_mode：该枚举类型定义了两个常量，用于指定线程安全函数的调用模式
 
@@ -674,7 +684,7 @@ ArkTS是鸿蒙生态的应用开发语言。下列说法正确的是
 
 C.TS/JS代码支持import ArkTS代码。
 
-**D.针对\****JavaScript(简称JS)/TS并发能力支持有限的问题，ArkTS对并发编程API和能力进行了**
+**D.针对JavaScript(简称JS)/TS并发能力支持有限的问题，ArkTS对并发编程API和能力进行了**
 
 ---
 
