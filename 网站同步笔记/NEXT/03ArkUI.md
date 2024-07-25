@@ -531,7 +531,7 @@ Slider(options?: SliderOptions)
 ```
 
 ### 案例：风车效果
-
+[官方codelabs指路-基础组件Slider的适用](https://developer.huawei.com/consumer/cn/codelabsPortal/carddetails/tutorials_NEXT-SliderExample)
 ![SliderCase](screenshots/03ArkUI/SliderCase.gif)
 
 ```typescript
