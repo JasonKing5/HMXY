@@ -10,9 +10,8 @@ struct Mycomponent{
   @State compRadius: number = 32;
   build() {
     Column(){}
-
     .borderRadius(this.compRadius)//3
-    .animation({curve:Curve.Ease,duration: 200 })
+    .animation({curve:Curve.Ease,duration: 5000 })
     .width(this.compwidth)//1
     .height(this.compHeight)//2
     .backgroundColor('#ffcf7373')
