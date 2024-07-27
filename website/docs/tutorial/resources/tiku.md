@@ -432,22 +432,24 @@ D、在`ChangeMode`里改变`mode`的值，会触发其父组件`Page`的Title`�
 下示例代码中可以进行动画的属性有哪些？
 
 ```
-@component
+@Entry
+@Component
 struct Mycomponent{
-    @state compwidth:number = 100;
-    @stalecompHeight: number = 100;
-    @state compRadius: number = 32;
-    build() {
-        Column(){}.width(this.compwidth)//1
-        .height(this.compHeight)//2
-        .animation({curve:Curve.Ease，duration: 200 })
-        .borderRadius(this.compRadius)//3
-        .onclick(O=>{
-            this.compwidth+=10;   
-            this.compHeightt += 10;
-            this.compRadius5+=4；
-        })
-    }
+  @State compwidth:number = 100;
+  @State compHeight: number = 100;
+  @State compRadius: number = 32;
+  build() {
+    Column(){}
+    .width(this.compwidth)//1
+    .height(this.compHeight)//2
+    .animation({curve:Curve.Ease,duration: 200 })
+    .borderRadius(this.compRadius)//3
+    .onClick(()=>{
+      this.compwidth+=10;
+      this.compHeight += 10;
+      this.compRadius +=4;
+    })
+  }
 }
 ```
 
@@ -455,9 +457,9 @@ A.1、3
 
 B.2、3
 
-**C.1、2、3**
+C.1、2、3
 
-D.1、2
+**D.1、2**
 
 ----
 
