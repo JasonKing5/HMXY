@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "语渡-创新赛"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "语渡"
+    },
+    {
+      "name": "tab1",
+      "value": "翻译"
+    },
+    {
+      "name": "tab2",
+      "value": "历史记录"
+    }
+  ]
+}

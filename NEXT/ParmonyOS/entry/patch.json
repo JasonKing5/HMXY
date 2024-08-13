@@ -1,0 +1,11 @@
+{
+  "app": {
+    "bundleName": "com.dxin.parmonyos",
+    "patchVersionCode": 2000024,
+    "versionCode": 1000000
+  },
+  "module": {
+    "name": "entry",
+    "type": "hotreload"
+  }
+}

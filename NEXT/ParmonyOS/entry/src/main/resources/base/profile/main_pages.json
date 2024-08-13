@@ -2,6 +2,12 @@
   "src": [
     "pages/Index",
     "pages/ArkData/ArkDataHome",
-    "pages/ArkData/ArkDataAbility/ArkDataDemo"
+    "pages/ArkData/ArkDataAbility/ArkDataDemo",
+    "pages/ArkTS/BuilderDecorators",
+    "pages/ArkTS/CustomComponents",
+    "pages/ArkTS/BuilderParamDecorators",
+    "pages/ArkUI/NavigationComp",
+    "pages/ArkUI/VideoComp",
+    "pages/ArkUI/WebComp"
   ]
 }

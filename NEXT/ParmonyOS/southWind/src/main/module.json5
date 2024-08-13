@@ -1,5 +1,8 @@
 {
   "module": {
+    "requestPermissions": [
+      {"name": "ohos.permission.INTERNET"}
+    ],
     "name": "southWind",
     "type": "feature",
     "description": "$string:module_desc",
