@@ -21,7 +21,7 @@ sudo git pull
 
 # 执行 npm install 并等待完成，然后执行 npm run build
 echo "sudo npm install && npm run build"
-sudo npm install && npm run build
+sudo npm run build
 
 # 复制构建后的文件到目标目录并强制替换覆盖
 echo "sync website"
