@@ -1,5 +1,0 @@
-<div class="container" onclick="backIndex">
-    <text class="title" >
-        第二屏幕
-    </text>
-</div>

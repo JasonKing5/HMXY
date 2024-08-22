@@ -1,9 +1,0 @@
-{
-  "src": [
-    "pages/Index",
-    "pages/ZuJianStudy",
-    "pages/ImageStudy",
-    "pages/Poem",
-    "pages/CollPoem"
-  ]
-}

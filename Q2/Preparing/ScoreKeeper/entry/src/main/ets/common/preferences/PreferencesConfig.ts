@@ -1,1 +1,0 @@
-export const IS_ACCEPT_PRIVACY: string = "IS_ACCEPT_SCOREKEEPER_PRIVACY"

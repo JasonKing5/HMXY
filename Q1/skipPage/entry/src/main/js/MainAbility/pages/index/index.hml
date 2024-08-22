@@ -1,6 +1,0 @@
-<div class="container">
-    <text class="title">
-       帝心
-    </text>
-    <button class="btn" @click="goTwo">goTwo....</button>
-</div>
