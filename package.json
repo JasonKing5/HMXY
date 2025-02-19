@@ -25,6 +25,7 @@
     "@docusaurus/preset-classic": "3.0.1",
     "@hw-agconnect/auth": "^1.5.1",
     "@mdx-js/react": "^3.0.0",
+    "@popperjs/core": "^2.11.8",
     "antd": "^5.12.5",
     "axios": "^1.6.7",
     "clsx": "^2.0.0",
