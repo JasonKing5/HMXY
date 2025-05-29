@@ -9,3 +9,16 @@
   height: 200px;
   width: 270px;
 }
+
+.featureItem {
+  cursor: pointer;
+  padding-top: 1rem;
+
+  &:hover {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+}
+
