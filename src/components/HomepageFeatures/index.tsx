@@ -7,29 +7,33 @@ type FeatureItem = {
   title: string;
   img: any;
   description: JSX.Element;
+  url: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "新版本",
-    img: "/img/index_intro_1.png",
-    description: <>新版本 HarmonyOS Next 教程</>,
+    title: "华为开发者联盟HDE",
+    img: "/img/home_image1.png",
+    description: <>全球开发者专家、HarmonyOS学习资源创作达人</>,
+    url:"https://developer.huawei.com/consumer/cn/programs/hde"
   },
   {
-    title: "零基础",
-    img: "/img/index_intro_2.png",
-    description: <>零基础保姆级教程，新手轻松上手</>,
+    title: "HarmonyOS开发者社区唯一收藏",
+    img: "/img/home_image2.png",
+    description: <>全网首发HarmonyOS4.0教程，开发者社区赠予野生鸿蒙侠称号</>,
+    url:"https://space.bilibili.com/1465232701/favlist"
   },
   {
-    title: "实战开发",
-    img: "/img/index_intro_3.png",
-    description: <>华为 HarmonyOS 从基础入门到实战开发</>,
+    title: "开源鸿蒙gitee仓库教程指南",
+    img: "/img/home_image3.png",
+    description: <>个人仓库被收录为OpenHarmony官方教程指南</>,
+    url:"https://gitee.com/mayuanwei/harmonyOS_bilibili"
   },
 ];
 
-function Feature({ title, img, description }: FeatureItem) {
+function Feature({ title, img, description, url }: FeatureItem) {
   return (
-    <div className={clsx("col col--4")}>
+    <div className={clsx("col col--4", styles.featureItem)} onClick={() => window.open(url)}>
       <div className="text--center">
         <img className={styles.featureSvg} role="img" src={useBaseUrl(img)} />
       </div>
