@@ -101,7 +101,8 @@ export function ActiveTeamRow(): JSX.Element {
           喜欢吟诗，擅写故事，公众号里写尽人生百态。
           <br />
           略懂技术，偶写代码，IT教育中坚持开源精神。
-        
+          <br />
+          微信：dxinmayw
         </div>
       </TeamProfileCardCol>
       <TeamProfileCardCol
