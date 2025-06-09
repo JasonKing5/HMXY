@@ -45,6 +45,8 @@ sidebar_position: 1
    > 帝心：质量一般，但是对小白很友好。初学鸿蒙者非常适合。
    > 网友戏称：鸿蒙之父。全网最细。
 
+3. [黑马-赵艳秋-10小时通关鸿蒙5.0音乐项目](https://www.bilibili.com/video/BV1gSZvYzEdZ)
+
 3. [黑马-虎翼](https://www.bilibili.com/video/BV1Sa4y1Z7B1/)
 
    > 帝心：专业机构，质量超级好。强烈建议！
