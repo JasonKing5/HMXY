@@ -276,84 +276,8 @@ function Resources() {
             flexWrap: "wrap",
           }}
         >
-          <div className={clsx("col col--6")}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginBottom: "20px",
-              }}
-            >
-              <div className="tab-header">
-                <strong style={{ marginRight: "5px", fontSize: "1.2rem" }}>
-                  微信群助手
-                </strong>
-                {wechats.map((wechat) => (
-                  <button
-                    key={wechat.id}
-                    style={buttonStl("wechat", wechat.id)}
-                    onClick={() => changeWechatTab(wechat.id)}
-                  >
-                    {wechat.name}
-                  </button>
-                ))}
-              </div>
-              <div className="tab-content">
-                {wechats.map((wechat) => {
-                  return (
-                    activeWechatTab === wechat.id && (
-                      <div>{imageContent({ src: wechat.img })}</div>
-                    )
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-          <div className={clsx("col col--6")}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                marginBottom: "20px",
-              }}
-            >
-              <div className="tab-header">
-                <strong style={{ marginRight: "5px", fontSize: "1.2rem" }}>
-                  QQ群
-                </strong>
-                {qqs.map((qq) => (
-                  <button
-                    key={qq.id}
-                    style={buttonStl("qq", qq.id)}
-                    onClick={() => changeQQTab(qq.id)}
-                  >
-                    {qq.name}
-                  </button>
-                ))}
-              </div>
-              <div className="tab-content">
-                {qqs.map((qq) => {
-                  return (
-                    activeQQTab === qq.id && (
-                      <div>{imageContent({ src: qq.img })}</div>
-                    )
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+        
         </div>
-        {/* <div className={clsx('row', styles.tweetsSection)}>
-          {wechats.map((wechat, i) => (
-            <div className="col col--6" key={i}>
-              {tweetItems.map((tweet) => (
-                <Tweet {...tweet} key={tweet.name} />
-              ))}
-            </div>
-          ))}
-        </div> */}
       </div>
     </div>
   );
