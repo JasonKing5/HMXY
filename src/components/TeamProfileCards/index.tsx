@@ -94,7 +94,7 @@ export function ActiveTeamRow(): JSX.Element {
       <TeamProfileCardCol
         name="帝心"
         giteeUrl="https://gitee.com/mayuanwei"
-        avatarUrl='https://foruda.gitee.com/avatar/1748499638878277094/9556293_mayuanwei_1748499638.png!avatar200'
+        avatarUrl='/img/team_1.png'
         wechatUrl="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=MzI0NDQ4MjE4MQ==&scene=1&album_id=3212803851943116806"
         bilibiliUrl="https://space.bilibili.com/110937561">
         <div>
