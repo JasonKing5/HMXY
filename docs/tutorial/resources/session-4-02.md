@@ -7,6 +7,7 @@ sidebar_position: 104
 :::tip
 
 华为云鸿蒙实验记录
+
 :::
 
 
@@ -14,7 +15,16 @@ sidebar_position: 104
 
 ## 实验一
 
-### 任务1
+### 任务1 补全数据模型数组项
+得分点：能正确对指定类中创建对象进行构造初始化。
+
+请使用如下配置自行创建API为12的应用工程：
+
+应用工程创建时的相关配置如下表：
+
+* Project name : ArkTSExam
+
+* Device Type: Phone
 
 ![image-20250612151515524](screenshots/hccda/image-20250612151515524.png)
 
@@ -43,8 +53,9 @@ class DataSources {
 
 得分点：
 1、自定义组件DataCard中数据来源应使用任务一中创建数据源数组DataSources。
-2、必须通过创建自定义组件DataCard构建页面。定义完数据模型后，请自行分析布局并优先构建组成
-页面Ul的自定义组件DataCard。且自定义组件DataCard中数据来源应使用任务T中创建数据源数组DataSources。
+
+2、必须通过创建自定义组件DataCard构建页面。定义完数据模型后，请自行分析布局并优先构建组成页面Ul的自定义组件DataCard。且自定义组件DataCard中数据来源应使用任务T中创建数据源数组DataSources。
+
 DataCard自定义组件布局如下图所示：
 
 ![image-20250612151007591](screenshots/hccda/image-20250612151007591.png)
@@ -88,21 +99,51 @@ struct DataCard {
 }
 ```
 
+> 完成以上内容并截图提交后，为方便后续步骤，添加export关键字
+
+![alt text](screenshots/image-1.png)
+
+### 任务3：使用渲染控制语法，构建页页面
+1、必须正确使用任务二中创建的DataCard组件
+
+2、必须通过染控制语法创建页面组件DataSourcesListView.
+构建完成自定义组件DataCard后，请使用渲染控制语法以及子组件DataCard构建组件DataSourcesListView
+
+如下所示，已提供自定义组件DataSourcesListView构建过程中所需具体样式属性参数，请根据这些信息构建出正确的页面。
+
+![alt text](screenshots/careateDataSourcesListView.png)
+![alt text](screenshots/image.png)
+
+![alt text](screenshots/image-2.png)
 
 
-## **拉起UIAbility**
+## 实验二：根据题目描述，使用DevEcoStudio实现启动应用内的UIAbility并获取返回结
 
-#### 1.导入
+#### 任务1：创建UIAbility并指定启动页面
+本实验包含两个UIAbility，每个UIAbility关联一张Page页面。EntryAbility与其关联的Page页面Index.ets创建好HarmonyOs工程后默认提供。接下来，请自行创建好一个UIAbility命名为SecondAbility，再创建好一个页面名叫Second，使其成为SecondAbility的指定启动页面。
 
-> 本步不必手动操作，直接操作后续步骤，本代码会自动导入
+> 创建 SecondAbility
+![alt text](screenshots/image-3.png)
+
+![alt text](screenshots/image-4.png)
+> 创建 Second
+![alt text](screenshots/image-5.png)
+![alt text](screenshots/image-6.png)
+> 设置 Second 页面为SecondAbility的启动页
+![alt text](screenshots/image-7.png)
+
+### 任务2：启动应用内的SecondAbility并传递参数
+本实验代码中，已经将Index.ets页面的基本U界面提前构建完毕。接下来，请补全Apply（方法，使其可以完成启动SecondAbility并传递参数的功能。最终实现如下功能效果：
+Index页面中存在一个文本输出框，当用户在其中输出文本，并点击提桥按钮，应用会将用户所输出文本在second页面上显示。
+
+
+>1 本步不必手动操作，直接操作后续步骤，本代码会自动导入
 
 ```
 import {common ,Want} from '@kit.AbilityKit'
 ```
 
-
-
-#### 2.添加正确事件从而完善TextInput组件，确保将用户输入信息
+> 2.添加正确事件从而完善TextInput组件，确保将用户输入信息
 
 ```
 .onChange((value） =>{
@@ -112,16 +153,18 @@ import {common ,Want} from '@kit.AbilityKit'
 
 
 
-#### 3.获取上下文
+> 3.获取上下文。
 
 ```
 let context : common.UIAbilityContext = getContext(this) as common.UIAbilityContext
 ```
 
-#### 4. 创建建want对象，将要传递的自定义参数放入其中
+> 4. 创建建want对象，将要传递的自定义参数放入其中
+>
+>为了方便让编辑器自动提示，先在=前面添加类型 `: Want`。
 
 ```
-let wantInfo = {
+let wantInfo :Want= {
 	deviceId:'',	//为空代表本设备
 	bundleName:getContext(context).applicationInfo.name,	//应用名
 	abilityName:'SecondAblity',		//目标Ability
@@ -133,21 +176,37 @@ let wantInfo = {
 
 
 
-#### 接收EntryAbility传递过来的参数
+### 任务3 接收EntryAbility传递过来的参数
 
+![alt text](screenshots/image-8.png)
+
+### 任务4：参数在Second页面中展示
+提供Second文件代码如下，请将代码补齐
 ```
-let SecondAbilityInfo = want
+// 填空 1
+let info = AppStorage.get("info") as string
+@Entry
+@Component
+struct Second {
+  // 填空2
+  @State message: string = info
+
+  build() {
+    Column({ space: 30 }) {
+      // 填空3
+      Text(this.message)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
 ```
-
-#### 将解析好的参数信息存到中AppStorage，方便在批假页面中使用
-
-```
-Appstorage.setorcreate('info',info)
-```
-
-
 
 ## 实验三卡片
+### 新建卡片项目
+![alt text](screenshots/createProject.png)
+
+
 
 #### 如果UIAbility是首次启动，在收到卡片Router事件后会触发onCreate生命周期回调
 
