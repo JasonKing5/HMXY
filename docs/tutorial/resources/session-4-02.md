@@ -202,37 +202,40 @@ struct Second {
 }
 ```
 
-## 实验三卡片
-### 新建卡片项目
+## 实验三 开发ArkTS卡片
+### 任务1 新建ArkTS卡片
+
+> 创建项目
+
 ![alt text](screenshots/createProject.png)
+![alt text](screenshots/image-9.png)
+
+> 创建卡片
+
+![alt text](screenshots/image-10.png)
+![alt text](screenshots/image-11.png)
+
+> 提交对应截图
+
+![alt text](screenshots/image-12.png)
+
+### 任务2:使用router事件跳转到EntryAbility
+> 1. 在ets\>pages目录下新建一张名为“Detail"的Page页面，> 将下列代码复制到新建的Detailets文件中，覆盖Detailets文>  件中的原有代码.
+
+> 2. 将下列代码复制到ExamCard.ets文件中，覆盖ExamCard.> ets文件中的原有代码。
+> 
+
+> 3. 将下列代码复制到EntryAbility.ts文件中，覆盖
+> EntryAbility.ts文件中的原有代码，并根据注释补全缺失代
+> 码，实现在Entrybility中接收router事件并获取参数，根据> 传递的params不同，选择拉起不同的页面。
+
+![alt text](screenshots/image-13.png)
+
+### 任务3：通过message事件刷新卡片内容（8分）
+> 1、将下列代码复制到EntryFormAbility.ts中，覆盖
+> EntryFormAbility.ts原有的代码，并根据注释补全缺代码，> 实现通过message事件刷新卡片的内容。
 
 
+![alt text](screenshots/image-14.png)
 
-#### 如果UIAbility是首次启动，在收到卡片Router事件后会触发onCreate生命周期回调
-
-```
-	// let params:Record<string,Object> = JsoN.parse(___________as string）：//补全代码，
-let params:Record<string,Object> = JsoN.parse(want.parameters.params as string)
-	// this.selectPage = _________ as string：//补全代码，以实现获取获取router事件中传递的target
-this.selectPage =params.targetPage as string：//补全代码·以实现获联获取router事件中
-```
-
-
-
-
-
-
-
-```
-	//补全代码，绑定要刷新的内容
- 	// let formInfo = formBindingData.createFormBindingData(__________)
-let formInfo = formBindingData.createFormBindingData(formData)
-	// 补全代码，调用相关接口刷新卡月内容
-	// formProvider.___________(formId, formInfo).then((data) =>{
-formProvider.updateForm (formId, formInfo).then((data)=>{
-	console.info('FormAbility updateForm success.+ JsoN.stringify(data));
-}).catch((error:BusinessError) =>{
-	
-}
-```
 
