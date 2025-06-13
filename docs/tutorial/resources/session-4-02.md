@@ -56,12 +56,6 @@ class DataSources {
 
 2、必须通过创建自定义组件DataCard构建页面。定义完数据模型后，请自行分析布局并优先构建组成页面Ul的自定义组件DataCard。且自定义组件DataCard中数据来源应使用任务T中创建数据源数组DataSources。
 
-DataCard自定义组件布局如下图所示：
-
-![image-20250612151007591](screenshots/hccda/image-20250612151007591.png)
-
-
-
 1. `@Component`
 2. `struct`
 3. `@Prop dataSources : DataSources` 
@@ -70,34 +64,8 @@ DataCard自定义组件布局如下图所示：
 6. `this.dataSources.title`
 7. `this.dataSources.brief`
 
-```
-@Component
-struct DataCard {
-  //使用 @Prop 装饰器连接数据源 DataSources
-  @Prop dataSources: DataSources
-  build() {
-    Row() {
-      Image($r('app.media.startIcon'))//系统自动提供图标
-        .width(80)
-        .height(80)
-        .margin({ right: 20 })
-      //清根据提供UI页面图样式·选择正纳的容器组件
-      Column() {
-        //Text组件零数空缺处请补全
-        Text(this.dataSources.title)
-          .fontSize(20)
-          .margin({ bottom: 8 })
-        Text(this.dataSources.brief)
-          .fontSize(16)
-          .fontColor(Color.Gray)
-          .margin({ bottom: 8 })
-      }
-      .alignItems(HorizontalAlign.Start)
-      .width('80%')
-    }
-  }
-}
-```
+![alt text](screenshots/image-21.png)
+
 
 > 完成以上内容并截图提交后，为方便后续步骤，添加export关键字
 
