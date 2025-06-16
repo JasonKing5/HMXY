@@ -124,47 +124,51 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      // links: [
-      //   {
-      //     title: 'Docs',
-      //     items: [
-      //       {
-      //         label: '课程',
-      //         to: '/docs/intro',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: 'Community',
-      //     items: [
-      //       {
-      //         label: 'Stack Overflow',
-      //         href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //       },
-      //       {
-      //         label: 'Discord',
-      //         href: 'https://discordapp.com/invite/docusaurus',
-      //       },
-      //       {
-      //         label: 'Twitter',
-      //         href: 'https://twitter.com/docusaurus',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: 'More',
-      //     items: [
-      //       {
-      //         label: '博客',
-      //         to: '/blog',
-      //       },
-      //       {
-      //         label: 'Gitee',
-      //         href: 'https://gitee.com/mayuanwei/harmonyOS_bilibili',
-      //       },
-      //     ],
-      //   },
-      // ],
+      links: [
+        {
+          title: '鸿蒙学苑',
+          items: [
+            {
+              label: '课程',
+              to: '/docs/tutorial/intro',
+            },
+            {
+              label: '博客',
+              to: '/blog',
+            },
+            {
+              label: '社区',
+              to: 'docs/community/team/',
+            },
+          ],
+        },
+        {
+          title: '团队',
+          items: [
+            {
+              label: '帝心',
+              href: 'https://space.bilibili.com/110937561',
+            },
+            {
+              label: '庄生',
+              href: 'https://space.bilibili.com/286327785',
+            },
+          ],
+        },
+        {
+          title: '更多',
+          items: [
+            {
+              label: 'CodeFE',
+              href: 'https://www.codefe.cn/',
+            },
+            {
+              label: '醉诗词',
+              href: 'https://poetry.codefe.cn/',
+            },
+          ],
+        },
+      ],
       copyright: `ICP备案<a href=" https://beian.miit.gov.cn/" target="_blank" style="margin-left: 5px; margin-right: 20px; color: #b5b5b5">豫ICP备2022004823号-1</a> Copyright © ${new Date().getFullYear()} 鸿蒙学苑`,
     },
     prism: {
