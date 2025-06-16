@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
 id: team
-sidebar_label: 我们
+sidebar_label: 关于我们
 slug: /community/team
 ---
 
