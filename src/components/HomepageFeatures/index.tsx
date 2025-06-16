@@ -13,7 +13,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: "华为开发者联盟HDE",
     img: "/img/home_image1.png",
-    description: "全球开发者专家、HarmonyOS学习资源创作达人、深圳市讯方技术股份有限公司老师",
+    description: "帝心-马园威：全球HDE专家、HarmonyOS创作达人、讯方高级讲师、鸿蒙诗人",
     url: "https://developer.huawei.com/consumer/cn/programs/hde",
     type: "user"
   },
