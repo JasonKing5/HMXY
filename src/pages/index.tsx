@@ -7,11 +7,22 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import useBaseUrl, { useBaseUrlUtils } from "@docusaurus/useBaseUrl";
 import Heading from "@theme/Heading";
 import Tweet from "@site/src/components/Tweet";
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 import styles from "./index.module.css";
 import AGCServer from "../server";
 import { hasToken } from "../server/auth";
+
+const POETRY_LINES = [
+  "君不见，黄河之水天上来，奔流到海不复回。",
+  "人生得意须尽欢，莫使金樽空对月。",
+  "天生我材必有用，千金散尽还复来。",
+  "长风破浪会有时，直挂云帆济沧海。",
+  "会当凌绝顶，一览众山小。",
+  "海内存知己，天涯若比邻。",
+  "欲穷千里目，更上一层楼。",
+  "落霞与孤鹜齐飞，秋水共长天一色。"
+];
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -283,6 +294,38 @@ function Resources() {
   );
 }
 
+const PoetryBar = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  // 随机选择一首诗词
+  const randomPoetry = useMemo(() => {
+    const randomIndex = Math.floor(Math.random() * POETRY_LINES.length);
+    return POETRY_LINES[randomIndex];
+  }, []);
+
+  if (!isVisible) return null;
+
+  return (
+    <div className={clsx(styles.poetryBar)}>
+      <a
+        href="https://poetry.codefe.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {randomPoetry}
+      </a>
+      <div 
+        className={styles.poetryBarClose} 
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsVisible(false);
+        }}
+      >
+        <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4388" width="18" height="18"><path d="M512 42.666667a469.333333 469.333333 0 1 0 469.333333 469.333333A469.333333 469.333333 0 0 0 512 42.666667z m0 864a394.666667 394.666667 0 1 1 394.666667-394.666667 395.146667 395.146667 0 0 1-394.666667 394.666667z" p-id="4389" fill="#8a8a8a"></path><path d="M670.4 300.8l-154.666667 154.666667a5.333333 5.333333 0 0 1-7.573333 0l-154.666667-154.666667a5.333333 5.333333 0 0 0-7.52 0l-45.173333 45.28a5.333333 5.333333 0 0 0 0 7.52l154.666667 154.666667a5.333333 5.333333 0 0 1 0 7.573333l-154.666667 154.666667a5.333333 5.333333 0 0 0 0 7.52l45.28 45.28a5.333333 5.333333 0 0 0 7.52 0l154.666667-154.666667a5.333333 5.333333 0 0 1 7.573333 0l154.666667 154.666667a5.333333 5.333333 0 0 0 7.52 0l45.28-45.28a5.333333 5.333333 0 0 0 0-7.52l-154.666667-154.666667a5.333333 5.333333 0 0 1 0-7.573333l154.666667-154.666667a5.333333 5.333333 0 0 0 0-7.52l-45.28-45.28a5.333333 5.333333 0 0 0-7.626667 0z" p-id="4390" fill="#8a8a8a"></path></svg>
+      </div>
+    </div>
+  );
+};
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
@@ -301,6 +344,7 @@ export default function Home() {
   // })
   return (
     <Layout title={`${siteConfig.title} 首页`} description="鸿蒙学苑">
+      <PoetryBar />
       <HomepageHeader />
       <main>
         <HomepageFeatures />

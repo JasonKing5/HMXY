@@ -375,3 +375,19 @@ html[data-theme="dark"] .topBannerTitleText {
   align-items: center;
   margin-bottom: 20px;
 }
+
+.poetryBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+}
+
+.poetryBarClose {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+}
