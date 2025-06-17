@@ -110,8 +110,8 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://gitcode.com/Dxin/harmonyOS_bilibili/',
-          label: 'GitCode',
+          href: 'https://www.yuque.com/myw',
+          label: '帝心语雀',
           position: 'right',
         },
         // {
