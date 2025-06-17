@@ -1,6 +1,11 @@
 ---
 sidebar_position: 100
 ---
+:::tip
+    协同开发必会技能
+:::
+
+
 # git安装与基本使用
 
 ### 1. [git下载国内镜像地址](https://registry.npmmirror.com/binary.html?path=git-for-windows/)
