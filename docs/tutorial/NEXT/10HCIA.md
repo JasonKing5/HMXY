@@ -8,7 +8,9 @@ sidebar_position: 100
 # 程序框架服务实验
 [本教程配套源码](https://gitee.com/mayuanwei/harmonyOS_bilibili/tree/master/HCIA/startAbility)
 
-![拉起效果](screenshots/10HCIA/拉起效果.gif)
+![拉起效果](screenshots/10HCIA/效果图.gif)
+
+
 ---
 
 *	掌握如何启动应用内的 `UIAbility`；
