@@ -368,7 +368,7 @@ const PoetryBar = () => {
         rel="noopener noreferrer"
       >
         {randomPoetry}
-        <span> 🎈🎂🎉🎈</span>
+        {/* <span> 🎈🎂🎉🎈</span> */}
       </a>
       <div 
         className={styles.poetryBarClose} 
