@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 100
 ---
 > HCIA实验。基于`API19`
 
@@ -7,6 +7,10 @@ sidebar_position: 10
 
 # 程序框架服务实验
 [本教程配套源码](https://gitee.com/mayuanwei/harmonyOS_bilibili/tree/master/HCIA/startAbility)
+
+![拉起效果](screenshots/10HCIA/拉起效果.gif)
+---
+
 *	掌握如何启动应用内的 `UIAbility`；
 *	掌握如何启动应用内的 `UIAbility` 并获取返回结果；
 *	掌握 `UIAbility` 组件与 `UI` 的数据同步；
