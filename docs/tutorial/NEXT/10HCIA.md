@@ -5,7 +5,7 @@ sidebar_position: 110
 
 ---
 
-# 程序框架服务实验
+## 程序框架服务实验
 [本教程配套源码](https://gitee.com/mayuanwei/harmonyOS_bilibili/tree/master/HCIA/startAbility)
 
 ![拉起效果](screenshots/10HCIA/效果图.gif)
@@ -19,11 +19,11 @@ sidebar_position: 110
 *	通过 `openLink` 和 `startAbility`实现应用间跳转。
 ---
 
-## 任务一 ： 拉起指定 UIAbility
+### 任务一 ： 拉起指定 UIAbility
 > 场景：在安卓系统的微信中，可点击小程序拉起第二个UIAbility，例如使用微信小程序`JJ象棋`。
 >
 > 将程序设计为多个Ability的方便之处在于，从底部上滑时，可以在一个应用里显示多个窗口模块，方便用户切换。
-### 设计主程序`Ability`的`Index`界面和功能
+#### 设计主程序`Ability`的`Index`界面和功能
 > 两种拉起方式：`单纯拉起`/ `拉起并获取返回结果`
 
 ```arkts
@@ -110,7 +110,7 @@ struct Index {
 }
 ```
 
-### 创建新Ability
+#### 创建新Ability
 
 1 在entry目录上右键新建 Ability。正常取名。例如：`JJchessAbility`
 
@@ -221,13 +221,9 @@ struct JJchess {
 ```
 
 ---
-## 任务二 ： 拉起指定 UIAbility并获取返回结果
-
-
----
-## 任务二 ： 拉起指定 应用
+### 任务二 ： 拉起指定 UIAbility并获取返回结果
 > 场景： 在微信中拉起QQ
-### 新建项目 QQApplication
+#### 新建项目 QQApplication
 > 仅仅修改Index能够呈现UI即可。
 
 ![qq](screenshots/10HCIA/qq.png)
@@ -257,7 +253,7 @@ struct JJchess {
         ]
 ```
 
-### 拉起方应用使用 startAbility 实现应用跳转
+#### 拉起方应用使用 startAbility 实现应用跳转
 > `startAbility`接口是将应用链接放入`want`中，通过调用隐式`wan`t匹配的方法触发应用跳转。
 通过`startAbility`接口启动时，还需要自己传入待匹配的`action` 和`entity`。
 
@@ -288,7 +284,7 @@ Button('使用 startAbility 唤醒QQ')
 
 ```
 ---
-### 拉起方应用使用 openLink 实现应用跳转
+#### 拉起方应用使用 openLink 实现应用跳转
 > 在`openLink`接口的`link`字段中传入目标应用的URL信息，并将`options`字段中的`appLinkingOnly`配置为`false`。
 
 >为使得代码简洁易读，在拉起方应用将上述操作封装到自定义的`openLinkQQApplication()`方法
