@@ -221,7 +221,7 @@ struct JJchess {
 ```
 
 ---
-### 任务二 ： 拉起指定 UIAbility并获取返回结果
+### 任务二 ： 拉起指定第三方应用
 > 场景： 在微信中拉起QQ
 #### 新建项目 QQApplication
 > 仅仅修改Index能够呈现UI即可。
