@@ -8,7 +8,6 @@ sidebar_position: 110
 ## 程序框架服务实验
 [本教程配套源码](https://gitee.com/mayuanwei/harmonyOS_bilibili/tree/master/HCIA/startAbility)
 
-![拉起效果](screenshots/10HCIA/效果图.gif)
 
 
 ---
