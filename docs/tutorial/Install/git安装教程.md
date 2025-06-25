@@ -6,35 +6,35 @@ sidebar_position: 100
 :::
 
 
-# git安装与基本使用
+## git安装与基本使用
 
 ### 1. [git下载国内镜像地址](https://registry.npmmirror.com/binary.html?path=git-for-windows/)
 
 ### 2. 拉到底部找到最新版本
 > 编写本文档时刻，最新版本为2.50。您看到时，或许会有更新版本。选择最新即可。
 
-![alt text](screenshots/image.png)
+![alt text](screenshots/git安装教程/git安装教程/image.png)
 
 ### 3.选择对应版本安装包下载
 > 如果你是windows电脑，选择64-bit.exe下载。
 
-![alt text](screenshots/image-1.png)
+![alt text](screenshots/git安装教程/image-1.png)
 
 ### 4.双击安装包进行安装
 > 无脑下一步，一路next！直到结束。安装路径可以默认C盘也可以修改其他位置，但是要求不能有中文以及花里胡哨的路径。
 
-![alt text](screenshots/image-2.png)
+![alt text](screenshots/git安装教程/image-2.png)
 
-![alt text](screenshots/image-3.png)
+![alt text](screenshots/git安装教程/image-3.png)
 
 ### 测试是否安装成功
 > `win+r`输入`cmd`进入终端黑窗口，输入命令：`git -v`。查看版本号。
 > 
 > 如果正确显示版本号，说明安装成功。如果提示：`不是内部或外部命令。说明安装失败。`
 
-![启动终端](screenshots/image-4.png)
+![启动终端](screenshots/git安装教程/image-4.png)
 
-![查看版本号](screenshots/image-5.png)
+![查看版本号](screenshots/git安装教程/image-5.png)
 
 ### 5. gitee注册登录+创建仓库
 
@@ -42,11 +42,11 @@ sidebar_position: 100
 > 注册gitee账号时候，手机号和密码无比记清楚。后续会使用。
 
 #### 2. 创建临时仓库
-![创建仓库](screenshots/image-6.png)
+![创建仓库](screenshots/git安装教程/image-6.png)
 
 #### 3. git全局设置
 
-![全局设置用户信息](screenshots/image-7.png)
+![全局设置用户信息](screenshots/git安装教程/image-7.png)
 > `win+r`输入`cmd`进入终端黑窗口，粘贴上图命令，`回车`执行。
 
 ### git代码同步基本命令
