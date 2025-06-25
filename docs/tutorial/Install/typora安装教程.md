@@ -15,23 +15,23 @@ sidebar_position: 100
 
 ## **安装步骤：一路下一步**
 
-![img](./screenshots/typora安装教程/clip_image002-16953091382531.gif)
+![img](screenshots/typora安装教程/clip_image002-16953091382531.gif)
 
-![](/screenshots/typora安装教程/clip_image004-16953091382542.gif)
+![](screenshots/typora安装教程/clip_image004-16953091382542.gif)
 
-![](/screenshots/typora安装教程/clip_image006-16953091382543.gif)
-
-
-
-![img](/screenshots/typora安装教程/clip_image008-16953091382547.gif)
+![](screenshots/typora安装教程/clip_image006-16953091382543.gif)
 
 
 
-![](/screenshots/typora安装教程/clip_image010-16953091382544.gif)
+![img](screenshots/typora安装教程/clip_image008-16953091382547.gif)
 
 
 
-![img](/screenshots/typora安装教程/clip_image012-16953091382545.gif)
+![](screenshots/typora安装教程/clip_image010-16953091382544.gif)
+
+
+
+![img](screenshots/typora安装教程/clip_image012-16953091382545.gif)
 
 # **激活**
 
@@ -45,6 +45,6 @@ G7LPKN-HP4NLD-FA3BGF-6JDQ5R
 VEZ7NV-USYN3G-8TL2N3-DADUG4
 ```
 
-![img](/screenshots/typora安装教程/clip_image014-16953091382546.gif)
+![img](screenshots/typora安装教程/clip_image014-16953091382546.gif)
 
  
