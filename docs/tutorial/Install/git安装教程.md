@@ -13,7 +13,7 @@ sidebar_position: 100
 ### 2. 拉到底部找到最新版本
 > 编写本文档时刻，最新版本为2.50。您看到时，或许会有更新版本。选择最新即可。
 
-![alt text](screenshots/git安装教程/git安装教程/image.png)
+![alt text](screenshots/git安装教程/image.png)
 
 ### 3.选择对应版本安装包下载
 > 如果你是windows电脑，选择64-bit.exe下载。
