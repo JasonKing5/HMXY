@@ -111,7 +111,7 @@ const config: Config = {
         },
         {
           href: 'https://gitee.com/mayuanwei/teacherTraining2025',
-          label: '2025年全省职业院校教师省级培训',
+          label: '2025年全省职业院校骨干教师省级培训',
           position: 'right',
         },
         // {
