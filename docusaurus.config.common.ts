@@ -110,8 +110,8 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://www.yuque.com/myw',
-          label: '帝心语雀',
+          href: 'https://gitee.com/mayuanwei/teacherTraining2025',
+          label: '2025年全省职业院校教师省级培训',
           position: 'right',
         },
         // {
