@@ -110,8 +110,8 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://gitee.com/mayuanwei/teacherTraining2025',
-          label: '2025年全省职业院校骨干教师省级培训',
+          href: 'https://gitee.com/mayuanwei/BestPoetry',
+          label: '醉诗词全栈教程',
           position: 'right',
         },
         // {
