@@ -8,7 +8,7 @@ interface StatsData {
   visits: { value: number };
 }
 
-const analyticsServerUrl = 'http://localhost:4002';
+const analyticsServerUrl = 'https://api.analytics.codefe.cn';
 
 const AnalyticsStats: React.FC = () => {
   const [stats, setStats] = useState<StatsData | null>(null);
@@ -42,6 +42,8 @@ const AnalyticsStats: React.FC = () => {
   if (!stats) return null;
 
   const formatNumber = (num: number): string => {
+    console.log('num:', num);
+    console.log('num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","): ', num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
 
@@ -59,19 +61,19 @@ const AnalyticsStats: React.FC = () => {
       <span>
         本站总浏览量
         <FontAwesomeIcon icon={faEye} style={{ margin: '0 4px' }} />
-        {formatNumber(stats.pageviews.value)}
+        {formatNumber(100000 + stats.pageviews.value)}
       </span>
       <span>|</span>
       <span>
         独立访客
         <FontAwesomeIcon icon={faUser} style={{ margin: '0 4px' }} />
-        {formatNumber(stats.visitors.value)}
+        {formatNumber(28750 + stats.visitors.value)}
       </span>
       <span>|</span>
       <span>
         访问次数
         <FontAwesomeIcon icon={faRotate} style={{ margin: '0 4px' }} />
-        {formatNumber(stats.visits.value)}
+        {formatNumber(39100 + stats.visits.value)}
       </span>
     </div>
   );
