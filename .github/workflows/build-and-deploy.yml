@@ -40,14 +40,14 @@ jobs:
           port: ${{ secrets.DEPLOY_PORT }}
           script: "echo ${{ secrets.DEPLOY_PASSWORD }} | sudo -S rm -rf /data/hm/*"
         # copy build files to remote host
-      - name: Remote copy build files
-        run: tar -czf build.tar.gz -C ./build . sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" scp -o StrictHostKeyChecking=no -P ${{ secrets.DEPLOY_PORT }} build.tar.gz ${{ secrets.DEPLOY_USERNAME }}@${{ secrets.DEPLOY_HOST }}:/data/hm
+      - name: remote copy
+        run: sudo tar -zcf build.tar.gz ./build/* && sudo sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" scp -o StrictHostKeyChecking=no build.tar.gz ${{ secrets.DEPLOY_USERNAME }}@${{ secrets.DEPLOY_HOST }}:/data/hm 
         # deploy new version in host server
-      - name: Deploy to remote host
-        run: |
-          sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" ssh -o StrictHostKeyChecking=no -p ${{ secrets.DEPLOY_PORT }} ${{ secrets.DEPLOY_USERNAME }}@${{ secrets.DEPLOY_HOST }} "
-            echo '${{ secrets.DEPLOY_PASSWORD }}' | sudo -S mkdir -p /data/hm &&
-            echo '${{ secrets.DEPLOY_PASSWORD }}' | sudo -S tar -zxf /data/hm/build.tar.gz -C /data/hm &&
-            echo '${{ secrets.DEPLOY_PASSWORD }}' | sudo -S cp -rf /data/hm/build/* '${{ secrets.DEPLOY_PATH }}' &&
-            echo '✅ Deploy success: files copied to ${{ secrets.DEPLOY_PATH }}'
-          "
+      - name: deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USERNAME }}
+          password: ${{ secrets.DEPLOY_PASSWORD }}
+          port: ${{ secrets.DEPLOY_PORT }}
+          script: "echo ${{ secrets.DEPLOY_PASSWORD }} |sudo -S tar -zxf /data/hm/build.tar.gz -C /data/hm && echo ${{ secrets.DEPLOY_PASSWORD }} |sudo -S cp -rf /data/hm/build/* ${{ secrets.DEPLOY_PATH }}"
