@@ -169,35 +169,8 @@ Index页面中存在一个文本输出框，当用户在其中输出文本，并
 ![alt text](screenshots/image-13.png)
 
 ### 任务3：通过message事件刷新卡片内容（8分）
-> 1、将下列代码复制到EntryFormAbility.ts中，覆盖
+> 1、将下列代码复制到 `EntryFormAbility.ts` 中，覆盖
 > EntryFormAbility.ts原有的代码，并根据注释补全缺代码，> 实现通过message事件刷新卡片的内容。
 
 
 ![alt text](screenshots/image-14.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
