@@ -36,7 +36,7 @@ sidebar_position: 1
 
 ### 官方视频教程
 
-1. [官方视频教程(NEXT)](https://developer.huawei.com/consumer/cn/doc/harmonyos-video-courses/video-tutorials-0000001443535745)
+1. [官方视频教程 (NEXT)](https://developer.huawei.com/consumer/cn/doc/harmonyos-video-courses/video-tutorials-0000001443535745)
 
    > 帝心：质量极好
 
