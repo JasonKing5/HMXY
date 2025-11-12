@@ -29,7 +29,7 @@
 ## 技术栈
 项目使用以下技术栈：
 - **前端**: React, TypeScript, Docusaurus
-- **后端**: Node.js, Express
+<!-- - **后端**: Node.js, Express -->
 
 ## 贡献者
 - **核心成员**: 庄生, 帝心
