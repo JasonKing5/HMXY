@@ -92,3 +92,4 @@ sidebar_position: 1
 3. [HarmonyOS 应用开发者高级认证](https://developer.huawei.com/consumer/cn/training/dev-cert-detail/101684223987951077)
 
 4. [开发者认证题库](../tutorial/resources/session-4-00.md)
+
