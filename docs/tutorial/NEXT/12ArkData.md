@@ -19,7 +19,7 @@ sidebar_position: 112
 
 如图所示，用户程序通过`ArkTS`接口调用用户首选项读写对应的数据文件。开发者可以将用户首选项持久化文件的内容加载到`Preferences`实例，每个文件唯一对应到一个`Preferences`实例，系统会通过静态容器将该实例存储在内存中，直到主动从内存中移除该实例或者删除该文件。
 
-![img](screenshots/ArkData/Preferences.jpg)
+![img](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/Preferences.f30cbff9.jpg)
 
 ### 约束限制
 

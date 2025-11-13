@@ -37,7 +37,7 @@ sidebar_position: 101
 
 ### 新场景
 
-![](./img/session1-设备.png)
+![](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-设备.f5b84c12.png)
 
 随着诸多设备搭载 HarmonyOS 系统以来，HarmonyOS 开发技术也逐渐成熟与推广开来，诸多对 HarmonyOS 技术感兴趣的开发者或亟待考取鸿蒙开发者认证人员，急需一套浅显易懂且循序渐进的系统性教程进行学习，这套理论与实践相辅相成的 HarmonyOS 教程将会助力您高效掌握 HarmonyOS 应用开发。
 
@@ -53,7 +53,7 @@ sidebar_position: 101
 
 - 命令式编程，需关注细节，变更频繁，维护成本高。
   **移动终端应用生态面临变革， 轻量化程序实体正成为新的趋势**
-  ![session1-传统](img/session1-传统.png)
+  ![session1-传统](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-传统.7d9152cc.png)
   
   ### 鸿蒙生态迎接挑战
   
@@ -72,24 +72,24 @@ sidebar_position: 101
 - HarmonyOS 通过硬件互助，资源共享的能力，将多个形态不一的设备进行组网，共同构成一个超级终端，可在超级终端中实现任务分发与数据共享。
 
 - 硬件互助依赖 HarmonyOS 的分布式软总线，在此基础上，HarmonyOS 还具备了分布式硬件虚拟化、分布式数据管理、分布式任务调度等分布式特性。
-  ![session1-分布式](img/session1-分布式.png)
+  ![session1-分布式](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-分布式.cd2c23e5.png)
   
 - 在传统的单设备系统能力基础上，HarmonyOS 提出了基于同一套系统能力、适配多种终端形态的分布式理念，能够支持手机、平板、智能穿戴、智慧屏、车机等多种终端设备，提供全场景（移动办公、运动健康、社交通信、媒体娱乐等）业务能力。
-  ![session1-互联](img/session1-互联.png)
+  ![session1-互联](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-互联.73a54acb.png)
   
   ### OpenHarmony
   
 - HarmonyOS 是华为通过 OpenHarmony 项目，结合商业发行版增加能力，构建华为自研产品的完整解决方案。
 
 - OpenHarmony 是由开放原子开源基金会（OpenAtom Foundation）孵化及运营的开源项目，目标是面向全场景、全连接、全智能时代，基于开源的方式，搭建一个智能终端设备操作系统的框架和平台，促进万物互联产业的繁荣发展。
-  ![session1-关系](img/session1-关系.png)
-  ![session1-组成](img/session1-组成.png)
+  ![session1-关系](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-关系.5072ea04.png)
+  ![session1-组成](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-组成.3d9f6865.png)
 
 ### HarmonyOS Connect
 
 - HarmonyOS Connect（中文“鸿蒙智联”）是华为统一的智能硬件生态品牌。
 - HarmonyOS Connect 生态伙伴可以基于华为提供的芯片设计、操作系统、连接、云、AI 和用户体验设计能力，为消费者提供高品质的智能硬件生态设备，使该设备能够与华为 HarmonyOS 设备（包括手机、全屋主机、智能座舱、智慧屏、手表等终端）以及其他的 HarmonyOS Connect 生态设备进行联接和协同，共同打造互联互通的 HarmonyOS Connect 生态。
-  ![session1-connect](img/session1-connect.png)
+  ![session1-connect](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-connect.d5645879.png)
 
 ---
 
@@ -102,11 +102,11 @@ sidebar_position: 101
 
 ### ArkTS
 ArkTS 是华为自研的开发语言。它在 TypeScript（简称 TS）的基础上，匹配 ArkUI 框架，扩展了声明式 UI、状态管理等相应的能力，让开发者以更简洁、更自然的方式开发跨端应用。
-![session1-arktsAndJs](img/session1-arktsAndJs.png)
+![session1-arktsAndJs](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-arktsAndJs.bd89935d.png)
 
 ### ArkUI
 ArkUI 是一套构建分布式应用界面的声明式 UI 开发框架。它使用极简的 UI 信息语法、丰富的 UI 组件、以及实时界面预览工具，提升开发效率。使用一套 ArkTS API，就能在多个 HarmonyOS 设备上提供生动而流畅的用户界面体验。
-![session1-arkUI](img/session1-arkUI.gif)
+![session1-arkUI](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-arkUI.9f268307.gif)
 
 ### 鸿蒙生态应用核心技术理念
 在万物智联时代重要机遇期，鸿蒙系统结合移动生态发展的趋势，提出了三大技术理念。
@@ -114,25 +114,25 @@ ArkUI 是一套构建分布式应用界面的声明式 UI 开发框架。它使�
 - 一次开发 多端部署
 - 可分可合 自由流转
 - 统一生态 原生智能
-  ![session1-三大理念](img/session1-三大理念.png)
+  ![session1-三大理念](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-三大理念.e089a804.png)
   
   ### 原子化服务定义
 - 原子化服务是 HarmonyOS 提供的一种全新的应用形态，具有独立入口，用户可通过点击、碰一碰、扫一扫等方式直接触发，无需显式安装，由程序框架后台静默安装后即可使用，可为用户提供便捷服务。
-  ![session1-原子化](img/session1-原子化.png)
+  ![session1-原子化](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-原子化.7cc47793.png)
 
 >  免安装的 HAP 包不能超过 10MB，保持免安装属性，HAP 包必须包含 FA
 
 ### 流转
-![session1-流转](img/session1-流转.png)
+![session1-流转](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-流转.851245a7.png)
 
 - 多个设备通过分布式操作系统能够相互感知，进而整合成一个超级终端，使设备间取长补短、相互帮助，为使用者提供自然流畅的分布式体验。
 - 流转在 HarmonyOS 中泛指多设备分布式操作，按照体验可分为跨端迁移和多端协同。
   
   #### 系统推荐流转
 - 系统感知周边有可用设备后，主动为用户提供可选择流转的设备信息，并在用户完成设备选择后回调通知应用开始流转，将用户选择的另一个设备的设备信息提供给应用。
-  ![session1-推荐流转](img/session1-推荐流转.png)
+  ![session1-推荐流转](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-推荐流转.bd7d0a89.png)
   
   #### 用户手动流转
 - 用户手动流转：系统在用户手动点击流转图标后，被动为用户提供可选择交互的设备信息，并在用户完成设备选择后回调通知应用开始流转，将用户所选另一个设备的设备信息提供给应用。
-  ![session1-手动流转](img/session1-手动流转.png)
+  ![session1-手动流转](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/session1-手动流转.6ed1915c.png)
 

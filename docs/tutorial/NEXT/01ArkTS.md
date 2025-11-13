@@ -28,7 +28,7 @@ ArkTS是HarmonyOS生态的应用开发语言。
 
 ​	ArkTS基于TypeScript的增强：**规范的代码更好地保证正确性和性能**
 
-![arkts1](screenshots/ArkTS/arkts1.png)
+![arkts1](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/arkts1.56dc32a6.png)
 
 ##### ArkTS相对TS的约束示例：
 
@@ -277,7 +277,7 @@ for(let student of students){
 
 函数是一组一起执行多条语句的组合，形成可重用的代码块。通过function关键字声明要告诉编译器函数的名称、返回类型和参数以及执行的内容；
 
-![image-20240612111208606](screenshots/ArkTS/image-20240612111208606.png)
+![image-20240612111208606](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240612111208606.b688c6a2.png)
 
 ```typescript
 function printStudentsInfo(students: string[]): void {
@@ -293,7 +293,7 @@ printStudentsInfo(['帝心', '鸿蒙诗人', '不多先生'])
 
 简化函数声明，通常用于需要一个简单函数的地方
 
-![image-20240612111525459](screenshots/ArkTS/image-20240612111525459.png)
+![image-20240612111525459](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240612111525459.720a0f27.png)
 
 箭头函数的返回类型可以省略，省略时，返回类型通过函数体推断
 
@@ -523,7 +523,7 @@ employee.printInfo() // 输出： 帝心 is a boy, and he is 32 years old workin
 
 * 一个ArkTS文件的作用域是独立的
 
-![image-20240612120150830](screenshots/ArkTS/image-20240612120150830.png)
+![image-20240612120150830](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240612120150830.8db3729c.png)
 
 * 通过export导出一个文件的变量、函数、类等
 
@@ -563,11 +563,11 @@ person.printInfo()// 输出: 帝心 is a boy ,and he is 20 years old
 
 * 状态驱动视图更新
 
-![image-20240527151517321](screenshots/ArkTS/image-20240527151517321.png)
+![image-20240527151517321](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240527151517321.0d8e3c10.png)
 
 在ArkTS中 ，状态是驱动应用变化的数据，视图则是与状态相关联的UI内容。当状态改变时，框架会自动更新与状态相关联的视图实现内容的动态。 
 
-![image-20240527151744721](screenshots/ArkTS/image-20240527151744721.png)
+![image-20240527151744721](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240527151744721.3bbabd16.png)
 
 ### 创建自定义组件
 

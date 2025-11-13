@@ -102,13 +102,13 @@ export function homeBuilder(){
 
 > 找到`src/main/module.json5`配置文件，未修改前的默认样子如下
 
-![module.json5修改之前](screenshots/04Navigation跳转/module.json5befor.png)
+![module.json5修改之前](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/module.json5befor.db29a9a3.png)
 
 ### 2 - 添加 `routerMap`配置项
 
 >  追加配置项：`"routerMap": "$profile:route_map"`。追加好后的样子如下图：
 
-![module.json5修改之后](screenshots/04Navigation跳转/module.json5after.png)
+![module.json5修改之后](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/module.json5after.b9ad3e4c.png)
 
 ### 3 - 创建`route_map.json`
 
@@ -128,7 +128,7 @@ export function homeBuilder(){
 }
 ```
 
-![Home文件与配置项的关系](screenshots/04Navigation跳转/HomeLine.png)
+![Home文件与配置项的关系](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/HomeLine.ae829836.png)
 
 
 

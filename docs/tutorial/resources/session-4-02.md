@@ -26,7 +26,7 @@ sidebar_position: 104
 
 * Device Type: Phone
 
-![image-20250612151515524](screenshots/hccda/image-20250612151515524.png)
+![image-20250612151515524](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20250612151515524.e23a1709.png)
 
 创建成功后，请打开默认生成的index.ets文件，并复制如下代码。此时文件中已经创建好了DataSources类，请对该类使用正确的构造方法进行对象初始化。
 
@@ -47,7 +47,7 @@ class DataSources {
 
 > 无需编写代码，按照下图操作即可补全代码
 
-![image-20250612151916461](screenshots/hccda/image-20250612151916461.png)
+![image-20250612151916461](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20250612151916461.914d64ab.png)
 
 ### 任务2：创建自定义组件，并补全代码
 
@@ -64,12 +64,12 @@ class DataSources {
 6. `this.dataSources.title`
 7. `this.dataSources.brief`
 
-![alt text](screenshots/image-21.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-21.4078a00c.png)
 
 
 > 完成以上内容并截图提交后，为方便后续步骤，添加export关键字
 
-![alt text](screenshots/image-1.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-1.a2398020.png)
 
 ### 任务3：使用渲染控制语法，构建页页面
 1、必须正确使用任务二中创建的DataCard组件
@@ -79,10 +79,10 @@ class DataSources {
 
 如下所示，已提供自定义组件DataSourcesListView构建过程中所需具体样式属性参数，请根据这些信息构建出正确的页面。
 
-![alt text](screenshots/careateDataSourcesListView.png)
-![alt text](screenshots/image.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/careateDataSourcesListView.b2bd3849.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image.1a829c3f.png)
 
-![alt text](screenshots/image-2.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-2.a685c1e6.png)
 
 
 ## 实验二：根据题目描述，使用DevEcoStudio实现启动应用内的UIAbility并获取返回结
@@ -92,22 +92,22 @@ class DataSources {
 
 > 创建 SecondAbility
 
-![alt text](screenshots/image-3.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-3.7a6076bb.png)
 
-![alt text](screenshots/image-4.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-4.aa49d549.png)
 > 创建 Second页面page
 
-![alt text](screenshots/image-5.png)
-![alt text](screenshots/image-6.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-5.db3c5984.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-6.74d22acf.png)
 
 > 设置 Second 页面为SecondAbility的启动页
 
-![alt text](screenshots/image-7.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-7.ecf77f89.png)
 
 ### 任务2：启动应用内的SecondAbility并传递参数
 本实验代码中，已经将Index.ets页面的基本U界面提前构建完毕。接下来，请补全Apply（方法，使其可以完成启动SecondAbility并传递参数的功能。最终实现如下功能效果：
 Index页面中存在一个文本输出框，当用户在其中输出文本，并点击提桥按钮，应用会将用户所输出文本在second页面上显示。
-![alt text](screenshots/image-15.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-15.fd3b7c1e.png)
 
 >复制代码后，根据下图完成指定位置填空。
 > 注意细节：
@@ -122,55 +122,55 @@ Index页面中存在一个文本输出框，当用户在其中输出文本，并
 > 
 
 
-![alt text](screenshots/image-16.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-16.5bbad054.png)
 
 ### 任务3 接收EntryAbility传递过来的参数
 
-![alt text](screenshots/image-8.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-8.8efec753.png)
 
 ### 任务4：参数在Second页面中展示
 > 提供Second文件代码如下，请将代码补齐。`此处为整体替换`
 
-![alt text](screenshots/image-17.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-17.905cd8a3.png)
 
 ## 实验三 开发ArkTS卡片
 ### 任务1 新建ArkTS卡片
 
 > 创建项目
 
-![alt text](screenshots/createProject.png)
-![alt text](screenshots/image-9.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/createProject.eb469168.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-9.a4e93475.png)
 
 > 创建卡片
 
-![alt text](screenshots/image-10.png)
-![alt text](screenshots/image-11.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-10.33efacee.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-11.00c1e695.png)
 
 > 提交对应截图
 
-![alt text](screenshots/image-12.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-12.28d5a1f2.png)
 
 ### 任务2:使用router事件跳转到EntryAbility
 > 1. 在ets\>pages目录下新建一张名为`Detail`的Page页面，> 将下列代码复制到新建的Detailets文件中，覆盖Detailets文>  件中的原有代码.
 
 > 创建 Detail页面的步骤如下两个示意图
 
-![alt text](screenshots/image-18.png)
-![alt text](screenshots/image-19.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-18.d113a6c4.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-19.8c2dc25f.png)
 
 > 2. 将下列代码复制到ExamCard.ets文件中，覆盖`ExamCard.ets`文件中的原有代码。
 > 
-![alt text](screenshots/image-20.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20.660253d2.png)
 
 > 3. 将下列代码复制到EntryAbility.ts文件中，覆盖
 > EntryAbility.ts文件中的原有代码，并根据注释补全缺失代
 > 码，实现在Entrybility中接收router事件并获取参数，根据> 传递的params不同，选择拉起不同的页面。
 
-![alt text](screenshots/image-13.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-13.7a355e06.png)
 
 ### 任务3：通过message事件刷新卡片内容（8分）
 > 1、将下列代码复制到 `EntryFormAbility.ts` 中，覆盖
 > EntryFormAbility.ts原有的代码，并根据注释补全缺代码，> 实现通过message事件刷新卡片的内容。
 
 
-![alt text](screenshots/image-14.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-14.0c69248c.png)

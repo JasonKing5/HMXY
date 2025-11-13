@@ -25,7 +25,7 @@ sidebar_position: 111
 
 
 
-![image-启动UIAbility](screenshots/HCIA/启动UIAbility.png)
+![image-启动UIAbility](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/启动UIAbility.ea39e4d9.png)
 
 
 > `src/main/ets/pages/Index.ets`
@@ -258,7 +258,7 @@ Button('单纯的停止当前小程序')
 
 |                        拉起方录入数据                        |                    被拉起方获取数据并使用                    |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![image-20250624200609629](screenshots/HCIA/启动并携带数据.png) | ![image-20250624200701773](screenshots/HCIA/接受数据并使用.png) |
+| ![image-20250624200609629](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/启动并携带数据.4a4b83f4.png) | ![image-20250624200701773](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/接受数据并使用.7748e987.png) |
 
 ---
 
@@ -369,7 +369,7 @@ Button('单纯的停止当前小程序')
 
 ### 任务四：应用间跳转。
 
-![应用间跳转](screenshots/HCIA/应用间跳转.gif)
+![应用间跳转](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/应用间跳转.34935622.gif)
 
 > 假设被拉起方为QQ，即：在微信中点击按钮拉起QQ。
 >

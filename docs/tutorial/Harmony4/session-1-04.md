@@ -10,7 +10,7 @@ sidebar_position: 104
 - ts：TypeScript
 - ets: extend TypeScript
 
-![变量](img/bl.PNG)
+![变量](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/bl.3b3ddb6d.PNG)
 
 ## 变量名要求：
 
@@ -381,7 +381,7 @@ Column() {
 
 # 诗文学习案例效果图
 
-![诗文学习](img/17076212588153.gif)
+![诗文学习](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/17076212588153.14cf572e.gif)
 
 自定义组件具有以下特点：
 
@@ -693,7 +693,7 @@ struct MyComponent {
 
 ## 案例
 
-![@Builder](img/@Builder.gif)
+![@Builder](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/@Builder.24785c43.gif)
 
 ### 组件内自定义构建函数
 
@@ -845,7 +845,7 @@ MyGlobalBuilderFunction()
 
 # @Styles装饰器：定义组件重用样式
 
-![通用样式函数](img/tongyongyangshi.png)
+![通用样式函数](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/tongyongyangshi.bbcf79e7.png)
 
 ```JavaScript
 /*
@@ -1209,7 +1209,7 @@ stateStyles是属性方法，可以根据UI内部状态来设置样式，类似�
 
 ## **使用场景**
 
-![状态样式](img/satatestyle.gif)
+![状态样式](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/satatestyle.efec9744.gif)
 
 下面的示例展示了stateStyles最基本的使用场景。Button处于第一个组件，默认获焦，生效focused指定的红色样式。按压时显示为pressed态指定的蓝色。如果在Button前再放一个组件，使其不处于获焦态，就会生效normal态的绿色。
 
@@ -1261,7 +1261,7 @@ struct StateStylesFun {
 
 # 状态管理
 
-![状态管理](img/statemanger.png)
+![状态管理](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/statemanger.84656da4.png)
 
 - @State：@State装饰的变量拥有其所属组件的状态，可以作为其子组件单向和双向同步的数据源。当其数值改变时，会引起相关组件的渲染刷新。
 - @Prop：@Prop装饰的变量可以和父组件建立单向同步关系，@Prop装饰的变量是可变的，但修改不会同步回父组件。
@@ -1276,7 +1276,7 @@ struct StateStylesFun {
 - @State   @Prop (`this.`进行传参)
 - @State   @Link(传参使用$)
 
-![state和prop和link](img/spl.gif)
+![state和prop和link](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/spl.260c2882.gif)
 
 ```JavaScript
 @Entry
@@ -1366,7 +1366,7 @@ struct StateManagement_link {
 
 @Provide和@Consume通过相同的变量名或者相同的变量别名绑定时，@Provide修饰的变量和@Consume修饰的变量是一对多的关系。不允许在同一个自定义组件内，包括其子组件中声明**多个同名或者同别名的**@Provide装饰的变量。
 
-![Provide-Consume](img/Provide-Consume.gif)
+![Provide-Consume](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/Provide-Consume.4bd6bd16.gif)
 
 ```JavaScript
 @Entry
@@ -1423,7 +1423,7 @@ struct ProvideConsume_sun {
 
 ## @Watch装饰器：状态变量更改通知
 
-![Watch](img/Watch.gif)
+![Watch](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/Watch.08afe684.gif)
 
 @Watch应用于对状态变量的监听。如果开发者需要关注某个状态变量的值是否改变，可以使用@Watch为状态变量设置回调函数。
 
@@ -1522,7 +1522,7 @@ if(条件表达式){
 
 ### 案例：学习鸿蒙前后对比
 
-![学习鸿蒙前后](img/qianhou.gif)
+![学习鸿蒙前后](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/qianhou.df609f46.gif)
 
 ```JavaScript
 /*
@@ -1571,7 +1571,7 @@ struct Branch_Comp {
 
 ### 作业：逢七过小游戏
 
-![逢七过](img/fqg.gif)
+![逢七过](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/fqg.073fc69f.gif)
 
 ## ForEach：循环渲染
 
@@ -1602,7 +1602,7 @@ ForEach(
  @State product: string[] = ['PC', '问界汽车', "平板", `手环`]
 ```
 
-![循环](img/loop.png)
+![循环](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/loop.6c474198.png)
 
 ```JavaScript
 /*
@@ -1661,7 +1661,7 @@ struct Loop {
 
 ### 作业：使用渲染控制完成前文案例
 
-![诗文学习](img/17076212588153.gif)
+![诗文学习](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/17076212588153.14cf572e.gif)
 
 ## LazyForEach：数据懒加载(用法同上，自行学习)
 
@@ -1750,7 +1750,7 @@ let appName =  AppStorage.Get('appName') as string
 '等观众催更'
 ```
 
-![综合案例待办事项](img/todolist.gif)
+![综合案例待办事项](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/todolist.2f558668.gif)
 
 - 创建页面，提供（空）数组容器。
 - 页面加载前装载数组（组件生命周期）

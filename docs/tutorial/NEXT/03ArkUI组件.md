@@ -61,7 +61,7 @@ Button('Disable', { type: ButtonType.Capsule, stateEffect: false })
     .height(40)
 ```
 
-![img](screenshots/03ArkUI/btnDisable.png)
+![img](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/btnDisable.af5a0e1c.png)
 
 2. 圆形按钮
 
@@ -74,7 +74,7 @@ Button('Circle', { type: ButtonType.Circle, stateEffect: false })
     .height(90)
 ```
 
-![img](screenshots/03ArkUI/btnCircle.png)
+![img](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/btnCircle.02cf1463.png)
 
 3. 普通按钮
 
@@ -88,7 +88,7 @@ Button('Ok', { type: ButtonType.Normal, stateEffect: true })
     .height(40)
 ```
 
-![img](screenshots/03ArkUI/btnOK.png)
+![img](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/btnOK.14383dbe.png)
 
 ### 样式和事件
 
@@ -226,7 +226,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor)
 
   **图1** `resources`
 
-![img](screenshots/03ArkUI/media.jpg)
+![img](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/media.c1476a7f.jpg)
 
 ```typescript
 Image($r('app.media.icon'))
@@ -234,7 +234,7 @@ Image($r('app.media.icon'))
 
 **图2** `rawfile` : 还可以将图片放在rawfile文件夹下。
 
-![rawfile.jpg](screenshots/03ArkUI/rawfile.jpg)
+![rawfile.jpg](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/rawfile.4c02e20b.jpg)
 
 ```typescript
 Image($rawfile('example1.png'))
@@ -532,7 +532,7 @@ Slider(options?: SliderOptions)
 
 ### 案例：风车效果
 [官方codelabs指路-基础组件Slider的适用](https://developer.huawei.com/consumer/cn/codelabsPortal/carddetails/tutorials_NEXT-SliderExample)
-![SliderCase](screenshots/03ArkUI/SliderCase.gif)
+![SliderCase](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/SliderCase.60c1e68f.gif)
 
 ```typescript
 import { router } from '@kit.ArkUI'
@@ -738,7 +738,7 @@ Radio({ value: 'Radio2', group: 'radioGroup' })
 
 通过点击Radio切换声音模式。
 
-![RadioCase](screenshots/03ArkUI/RadioCase.gif)
+![RadioCase](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/RadioCase.efd95cce.gif)
 
 ```typescript
 // radio案例
@@ -840,14 +840,14 @@ Toggle(options: { type: ToggleType, isOn?: boolean })
   Toggle({ type: ToggleType.Checkbox, isOn: true })
   ```
 
-![img](screenshots/03ArkUI/ToggleCheckbox.png)
+![img](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/ToggleCheckbox.08112714.png)
 
 ```typescript
 Toggle({ type: ToggleType.Switch, isOn: false })
 Toggle({ type: ToggleType.Switch, isOn: true })
 ```
 
-![img](screenshots/03ArkUI/ToggleSwitch.png)
+![img](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/ToggleSwitch.1de04c34.png)
 
 - 创建包含子组件的`Toggle`。
 
@@ -866,7 +866,7 @@ Toggle({ type: ToggleType.Button, isOn: true }) {
 }.width(100)
 ```
 
-![img](screenshots/03ArkUI/ToggleButton.png)
+![img](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/ToggleButton.c8d57dd6.png)
 
 ### 自定义样式
 
@@ -890,7 +890,7 @@ Toggle({ type: ToggleType.Switch, isOn: false })
 
 `Toggle`用于切换蓝牙开关状态。
 
-![ToggoleCase](screenshots/03ArkUI/ToggoleCase.gif)
+![ToggoleCase](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/ToggoleCase.9da67ed1.gif)
 
 ```typescript
 // Toggle用于切换蓝牙开关状态。

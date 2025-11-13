@@ -28,7 +28,7 @@ ArkUI中，产生动画的方式是改变属性值且指定动画参数。动画
 
 按照页面分类的动画
 
-![image-20240211105135884](img/image-20240211105135884.png)
+![image-20240211105135884](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240211105135884.e7f202ab.png)
 
 按照基础能力分类的动画
 
@@ -58,7 +58,7 @@ animateTo(value: AnimateParam, event: () => void): void
 
 ##### 案例：位置变化
 
-![显示动画-位置变化](img/xianshi1.gif)
+![显示动画-位置变化](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/xianshi1.0e5f42d4.gif)
 
 ```JavaScript
 // 显示动画 ： 位置变化
@@ -104,7 +104,7 @@ struct LayoutChange {
 
 ##### 案例：尺寸变化
 
-![显示动画-尺寸变化](img/xianshi2.gif)
+![显示动画-尺寸变化](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/xianshi2.46fd1dda.gif)
 
 ```JavaScript
 // 显示动画：尺寸变化
@@ -149,7 +149,7 @@ struct LayoutChange2 {
 
 ##### 案例：角度变化
 
-![显示动画-角度变化](img/xianshi3.gif)
+![显示动画-角度变化](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/xianshi3.666b6d33.gif)
 
 ```JavaScript
 // 显示动画-角度改变
@@ -223,7 +223,7 @@ animation(value: AnimateParam)
 > 2. 显式动画会对动画闭包前后造成的所有界面差异执行动画，且使用同一动画参数，适用于统一执行的场景。此外，显式动画也可以用于一些非属性变量造成的动画，如if/else的条件，ForEach使用的数组元素的删减。
 > 3. 如果一个属性配置了属性动画，且在显式动画闭包中改变该属性值，属性动画优先生效，会使用属性动画的动画参数。
 
-![属性动画](img/sx.gif)
+![属性动画](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/sx.b593b5b4.gif)
 
 ```JavaScript
 // 属性动画
@@ -338,7 +338,7 @@ Button()
 
 #### **if/else产生组件内转场动画**
 
-![26016703-31b0-4a0a-af50-80e2f87db81f](img/26016703-31b0-4a0a-af50-80e2f87db81f.gif)
+![26016703-31b0-4a0a-af50-80e2f87db81f](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/26016703-31b0-4a0a-af50-80e2f87db81f.b23196ca.gif)
 
 `if/else`语句可以控制组件的插入和删除。如下代码即可通过`Button`的点击事件，控制if的条件是否满足，来控制`if`下的`Image`组件是否显示。
 
@@ -416,7 +416,7 @@ struct IfElseTransition {
 
 #### **ForEach****产生组件内转场动画**
 
-![组件内转场动画-forEach](img/zjnzc.gif)
+![组件内转场动画-forEach](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/zjnzc.41f55cd0.gif)
 
 和`if`/`else`类似，`ForEach`可以通过控制数组中的元素个数，来控制组件的插入和删除。通过`ForEach`来产生组件内转场动画，仍然需要两个条件：
 
@@ -541,7 +541,7 @@ sharedTransition(id: string, options?: sharedTransitionOptions)
 
 下面介绍使用共享元素转场进行放大缩小图片的示例。
 
-![页面间共享元素转场](img/yemjgx.gif)
+![页面间共享元素转场](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/yemjgx.60721a94.gif)
 
 案例效果
 
@@ -615,7 +615,7 @@ struct SharedTransitionDest {
 
 ### 页面转场动画
 
-![页面间转场动画](img/17076203173681.gif)
+![页面间转场动画](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/17076203173681.2badeffa.gif)
 
 两个页面间发生跳转，一个页面消失，另一个页面出现，这时可以配置各自页面的页面转场参数实现自定义的页面转场效果。[页面转场](https://developer.harmonyos.com/cn/docs/documentation/doc-references-V3/ts-page-transition-animation-0000001477981233-V3)效果写在pageTransition函数中，通过PageTransitionEnter和PageTransitionExit指定页面进入和退出的动画效果。
 
@@ -678,7 +678,7 @@ pageTransition() {
 
 #### 案例： 界面进场退场效果
 
-![页面间转场动画](img/17076203173681.gif)
+![页面间转场动画](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/17076203173681.2badeffa.gif)
 
 ```JavaScript
 import router from '@ohos.router'
@@ -887,7 +887,7 @@ httpRequest.request('接口地址',{
 
 ### 案例：诗词学习
 
-![网络请求获取诗词](img/wangluo.gif)
+![网络请求获取诗词](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/wangluo.7b4179e8.gif)
 
 获取诗词接公开API接口
 

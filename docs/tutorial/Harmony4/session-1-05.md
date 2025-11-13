@@ -21,7 +21,7 @@ sidebar_position: 105
 onClick(event: (event?: ClickEvent) => void)
 ```
 
-![组件通用事件](img/zjtysj.PNG)
+![组件通用事件](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/zjtysj.a83b1b6f.PNG)
 
 ```JavaScript
 // src/main/ets/pages/common/Click.ets
@@ -62,7 +62,7 @@ struct ClickExample {
 onTouch(event: (event?: TouchEvent) => void)
 ```
 
-![触摸事件](img/cmsj.png)
+![触摸事件](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/cmsj.18ef9d0f.png)
 
 ```JavaScript
 // src/main/ets/pages/common/Touch.ets
@@ -119,7 +119,7 @@ struct TouchExample {
 onKeyEvent(event: (event?: KeyEvent) => void)
 ```
 
-![按键事件](img/anjsj.png)
+![按键事件](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/anjsj.73602727.png)
 
 ```JavaScript
 // src/main/ets/pages/common/KeyEvent.ets
@@ -153,9 +153,9 @@ struct KeyEventExample {
 
 用于设置组件的宽高、边距。
 
-![尺寸设置1](img/size1.png)
+![尺寸设置1](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/size1.09ed6f8b.png)
 
-![尺寸设置2](img/size2.png)
+![尺寸设置2](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/size2.1e0121f8.png)
 
 ```JavaScript
 // src/main/ets/pages/common/Width.ets
@@ -207,13 +207,13 @@ struct WidthExample {
 
 设置组件的对齐方式、布局方向和显示位置。
 
-![位置](img/weizhi1.png)
+![位置](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/weizhi1.77769d5a.png)
 
 align: 设置元素内容在元素绘制区域内的对齐方式。
 
 direction: 设置元素水平方向的布局。
 
-![组件通用事件](img/zjtysj.PNG)
+![组件通用事件](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/zjtysj.a83b1b6f.PNG)
 
 ```JavaScript
 // src/main/ets/pages/common/Position.ets
@@ -321,7 +321,7 @@ struct PositionExample {
 
 使用文本内容创建相应的按钮组件，此时Button无法包含子组件。
 
-![button](img/button.png)
+![button](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/button.c53b04a6.png)
 
 ```JavaScript
 // src/main/ets/pages/basic/Button.etx
@@ -381,7 +381,7 @@ struct ButtonExample {
 Checkbox(options?: {name?: string, group?: string })
 ```
 
-![checkbox](img/checkbox.png)
+![checkbox](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/checkbox.0eda0795.png)
 
 ```JavaScript
 // src/main/ets/pages/basic/Checkbox.ets
@@ -471,7 +471,7 @@ DatePicker(options?: {start?: Date, end?: Date, selected?: Date})
 onChange(callback: (value: DatePickerResult) => void)
 ```
 
-![DatePicker](img/DatePicker.png)
+![DatePicker](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DatePicker.367c877c.png)
 
 ```JavaScript
 // src/main/ets/pages/basic/DatePicker.ets
@@ -508,7 +508,7 @@ struct DatePickerExample {
 
 一般作为Page页面的根容器，通过属性设置来展示页面的标题栏、工具栏、导航栏等。
 
-![Navigation](img/Navigation.png)
+![Navigation](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/Navigation.caa0ee56.png)
 
 ```JavaScript
 // src/main/ets/pages/basic/Navigation.ets
@@ -610,7 +610,7 @@ struct NavigationExample {
 
 ## Column/Row/Flex
 
-![容器](img/rq.png)
+![容器](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/rq.7762dd6f.png)
 
 ```JavaScript
 // src/main/ets/pages/Column.ets
@@ -666,7 +666,7 @@ struct ColumnExample {
 
 # 实战案例：健康饮食（布局版）
 
-![健康](img/jk.gif)
+![健康](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/jk.2201b9d1.gif)
 
 ```JavaScript
 // src/main/ets/pages/Index.ets

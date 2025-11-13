@@ -31,31 +31,31 @@ https://developer.huawei.com/consumer/cn/service/josp/agc/index.html#/
 
 - #### 登录到AppGallery Connet新建项目
 
-![image-20240307095313404](screenshots/image-20240307095313404.png)
+![image-20240307095313404](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307095313404.7eb33090.png)
 
-![image-20240307095425071](screenshots/image-20240307095425071.png)
+![image-20240307095425071](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307095425071.0f7e1fa0.png)
 
-![image-20240307095441010](screenshots/image-20240307095441010.png)
+![image-20240307095441010](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307095441010.326d1290.png)
 
 - #### 创建项目后，该项目中还没有应用。可以先添加应用，亦可先开通云函数。无先后顺序。
 
-![image-20240307095611995](screenshots/image-20240307095611995.png)
+![image-20240307095611995](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307095611995.463a335c.png)
 
 - #### 先开通云函数
 
-![image-20240307095928573](screenshots/image-20240307095928573.png)
+![image-20240307095928573](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307095928573.20f54051.png)
 
-![image-20240307095956983](screenshots/image-20240307095956983.png)
+![image-20240307095956983](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307095956983.e927f33f.png)
 
 至此，云函数开通好了。
 
 - #### 再添加应用
 
-![image-20240307100057430](screenshots/image-20240307100057430.png)
+![image-20240307100057430](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307100057430.90aa604c.png)
 
 
 
-![image-20240307100243016](screenshots/image-20240307100243016.png)
+![image-20240307100243016](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307100243016.01253b64.png)
 
 ---
 
@@ -65,23 +65,23 @@ https://developer.huawei.com/consumer/cn/service/josp/agc/index.html#/
 
 > 不同版本IDE可能显示模板有差异。此处截图为4.0
 
-![image-20240307100530418](screenshots/image-20240307100530418.png)
+![image-20240307100530418](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307100530418.45a9ada3.png)
 
 
 
-![image-20240307100901512](screenshots/image-20240307100901512.png)
+![image-20240307100901512](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307100901512.14f1fa3f.png)
 
-![image-20240307100935290](screenshots/image-20240307100935290.png)
+![image-20240307100935290](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307100935290.59933f8a.png)
 
 <img src="screenshots/image-20240307100949572.png" alt="image-20240307100949572" />
 
-![image-20240307101327808](screenshots/image-20240307101327808.png)
+![image-20240307101327808](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307101327808.762a89b6.png)
 
-![image-20240307101711309](screenshots/image-20240307101711309.png)
+![image-20240307101711309](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307101711309.1501c012.png)
 
 ### 3. 创建云函数
 
-![image-20240307101849379](screenshots/image-20240307101849379.png)
+![image-20240307101849379](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307101849379.a5ed632f.png)
 
 #### 默认生成云函数
 
@@ -132,7 +132,7 @@ export { myHandler };
 
 #### 运行云函数看效果
 
-![image-20240307102609958](screenshots/image-20240307102609958.png)
+![image-20240307102609958](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307102609958.8dd90feb.png)
 
 > 暂时没看出来去哪里看效果，稍后补充。
 
@@ -140,17 +140,17 @@ export { myHandler };
 
 ### 5. 部署云函数
 
-![image-20240307103115027](screenshots/image-20240307103115027.png)
+![image-20240307103115027](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307103115027.36476776.png)
 
 #### 部署成功后在AGC查看自己的云函数
 
-![image-20240307103258754](screenshots/image-20240307103258754.png)
+![image-20240307103258754](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307103258754.4780b30f.png)
 
 
 ### 6.测试云函数
-![alt text](screenshots/AppGalleryStudy-image.png)
-![alt text](screenshots/AppGalleryStudy-image-1.png)
-![alt text](screenshots/AppGalleryStudy-image-2.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/AppGalleryStudy-image.558c611c.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/AppGalleryStudy-image-1.f4a42cd3.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/AppGalleryStudy-image-2.f6d68579.png)
 
 ---
 
@@ -166,7 +166,7 @@ export { myHandler };
     "long": "5.2.1"
   }
 ```
-![alt text](screenshots/AppGalleryStudy-image-3.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/AppGalleryStudy-image-3.30e0b250.png)
 
 ### 2. 初始化AGConnect
 > 使用云侧函数、数据科、存储等，前提是先初始化AGConnect。使用模板创建项目的时候，已经自动初始化了。
@@ -219,7 +219,7 @@ onCreate() {
 
 
 `src/main/resources/rawfile/agconnect-services.json`文件是记录了云侧配置的文件。如果云侧做了配置修改，则需要从AGC平台下载该文件进行更新。下载位置如下：
-![alt text](screenshots/AppGalleryStudy-image-4.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/AppGalleryStudy-image-4.37b71a7e.png)
 
 
 ### 3. ArkTS界面开发
@@ -227,7 +227,7 @@ onCreate() {
 
 > 编写界面代码，使用`@ohos.agconnect.cloud`模块调用云侧接口。
 
-![alt text](screenshots/AppGalleryStudy-image-5.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/AppGalleryStudy-image-5.4a59e285.png)
 > 
 > 代码如下：
 ```ts
@@ -270,7 +270,7 @@ struct MyIndex {
 
 真机运行效果如下：点击按钮，调用云函数，返回自己云函数指定结果。
 
-![alt text](screenshots/AppGalleryStudy-recording.gif)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/AppGalleryStudy-recording.02d13033.gif)
 
 
 ## 云函数开发细节
@@ -372,7 +372,7 @@ export { myHandler };
 >
 > >真机运行测试
 
-![alt text](screenshots/AppGalleryStudy-recording-1.gif)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/AppGalleryStudy-recording-1.9faa5026.gif)
 
 ---
 ### 2. 环境变量

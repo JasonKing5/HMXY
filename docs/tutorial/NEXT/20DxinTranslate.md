@@ -10,7 +10,7 @@ sidebar_position: 120
 * [帝心翻译源码参考](https://gitee.com/mayuanwei/harmonyOS_bilibili/tree/master/Q2/DxinTranslate)
 
 
-![alt text](screenshots/DxinTranslate/DxinTranslate-recording.gif)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DxinTranslate-recording.392bf1ee.gif)
 
 >  东北某大学的 玖璋同学 在编写该程序时遇到一些bug，联系到 `帝心`。遂，本项目为帮助其解决bug而录制。
 >
@@ -44,18 +44,18 @@ sidebar_position: 120
 本项目为翻译app，可切换语种进行翻译。可升级扩展为多中接口翻译（`百度翻译`/`天行数据`/`聚合数据`/`个人搭建服务端`等）。
 
 ## 2. 项目创建和基本配置
-![alt text](screenshots/DxinTranslate/DxinTranslate-image.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DxinTranslate-image.cba4f72b.png)
 
 ### 配置国际化资源
-![alt text](screenshots/DxinTranslate/DxinTranslate-image-2.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DxinTranslate-image-2.05fb869d.png)
 
 ---
 ### 配置app图标+名称+网络权限
-![alt text](screenshots/DxinTranslate/DxinTranslate-image-1.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DxinTranslate-image-1.c3015e92.png)
 
 * 配置图标和名称后，效果如下：
 
-![alt text](screenshots/DxinTranslate/DxinTranslate-image-6.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DxinTranslate-image-6.9d58394e.png)
 
 ---
 ### 配置app主题色和主要文本颜色
@@ -63,7 +63,7 @@ sidebar_position: 120
 
 > 本项目页面数量少，公用数据不多。如果是商用app。则很有必要进行配置。
 
-![alt text](screenshots/DxinTranslate/DxinTranslate-image-3.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DxinTranslate-image-3.336e6ea1.png)
 
 ---
 
@@ -72,16 +72,16 @@ sidebar_position: 120
 看在免费公益为大学生提供教程的份上，不要吝啬你的start呦。
 
 ### 项目首页
-![alt text](screenshots/DxinTranslate/DxinTranslate-image-4.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DxinTranslate-image-4.50c91dc7.png)
 
 ---
 ### 语言选择页面
-![alt text](screenshots/DxinTranslate/DxinTranslate-image-5.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DxinTranslate-image-5.7daa37b5.png)
 
 ---
 
 ### 真机运行效果
-![alt text](screenshots/DxinTranslate/DxinTranslate-recording.gif)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/DxinTranslate-recording.392bf1ee.gif)
 
 
 ## 4. NEXT版本迁移

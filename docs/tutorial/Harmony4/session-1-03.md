@@ -37,7 +37,7 @@ ArkTS是HarmonyOS优选的主力应用开发语言。ArkTS围绕应用开发在[
 
 # ArkTS的基本组成
 
-![arkts组成](img/arktszj.PNG)
+![arkts组成](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/arktszj.576b9f68.PNG)
 
 - 装饰器： 用于装饰类、结构、方法以及变量，并赋予其特殊的含义。如上述示例中@Entry、@Component和@State都是装饰器，[@Component](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-create-custom-components-0000001473537046-V3#section1430055924816)表示自定义组件，[@Entry](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-create-custom-components-0000001473537046-V3#section1430055924816)表示该自定义组件为入口组件，[@State](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-state-0000001474017162-V3)表示组件中的状态变量，状态变量变化会触发UI刷新。
 - [UI描述](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-declarative-ui-description-0000001524416537-V3)：以声明式的方式来描述UI的结构，例如build()方法中的代码块。
@@ -55,7 +55,7 @@ ArkTS是HarmonyOS优选的主力应用开发语言。ArkTS围绕应用开发在[
 
 # 页面跳转案例-ArkTS（声明式开发范式）
 
-![页面跳转](img/pageskip.gif)
+![页面跳转](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/pageskip.3534c1af.gif)
 
 `src/main/ets/pages/First.ets`
 
@@ -108,7 +108,7 @@ struct Second {
 
 # 页面跳转案例-JavaScript（类Web开发范式）
 
-![页面跳转2](img/pageskip2.gif)
+![页面跳转2](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/pageskip2.6d0d7b86.gif)
 
 ## 页面1
 

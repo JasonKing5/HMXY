@@ -13,6 +13,6 @@ sidebar_position: 100
 
 再运行汉化补丁，需要注意的是如下步骤。
 
-![image-20251023155403803](screenshots/Camtasia9录屏软件/image-20251023155403803.png)
+![image-20251023155403803](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20251023155403803.278070a3.png)
 
-![image-20251023155424383](screenshots/Camtasia9录屏软件/image-20251023155424383.png)
+![image-20251023155424383](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20251023155424383.ca376aed.png)

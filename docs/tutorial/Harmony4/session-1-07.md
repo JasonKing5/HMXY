@@ -12,7 +12,7 @@ sidebar_position: 107
 
 # 第一季：全网最新最细HarmonyOS4.0教程（日更）
 
-![image-20240207004551590](img/image-20240207004551590.png)
+![image-20240207004551590](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240207004551590.b5b44f37.png)
 
 # 第二季：HarmonyOS4.0实战教程
 
