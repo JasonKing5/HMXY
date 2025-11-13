@@ -6,6 +6,7 @@
 *.code-workspace
 .changelog
 .history
+.env
 
 node_modules
 server/node_modules
