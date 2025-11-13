@@ -22,7 +22,7 @@ git remote set-url --add --push origin git@github.com:JasonKing5/HMXY.git
 git remote show origin
 ```
 
-![alt text](./img/img-1.jpg)
+![验证远程推送是否生效](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/img-1.186c14a8.jpg)
 
 ## 提交代码推送到远程
 
@@ -32,13 +32,13 @@ git remote show origin
 git push
 ```
 
-![alt text](./img/img-2.jpg)
+![提交代码推送到远程](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/img-2.b438ae59.jpg)
 
 ## 查看部署状态及具体日志
 
 [https://github.com/JasonKing5/HMXY/actions](https://github.com/JasonKing5/HMXY/actions)
 
-![alt text](./img/img-3.jpg)
+![查看部署状态及具体日志](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/img-3.3aa29441.jpg)
 
 
 
