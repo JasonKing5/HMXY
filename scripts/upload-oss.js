@@ -16,9 +16,7 @@ const bucket = process.env.TENCENT_COS_BUCKET;
 const region = process.env.TENCENT_COS_REGION;
 const ossBaseUrl = process.env.TENCENT_COS_BASE_URL;
 
-const imageDirs = ['docs'];
-const imageGlob = 'docs/**/*.{png,jpg,jpeg,gif,webp}';
-const mdGlob = 'docs/**/*.{md,mdx}';
+const mdGlob = ['docs/**/*.{md,mdx}', 'blog/**/*.{md,mdx}'];
 
 // 压缩图片，保留合理质量
 async function compressImage(filePath) {
@@ -81,12 +79,12 @@ async function isFileExist(key) {
 }
 
 // 上传图片到 OSS
-async function uploadFile(filePath) {
+async function uploadFile(filePath, targetDir = 'docs') {
   const hash = getFileHash(filePath);
   const ext = path.extname(filePath);
   const base = path.basename(filePath, ext);
-  const key = `docs/${base}.${hash}${ext}`;
-  const url = `${ossBaseUrl}/docs/${base}.${hash}${ext}`;
+  const key = `${targetDir}/${base}.${hash}${ext}`;
+  const url = `${ossBaseUrl}/${key}`;
 
   console.log(`🔍 检查文件: ${filePath}`);
   console.log(`  生成 Key: ${key}`);
@@ -153,9 +151,9 @@ async function processMarkdown(mdFile) {
   const processImage = async (fullMatch, alt, imgPath) => {
     // 检查是否需要上传
     const needUpload = imgPath.startsWith('./img/') || 
-                      imgPath.startsWith('./screenshots/') || 
+                      imgPath.startsWith('./screenshots/') ||
                       imgPath.startsWith('img/') || 
-                      imgPath.startsWith('screenshots/');
+                      imgPath.startsWith('screenshots/')
     
     if (!needUpload) return null;
     
@@ -168,7 +166,9 @@ async function processMarkdown(mdFile) {
     
     // 压缩并上传图片
     await compressImage(filePath);
-    const url = await uploadFile(filePath);
+    // 根据 Markdown 文件路径确定目标目录
+    const targetDir = mdFile.includes('blog/') ? 'blog' : 'docs';
+    const url = await uploadFile(filePath, targetDir);
     return { fullMatch, url: `![${alt}](${url})` };
   };
   
@@ -196,14 +196,15 @@ async function processMarkdown(mdFile) {
     fs.writeFileSync(mdFile, content, 'utf8');
     console.log('✏️  Updated Markdown:', mdFile);
   } else {
-    console.log('ℹ️  No changes needed:', mdFile);
+    // console.log('ℹ️  No changes needed:', mdFile);
   }
 }
 
 // 主函数
 async function main() {
   console.log('🚀 Start processing markdown files...');
-  const mdFiles = glob.sync(mdGlob);
+  // 支持 glob 数组，合并多个模式匹配结果
+  const mdFiles = mdGlob.flatMap(pattern => glob.sync(pattern));
   
   // 处理所有 Markdown 文件
   for (const file of mdFiles) {
