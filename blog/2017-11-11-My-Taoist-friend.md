@@ -5,7 +5,7 @@ authors: [mayuanwei]
 tags: [匆匆那年]
 ---
 
-![alt text](screenshots/2017-11-11-My-Taoist-friend-image-1.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-11-11-My-Taoist-friend-image-1.660b8fbc.png)
 
 <b><center> 前言</center> </b>
 
@@ -48,7 +48,7 @@ tags: [匆匆那年]
 
 我当时就疼出了满脸泪花！心想着，我都交了些什么狗屁朋友。因为怕他再摁我的伤口，没敢多说什么。
 
-![alt text](screenshots/2017-11-11-My-Taoist-friend-image.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-11-11-My-Taoist-friend-image.c96ffe13.png)
 
 <!--truncate-->
 
@@ -182,7 +182,7 @@ tags: [匆匆那年]
 
 我跟在你身后，送你入了家门自归去。
 
-![alt text](screenshots/2017-11-11-My-Taoist-friend-image-2.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-11-11-My-Taoist-friend-image-2.bf6c7158.png)
 
 
 当晚奶奶怜惜地搂着小佩玖，讲了许多忧心的话。奶奶问：倘若我哪天老去，你可要嫁个好人。你想嫁什么样的男人呢？
@@ -243,7 +243,7 @@ tags: [匆匆那年]
 
 情到浓时，泽心说：我愿这样的欢乐时光能足够长久，自生至死。
 
-![alt text](screenshots/2017-11-11-My-Taoist-friend-image-3.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-11-11-My-Taoist-friend-image-3.8a303415.png)
 
 
 
@@ -353,7 +353,7 @@ tags: [匆匆那年]
 
 一座山成了两种人生的分界线，一侧是寡淡的孤寂，另一侧是喧闹的繁华。
 
-![alt text](screenshots/2017-11-11-My-Taoist-friend-image-4.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-11-11-My-Taoist-friend-image-4.5cde4d67.png)
 
 
 
@@ -391,7 +391,7 @@ tags: [匆匆那年]
 
 新郎举起一杯酒说：从前修道时，<b>我的一个道姑朋友</b>。
 
-![alt text](screenshots/2017-11-11-My-Taoist-friend-image-5.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-11-11-My-Taoist-friend-image-5.e6507221.png)
 
 <b><center> 7：不如将往事埋在风中，长剑为碑，霜雪为冢 </center> </b>
 
@@ -415,7 +415,7 @@ tags: [匆匆那年]
 
 很多年以后，泽心带着一把油纸伞去祭拜过佩玖的坟墓。转身下山的时候，华山下了一场暴雨，像极了当年佩玖在他的婚宴上，转身离开时山洪般的眼泪。
 
-![alt text](screenshots/2017-11-11-My-Taoist-friend-image-6.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-11-11-My-Taoist-friend-image-6.10b621b2.png)
 
 
 <b><center> 后记 </center> </b>
@@ -431,7 +431,7 @@ tags: [匆匆那年]
 
 第二句是：我要写一个故事，名字就叫——<b>我的一个道姑朋友</b>。
 
-![alt text](screenshots/2017-11-11-My-Taoist-friend-image-7.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-11-11-My-Taoist-friend-image-7.1cab0aef.png)
 
 
 ——2017年十一月

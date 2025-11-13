@@ -231,6 +231,6 @@ tags: [匆匆那年]
 
 文彤彤最后说：你要幸福。
 
-![alt text](screenshots/2017-10-26-Electric-vehicles-image.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-10-26-Electric-vehicles-image.b81f689b.png)
 
 ——2017年10月25 

@@ -14,7 +14,7 @@ tags: [匆匆那年]
 
 10月16日，我出门闻到楼道里满是鱼香味，我在想，这辈子可能再也吃不到那样的味道了。————二白
 
-![alt text](screenshots/2017-10-29-Boiled-fish-in-water-image.png)
+![alt text](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/blog/2017-10-29-Boiled-fish-in-water-image.4d993369.png)
 
 ---
 
