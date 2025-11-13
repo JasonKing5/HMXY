@@ -48,3 +48,9 @@ website/i18n/**/*
 #!website/i18n/fr/**/*
 
 .netlify
+
+docs/**/img
+docs/**/screenshots
+blog/**/img
+blog/**/screenshots
+
