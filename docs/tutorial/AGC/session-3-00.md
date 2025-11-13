@@ -73,7 +73,8 @@ https://developer.huawei.com/consumer/cn/service/josp/agc/index.html#/
 
 ![image-20240307100935290](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307100935290.59933f8a.png)
 
-<img src="screenshots/image-20240307100949572.png" alt="image-20240307100949572" />
+<!-- <img src="screenshots/image-20240307100949572.png" alt="image-20240307100949572" /> -->
+![image-20240307100949572](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307100949572.ef23c517.png)
 
 ![image-20240307101327808](https://hm-1252173264.cos.ap-shanghai.myqcloud.com/docs/image-20240307101327808.762a89b6.png)
 
