@@ -17,6 +17,8 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "upload-oss": "node -r dotenv/config ./scripts/upload-oss.js dotenv_config_path=./.env",
+    "prepare": "husky install",
+    "precommit": "lint-staged",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc"
@@ -47,7 +49,15 @@
     "dotenv": "^17.2.3",
     "fs-extra": "^11.3.2",
     "glob": "^11.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "typescript": "~5.2.2"
+  },
+  "lint-staged": {
+    "**/*.{md,mdx}": [
+      "node -r dotenv/config ./scripts/upload-oss.js dotenv_config_path=./.env",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [

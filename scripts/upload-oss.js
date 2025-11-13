@@ -200,15 +200,35 @@ async function processMarkdown(mdFile) {
   }
 }
 
-// 主函数
+// // 主函数
+// async function main() {
+//   console.log('🚀 Start processing markdown files...');
+//   // 支持 glob 数组，合并多个模式匹配结果
+//   const mdFiles = mdGlob.flatMap(pattern => glob.sync(pattern));
+  
+//   // 处理所有 Markdown 文件
+//   for (const file of mdFiles) {
+//     await processMarkdown(file);
+//   }
+
+//   console.log('✅ All images processed and uploaded.');
+// }
+
+// 主函数（pre-commit）
 async function main() {
   console.log('🚀 Start processing markdown files...');
-  // 支持 glob 数组，合并多个模式匹配结果
-  const mdFiles = mdGlob.flatMap(pattern => glob.sync(pattern));
+  
+  // 获取命令行参数中的文件列表
+  const files = process.argv.slice(2);
+  const mdFiles = files.length > 0 
+    ? files 
+    : mdGlob.flatMap(pattern => glob.sync(pattern));
   
   // 处理所有 Markdown 文件
   for (const file of mdFiles) {
-    await processMarkdown(file);
+    if (file.endsWith('.md') || file.endsWith('.mdx')) {
+      await processMarkdown(file);
+    }
   }
 
   console.log('✅ All images processed and uploaded.');
